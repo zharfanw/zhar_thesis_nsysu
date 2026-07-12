@@ -1,3 +1,4 @@
+% !TeX root = thesis.tex
 %% Copyright 2020 Dony Darmawan Putra & Hasan Albinsaid
 
 %% for dots table of contents
@@ -41,12 +42,12 @@
 \addtocontents{lot}{\protect\noaddvspace}
 \addtocontents{lot}{\linespread{1}\selectfont}
 
-%% Arabic Text
-\usepackage{arabtex}
-
 %% for Chinese typing
-\usepackage{xeCJK}
-\setCJKmainfont{AR PL KaitiM Big5}                    
+\usepackage{fontspec}
+\newfontfamily\chinesefont[
+	Path={Chinese Font/}
+]{bkai00m0.TTF}
+\newcommand{\zh}[1]{{\chinesefont #1}}
 
 %% for sections
 \usepackage{mfirstuc}
@@ -129,12 +130,12 @@
 
 %% Algorithm    
 \usepackage{algorithmic}
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{newtxmath}
 \usepackage{mathtools}
 \usepackage[linesnumbered,ruled,vlined,algochapter]{algorithm2e}
 \usepackage{varioref}
 \usepackage{hyperref}
-
-
-%% Math Set Symbol
-\usepackage{newtxmath}
+\pdfstringdefDisableCommands{%
+	\def\zh#1{#1}%
+	\def\chinesefont{}%
+}
