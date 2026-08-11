@@ -1,0 +1,10 @@
+scenario,rx_index,rx_name,x_m,y_m,z_m,orientation_alpha_deg,orientation_beta_deg,orientation_gamma_deg,lens_angle_deg,pattern_csv
+full_wolens,0,Simul_+4,-9,-0.02212,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,1,Simul_+3,-9,-0.01659,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,2,Simul_+2,-9,-0.01106,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,3,Simul_+1,-9,-0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,4,Simul_0,-9,0.0,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,5,Simul_-1,-9,0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,6,Simul_-2,-9,0.01106,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,7,Simul_-3,-9,0.01659,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+full_wolens,8,Simul_-4,-9,0.02212,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv

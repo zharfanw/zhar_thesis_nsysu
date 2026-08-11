@@ -1,0 +1,17 @@
+\frametitle{Blocks}
+\begin{verbatim}
+\begin{block}{Normal block}Text\end{block}
+\end{verbatim}
+\begin{block}{Normal block}
+    Text
+\end{block}
+
+\begin{verbatim}
+\begin{alertblock}{Alert block}Text\end{alertblock}
+\end{verbatim}
+\begin{alertblock}{Alert block}Text\end{alertblock}
+
+\begin{verbatim}
+\begin{exampleblock}{Example block}Text\end{exampleblock}
+\end{verbatim}
+\begin{exampleblock}{Example block}Text\end{exampleblock}

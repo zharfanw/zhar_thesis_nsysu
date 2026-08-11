@@ -1,0 +1,165 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TITLE PAGE
+\title[\TitleSidebar]{\Title}
+\subtitle{\Subtitle}
+\author[\AuthorSidebar]{\Author}
+\institute{\Institute}
+\date{\Date}
+
+\usepackage{ifthen}
+\newcommand{\PrintSupervisor}{
+  \ifthenelse{\equal{\Supervisor}{}}
+    {}
+    {\begin{tabular}{rl}{\bf \small\SupervisorTitle:} &  \begin{minipage}[t]{.5\textwidth}\small\Supervisor\end{minipage}\end{tabular}}}
+\newcommand{\PrintExaminer}{
+  \ifthenelse{\equal{\Examiner}{}}
+    {}
+    {\begin{tabular}{rl}{\bf \small\ExaminerTitle:} &  \begin{minipage}[t]{.5\textwidth}\small\Examiner\end{minipage}\end{tabular}}}
+
+
+
+
+
+\setbeamertemplate{title page}{
+\vfill
+    \begin{adjustwidth}{-55pt}{-40pt}
+        \begin{tabular}[t]{p{0.66\textwidth}@{\hspace{1cm}}p{0.37\textwidth}}
+            {\Large\bfseries \Title}\\\\
+            {\small \Subtitle}
+            &
+            \raisebox{0pt}[0pt][0pt]{\includegraphics[width=4cm]{\Logo}}
+        \end{tabular}
+    \end{adjustwidth}
+    
+    \vspace{.2cm}\hspace{-1cm}\rule{1\textwidth}{0.1pt}
+    
+    \begin{adjustwidth}{-50pt}{0pt}
+    \Minipage{.5}{{\bfseries\Author}
+    
+    {\EMail}
+    
+    \vspace{.5\baselineskip}{\Institute}}{.5}{
+    \PrintSupervisor
+    \\[5pt]
+    \PrintExaminer}
+    \end{adjustwidth}}
+
+\newcommand{\TitlePage}{
+\begingroup
+\setbeamertemplate{navigation symbols}{}
+\begin{frame}[plain]{}
+    \maketitle
+\end{frame}
+\endgroup}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAGE NUMBERING
+\newcommand{\PageNumbering}{
+\makeatletter
+\addtobeamertemplate{footline}{
+\leavevmode\hbox{
+    \begin{beamercolorbox}[wd=.975\paperwidth,dp=.15cm, right]{Foot}
+\small\insertframenumber{}/\inserttotalframenumber
+    \end{beamercolorbox}}}
+\makeatother}
+
+
+
+\newcommand{\NoPageNumbering}[0]{
+\makeatletter
+\setbeamertemplate{headline}{
+\leavevmode
+\hbox{}}
+\setbeamertemplate{footline}{}
+\makeatother}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PROGRESSBAR
+\newcommand{\ProgressBar}[0]{
+\makeatletter\defbeamertemplate*{sidebar right}{pro-bar}{
+    \pgfmathsetmacro\safetotalframenumber{max(\insertmainframenumber-1,1)}
+    \tikz[remember picture,overlay,x=1.5mm,y=\paperheight]{\footnotesize
+        \pgfmathsetmacro\overlaytotal{\insertframeendpage+1-\insertframestartpage}
+        \pgfmathsetmacro\overlayfraction{\insertoverlaynumber/\overlaytotal}
+        \path[save path=\stare,yscale=1/\safetotalframenumber]
+            (-1,0)-|(0,1-\insertframenumber)-|+(-\overlayfraction,1)-|cycle;
+        \tikzset{bar/.pic={\node at(-.55,-.5)[rotate=-90]
+            {};}}
+        \fill[use path=\stare,Blue]pic[blue]{bar};
+        \clip[use path=\stare]pic[white]{bar};
+    }}\makeatother}
+
+
+\newcommand{\NoProgressBar}[0]{
+\makeatletter\defbeamertemplate*{sidebar right}{end-pro-bar}{}\makeatother}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LEFT SIDEBAR
+\useoutertheme[left, width=.14\textwidth, hideothersubsections]{sidebar}
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{sidebar canvas left}[horizontal shading]
+         [left=Blue, middle=Blue, right=Blue]
+
+\addtobeamertemplate{sidebar left}{
+  \vskip-5em
+  \centering}{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FRAMETITLE
+\setbeamertemplate{frametitle}
+{\nointerlineskip
+\begin{beamercolorbox}[ht=2.75ex,dp=1.25ex,wd=.878\paperwidth]{frametitle}
+\parbox{12cm}{\hspace{.2cm}\insertframetitle}
+\end{beamercolorbox}}
+
+\setbeamertemplate{frametitle continuation}[from second][\insertcontinuationcount]
+
+\addtobeamertemplate{frametitle}{}{
+        \begin{tikzpicture}[remember picture, overlay]
+            \node[xshift=-16 pt,yshift=-12 pt] at (current page.north east)
+            {\includegraphics[scale=.075]{\Logo}};
+        \end{tikzpicture}}
+
+
+
+
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION PAGE
+\setbeamertemplate{section page}[default]
+\newcommand{\SectionPage}[0]{
+\AtBeginSection{
+\begingroup
+\setbeamertemplate{navigation symbols}{}
+  \begin{frame}[plain]
+    \parbox{12.5cm}{\huge\raggedleft\insertsection\vspace{.15cm}}
+    \rule{1\textwidth}{0.1pt}
+  \end{frame}
+  \endgroup}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION PAGE
+\setbeamertemplate{subsection page}[default]
+\newcommand{\SubsectionPage}[0]{
+\AtBeginSubsection[]{
+\begingroup
+\setbeamertemplate{navigation symbols}{}
+  \begin{frame}[plain]
+    \parbox{12cm}{\huge\raggedleft\insertsection\vspace{.15cm}}
+    \rule{1\textwidth}{0.1pt}\vspace{.15cm}
+    \parbox{12cm}{\Large\raggedright\insertsubsection}
+  \end{frame}
+  \endgroup}}
+
+
+
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamersize{text margin left=.5cm}
+\setbeamersize{text margin right=.75cm}

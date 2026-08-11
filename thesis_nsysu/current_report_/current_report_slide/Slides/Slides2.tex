@@ -1,0 +1,19 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Multimedia}
+
+\begin{frame}[fragile, squeeze, shrink=12.5]{Multimedia}
+With
+\begin{verbatim}\embedvideo*{\includegraphics[scale=.25]
+    {AuxiliaryFiles/Videos/Test.mp4}}{Label}\end{verbatim}
+we can insert a video.
+\begin{center}
+\embedvideo*{\includegraphics[scale=.25]{example-movie}}{AuxiliaryFiles/Videos/Test.mp4}
+\end{center}
+
+\begin{alertblock}{Alert}
+It does not work with pause commands, and as far as I know, Overleaf does not support videos; Adobe Acrobat is fine to use this feature\newline
+Only modify the video filename 'Test.mp4' and the options inside the square brackets
+\end{alertblock}
+\end{frame}

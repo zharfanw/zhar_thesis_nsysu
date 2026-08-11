@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.6.10)  5 JUL 2026 05:03
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.3)  10 AUG 2026 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -48,49 +48,70 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count285
 \@thisrulewidth=\dimen163
 )
+(C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen164
+\ar@mcellbox=\box53
+\extrarowheight=\dimen165
+\NC@list=\toks17
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen166
+\TX@old@table=\dimen167
+\TX@old@col=\dimen168
+\TX@target=\dimen169
+\TX@delta=\dimen170
+\TX@cols=\count286
+\TX@ftn=\toks18
+)
 (C:\Program Files\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2025/01/04 v2.17 TOC entries
-\ttl@leftsep=\dimen164
+\ttl@leftsep=\dimen171
 )
 (C:\Program Files\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip51
-\cftbeforetoctitleskip=\skip52
-\cftaftertoctitleskip=\skip53
-\cftbeforepartskip=\skip54
-\cftpartnumwidth=\skip55
-\cftpartindent=\skip56
-\cftbeforechapskip=\skip57
-\cftchapindent=\skip58
-\cftchapnumwidth=\skip59
-\cftbeforesecskip=\skip60
-\cftsecindent=\skip61
-\cftsecnumwidth=\skip62
-\cftbeforesubsecskip=\skip63
-\cftsubsecindent=\skip64
-\cftsubsecnumwidth=\skip65
-\cftbeforesubsubsecskip=\skip66
-\cftsubsubsecindent=\skip67
-\cftsubsubsecnumwidth=\skip68
-\cftbeforeparaskip=\skip69
-\cftparaindent=\skip70
-\cftparanumwidth=\skip71
-\cftbeforesubparaskip=\skip72
-\cftsubparaindent=\skip73
-\cftsubparanumwidth=\skip74
-\cftbeforeloftitleskip=\skip75
-\cftafterloftitleskip=\skip76
-\cftbeforefigskip=\skip77
-\cftfigindent=\skip78
-\cftfignumwidth=\skip79
-\c@lofdepth=\count286
-\c@lotdepth=\count287
-\cftbeforelottitleskip=\skip80
-\cftafterlottitleskip=\skip81
-\cftbeforetabskip=\skip82
-\cfttabindent=\skip83
-\cfttabnumwidth=\skip84
+\cftparskip=\skip53
+\cftbeforetoctitleskip=\skip54
+\cftaftertoctitleskip=\skip55
+\cftbeforepartskip=\skip56
+\cftpartnumwidth=\skip57
+\cftpartindent=\skip58
+\cftbeforechapskip=\skip59
+\cftchapindent=\skip60
+\cftchapnumwidth=\skip61
+\cftbeforesecskip=\skip62
+\cftsecindent=\skip63
+\cftsecnumwidth=\skip64
+\cftbeforesubsecskip=\skip65
+\cftsubsecindent=\skip66
+\cftsubsecnumwidth=\skip67
+\cftbeforesubsubsecskip=\skip68
+\cftsubsubsecindent=\skip69
+\cftsubsubsecnumwidth=\skip70
+\cftbeforeparaskip=\skip71
+\cftparaindent=\skip72
+\cftparanumwidth=\skip73
+\cftbeforesubparaskip=\skip74
+\cftsubparaindent=\skip75
+\cftsubparanumwidth=\skip76
+\cftbeforeloftitleskip=\skip77
+\cftafterloftitleskip=\skip78
+\cftbeforefigskip=\skip79
+\cftfigindent=\skip80
+\cftfignumwidth=\skip81
+\c@lofdepth=\count287
+\c@lotdepth=\count288
+\cftbeforelottitleskip=\skip82
+\cftafterlottitleskip=\skip83
+\cftbeforetabskip=\skip84
+\cfttabindent=\skip85
+\cfttabnumwidth=\skip86
 )
 (C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -100,20 +121,20 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks19
 )
-\caption@tempdima=\dimen165
-\captionmargin=\dimen166
-\caption@leftmargin=\dimen167
-\caption@rightmargin=\dimen168
-\caption@width=\dimen169
-\caption@indent=\dimen170
-\caption@parindent=\dimen171
-\caption@hangindent=\dimen172
+\caption@tempdima=\dimen172
+\captionmargin=\dimen173
+\caption@leftmargin=\dimen174
+\caption@rightmargin=\dimen175
+\caption@width=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count288
-\c@continuedfloat=\count289
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
 )
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
 (C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
@@ -122,9 +143,9 @@ Package: expl3 2026-05-26 L3 programming layer (loader)
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2026-02-18 L3 backend support: XeTeX
-\g__graphics_track_int=\count290
-\g__pdfannot_backend_int=\count291
-\g__pdfannot_backend_link_int=\count292
+\g__graphics_track_int=\count291
+\g__pdfannot_backend_int=\count292
+\g__pdfannot_backend_link_int=\count293
 ))
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
@@ -133,20 +154,20 @@ Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count293
-\l__fontspec_language_int=\count294
-\l__fontspec_strnum_int=\count295
-\l__fontspec_tmp_int=\count296
-\l__fontspec_tmpa_int=\count297
-\l__fontspec_tmpb_int=\count298
-\l__fontspec_tmpc_int=\count299
-\l__fontspec_em_int=\count300
-\l__fontspec_emdef_int=\count301
-\l__fontspec_strong_int=\count302
-\l__fontspec_strongdef_int=\count303
-\l__fontspec_tmpa_dim=\dimen173
-\l__fontspec_tmpb_dim=\dimen174
-\l__fontspec_tmpc_dim=\dimen175
+\l__fontspec_script_int=\count294
+\l__fontspec_language_int=\count295
+\l__fontspec_strnum_int=\count296
+\l__fontspec_tmp_int=\count297
+\l__fontspec_tmpa_int=\count298
+\l__fontspec_tmpb_int=\count299
+\l__fontspec_tmpc_int=\count300
+\l__fontspec_em_int=\count301
+\l__fontspec_emdef_int=\count302
+\l__fontspec_strong_int=\count303
+\l__fontspec_strongdef_int=\count304
+\l__fontspec_tmpa_dim=\dimen180
+\l__fontspec_tmpb_dim=\dimen181
+\l__fontspec_tmpc_dim=\dimen182
 
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
@@ -169,10 +190,10 @@ Package: mfirstuc 2025/04/03 v2.09 (NLCT)
 
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count304
+\etb@tempcnta=\count305
 )
-\@glsmfirst=\toks18
-\@glsmrest=\toks19
+\@glsmfirst=\toks20
+\@glsmrest=\toks21
 )
 (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
@@ -191,15 +212,15 @@ Package graphics Info: Driver file: xetex.def on input line 106.
 (C:\Program Files\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen176
-\Gin@req@width=\dimen177
+\Gin@req@height=\dimen183
+\Gin@req@width=\dimen184
 )
 (C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count305
+\c@subfigure=\count306
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count306
+\c@subtable=\count307
 )
 (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
@@ -210,18 +231,18 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count307
-\Gm@cntv=\count308
-\c@Gm@tempcnt=\count309
-\Gm@bindingoffset=\dimen178
-\Gm@wd@mp=\dimen179
-\Gm@odd@mp=\dimen180
-\Gm@even@mp=\dimen181
-\Gm@layoutwidth=\dimen182
-\Gm@layoutheight=\dimen183
-\Gm@layouthoffset=\dimen184
-\Gm@layoutvoffset=\dimen185
-\Gm@dimlist=\toks20
+\Gm@cnth=\count308
+\Gm@cntv=\count309
+\c@Gm@tempcnt=\count310
+\Gm@bindingoffset=\dimen185
+\Gm@wd@mp=\dimen186
+\Gm@odd@mp=\dimen187
+\Gm@even@mp=\dimen188
+\Gm@layoutwidth=\dimen189
+\Gm@layoutheight=\dimen190
+\Gm@layouthoffset=\dimen191
+\Gm@layoutvoffset=\dimen192
+\Gm@dimlist=\toks22
 
 (C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Program Files\MiKTeX\tex/latex/tools\indentfirst.sty
@@ -236,46 +257,46 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (C:\Program Files\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count310
-\c@Blindtext=\count311
-\c@blind@countparstart=\count312
-\blind@countxx=\count313
-\blindtext@numBlindtext=\count314
-\blind@countyy=\count315
-\c@blindlist=\count316
-\c@blindlistlevel=\count317
-\c@blindlist@level=\count318
-\blind@listitem=\count319
-\c@blind@listcount=\count320
-\c@blind@levelcount=\count321
-\blind@mathformula=\count322
-\blind@Mathformula=\count323
-\c@blind@randomcount=\count324
-\c@blind@randommax=\count325
-\c@blind@pangramcount=\count326
-\c@blind@pangrammax=\count327
+\c@blindtext=\count311
+\c@Blindtext=\count312
+\c@blind@countparstart=\count313
+\blind@countxx=\count314
+\blindtext@numBlindtext=\count315
+\blind@countyy=\count316
+\c@blindlist=\count317
+\c@blindlistlevel=\count318
+\c@blindlist@level=\count319
+\blind@listitem=\count320
+\c@blind@listcount=\count321
+\c@blind@levelcount=\count322
+\blind@mathformula=\count323
+\blind@Mathformula=\count324
+\c@blind@randomcount=\count325
+\c@blind@randommax=\count326
+\c@blind@pangramcount=\count327
+\c@blind@pangrammax=\count328
 )
 (C:\Program Files\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip85
-\bibsep=\skip86
+\bibhang=\skip87
+\bibsep=\skip88
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count328
+\c@NAT@ctr=\count329
 )
 (C:\Program Files\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip87
-\aftertitleunit=\skip88
-\ttl@plus=\dimen186
-\ttl@minus=\dimen187
-\ttl@toksa=\toks21
-\titlewidth=\dimen188
-\titlewidthlast=\dimen189
-\titlewidthfirst=\dimen190
+\ttl@box=\box55
+\beforetitleunit=\skip89
+\aftertitleunit=\skip90
+\ttl@plus=\dimen193
+\ttl@minus=\dimen194
+\ttl@toksa=\toks23
+\titlewidth=\dimen195
+\titlewidthlast=\dimen196
+\titlewidthfirst=\dimen197
 )
-\c@ttlp@side=\count329
-\ttlp@side=\count330
+\c@ttlp@side=\count330
+\ttlp@side=\count331
 
 (C:\Program Files\MiKTeX\tex/latex/background\background.sty
 Package: background 2014/03/04 v2.1 background material
@@ -285,22 +306,22 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks22
-\XKV@tempa@toks=\toks23
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
 )
-\XKV@depth=\count331
+\XKV@depth=\count332
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
 (C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks24
-\pgfutil@tempdima=\dimen191
-\pgfutil@tempdimb=\dimen192
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen198
+\pgfutil@tempdimb=\dimen199
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box54
+\pgfutil@abb=\box56
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -314,33 +335,33 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks25
-\pgfkeys@temptoks=\toks26
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
 tex
-\pgfkeys@tmptoks=\toks27
+\pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen193
-\pgf@y=\dimen194
-\pgf@xa=\dimen195
-\pgf@ya=\dimen196
-\pgf@xb=\dimen197
-\pgf@yb=\dimen198
-\pgf@xc=\dimen199
-\pgf@yc=\dimen256
-\pgf@xd=\dimen257
-\pgf@yd=\dimen258
+\pgf@x=\dimen256
+\pgf@y=\dimen257
+\pgf@xa=\dimen258
+\pgf@ya=\dimen259
+\pgf@xb=\dimen260
+\pgf@yb=\dimen261
+\pgf@xc=\dimen262
+\pgf@yc=\dimen263
+\pgf@xd=\dimen264
+\pgf@yd=\dimen265
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count332
-\c@pgf@countb=\count333
-\c@pgf@countc=\count334
-\c@pgf@countd=\count335
-\t@pgf@toka=\toks28
-\t@pgf@tokb=\toks29
-\t@pgf@tokc=\toks30
-\pgf@sys@id@count=\count336
+\c@pgf@counta=\count333
+\c@pgf@countb=\count334
+\c@pgf@countc=\count335
+\c@pgf@countd=\count336
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count337
  (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -355,12 +376,12 @@ File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
-\pgfsys@objnum=\count337
+\pgfsys@objnum=\count338
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count338
-\pgfsyssoftpath@bigbuffer@items=\count339
+\pgfsyssoftpath@smallbuffer@items=\count339
+\pgfsyssoftpath@bigbuffer@items=\count340
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -389,12 +410,12 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen259
-\pgfmath@count=\count340
-\pgfmath@box=\box55
-\pgfmath@toks=\toks31
-\pgfmath@stack@operand=\toks32
-\pgfmath@stack@operation=\toks33
+\pgfmath@dimen=\dimen266
+\pgfmath@count=\count341
+\pgfmath@box=\box57
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
@@ -410,55 +431,55 @@ tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
 cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count341
+\c@pgfmathroundto@lastzeros=\count342
 ))
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen260
-\pgf@picmaxx=\dimen261
-\pgf@picminy=\dimen262
-\pgf@picmaxy=\dimen263
-\pgf@pathminx=\dimen264
-\pgf@pathmaxx=\dimen265
-\pgf@pathminy=\dimen266
-\pgf@pathmaxy=\dimen267
-\pgf@xx=\dimen268
-\pgf@xy=\dimen269
-\pgf@yx=\dimen270
-\pgf@yy=\dimen271
-\pgf@zx=\dimen272
-\pgf@zy=\dimen273
+\pgf@picminx=\dimen267
+\pgf@picmaxx=\dimen268
+\pgf@picminy=\dimen269
+\pgf@picmaxy=\dimen270
+\pgf@pathminx=\dimen271
+\pgf@pathmaxx=\dimen272
+\pgf@pathminy=\dimen273
+\pgf@pathmaxy=\dimen274
+\pgf@xx=\dimen275
+\pgf@xy=\dimen276
+\pgf@yx=\dimen277
+\pgf@yy=\dimen278
+\pgf@zx=\dimen279
+\pgf@zy=\dimen280
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
 ex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen274
-\pgf@path@lasty=\dimen275
+\pgf@path@lastx=\dimen281
+\pgf@path@lasty=\dimen282
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen276
-\pgf@shorten@start@additional=\dimen277
+\pgf@shorten@end@additional=\dimen283
+\pgf@shorten@start@additional=\dimen284
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box56
-\pgf@hbox=\box57
-\pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count342
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count343
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
 x
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen278
+\pgflinewidth=\dimen285
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
 .tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen279
-\pgf@pt@y=\dimen280
-\pgf@pt@temp=\dimen281
+\pgf@pt@x=\dimen286
+\pgf@pt@y=\dimen287
+\pgf@pt@temp=\dimen288
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -469,19 +490,19 @@ tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen282
+\pgfarrowsep=\dimen289
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen283
-\pgf@sys@shading@range@num=\count343
-\pgf@shadingcount=\count344
+\pgf@max=\dimen290
+\pgf@sys@shading@range@num=\count344
+\pgf@shadingcount=\count345
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box59
+\pgfexternal@startupbox=\box61
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -496,15 +517,15 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box60
+\pgfnodeparttextbox=\box62
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen284
-\pgf@nodesepend=\dimen285
+\pgf@nodesepstart=\dimen291
+\pgf@nodesepend=\dimen292
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
@@ -515,10 +536,10 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen286
-\pgffor@skip=\dimen287
-\pgffor@stack=\toks34
-\pgffor@toks=\toks35
+\pgffor@iter=\dimen293
+\pgffor@skip=\dimen294
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
 ))
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
@@ -526,32 +547,32 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
 tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count345
-\pgfplotmarksize=\dimen288
+\pgf@plot@mark@count=\count346
+\pgfplotmarksize=\dimen295
 )
-\tikz@lastx=\dimen289
-\tikz@lasty=\dimen290
-\tikz@lastxsaved=\dimen291
-\tikz@lastysaved=\dimen292
-\tikz@lastmovetox=\dimen293
-\tikz@lastmovetoy=\dimen294
-\tikzleveldistance=\dimen295
-\tikzsiblingdistance=\dimen296
-\tikz@figbox=\box61
-\tikz@figbox@bg=\box62
-\tikz@tempbox=\box63
-\tikz@tempbox@bg=\box64
-\tikztreelevel=\count346
-\tikznumberofchildren=\count347
-\tikznumberofcurrentchild=\count348
-\tikz@fig@count=\count349
+\tikz@lastx=\dimen296
+\tikz@lasty=\dimen297
+\tikz@lastxsaved=\dimen298
+\tikz@lastysaved=\dimen299
+\tikz@lastmovetox=\dimen300
+\tikz@lastmovetoy=\dimen301
+\tikzleveldistance=\dimen302
+\tikzsiblingdistance=\dimen303
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count347
+\tikznumberofchildren=\count348
+\tikznumberofcurrentchild=\count349
+\tikz@fig@count=\count350
  (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count350
-\pgfmatrixcurrentcolumn=\count351
-\pgf@matrix@numberofcolumns=\count352
+\pgfmatrixcurrentrow=\count351
+\pgfmatrixcurrentcolumn=\count352
+\pgf@matrix@numberofcolumns=\count353
 )
-\tikz@expandcount=\count353
+\tikz@expandcount=\count354
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rytopaths.code.tex
@@ -577,9 +598,9 @@ Package everypage Warning: You appear to be running a version of LaTeX
 
 ) (C:\Program Files\MiKTeX\tex/latex/tools\afterpage.sty
 Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
-\AP@output=\toks36
-\AP@partial=\box65
-\AP@footins=\box66
+\AP@output=\toks38
+\AP@partial=\box67
+\AP@footins=\box68
 ))
 (C:\Program Files\MiKTeX\tex/latex/algorithms\algorithmic.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
@@ -588,12 +609,12 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count354
-\c@ALC@line=\count355
-\c@ALC@rem=\count356
-\c@ALC@depth=\count357
-\ALC@tlm=\skip89
-\algorithmicindent=\skip90
+\c@ALC@unique=\count355
+\c@ALC@line=\count356
+\c@ALC@rem=\count357
+\c@ALC@depth=\count358
+\ALC@tlm=\skip91
+\algorithmicindent=\skip92
 )
 (C:\Program Files\MiKTeX\tex/latex/newtx\newtxmath.sty
 Package: newtxmath 2024/09/22 v1.754
@@ -601,7 +622,7 @@ Package: newtxmath 2024/09/22 v1.754
 `newtxmath' v1.754, 2024/09/22 Math macros based originally on txfonts (msharpe
 ) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2026/05/19 v2.18d AMS math features
-\@mathmargin=\skip91
+\@mathmargin=\skip93
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -609,74 +630,74 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks37
-\ex@=\dimen297
+\@emptytoks=\toks39
+\ex@=\dimen304
 ))
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen298
+\pmbraise@=\dimen305
 )
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count358
+\inf@bad=\count359
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count359
-\leftroot@=\count360
+\uproot@=\count360
+\leftroot@=\count361
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count361
-\DOTSCASE@=\count362
+\classnum@=\count362
+\DOTSCASE@=\count363
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box67
-\strutbox@=\box68
+\Mathstrutbox@=\box69
+\strutbox@=\box70
 LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen299
+\big@size=\dimen306
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count363
+\macc@depth=\count364
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count364
+\c@MaxMatrixCols=\count365
 \dotsspace@=\muskip17
-\c@parentequation=\count365
-\dspbrk@lvl=\count366
-\tag@help=\toks38
-\row@=\count367
-\column@=\count368
-\maxfields@=\count369
-\andhelp@=\toks39
-\eqnshift@=\dimen300
-\alignsep@=\dimen301
-\tagshift@=\dimen302
-\tagwidth@=\dimen303
-\totwidth@=\dimen304
-\lineht@=\dimen305
-\@envbody=\toks40
-\multlinegap=\skip92
-\multlinetaggap=\skip93
-\mathdisplay@stack=\toks41
+\c@parentequation=\count366
+\dspbrk@lvl=\count367
+\tag@help=\toks40
+\row@=\count368
+\column@=\count369
+\maxfields@=\count370
+\andhelp@=\toks41
+\eqnshift@=\dimen307
+\alignsep@=\dimen308
+\tagshift@=\dimen309
+\tagwidth@=\dimen310
+\totwidth@=\dimen311
+\lineht@=\dimen312
+\@envbody=\toks42
+\multlinegap=\skip94
+\multlinetaggap=\skip95
+\mathdisplay@stack=\toks43
 LaTeX Info: Redefining \[ on input line 2965.
 LaTeX Info: Redefining \] on input line 2966.
 )
 (C:\Program Files\MiKTeX\tex/latex/oberdiek\centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count370
+\tx@cntz=\count371
 
 (C:\Program Files\MiKTeX\tex/generic/binhex\binhex.tex)
-\tx@Isdigit=\count371
-\tx@IsAlNum=\count372
-\tx@tA=\toks42
-\tx@tB=\toks43
+\tx@Isdigit=\count372
+\tx@IsAlNum=\count373
+\tx@tA=\toks44
+\tx@tB=\toks45
 \tx@su=\read3
 
 amsthm NOT loaded
@@ -757,7 +778,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
-\tx@sbptoks=\toks44
+\tx@sbptoks=\toks46
 LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
 LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 903.
 LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 904.
@@ -779,86 +800,86 @@ Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
 
 (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count373
-\calc@Bcount=\count374
-\calc@Adimen=\dimen306
-\calc@Bdimen=\dimen307
-\calc@Askip=\skip94
-\calc@Bskip=\skip95
+\calc@Acount=\count374
+\calc@Bcount=\count375
+\calc@Adimen=\dimen313
+\calc@Bdimen=\dimen314
+\calc@Askip=\skip96
+\calc@Bskip=\skip97
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count375
-\calc@Cskip=\skip96
+\calc@Ccount=\count376
+\calc@Cskip=\skip98
 )
 (C:\Program Files\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count376
-\l_MT_multwidth_dim=\dimen308
-\origjot=\skip97
-\l_MT_shortvdotswithinadjustabove_dim=\dimen309
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen310
-\l_MT_above_intertext_sep=\dimen311
-\l_MT_below_intertext_sep=\dimen312
-\l_MT_above_shortintertext_sep=\dimen313
-\l_MT_below_shortintertext_sep=\dimen314
-\xmathstrut@box=\box69
-\xmathstrut@dim=\dimen315
+\g_MT_multlinerow_int=\count377
+\l_MT_multwidth_dim=\dimen315
+\origjot=\skip99
+\l_MT_shortvdotswithinadjustabove_dim=\dimen316
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen317
+\l_MT_above_intertext_sep=\dimen318
+\l_MT_below_intertext_sep=\dimen319
+\l_MT_above_shortintertext_sep=\dimen320
+\l_MT_below_shortintertext_sep=\dimen321
+\xmathstrut@box=\box71
+\xmathstrut@dim=\dimen322
 )
 (C:\Program Files\MiKTeX\tex/latex/algorithm2e\algorithm2e.sty
 Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 550 replaced by U+FFFD.
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count377
-\algocf@hangindent=\skip98
+\c@AlgoLine=\count378
+\algocf@hangindent=\skip100
 
 (C:\Program Files\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count378
+\c@checkoddpage=\count379
 )
 (C:\Program Files\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip99
-\skiplinenumber=\skip100
-\skiprule=\skip101
-\skiphlne=\skip102
-\skiptext=\skip103
-\skiplength=\skip104
-\algomargin=\skip105
-\skipalgocfslide=\skip106
-\algowidth=\dimen316
-\inoutsize=\dimen317
-\inoutindent=\dimen318
-\interspacetitleruled=\dimen319
-\interspacealgoruled=\dimen320
-\interspacetitleboxruled=\dimen321
-\algocf@ruledwidth=\skip107
-\algocf@inoutbox=\box70
-\algocf@inputbox=\box71
-\AlCapSkip=\skip108
-\AlCapHSkip=\skip109
-\algoskipindent=\skip110
-\algocf@nlbox=\box72
-\algocf@hangingbox=\box73
-\algocf@untilbox=\box74
-\algocf@skipuntil=\skip111
-\algocf@capbox=\box75
-\algocf@lcaptionbox=\skip112
-\algoheightruledefault=\skip113
-\algoheightrule=\skip114
-\algotitleheightruledefault=\skip115
-\algotitleheightrule=\skip116
-\c@algocfline=\count379
-\c@algocfproc=\count380
-\c@algocf=\count381
-\algocf@algoframe=\box76
-\algocf@algobox=\box77
+\skiptotal=\skip101
+\skiplinenumber=\skip102
+\skiprule=\skip103
+\skiphlne=\skip104
+\skiptext=\skip105
+\skiplength=\skip106
+\algomargin=\skip107
+\skipalgocfslide=\skip108
+\algowidth=\dimen323
+\inoutsize=\dimen324
+\inoutindent=\dimen325
+\interspacetitleruled=\dimen326
+\interspacealgoruled=\dimen327
+\interspacetitleboxruled=\dimen328
+\algocf@ruledwidth=\skip109
+\algocf@inoutbox=\box72
+\algocf@inputbox=\box73
+\AlCapSkip=\skip110
+\AlCapHSkip=\skip111
+\algoskipindent=\skip112
+\algocf@nlbox=\box74
+\algocf@hangingbox=\box75
+\algocf@untilbox=\box76
+\algocf@skipuntil=\skip113
+\algocf@capbox=\box77
+\algocf@lcaptionbox=\skip114
+\algoheightruledefault=\skip115
+\algoheightrule=\skip116
+\algotitleheightruledefault=\skip117
+\algotitleheightrule=\skip118
+\c@algocfline=\count380
+\c@algocfproc=\count381
+\c@algocf=\count382
+\algocf@algoframe=\box78
+\algocf@algobox=\box79
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\varioref.sty
 Package: varioref 2026/05/04 v1.6i package for extended references (FMi)
-\c@vrcnt=\count382
+\c@vrcnt=\count383
 )
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
@@ -901,15 +922,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count383
+\c@section@level=\count384
 )
 (C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen322
-\Hy@linkcounter=\count384
-\Hy@pagecounter=\count385
+\@linkdim=\dimen329
+\Hy@linkcounter=\count385
+\Hy@pagecounter=\count386
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
@@ -917,7 +938,7 @@ File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
 (C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count386
+\Hy@SavedSpaceFactor=\count387
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
@@ -930,14 +951,14 @@ Package hyperref Info: Plain pages OFF on input line 4214.
 Package hyperref Info: Backreferencing OFF on input line 4219.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4466.
-\c@Hy@tempcnt=\count387
+\c@Hy@tempcnt=\count388
 
 (C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4805.
-\XeTeXLinkMargin=\dimen323
+\XeTeXLinkMargin=\dimen330
 
 (C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -946,9 +967,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count388
-\Field@Width=\dimen324
-\Fld@charsize=\dimen325
+\Fld@menulength=\count389
+\Field@Width=\dimen331
+\Fld@charsize=\dimen332
 Package hyperref Info: Hyper figures OFF on input line 6091.
 Package hyperref Info: Link nesting OFF on input line 6096.
 Package hyperref Info: Hyper index ON on input line 6099.
@@ -956,19 +977,19 @@ Package hyperref Info: backreferencing OFF on input line 6106.
 Package hyperref Info: Link coloring OFF on input line 6111.
 Package hyperref Info: Link coloring with OCG OFF on input line 6116.
 Package hyperref Info: PDF/A mode OFF on input line 6121.
-\Hy@abspage=\count389
-\c@Item=\count390
-\c@Hfootnote=\count391
+\Hy@abspage=\count390
+\c@Item=\count391
+\c@Hfootnote=\count392
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2026-04-24 v7.01q Hyperref driver for XeTeX
-\pdfm@box=\box78
-\c@Hy@AnnotLevel=\count392
-\HyField@AnnotCount=\count393
-\Fld@listcount=\count394
-\c@bookmark@seq@number=\count395
+\pdfm@box=\box80
+\c@Hy@AnnotLevel=\count393
+\HyField@AnnotCount=\count394
+\Fld@listcount=\count395
+\c@bookmark@seq@number=\count396
 
 (C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
@@ -979,7 +1000,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip117
+\Hy@SectionHShift=\skip119
 ))
 (thesis.aux)
 \openout1 = `thesis.aux'.
@@ -1078,10 +1099,15 @@ Package hyperref Info: Link coloring OFF on input line 13.
 
 File: Images/logo_nsysu_thesis.jpg Graphic file (type bmp)
 <Images/logo_nsysu_thesis.jpg>
+
+Overfull \hbox (149.20865pt too wide) in paragraph at lines 36--36
+ \TU/bkai00m0.TTF(0)/m/n/18 天線透鏡輔助毫米波多輸入多輸出系統之通道去相關與空間多工效能評估 
+ []
+
 LaTeX Font Info:    Calculating math sizes for size <16> on input line 40.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
 0.
- (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
+(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -1144,10 +1170,13 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 11.67993pt on input line 40.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 8.80005pt on input line 40.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1
 
-] [2] [1] [2] [3]
-[4] [5] [6]
+]
+[2] [3] [1] [2] [3] [4] [5] [6]
 File: Images/watermark.jpg Graphic file (type bmp)
 <Images/watermark.jpg>
  [7] (thesis.toc
@@ -1204,15 +1233,117 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 8.8pt on input line 5.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 6.6pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 8.8pt on input line 11.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 6.6pt on input line 11.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (0.18475pt too wide) in paragraph at lines 28--28
+ [][] [][]\TU/lmr/m/n/12 Sionna-RT: mean off-diagonal spatial correlation with 
+and with- 
+ []
+
+
+Overfull \hbox (7.29274pt too wide) in paragraph at lines 30--30
+ [][] [][]\TU/lmr/m/n/12 Mean pairwise absolute-magnitude and centered frequenc
+y-shape 
+ []
+
+
+Overfull \hbox (1.19708pt too wide) in paragraph at lines 30--30
+ \TU/lmr/m/n/12 discrepancies among the Hybrid, SBR+, and Sionna-RT solvers; 
+ []
+
+
+Overfull \hbox (6.36075pt too wide) in paragraph at lines 31--31
+ [][] [][]\TU/lmr/m/n/12 Lens-induced channel-magnitude change for every canoni
+cal TX– 
+ []
+
+
+Overfull \hbox (0.13274pt too wide) in paragraph at lines 39--39
+ [][] [][]\TU/lmr/m/n/12 Aggregate lens-assisted and without-lens comparison ac
+ross tra- 
+ []
+
+
+Overfull \hbox (6.35435pt too wide) in paragraph at lines 39--39
+ \TU/lmr/m/n/12 relation, median-block decorrelation, and median condition num-
+ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (5.48474pt too wide) in paragraph at lines 42--42
+ [][] [][]\TU/lmr/m/n/12 Diagnostic along-trajectory comparison for the full-ci
+rcular path. 
+ []
+
+
+Overfull \hbox (5.80077pt too wide) in paragraph at lines 43--43
+ [][] [][]\TU/lmr/m/n/12 Compute-cost scalability: actual vs. naive \TU/lmtt/m/
+n/12 PathSolver \TU/lmr/m/n/12 run count 
+ []
+
 )
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [11] (thesis.lot)
+ [13] (thesis.lot
+Overfull \hbox (6.39557pt too wide) in paragraph at lines 15--15
+ [][] [][]\TU/lmr/m/n/12 Aggregate spatial-channel results. $\OML/ntxmi/m/it/12
+ D[]$ \TU/lmr/m/n/12 and $\OML/ntxmi/m/it/12 D[]$ \TU/lmr/m/n/12 denote pooled 
+
+ []
+
+)
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [12] (Chapters/chapter1-introduction.tex
+ [14] (Chapters/v2_chapter1-introduction.tex
 Chapter 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1221,128 +1352,596 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+Overfull \hbox (12.54869pt too wide) in paragraph at lines 133--145
+\TU/lmr/m/n/12 ventional antenna arrays can provide substantial beamforming and
+ spatial-multiplexing
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2])
-(Chapters/chapter2-second-chapter.tex
+ [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-[4]
-Chapter 2.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
+ [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-File: Images/AntennaLensSideView.PNG Graphic file (type bmp)
-<Images/AntennaLensSideView.PNG>
-File: Images/AntennaLensFrontView.PNG Graphic file (type bmp)
-<Images/AntennaLensFrontView.PNG>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[7]
+ [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
+Overfull \hbox (3.11871pt too wide) in paragraph at lines 336--336
+|[]\TU/lmr/bx/n/14.4 Beamspace MIMO and Lens-Assisted Communications| 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10])
-(Chapters/chapter3-third-chapter.tex [11] [12
+ [10]
+Overfull \hbox (7.71828pt too wide) in paragraph at lines 412--417
+\TU/lmr/m/n/12 tial of lens antenna arrays for beam selection, RF-chain reducti
+on, and path-dependent
+ []
 
-]
-Chapter 3.
-File: Images/gambar.png Graphic file (type bmp)
-<Images/gambar.png>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (44.32867pt too wide) in paragraph at lines 429--437
+[]\TU/lmr/m/n/12 Existing antenna-lens research can be broadly divided into phy
+sical electromagnetic-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
+Overfull \hbox (11.87022pt too wide) in paragraph at lines 622--622
+ []|\TU/lmr/m/n/10.95 Frequency| 
+ []
+
+
+Overfull \hbox (6.0038pt too wide) in paragraph at lines 622--622
+[]|\TU/lmr/m/n/10.95 Configuration|  
+ []
+
+
+Overfull \hbox (1.57999pt too wide) in paragraph at lines 622--622
+[]|\TU/lmr/m/n/10.95 Polarization- 
+ []
+
+
+Overfull \hbox (3.5373pt too wide) in paragraph at lines 622--622
+ []|\TU/lmr/m/n/10.95 144 GHz| 
+ []
+
+
+Overfull \hbox (6.19814pt too wide) in paragraph at lines 622--622
+ []|\TU/lmr/m/n/10.95 mmWave| 
+ []
+
+
+Overfull \hbox (6.19814pt too wide) in paragraph at lines 622--622
+ []|\TU/lmr/m/n/10.95 mmWave| 
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
+Overfull \hbox (7.7975pt too wide) in paragraph at lines 655--661
+[]\TU/lmr/m/n/12 Second, although a metasurface lens has already been experimen
+tally demon-
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
-(Chapters/chapter4-simulation-results.tex [18]
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Overfull \hbox (9.41269pt too wide) in paragraph at lines 857--858
+[]\TU/lmr/m/n/12 To validate the proposed S-parameter-based channel-modeling ap
+proach through
+ []
+
+
+Overfull \hbox (13.26468pt too wide) in paragraph at lines 857--858
+\TU/lmr/m/n/12 cross-validation across three independent electromagnetic and ra
+y-tracing solvers,
+ []
+
+
+Overfull \hbox (5.97748pt too wide) in paragraph at lines 858--859
+\TU/lmr/m/n/12 tributions, the communication-performance benefits of the antenn
+a lens-assisted
+ []
+
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22])
+(Chapters/v2_chapter2-second-chapter-Backup.tex [23] [24]
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+37.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+File: Images/AntennaPatch_ReturnLoss.PNG Graphic file (type bmp)
+<Images/AntennaPatch_ReturnLoss.PNG>
+File: Images/AntennaPatch_Design_Fields.PNG Graphic file (type bmp)
+<Images/AntennaPatch_Design_Fields.PNG>
+
+Underfull \vbox (badness 1418) has occurred while \output is active []
+
+ [27]
+File: Images/Unitcell_Design.png Graphic file (type bmp)
+<Images/Unitcell_Design.png>
+File: Images/Unitcell_Design_geometry.png Graphic file (type bmp)
+<Images/Unitcell_Design_geometry.png>
+
+[28]
+File: Images/FloqBoundary-1.png Graphic file (type bmp)
+<Images/FloqBoundary-1.png>
+File: Images/FloqBoundary-2.png Graphic file (type bmp)
+<Images/FloqBoundary-2.png>
+File: Images/FloqPort-1.png Graphic file (type bmp)
+<Images/FloqPort-1.png>
+File: Images/FloqPort-2.png Graphic file (type bmp)
+<Images/FloqPort-2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+File: Images/UnitCell_Magnitude.png Graphic file (type bmp)
+<Images/UnitCell_Magnitude.png>
+File: Images/UnitCell_Phase.png Graphic file (type bmp)
+<Images/UnitCell_Phase.png>
+
+[30] [31]
+Overfull \hbox (5.98679pt too wide) in paragraph at lines 200--211
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+File: Images/AntennaLens20x20_VerifFocalPoint.png Graphic file (type bmp)
+<Images/AntennaLens20x20_VerifFocalPoint.png>
+File: Images/FocalCharacter_0deg.png Graphic file (type bmp)
+<Images/FocalCharacter_0deg.png>
+File: Images/FocalCharacter_m15degdeg.png Graphic file (type bmp)
+<Images/FocalCharacter_m15degdeg.png>
+File: Images/FocalCharacter_m30deg.png Graphic file (type bmp)
+<Images/FocalCharacter_m30deg.png>
+File: Images/FocalCharacter_m45deg.png Graphic file (type bmp)
+<Images/FocalCharacter_m45deg.png>
+File: Images/FocalCharacter_m60deg.png Graphic file (type bmp)
+<Images/FocalCharacter_m60deg.png>
+
+Underfull \vbox (badness 5133) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+File: Images/AntennaLensRadiationPatternAsset/TransmitArray_CoorSystem.PNG Grap
+hic file (type bmp)
+<Images/AntennaLensRadiationPatternAsset/TransmitArray_CoorSystem.PNG>
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
+(Font)              scaled to size 6.1pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 10.95pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
+(Font)              scaled to size 6.1pt on input line 307.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+File: Images/AntennaLensRadiationPatternOutput/matlab_visualization/figures/mat
+lab_radiation_pattern_3d_all_patterns.png Graphic file (type bmp)
+<Images/AntennaLensRadiationPatternOutput/matlab_visualization/figures/matlab_r
+adiation_pattern_3d_all_patterns.png>
+File: Images/AntennaLensRadiationPatternOutput/vertical_cut_360/figures/vertica
+l_cut_360_all_patterns.png Graphic file (type bmp)
+<Images/AntennaLensRadiationPatternOutput/vertical_cut_360/figures/vertical_cut
+_360_all_patterns.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \vbox (badness 2512) has occurred while \output is active []
+
+ [38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Overfull \hbox (6.1806pt too wide) in paragraph at lines 445--446
+[]\TU/lmr/m/n/12 Under this convention, the diagonal entries $\OML/ntxmi/m/it/1
+2 S\LMS/ntxsy/m/n/12 ¹[][]\OML/ntxmi/m/it/12 ; [][]\LMS/ntxsy/m/n/12 º$ \TU/lmr
+/m/n/12 correspond to matched
+ []
+
+
+Overfull \hbox (5.89668pt too wide) in paragraph at lines 447--448
+[]\TU/lmr/m/n/12 The corresponding frequency-domain input-output relation can b
+e expressed
+ []
+
+[43]
+File: Images/Room_SBR_withCloseup.png Graphic file (type bmp)
+<Images/Room_SBR_withCloseup.png>
+File: Images/Room_withCloseup.png Graphic file (type bmp)
+<Images/Room_withCloseup.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+[45]
+File: Images/SetupEnvirontment_SBR_WithLens.PNG Graphic file (type bmp)
+<Images/SetupEnvirontment_SBR_WithLens.PNG>
+File: Images/SetupEnvirontment_SBR_WithLens_TopDetails.PNG Graphic file (type b
+mp)
+<Images/SetupEnvirontment_SBR_WithLens_TopDetails.PNG>
+File: Images/SetupEnvirontment__WithLens_Hybrid.jpeg Graphic file (type bmp)
+<Images/SetupEnvirontment__WithLens_Hybrid.jpeg>
+File: Images/SetupEnvirontment_WithLens_Hybrid_TopDetails.png Graphic file (typ
+e bmp)
+<Images/SetupEnvirontment_WithLens_Hybrid_TopDetails.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+[47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/power_distribution.
+png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_SBR+_Solver/power_distribution.png>
+
+[49]
+File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/channel_3x3_magnitu
+de_db.png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_SBR+_Solver/channel_3x3_magnitude_db
+.png>
+File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/spatial_correlation
+.png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_SBR+_Solver/spatial_correlation.png>
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51] [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+File: Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/power_distributio
+n.png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/power_distribution.png
+>
+File: Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/channel_3x3_magni
+tude_db.png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/channel_3x3_magnitude_
+db.png>
+File: Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/spatial_correlati
+on.png Graphic file (type bmp)
+<Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/spatial_correlation.pn
+g>
+
+[54] [55] [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+File: Images/channel_evaluation_per_method/SIonna-RT/power_distribution.png Gra
+phic file (type bmp)
+<Images/channel_evaluation_per_method/SIonna-RT/power_distribution.png>
+File: Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.p
+ng Graphic file (type bmp)
+<Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+[59]
+File: Images/channel_evaluation_per_method/SIonna-RT/spatial_correlation.png Gr
+aphic file (type bmp)
+<Images/channel_evaluation_per_method/SIonna-RT/spatial_correlation.png>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 2689) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+File: Images/channel_comparison_results/channel_3x3_with_magnitude_db.png Graph
+ic file (type bmp)
+<Images/channel_comparison_results/channel_3x3_with_magnitude_db.png>
+File: Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png G
+raphic file (type bmp)
+<Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png>
+
+Overfull \hbox (6.41396pt too wide) in paragraph at lines 751--752
+[]\TU/lmr/m/n/12 Figure []2-27[] shows the lens-induced magnitude change $\U/nt
+xmia/m/it/12 ^^A\OML/ntxmi/m/it/12 H[] \U/ntxmia/m/it/12 = \OML/ntxmi/m/it/12 H
+[] \LMS/ntxsy/m/n/12 ^^@
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+File: Images/channel_comparison_results/channel_3x3_lens_gain.png Graphic file 
+(type bmp)
+<Images/channel_comparison_results/channel_3x3_lens_gain.png>
+File: Images/channel_comparison_results/lens_effect_direction_agreement.png Gra
+phic file (type bmp)
+<Images/channel_comparison_results/lens_effect_direction_agreement.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+[64]
+File: Images/channel_comparison_results/mimo_evaluation_raw.png Graphic file (t
+ype bmp)
+<Images/channel_comparison_results/mimo_evaluation_raw.png>
+
+Overfull \hbox (49.2967pt too wide) in paragraph at lines 783--795
+ [] 
+ []
+
+[65]
+File: Images/channel_comparison_results/mimo_normalized_singular_values.png Gra
+phic file (type bmp)
+<Images/channel_comparison_results/mimo_normalized_singular_values.png>
+
+Overfull \hbox (9.32231pt too wide) in paragraph at lines 808--809
+\TU/lmr/m/n/12 Sionna-RT; without the lens, the corresponding values rise to 0.
+393/0.561, 0.767/0.767,
+ []
+
+[66]
+File: Images/channel_comparison_results/mimo_spatial_correlation_evaluation.png
+ Graphic file (type bmp)
+<Images/channel_comparison_results/mimo_spatial_correlation_evaluation.png>
+
+Underfull \vbox (badness 1515) has occurred while \output is active []
+
+ [67])
+(Chapters/v3_chapter3-third-chapter.tex [68]
+Chapter 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+File: Images/3_1_PositionofReceiverAntennaLens.png Graphic file (type bmp)
+<Images/3_1_PositionofReceiverAntennaLens.png>
+File: Images/3_1_PositionofReceiverWOAntennaLens.png Graphic file (type bmp)
+<Images/3_1_PositionofReceiverWOAntennaLens.png>
+File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/01_geometry_six
+_scenarios.png Graphic file (type bmp)
+<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/01_geometry_six_scen
+arios.png>
+
+[71] [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [74]
+[75]
+File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/03_aggregate_co
+mparison.png Graphic file (type bmp)
+<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/03_aggregate_compari
+son.png>
+ [76] [77
+
+
+] [78]
+File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_line
+ar_all_parameters.png Graphic file (type bmp)
+<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_linear_al
+l_parameters.png>
+ [79] [80
+
+
+]
+File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_half
+_all_parameters.png Graphic file (type bmp)
+<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_half_all_
+parameters.png>
+ [81] [82
+
+
+]
+File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_full
+_all_parameters.png Graphic file (type bmp)
+<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_full_all_
+parameters.png>
+ [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+[86]
+File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig1_compu
+te_cost_scalability.png Graphic file (type bmp)
+<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig1_compute_co
+st_scalability.png>
+ [87]
+File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig4_monte
+carlo_aggregate_vs_N.png Graphic file (type bmp)
+<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig4_montecarlo
+_aggregate_vs_N.png>
+File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig5_mimo_
+per_drop_boxplot_vs_N.png Graphic file (type bmp)
+<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig5_mimo_per_d
+rop_boxplot_vs_N.png>
+ [88] [89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90])
+(Chapters/v2_chapter4-fourth-chapter.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+[92]
 Chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19
+ [93
 
 ]
-[20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22])
-(Chapters/chapter5-conclusion.tex [23] [24
-
-]
-Chapter 5.
-
-Overfull \hbox (8.82466pt too wide) in paragraph at lines 8--9
-[]\TU/lmr/m/n/12 The simulation and evaluation framework provides a way to conn
-ect antenna-
+Overfull \hbox (15.81665pt too wide) in paragraph at lines 12--13
+\TU/lmr/m/n/12 changed ($\OT1/lmr/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/lmr/m/n/12 0
+9 \LMS/ntxsy/m/n/12 ! \OT1/lmr/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/lmr/m/n/12 07$ 
+\TU/lmr/m/n/12 of 9), and 10 dB-SNR capacity decreases (21.72$\LMS/ntxsy/m/n/12
+ !$\TU/lmr/m/n/12 21.11 bit/s/Hz).
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-[26] [27] [28]) (thesis.bbl
-Underfull \hbox (badness 1132) in paragraph at lines 48--53
-\TU/lmr/m/n/12 munication,” \TU/lmr/m/it/12 Fundamentals of Wireless Communicat
-ion\TU/lmr/m/n/12 , vol.
+ [94]
+[95]
+Overfull \hbox (20.49432pt too wide) in paragraph at lines 32--33
+[]\TU/lmr/bx/n/12 Richer propagation environments\TU/lmr/m/n/12 : outdoor, mult
+i-room, and blockage/clutter
  []
 
+[96]) (thesis.bbl [97] [98]
+Underfull \hbox (badness 1817) in paragraph at lines 115--120
+[]\TU/lmr/m/n/12 V. Torres, B. Orazbayev, V. Pacheco-Peña, J. Teniente, M. Beru
+ete,
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
 [] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [
 ]
  []
 
-) [29] [30] (thesis.aux)
+) [100] [101] (thesis.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 2EB27F4D4F57AF4B2BA2A66A9B7F2A1C;10951
-(rerunfilecheck)             After:  0876600D42256103F82930C287403350;9802.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 47D602B96714D3D155C0C3D6523C62E3;12265.
  ) 
 Here is how much of TeX's memory you used:
- 30025 strings out of 402627
- 567119 string characters out of 5443439
- 1017827 words of memory out of 5000000
- 58629 multiletter control sequences out of 15000+600000
- 674512 words of font info for 117 fonts, out of 8000000 for 9000
+ 30950 strings out of 402627
+ 606476 string characters out of 5443440
+ 1044022 words of memory out of 5000000
+ 59464 multiletter control sequences out of 15000+600000
+ 772901 words of font info for 229 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,10n,121p,899b,758s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,14n,121p,1513b,758s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (44 pages).
+Output written on thesis.pdf (118 pages).

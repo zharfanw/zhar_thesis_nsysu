@@ -1,0 +1,105 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Environments}
+
+\begin{frame}{Theorems, Proofs, Propositions, Lemmas, Corollaries}
+\begin{The}\label{The}	 Statement	       \end{The}
+\begin{Proof}            Proof text		   \end{Proof}
+
+\vspace{.2cm}\begin{Pro}		         Statement 		   \end{Pro}
+
+\vspace{.2cm}\begin{Le}			     Statement         \end{Le}
+
+\vspace{.2cm}\begin{Co}	             Statement	       \end{Co}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[squeeze]{Definitions, Examples, Remarks}
+\begin{De}	 Text	\end{De}
+
+\vspace{.2cm}\begin{Exa}			Text		\end{Exa}
+
+\vspace{.2cm}\begin{Rmk}	Text		\end{Rmk}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Description, Itemize}
+\begin{frame}{Description, Itemize}
+Description
+
+\vspace{.2cm}\begin{description}
+	\item[Label 1] Text
+	\item[Label 2] Text
+\end{description}
+Itemize
+
+\begin{itemize}
+	\item Text
+	\item Text
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hyperlinks, Citations, URLs}
+
+\begin{frame}[fragile, squeeze]{Hyperlinks}
+A hyperlink is created with
+\begin{verbatim}\label{Label}\end{verbatim}
+and referenced with
+\begin{verbatim}\ref{Label}\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile, squeeze]{Citations, URLs}
+A citation to a book in the bibliography is made with	\begin{verbatim}\cite{LabelBook}\end{verbatim}
+
+\vspace{.4cm}
+To insert a link, you can use
+\begin{verbatim}\url{https://www.google.com}\end{verbatim}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The "column" environment}
+\begin{frame}[fragile]{The "column" environment}
+To break text into multiple columns (or, for example, to position an image), you can use a command like this:
+\begin{verbatim}
+\begin{columns}[T]
+\column{.5\textwidth}Test1 
+\column{.5\textwidth}Test2 
+\end{columns} \end{verbatim}
+\begin{columns}[T]
+\column{.5\textwidth}Test1 
+\column{.5\textwidth}Test2 
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile, shrink=10]{The "column" environment (second part)}
+If used with the option below, a column can be made to appear only on certain slides:
+\begin{verbatim}
+\begin{columns}<1>[T]
+\column{.5\textwidth}Test1    \column{.5\textwidth}
+\end{columns}
+\begin{columns}<2>[T]
+\column{.5\textwidth}         \column{.5\textwidth}Test2
+\end{columns}
+\begin{columns}<3>[T]
+\column{.5\textwidth}Test1    \column{.5\textwidth}Test2
+\end{columns}
+\end{verbatim}
+\begin{columns}<1>[T]
+\column{.5\textwidth}Test1
+\column{.5\textwidth}
+\end{columns}
+\begin{columns}<2>[T]
+\column{.5\textwidth}
+\column{.5\textwidth}Test2
+\end{columns}
+\begin{columns}<3>[T]
+\column{.5\textwidth}Test1
+\column{.5\textwidth}Test2
+\end{columns}
+\end{frame}

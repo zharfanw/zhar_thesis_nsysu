@@ -1,0 +1,22 @@
+========================================================================
+RANDOM-TX MONTE CARLO SUMMARY -- combined across all RX scenarios
+========================================================================
+Drops / TX per drop / RX scenarios : 20 / 9 / 9
+Total runs (drop x RX)              : 180
+Capacity median (combined)          : 7.29 bit/s/Hz
+Capacity 5%-95% (combined)          : 6.48 - 9.21 bit/s/Hz
+Throughput median (combined)        : 2.92 Gbit/s
+Delay spread median (combined)      : 68.29 ns
+Drop-RX outage C < 1.0           : 0.0%
+
+Per RX scenario:
+ rx_config_index rx_config_name  rx_lens_angle_deg  capacity_median  capacity_p05  capacity_p95  snr_median_db  outage
+               0   Simul_+60deg                 60         7.310120      6.467942      9.190508      22.022430     0.0
+               1   Simul_+45deg                 45         7.306702      6.502203      9.204835      22.008430     0.0
+               2   Simul_+30deg                 30         7.307874      6.500330      9.206861      22.014278     0.0
+               3   Simul_+15deg                 15         7.303996      6.495161      9.190275      21.996378     0.0
+               4    Simul_+0deg                  0         7.298193      6.502999      9.173363      21.980116     0.0
+               5   Simul_-15deg                -15         7.292438      6.508747      9.164783      21.957214     0.0
+               6   Simul_-30deg                -30         7.292436      6.507469      9.160728      21.955006     0.0
+               7   Simul_-45deg                -45         7.290672      6.477632      9.184278      21.958263     0.0
+               8   Simul_-60deg                -60         7.293738      6.467728      9.171329      21.969723     0.0

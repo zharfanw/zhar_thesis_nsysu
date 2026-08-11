@@ -1,0 +1,418 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Monte Carlo 9x9 Position Simulation}
+
+\subsection{Simulation Design}
+
+\begin{frame}[t,shrink=10]{Monte Carlo Simulation Objective}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.52\textwidth}
+            \begin{block}{Question}
+                How does the RX antenna lens affect a 38-GHz indoor channel
+                when nine transmitters are placed at random positions?
+            \end{block}
+            \begin{itemize}
+                \item Room size: $20\times20\times3$~m
+                \item Nine randomly positioned TXs per drop
+                \item Nine RX angular configurations
+                \item With-lens and without-lens cases
+                \item 20 Monte Carlo drops
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.44\textwidth}
+            \begin{exampleblock}{Paired experiment}
+                Each lens/no-lens comparison uses identical TX positions.
+                This isolates the effect of the RX pattern from random
+                geometry changes.
+            \end{exampleblock}
+            \begin{alertblock}{Evidence status}
+                With only 20 drops and 100,000 path samples per source, the
+                results are preliminary and should be shared with caveats.
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=15]{Lens and No-Lens Configurations}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.47\textwidth}
+            \begin{block}{Without lens}
+                \begin{itemize}
+                    \item Same patch RX pattern for every angle label
+                    \item RX labels retained only for paired matching
+                    \item Expected to provide relatively uniform angular
+                    performance
+                \end{itemize}
+            \end{block}
+        \end{column}
+        \begin{column}{0.49\textwidth}
+            \begin{block}{With lens}
+                Different HFSS far-field patterns are used at:
+                \[
+                    +60^\circ,+45^\circ,+30^\circ,+15^\circ,0^\circ,
+                \]
+                \[
+                    -15^\circ,-30^\circ,-45^\circ,-60^\circ.
+                \]
+                Performance can therefore depend strongly on angular
+                alignment.
+            \end{block}
+        \end{column}
+    \end{columns}
+    \begin{exampleblock}{Dataset size}
+        Each notebook contains $20$ drops $\times$ $9$ RX configurations
+        $=180$ drop--RX results; the paired comparison contains 180 pairs.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}[t,shrink=12]{Simulation Scope and Parameters}
+    \centering
+    \small
+    \begin{tabular}{@{}ll@{\qquad}ll@{}}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} &
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Carrier frequency & 38~GHz &
+        Bandwidth & 400~MHz \\
+        Frequency points & 401 &
+        Drops & 20 \\
+        TXs per drop & 9 &
+        RX configurations & 9 \\
+        Random seed & 20260718 &
+        Path samples/source & 100,000 \\
+        TX height & 1.0--2.5~m &
+        Minimum TX--RX range & 1.0~m \\
+        Wall margin & 0.75~m &
+        Power per TX & 10~dBm \\
+        Noise figure & 7~dB &
+        Noise temperature & 290~K \\
+        Outage threshold & 1~bit/s/Hz &
+        Results/notebook & 180 \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{5mm}
+    \begin{alertblock}{TX pattern clarification}
+        Although the notebook filenames contain \texttt{Patch}, the Monte
+        Carlo section explicitly forces the TX pattern to isotropic
+        (\texttt{iso}).
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}[t,shrink=8]{Random-Position Spatial Coverage}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.47\textwidth}
+            \begin{block}{Stored TX-coordinate coverage}
+                \centering
+                \begin{tabular}{@{}lc@{}}
+                    \toprule
+                    \textbf{Dimension} & \textbf{Range} \\
+                    \midrule
+                    $x$ & $-9.24$ to $9.19$~m \\
+                    $y$ & $-9.24$ to $9.19$~m \\
+                    $z$ & $1.01$ to $2.50$~m \\
+                    \bottomrule
+                \end{tabular}
+            \end{block}
+        \end{column}
+        \begin{column}{0.49\textwidth}
+            \begin{block}{TX--RX distance}
+                \centering
+                \begin{tabular}{@{}lc@{}}
+                    \toprule
+                    \textbf{Statistic} & \textbf{Distance} \\
+                    \midrule
+                    Minimum & 1.22~m \\
+                    Mean & 10.56~m \\
+                    Maximum & 19.57~m \\
+                    \bottomrule
+                \end{tabular}
+            \end{block}
+        \end{column}
+    \end{columns}
+    \begin{exampleblock}{Coverage check}
+        The 180 stored TX points span a broad portion of the permitted room
+        area and are consistent with the configured sampling constraints.
+    \end{exampleblock}
+\end{frame}
+
+\subsection{Calculation Methodology}
+
+\begin{frame}[t,shrink=18]{Channel and Capacity Calculation}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.52\textwidth}
+            \begin{block}{Non-coherent power combination}
+                \[
+                    P_{\mathrm{RX}}(f)=P_{\mathrm{TX}}
+                    \sum_{i=1}^{9}|H_i(f)|^2
+                \]
+                Powers from the nine TX channels are added, not their complex
+                voltages.
+            \end{block}
+            \begin{block}{Equivalent SISO spectral efficiency}
+                \[
+                    C=\mathbb E_f\!
+                    \left[\log_2\!\left(1+\mathrm{SNR}(f)\right)\right]
+                \]
+            \end{block}
+        \end{column}
+        \begin{column}{0.44\textwidth}
+            \begin{itemize}
+                \item Noise is calculated from $kTB$ and the configured noise
+                figure.
+                \item Ideal throughput is $B\,C$.
+                \item RMS delay spread is extracted from the IFFT-derived
+                power-delay profile.
+                \item Shannon capacity excludes modulation, coding,
+                overhead, interference, estimation, and RF losses.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]{Virtual 9x9 MIMO Evaluation}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.53\textwidth}
+            \begin{block}{Construction}
+                The nine RX channels associated with different lens angles
+                are combined into a virtual $9\times9$ matrix.
+            \end{block}
+            \textbf{Reported metrics:}
+            \begin{itemize}
+                \item Condition number
+                \item Effective rank
+                \item Capacity at 10-dB SNR
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.43\textwidth}
+            \begin{alertblock}{Interpretation limit}
+                The nine RX states are not measured simultaneously at one
+                physical receiver.
+            \end{alertblock}
+            \begin{exampleblock}{Correct interpretation}
+                These metrics indicate virtual angular-channel diversity and
+                conditioning. They are not directly realizable capacity for a
+                physical single-antenna RX.
+            \end{exampleblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Aggregate Results}
+
+\begin{frame}[t,shrink=18]{Aggregate Lens and No-Lens Results}
+    \centering
+    \scriptsize
+    \begin{tabular}{lrrr}
+        \toprule
+        \textbf{Metric} & \textbf{No lens} & \textbf{Lens} &
+        \textbf{Change} \\
+        \midrule
+        Median capacity (bit/s/Hz) & 7.29 & 7.67 &
+        $+0.38$ ($+5.2\%$) \\
+        5th-percentile capacity & 6.48 & 5.02 & $-1.46$ \\
+        95th-percentile capacity & 9.21 & 9.68 & $+0.47$ \\
+        Median throughput (Gbit/s) & 2.92 & 3.07 &
+        $+0.15$ ($+5.1\%$) \\
+        Median RMS delay spread (ns) & 68.29 & 65.01 &
+        $-3.28$ ($-4.8\%$) \\
+        Outage below 1 bit/s/Hz & 0.0\% & 0.0\% & No change \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{4mm}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.47\textwidth}
+            \begin{exampleblock}{Typical performance}
+                The lens improves median capacity and throughput by
+                approximately \textbf{5\%}.
+            \end{exampleblock}
+        \end{column}
+        \begin{column}{0.49\textwidth}
+            \begin{alertblock}{Reliability tradeoff}
+                The 5th percentile degrades, indicating greater sensitivity
+                to angle and configuration.
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=12]{Median Capacity by RX Angle}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.55\textwidth}
+            \centering
+            \scriptsize
+            \begin{tabular}{rrrr}
+                \toprule
+                \textbf{Angle} & \textbf{No lens} & \textbf{Lens} &
+                \textbf{Difference} \\
+                \midrule
+                $+60^\circ$ & 7.31 & 6.70 & $-0.61$ \\
+                $+45^\circ$ & 7.31 & 7.49 & $+0.18$ \\
+                $+30^\circ$ & 7.31 & 7.29 & $-0.01$ \\
+                $+15^\circ$ & 7.30 & 8.02 & $+0.72$ \\
+                $0^\circ$   & 7.30 & 7.68 & $+0.39$ \\
+                $-15^\circ$ & 7.29 & 8.28 & $+0.99$ \\
+                $-30^\circ$ & 7.29 & \textbf{8.32} & $\mathbf{+1.03}$ \\
+                $-45^\circ$ & 7.29 & 8.13 & $+0.84$ \\
+                $-60^\circ$ & 7.29 & 7.43 & $+0.14$ \\
+                \bottomrule
+            \end{tabular}
+        \end{column}
+        \begin{column}{0.41\textwidth}
+            \begin{exampleblock}{Best region}
+                The strongest median performance occurs from
+                $-15^\circ$ to $-45^\circ$, led by $-30^\circ$.
+            \end{exampleblock}
+            \begin{alertblock}{Observed asymmetry}
+                $+60^\circ$ performs worse than the no-lens case. Positive
+                and negative angles cannot be assumed symmetric.
+            \end{alertblock}
+            \small
+            Verify RX orientation, HFSS mapping, parameter filtering, and
+            angle signs before treating the asymmetry as physical.
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}[t,shrink=10]{Paired Checks Using Identical TX Positions}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.46\textwidth}
+            \begin{block}{Across 180 pairs}
+                \centering
+                \resizebox{\linewidth}{!}{%
+                \begin{tabular}{@{}lr@{}}
+                    \toprule
+                    \textbf{Paired statistic} & \textbf{Result} \\
+                    \midrule
+                    Median capacity difference & $+0.40$~bit/s/Hz \\
+                    Mean capacity difference & $+0.15$~bit/s/Hz \\
+                    Lens wins & 106/180 ($58.9\%$) \\
+                    Median SNR difference & $+1.3$~dB \\
+                    Median delay-spread difference & $-4.70$~ns \\
+                    \bottomrule
+                \end{tabular}
+                }
+            \end{block}
+        \end{column}
+        \begin{column}{0.50\textwidth}
+            \begin{block}{Lens wins by angle}
+                \begin{itemize}
+                    \item 15/20 drops at $+15^\circ$ and $-15^\circ$
+                    \item 14/20 drops at $0^\circ$ and $-30^\circ$
+                    \item 13/20 drops at $-45^\circ$
+                    \item Only 8/20 drops at $+60^\circ$
+                \end{itemize}
+            \end{block}
+            \begin{alertblock}{Conclusion}
+                Lens benefit depends on angular alignment and is not a
+                universal improvement.
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\subsection{Virtual MIMO Results}
+
+\begin{frame}[t,shrink=12]{Virtual MIMO Channel Conditioning}
+    \centering
+    \small
+    \begin{tabular}{lrr}
+        \toprule
+        \textbf{Metric} & \textbf{No lens} & \textbf{Lens} \\
+        \midrule
+        Median condition number & 49.4 (33.8~dB) & 54.0 (34.6~dB) \\
+        5th--95th percentile range & 27.8--44.4~dB & 29.4--40.6~dB \\
+        Median effective rank & 4.09 of 9 & 4.07 of 9 \\
+        Median capacity at 10~dB & 21.72~bit/s/Hz & 21.11~bit/s/Hz \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{5mm}
+    \begin{alertblock}{No virtual-MIMO improvement}
+        The lens slightly increases the condition number, leaves effective
+        rank almost unchanged, and reduces median 10-dB virtual-MIMO capacity
+        by approximately $0.61$~bit/s/Hz.
+    \end{alertblock}
+    \begin{exampleblock}{Why this does not contradict the SISO result}
+        A lens can increase received power at selected angles without
+        improving channel orthogonality or the number of independent modes.
+    \end{exampleblock}
+\end{frame}
+
+\subsection{Limitations and Next Steps}
+
+\begin{frame}[t,shrink=22]{Main Limitations and Uncertainty}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Only 20 drops
+                \item 100,000 rather than 1,000,000 path samples
+                \item Isotropic Monte Carlo TX pattern
+                \item 10~dBm applied independently to every TX
+                \item Ideal Shannon-bound capacity
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                % \item Same patch CSV for all no-lens angle labels
+                \item Lens-angle orientation and mapping require verification
+                \item Virtual, not physical, $9\times9$ MIMO
+                % \item LLVM JIT initialization warning in notebook output
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \begin{alertblock}{Fair-power comparison}
+        For fixed total transmitted power, each TX should be reduced by
+        $10\log_{10}(9)\approx9.54$~dB.
+    \end{alertblock}
+\end{frame}
+
+% \begin{frame}[t,shrink=20]{Recommended Follow-Up Simulations}
+%     \begin{itemize}
+%         \item Increase to 100--500 drops and 1,000,000 path samples/source.
+%         \item Export full-precision results to CSV or Parquet.
+%         \item Report paired bootstrap confidence intervals for every angle.
+%         \item Add outage thresholds at 5, 6, and 7~bit/s/Hz.
+%         \item Repeat the comparison under a fixed total power budget.
+%         \item Separate isotropic-TX and HFSS patch-TX experiments.
+%         \item Verify boresight, angle signs, RX orientation, and HFSS mapping.
+%         \item For physical MIMO, model simultaneously active RX elements with
+%         an appropriate power-allocation and noise model.
+%     \end{itemize}
+% \end{frame}
+
+\subsection{Conclusion}
+
+\begin{frame}[t,shrink=15]{Monte Carlo Conclusions}
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.48\textwidth}
+            \begin{exampleblock}{Promising evidence}
+                \begin{itemize}
+                    \item Median capacity: $+5.2\%$
+                    \item Median throughput: $+5.1\%$
+                    \item Median delay spread: $-4.8\%$
+                    \item Best angle: $-30^\circ$
+                \end{itemize}
+            \end{exampleblock}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{alertblock}{Important qualification}
+                \begin{itemize}
+                    \item Lower 5th-percentile capacity
+                    \item $+60^\circ$ underperforms no lens
+                    \item No virtual-MIMO conditioning improvement
+                    \item Strong angle and pattern dependence
+                \end{itemize}
+            \end{alertblock}
+        \end{column}
+    \end{columns}
+    \begin{block}{Engineering interpretation}
+        The lens behaves as a direction-selective gain mechanism. It can
+        improve typical performance when aligned, but it can be detrimental
+        under angular mismatch. Final design decisions require more drops,
+        fair total power, verified pattern mapping, and physical validation.
+    \end{block}
+\end{frame}

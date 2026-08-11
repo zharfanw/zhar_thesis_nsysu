@@ -1,0 +1,4 @@
+N,main_loop_actual,main_loop_naive_per_element,mc_drops,mc_runs_total,mc_runs_naive_per_element
+3,3,9,20,60,180
+5,5,25,20,100,500
+9,9,81,20,180,1620

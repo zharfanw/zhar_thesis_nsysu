@@ -1,0 +1,94 @@
+# Raw output log -- Setupv3_20mx20m_lens_5x5_Patch_randomCom.ipynb
+# Cells extracted verbatim (unmodified) from stored notebook outputs: [11, 33, 36, 39, 43, 48, 50]
+
+===== CELL 11  (source starts: 'FREQ_GHZ = 38') =====
+5 TX elements (fixed, pattern=csv) x 5 RX scenarios
+  Simul_+60deg: csv=farfieldAntennaData/FarFieldData_m60deg_detailFreq.csv  rx_pos=[-9.01 -0.01  2.  ]  rx_orient_deg=[-90. -90.   0.]
+  Simul_+30deg: csv=farfieldAntennaData/FarFieldData_m30deg_detailFreq.csv  rx_pos=[-9.01 -0.01  2.  ]  rx_orient_deg=[-90. -90.   0.]
+  Simul_+0deg: csv=farfieldAntennaData/FarFieldData_0deg_detailFreq.csv  rx_pos=[-9.02  0.    2.  ]  rx_orient_deg=[-90. -90.   0.]
+  Simul_-30deg: csv=farfieldAntennaData/FarFieldData_m30deg_detailFreq.csv  rx_pos=[-9.01  0.01  2.  ]  rx_orient_deg=[-90.  90.   0.]
+  Simul_-60deg: csv=farfieldAntennaData/FarFieldData_m60deg_detailFreq.csv  rx_pos=[-9.01  0.01  2.  ]  rx_orient_deg=[-90.  90.   0.]
+
+===== CELL 33  (source starts: 'print("=" * 60)') =====
+============================================================
+EVALUATION SUMMARY -- 5 TX elements x 5 RX lens scenarios @ 38 GHz
+============================================================
+        name  rx_lens_angle_deg  combined_gain_db  mean_|rho|_offdiag  max_|rho|_offdiag  capacity_10dB_bits/s/Hz
+ Simul_+0deg                  0        -42.231770            0.511307           0.990868                 3.459059
+Simul_+30deg                 30        -44.721175            0.694597           0.967875                 3.458826
+Simul_-30deg                -30        -44.740956            0.661852           0.967172                 3.458800
+Simul_+60deg                 60        -53.458954            0.845672           0.991676                 3.457347
+Simul_-60deg                -60        -53.646411            0.844505           0.991440                 3.457357
+
+Best RX scenario (combined gain): Simul_+0deg  (-42.2 dB, capacity@10dB=3.46 bits/s/Hz)
+
+===== CELL 36  (source starts: 'H_5x5 = H_all  # (rx_config, tx_element, freq) -- direct combination, ') =====
+H_5x5 shape: (5, 5, 401)  # (rx, tx, freq) -- combined from 5 simulations of 5x1
+============================================================
+5x5 MIMO SUMMARY (combined from 5 simulations) @ 38 GHz
+============================================================
+Condition number : median = 5.7  (15.1 dB)
+Effective rank   : median = 3.39 / 5
+Capacity @ 10dB  : 14.24 bits/s/Hz
+
+===== CELL 39  (source starts: 'def rx_correlation_5x5(H9):') =====
+============================================================
+SPATIAL CORRELATION (DECORRELATION) -- combined 5x5 MIMO, RX side
+============================================================
+Mean |rho| off-diagonal : 0.2334
+Max  |rho| off-diagonal : 0.4980
+(closer to 0 = more decorrelated/independent -- good for diversity/multiplexing gain; closer to 1 = more correlated, limiting effective rank & MIMO capacity)
+
+===== CELL 43  (source starts: '# --- Random-TX experiment parameters (edit here) ---') =====
+Random-TX: 20 drops x 5 TX x 5 RX scenarios, seed=20260718  (100 total PathSolver runs)
+
+===== CELL 48  (source starts: 'if RUN_RANDOM_TX_MONTE_CARLO and not random_tx_results.empty:') =====
+========================================================================
+RANDOM-TX MONTE CARLO SUMMARY -- combined across all RX scenarios
+========================================================================
+Drops / TX per drop / RX scenarios : 20 / 5 / 5
+Total runs (drop x RX)              : 100
+Capacity median (combined)          : 6.46 bit/s/Hz
+Capacity 5%-95% (combined)          : 3.97 - 8.90 bit/s/Hz
+Throughput median (combined)        : 2.58 Gbit/s
+Delay spread median (combined)      : 63.46 ns
+Drop-RX outage C < 1.0           : 0.0%
+
+Per RX scenario:
+ rx_config_index rx_config_name  rx_lens_angle_deg  capacity_median  capacity_p05  capacity_p95  snr_median_db  outage
+               0   Simul_+60deg                 60         5.702155      3.561451      8.138091      17.481945     0.0
+               1   Simul_+30deg                 30         6.310228      4.333645      8.212238      19.090183     0.0
+               2    Simul_+0deg                  0         6.957178      5.174754      8.857847      21.058067     0.0
+               3   Simul_-30deg                -30         7.278836      5.451078      9.517728      21.945515     0.0
+               4   Simul_-60deg                -60         5.934236      3.707421      8.425823      18.088249     0.0
+
+===== CELL 50  (source starts: 'random_tx_mimo_results = pd.DataFrame()') =====
+========================================================================
+SVD/5x5 MIMO SUMMARY PER DROP -- Random-TX Monte Carlo
+========================================================================
+Condition number median (across drops)  : 17.1  (24.6 dB)
+Condition number 5%-95% (dB)            : 19.4 - 32.1 dB
+Effective rank median (across drops)     : 2.77 / 5
+Capacity @ 10 dB median (across drops)    : 12.81 bit/s/Hz
+    drop  cond_median  cond_median_db  erank_median  capacity_10db
+0      0    16.705011       24.456935      2.639223      12.877628
+1      1    53.031558       34.490688      1.554712       9.402682
+2      2    30.403171       29.658378      1.957915      10.567950
+3      3    14.220766       23.058460      3.113829      13.510842
+4      4    17.460318       24.841043      2.850481      12.908906
+5      5    23.606284       27.460553      1.738099      10.138351
+6      6    13.245332       22.441257      3.188311      13.789251
+7      7     5.639657       15.025054      3.408017      14.514124
+8      8    39.512727       31.934740      2.011245      10.988956
+9      9    11.687142       21.354166      2.999209      13.385111
+10    10    21.657047       26.711985      2.826695      12.895609
+11    11    15.725244       23.931948      2.708704      12.636609
+12    12    22.337769       26.980796      1.829691      10.638084
+13    13     9.476096       19.532589      2.515734      12.702362
+14    14    22.786496       27.153551      2.516489      12.420956
+15    15    12.822067       22.159161      3.462028      14.279155
+16    16    15.135275       23.599806      3.274889      13.878848
+17    17    15.877880       24.015850      3.026223      13.264977
+18    18    28.408083       29.068839      2.661111      12.209444
+19    19    24.694127       27.851874      2.971865      12.738143
+

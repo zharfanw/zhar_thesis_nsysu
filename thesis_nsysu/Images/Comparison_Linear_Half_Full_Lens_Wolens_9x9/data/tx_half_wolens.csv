@@ -1,0 +1,10 @@
+scenario,tx_index,x_m,y_m,z_m
+half_wolens,0,-7.96077,-1.8,2.0
+half_wolens,1,-7.96077,-1.35,2.0
+half_wolens,2,-7.96077,-0.9,2.0
+half_wolens,3,-7.96077,-0.45,2.0
+half_wolens,4,-7.96077,0.0,2.0
+half_wolens,5,-7.96077,0.45,2.0
+half_wolens,6,-7.96077,0.9,2.0
+half_wolens,7,-7.96077,1.35,2.0
+half_wolens,8,-7.96077,1.8,2.0

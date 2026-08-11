@@ -1,0 +1,10 @@
+scenario,rx_index,rx_name,x_m,y_m,z_m,orientation_alpha_deg,orientation_beta_deg,orientation_gamma_deg,lens_angle_deg,pattern_csv
+half_lens,0,Simul_+60deg,-9.0085,-0.014722,2.0,-90,-90,0.0,60,farfieldAntennaData/FarFieldData_m60deg_detailFreq.csv
+half_lens,1,Simul_+45deg,-9.012021,-0.012021,2.0,-90,90,0.0,45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv
+half_lens,2,Simul_+30deg,-9.014722,-0.0085,2.0,-90,-90,0.0,30,farfieldAntennaData/FarFieldData_m30deg_detailFreq.csv
+half_lens,3,Simul_+15deg,-9.016421,-0.0044,2.0,-90,-90,0.0,15,farfieldAntennaData/FarFieldData_m15deg_detailFreq.csv
+half_lens,4,Simul_+0deg,-9.017,0.0,2.0,-90,-90,0.0,0,farfieldAntennaData/FarFieldData_0deg_detailFreq.csv
+half_lens,5,Simul_-15deg,-9.016421,0.0044,2.0,-90,90,0.0,-15,farfieldAntennaData/FarFieldData_m15deg_detailFreq.csv
+half_lens,6,Simul_-30deg,-9.014722,0.0085,2.0,-90,90,0.0,-30,farfieldAntennaData/FarFieldData_m30deg_detailFreq.csv
+half_lens,7,Simul_-45deg,-9.012021,0.012021,2.0,-90,90,0.0,-45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv
+half_lens,8,Simul_-60deg,-9.0085,0.014722,2.0,-90,90,0.0,-60,farfieldAntennaData/FarFieldData_m60deg_detailFreq.csv

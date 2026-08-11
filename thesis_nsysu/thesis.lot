@@ -1,12 +1,19 @@
 \noaddvspace 
 \linespread {1}\selectfont 
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {Table~1-1}{\ignorespaces Representative Existing Antenna-Lens Studies}}{24}{table.caption.4}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {Table~2-1}{\ignorespaces Design parameters of the metasurface antenna lens}}{32}{table.caption.9}%
+\contentsline {table}{\numberline {Table~2-2}{\ignorespaces Angular position and role of each receive and transmit index used in $\mathbf {H}(f)$}}{43}{table.caption.16}%
+\contentsline {table}{\numberline {Table~2-3}{\ignorespaces HFSS SBR+ solver: MIMO channel-quality metrics at 38\,GHz}}{52}{table.caption.28}%
+\contentsline {table}{\numberline {Table~2-4}{\ignorespaces HFSS Hybrid solver: MIMO channel-quality metrics at 38\,GHz}}{56}{table.caption.32}%
+\contentsline {table}{\numberline {Table~2-5}{\ignorespaces Sionna-RT: MIMO channel-quality metrics at 38\,GHz}}{61}{table.caption.36}%
+\contentsline {table}{\numberline {Table~2-6}{\ignorespaces Raw-channel MIMO metrics at 38 GHz across the three solvers}}{65}{table.caption.42}%
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {Table~4-1}{\ignorespaces Summary of unit cell simulation results}}{20}{table.caption.6}%
-\contentsline {table}{\numberline {Table~4-2}{\ignorespaces Summary of transmitarray antenna simulation results}}{21}{table.caption.7}%
-\contentsline {table}{\numberline {Table~4-3}{\ignorespaces Summary of communication channel evaluation results}}{23}{table.caption.8}%
+\contentsline {table}{\numberline {Table~3-1}{\ignorespaces Paired trajectory design and minimum TX--RX separation.}}{73}{table.caption.47}%
+\contentsline {table}{\numberline {Table~3-2}{\ignorespaces Aggregate link-quality results. Full-circle rows are diagnostic because of the near-collision.}}{77}{table.caption.49}%
+\contentsline {table}{\numberline {Table~3-3}{\ignorespaces Aggregate spatial-channel results. $D_\mathrm {pool}$ and $D_\mathrm {med}$ denote pooled and median-block decorrelation; $C_\mathrm {MIMO}$ is evaluated at 10~dB. Full-circle rows ($\dagger $) are diagnostic only.}}{77}{table.caption.50}%
+\contentsline {table}{\numberline {Table~3-4}{\ignorespaces Aggregate scalability metrics vs.\ array size $N$ (medians over 20 Monte Carlo drops).}}{88}{table.caption.55}%
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 

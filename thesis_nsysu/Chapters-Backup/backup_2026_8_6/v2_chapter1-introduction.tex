@@ -1,0 +1,919 @@
+\chapter{Introduction}
+
+% \section{Background}
+% \begin{itemize}
+%     \item Evolution of millimeter-wave communication systems
+%     \begin{itemize}
+%         \item FR1 (cellular bands becoming saturated, motivating the shift to mmWave)
+%     \end{itemize}
+%     \item Challenges of line-of-sight-dominant MIMO channels
+%     \begin{itemize}
+%         \item Discuss common mmWave channel challenges, supported by literature
+%     \end{itemize}
+%     \item Importance of channel decorrelation and spatial multiplexing
+%     \item Motivation for antenna lens-assisted MIMO systems
+%     \begin{itemize}
+%         \item Improve channel decorrelation and spatial multiplexing
+%     \end{itemize}
+% \end{itemize}
+
+
+\section{Background}
+
+% \paragraph{1 - Development of 5G and the Utilization of FR2 Spectrum}
+% Paragraf pertama membuka pembahasan dari kebutuhan komunikasi nirkabel berkecepatan tinggi dan penggunaan spektrum frekuensi tinggi pada 5G New Radio.
+
+% Poin utama:
+
+% Pertumbuhan kebutuhan data dan perangkat terhubung membutuhkan bandwidth komunikasi yang lebih luas karena scarcity and fragmentation in conventional cellular bands dan pindah ke mmwave\cite{Rappaport2013}
+% Salah satu pengembangan penting dalam 5G New Radio adalah pemanfaatan Frequency Range 2 (FR2) yang memiliki bandwidth yang luas \cite{TSGR2021}.
+% Frekuensi penelitian sebesar 38 GHz berada dalam FR2-1.
+% Secara lebih spesifik, 38 GHz termasuk dalam NR operating band n260, yang mencakup 37–40 GHz yang menyediakan hampir 3 GHz bandwidth untuk komunikasi nirkabel berkecepatan tinggi.
+% % Sitasi : \cite{Rappaport2013,TSGR2021}
+The rapid growth in data demand and the proliferation of connected devices necessitate significantly wider communication bandwidths to support next-generation wireless networks. This is primarily driven by the scarcity and fragmentation within conventional cellular bands, pushing the industry toward millimeter-wave (mmWave) frequencies \cite{Rappaport2013}. One of the most significant developments in 5G New Radio (NR) technology is the utilization of high-frequency spectrum, specifically Frequency Range 2 (FR2), which offers extensive bandwidth for high-speed wireless communication \cite{TSGR2021}. This research focuses on a frequency of 38 GHz, which falls within the FR2-1 segment. More specifically, 38 GHz is situated within the NR operating band n260, spanning 37–40 GHz and providing approximately 3 GHz of bandwidth for high-capacity wireless services.
+
+% \paragraph{Propagational Challenges and Hardware Complexity in 5G FR2}
+% The utilization of the high-frequency FR2 spectrum is inherently linked to significant propagation challenges arising from its short wavelengths. Signals at these frequencies suffer from severe free-space path loss, substantial penetration losses, and extreme sensitivity to physical blockages, which collectively restrict overall coverage \cite{Zeng2016}. Consequently, maintaining reliable wireless links in FR2 environments requires sophisticated techniques such as directional transmissions and high antenna gains. While the small wavelength size facilitates the integration of numerous antenna elements into a compact aperture, it also necessitates advanced spatial processing capabilities. Conventional approaches to achieve this include Massive MIMO systems designed to provide sufficient beamforming gain; however, fully digital MIMO architectures—which require an independent RF chain for every antenna element—pose substantial practical hurdles at FR2 frequencies. The high-frequency environment demands complex and costly components such as power amplifiers (PAs), low-noise amplifiers (LNAs), mixers, local oscillators, and high-speed ADCs or DACs \cite{Heath2016}. Scaling the number of RF chains in these systems significantly escalates hardware complexity, power consumption, manufacturing costs, and the stringency of calibration requirements.
+
+% Poin utama Paragraf 2:
+% Sinyal FR2 memiliki panjang gelombang yang sangat pendek.
+% Frekuensi tinggi mengalami:
+% free-space path loss yang tinggi;
+% penetration loss yang besar;
+% sensitivitas terhadap blockage;
+% cakupan propagasi yang lebih terbatas.
+% Karena itu, sistem FR2 memerlukan directional transmission dan antenna gain yang tinggi.
+% Ukuran panjang gelombang yang kecil memungkinkan banyak elemen antena ditempatkan pada aperture yang relatif ringkas. \cite{Zeng2016}
+
+% Poin utama Paragraf 3:
+% Massive MIMO digunakan untuk menghasilkan beamforming gain.
+% Fully digital MIMO membutuhkan satu RF chain untuk setiap elemen antena.
+% Pada frekuensi FR2, RF chain memerlukan komponen seperti:
+% power amplifier;
+% low-noise amplifier;
+% mixer;
+% local oscillator;
+% ADC atau DAC.
+% Penambahan jumlah RF chain meningkatkan:
+% hardware complexity;
+% konsumsi daya;
+% biaya implementasi;
+% kebutuhan kalibrasi.
+% sitasi : \cite{Heath2016}
+
+% \paragraph{Lens Antenna Array for Beamspace Communication in FR2 MIMO}
+The lens antenna array presents a compelling alternative to conventional MIMO systems by utilizing an electromagnetic lens in conjunction with antenna elements positioned on the focal region or surface. This configuration allows the lens to provide varying phase delays across the aperture, facilitating the passive spatial transformation of signals from the antenna space into a beamspace \cite{Shen2019}. By focusing waves originating from different directions onto specific subsets of antenna elements, only those receiving dominant energy need to be connected to the RF chains. This characteristic is particularly advantageous for Frequency Range 2 (FR2) MIMO systems, where propagation channels are typically characterized by a limited number of dominant paths and a relatively sparse beamspace \cite{Zeng2016}. In such environments, most channel energy is concentrated on only a few beams or antennas, allowing for efficient beam selection to significantly reduce the required number of RF chains. Furthermore, the integration of lens antennas can enhance system performance by improving angular separation, spatial channel decorrelation, effective channel rank, spatial multiplexing capability, and overall channel capacity \cite{Zeng2016}.
+
+% Poin utama Paragraf 4:
+% Lens antenna array terdiri dari:
+% electromagnetic lens;
+% antenna elements pada focal region atau focal surface.
+% Lens memberikan phase delay berbeda di sepanjang aperture.
+% Gelombang dari arah berbeda difokuskan pada elemen antena berbeda.
+% Lens secara pasif melakukan spatial transformation dari antenna space menuju beamspace.
+% Hanya antena yang menerima energi dominan yang perlu dihubungkan ke RF chain.
+
+% Poin utama Paragraf 5:
+% Kanal FR2 umumnya memiliki jumlah dominant propagation paths yang terbatas.
+% Beamspace channel menjadi relatif sparse.
+% Sebagian besar energi kanal terkonsentrasi pada beberapa beam atau antena.
+% Beam selection dapat mengurangi jumlah RF chain.
+% Lens juga berpotensi meningkatkan:
+% angular separation;
+% spatial channel decorrelation;
+% effective channel rank;
+% spatial multiplexing capability;
+% channel capacity.\cite{Zeng2016}
+
+% \paragraph{Metasurface-Based Planar Lens Solutions for High-Frequency Communication}
+While conventional dielectric lenses are valued for their high focusing capabilities and gain, they possess several significant drawbacks that hinder their integration into modern wireless systems. These include thick profiles, substantial weight, curved surfaces, and reflection losses stemming from impedance mismatches \cite{Al-Joumayly2011}. Furthermore, dielectric lenses can be bulky, expensive to manufacture at certain microwave frequencies, and inherently difficult to integrate with planar antenna arrays due to their complex geometries. To overcome these limitations, there is a growing shift toward planar lens architectures. A prominent solution in this area is the metasurface-based planar antenna lens, which comprises an array of sub-wavelength unit cells that act as individual spatial phase shifters \cite{Al-Joumayly2011}. By adjusting the geometric dimensions of these unit cells, one can precisely control the transmission magnitude, phase, and frequency response across the aperture. The distribution of these cells allows for the synthesis of specific phase profiles capable of transforming spherical wavefronts into planar ones or vice versa, effectively focusing waves while maintaining a compact and low-profile form factor \cite{Al-Joumayly2011}.
+
+% Poin utama Paragraf 6:
+% Dielectric lens dapat memberikan focusing dan gain tinggi.
+% Namun, dielectric lens dapat memiliki:
+% profil tebal;
+% bobot besar;
+% curved surface;
+% reflection loss akibat impedance mismatch;
+% integrasi yang sulit dengan planar antenna array;
+% proses fabrikasi yang relatif kompleks.
+% Masalah ini mendorong pengembangan planar lens.
+
+% Poin utama Paragraf 7:
+% Metasurface terdiri dari kumpulan sub-wavelength unit cells.
+% Setiap unit cell bertindak sebagai spatial phase shifter.
+% Dimensi geometris unit cell menentukan:
+% transmission magnitude;
+% transmission phase;
+% frequency response.
+% Distribusi unit cell di seluruh aperture membentuk phase profile yang diperlukan.
+% Metasurface dapat mengubah:
+% spherical wavefront menjadi planar wavefront;
+% planar wavefront menjadi focused wavefront.
+
+% \paragraph{8 — Relevance of a 38 GHz Metasurface Lens to 5G FR2}
+
+% Paragraf ini membuat hubungan langsung antara desainmu dan 5G FR2.
+
+% Poin utama:
+
+% Lens dirancang pada 38 GHz.
+% Frekuensi tersebut berada dalam NR band n260.
+% Teknologi ini relevan untuk:
+% FR2 access points;
+% base stations;
+% fixed wireless access;
+% indoor high-capacity communication;
+% directional MIMO receivers.
+% Metasurface dapat melakukan passive beam focusing tanpa memerlukan phase shifter aktif pada setiap elemen.
+
+\section{Literature Review}
+\label{sec:literature_review}
+
+The development of millimeter-wave (mmWave) wireless systems has
+motivated extensive research on high-gain antennas, large-scale
+multiple-input multiple-output (MIMO) architectures, and spatial
+beamforming techniques. Although conventional antenna arrays can
+provide substantial beamforming and spatial-multiplexing gains, their
+implementation becomes increasingly complex as the number of antenna
+elements and radio-frequency (RF) chains increases. Electromagnetic
+lens antennas provide an alternative approach by manipulating the
+incident wavefront directly in the electromagnetic domain. When
+combined with antenna elements positioned in the focal region, the
+lens can also transform angle-dependent propagation components into
+spatially separated focal responses.
+
+This section reviews conventional mmWave MIMO systems, antenna-lens
+technologies for beam focusing, beamspace MIMO and lens-assisted
+communications, and existing physical implementations of antenna
+lenses. The remaining research gaps are subsequently identified, with
+particular emphasis on the scalability of metasurface unit-cell
+designs toward electrically larger apertures and the relationship
+between physical lens focusing and MIMO channel characteristics.
+
+
+\subsection{Conventional Millimeter-Wave MIMO Systems}
+\label{subsec:conventional_mmwave_mimo}
+
+Millimeter-wave communication provides access to substantially wider
+frequency bandwidths than conventional sub-6-GHz systems. These wide
+bandwidths are attractive for supporting the high data rates required
+by future wireless applications. Nevertheless, mmWave propagation is
+affected by substantial path loss, blockage, limited diffraction, and
+relatively sparse scattering. Therefore, reliable mmWave links
+generally require highly directional transmission and reception
+\cite{Guo2026,Payami2020}.
+
+The short wavelength at mmWave frequencies enables a large number of
+antenna elements to be accommodated within a relatively compact
+physical area. Large antenna arrays can therefore be used to generate
+narrow beams and compensate for propagation loss through antenna-array
+gain. In addition, when multiple independent propagation modes are
+available, MIMO processing can support the simultaneous transmission
+of multiple data streams. However, the practical advantages of
+large-scale mmWave MIMO depend strongly on the transceiver
+architecture.
+
+In a fully digital MIMO architecture, each antenna element is connected
+to an independent RF chain. This arrangement provides extensive
+flexibility for precoding, combining, interference suppression, and
+spatial multiplexing. However, each RF chain requires components such
+as mixers, amplifiers, filters, and data converters. As the number of
+antenna elements increases, the resulting hardware cost, power
+consumption, and implementation complexity can become prohibitive
+\cite{Payami2020,Zeng2018}.
+
+Analog beamforming reduces the number of required RF chains by
+connecting one RF chain to multiple antenna elements through a
+phase-shifting network. This architecture can provide high array gain
+with lower hardware complexity than a fully digital system. However,
+a single-RF-chain analog beamformer generally supports only one data
+stream and therefore cannot fully exploit the spatial-multiplexing
+capability of a MIMO channel.
+
+Hybrid analog--digital beamforming has consequently been introduced as
+a compromise between fully digital and analog architectures. A
+limited number of RF chains performs digital signal processing, while
+an analog network connects these RF chains to a larger number of
+antenna elements. Hybrid beamforming can provide a practical trade-off
+among antenna gain, spatial multiplexing, hardware cost, and energy
+consumption \cite{Payami2020}.
+
+Nevertheless, fully connected hybrid architectures may require a
+large number of phase shifters, power dividers, combiners, and RF
+interconnections. Practical phase shifters also have finite phase
+resolution and introduce insertion loss. In addition, the design of
+wideband hybrid precoding and combining becomes more complicated
+because the same analog network must operate over the complete signal
+bandwidth.
+
+The practical complexity of hybrid beamforming was demonstrated by
+Payami \textit{et al.}, who developed a fully connected hybrid
+beamforming platform consisting of a $16\times8$ antenna array with
+128 antenna elements and two RF inputs at 26~GHz
+\cite{Payami2020}. Although the system provides independent
+control of the phase and amplitude associated with each RF path, its
+implementation requires extensive RF interconnections, calibration
+procedures, control interfaces, phase shifters, and attenuators.
+
+Furthermore, the sparse propagation characteristics of many mmWave
+environments can limit the number of sufficiently independent spatial
+modes. In line-of-sight-dominant scenarios, closely spaced antennas
+with similar orientations may observe highly correlated channel
+responses. Therefore, increasing the number of conventional antenna
+elements does not necessarily produce a proportional increase in the
+number of usable spatial streams.
+
+These limitations have motivated the investigation of alternative
+antenna architectures capable of providing high gain and spatial
+discrimination without requiring a dedicated active phase-shifting
+network for every antenna element. One promising solution is the use
+of electromagnetic antenna lenses.
+
+
+\subsection{Antenna Lens Technologies for Beam Focusing}
+\label{subsec:antenna_lens_technologies}
+
+An electromagnetic lens controls the spatial phase distribution of an
+incident wave across its aperture. During transmission, a feed antenna
+located near the focal point produces a spherical wave whose
+propagation distance varies across the lens surface. The lens
+introduces different transmission phases at different aperture
+positions to compensate for these path-length differences. As a
+result, the transmitted spherical wavefront can be transformed into
+an approximately planar or shaped wavefront.
+
+Through electromagnetic reciprocity, an incident plane wave can
+conversely be concentrated within a focal region behind the lens.
+This reciprocal property enables an antenna lens to operate both as a
+high-gain transmitting aperture and as a spatial focusing device at
+the receiver.
+
+Conventional electromagnetic lenses are commonly implemented using
+bulk dielectric materials. Their curved surfaces provide different
+amounts of phase accumulation across the aperture. Dielectric lenses
+can provide high antenna gain and relatively wide bandwidth,
+particularly at mmWave frequencies. However, they may be bulky,
+heavy, difficult to integrate with planar circuits, and affected by
+reflection and dielectric losses.
+
+Planar lens technologies reduce the physical profile by implementing
+the required phase distribution using spatially distributed
+phase-shifting elements. Early planar lenses used receiving and
+transmitting antenna elements connected through transmission lines
+with different lengths. Although these structures can provide the
+required phase delay, their interconnection networks may become
+complex for large apertures.
+
+Frequency-selective surfaces, transmitarrays, metamaterials, and
+metasurfaces provide alternative planar implementations. A
+transmitarray generally consists of a spatial feed and a transmission
+surface containing numerous unit cells. Each unit cell provides a
+specific transmission magnitude and transmission phase. By arranging
+unit cells with different responses over the aperture, the surface can
+collimate, redirect, or shape the transmitted wave
+\cite{Song2026}.
+
+Al-Joumayly and Behdad developed a planar microwave lens based on
+subwavelength spatial phase shifters derived from miniaturized-element
+frequency-selective surfaces \cite{Al-Joumayly2011}. In their
+approach, each subwavelength unit cell operates as a local spatial
+phase shifter. Unit cells with different transmission phases are
+distributed over the aperture to approximate the desired lens phase
+profile. The fabricated X-band prototypes demonstrated approximately
+20\% bandwidth and relatively stable responses under oblique
+incidence.
+
+Metasurfaces extend this concept by using electrically small
+scatterers to manipulate the phase, amplitude, and polarization of
+electromagnetic waves. Compared with conventional bulk lenses,
+metasurface lenses can provide lower profiles, shorter focal
+distances, reduced weight, and improved compatibility with printed
+circuit manufacturing.
+
+The performance of a metasurface lens depends strongly on its
+unit-cell library. Important unit-cell characteristics include the
+available transmission-phase range, transmission magnitude,
+operating bandwidth, polarization response, angular stability,
+physical periodicity, and fabrication sensitivity.
+
+A unit-cell library should ideally provide a sufficiently wide phase
+range while maintaining high and relatively uniform transmission
+magnitude. Limited phase coverage can produce phase errors across the
+aperture. Significant differences in transmission magnitude between
+unit-cell geometries can create an unintended amplitude distribution,
+reduce aperture efficiency, and increase radiation sidelobes.
+
+The physical size of the unit cell is also important. Smaller unit
+cells provide finer spatial sampling of the required phase
+distribution and allow smoother transitions between neighbouring
+elements. However, very small structures may become more sensitive to
+fabrication tolerances, conductor losses, substrate variations, and
+mutual coupling.
+
+The angular response of the unit cell is particularly important for a
+spatially fed lens. Unit cells are frequently characterized using
+periodic boundary conditions and normal plane-wave incidence. In an
+actual lens, however, the feed illuminates different parts of the
+aperture at different local incident angles. Unit cells near the
+aperture edges may therefore exhibit transmission responses that
+differ from their normal-incidence characteristics.
+
+Consequently, designing a practical metasurface lens requires a
+compromise among transmission efficiency, phase coverage, spatial
+resolution, angular stability, bandwidth, aperture size, and
+fabrication complexity.
+
+The reciprocal focusing property also provides an important
+connection between antenna-lens technology and MIMO communications.
+Waves arriving from different angular directions can be concentrated
+at different locations within the focal region. If several antenna
+elements are positioned within this region, the lens can generate
+angle-dependent spatial responses without requiring a conventional
+active phase-shifter network.
+
+
+\subsection{Beamspace MIMO and Lens-Assisted Communications}
+\label{subsec:beamspace_mimo}
+
+In conventional MIMO systems, signals and channels are generally
+represented in the antenna-element domain. Beamspace MIMO instead
+represents the transmitted and received signals using a set of
+spatial beams. This transformation can concentrate the energy of a
+sparse mmWave channel into a limited number of dominant beam
+components.
+
+An electromagnetic lens can approximately perform this spatial
+transformation in the RF domain. A lens antenna array generally
+consists of an electromagnetic lens and multiple antenna elements
+placed along a focal arc or focal surface. An incident wave with a
+particular angle of arrival is focused onto a localized subset of
+antenna elements. Conversely, exciting different focal-region
+elements produces beams with different departure angles.
+
+Zeng and Zhang derived an analytical response for a lens antenna array
+and showed that the energy distribution across the focal-region
+antennas follows a sinc-like response
+\cite{Zeng2016}. The position of the maximum response is determined
+by the angle of arrival or departure. Consequently, propagation paths
+with sufficiently separated angular directions can produce distinct
+energy distributions across the focal-plane antenna elements.
+
+This property is attractive for mmWave communications because mmWave
+channels commonly contain only a limited number of dominant
+propagation paths. In the beamspace representation, most of the
+channel energy may therefore be concentrated into a small number of
+beams. Only the antenna elements associated with these dominant beams
+need to be connected to RF chains, potentially reducing the hardware
+and signal-processing dimensions.
+
+By exploiting the angular separation of different propagation paths,
+Zeng and Zhang proposed path-division multiplexing and orthogonal
+path-division multiplexing \cite{Zeng2016}. Under favourable
+angular conditions, different propagation paths can be treated as
+approximately parallel channels. Multiple data streams can then be
+transmitted through different paths using relatively simple per-path
+processing.
+
+For propagation paths with insufficient angular separation,
+small-scale group-based MIMO processing can be used to reduce
+inter-path interference. This allows the lens-assisted architecture to
+operate under more general propagation conditions than the ideal
+orthogonal-path case.
+
+The lens-assisted concept was extended to multiuser and
+full-dimensional systems by Zeng, Yang, and Zhang
+\cite{Zeng2018}. In a full-dimensional lens array, antenna
+elements are distributed over a focal surface rather than only along
+a one-dimensional focal arc. The arrangement therefore provides
+angular resolution in both azimuth and elevation.
+
+For wideband multiuser systems, path-delay compensation was introduced
+to simplify the frequency-selective channels into smaller
+approximately frequency-flat MIMO channels. The proposed architecture
+achieved spectral efficiency comparable to conventional benchmark
+systems while requiring fewer RF chains and lower signal-processing
+complexity \cite{Zeng2018}.
+
+Nevertheless, wideband lens-assisted MIMO systems are affected by beam
+squint. The focusing location associated with a physical path can
+change with frequency. Therefore, an antenna or beam selected at the
+centre frequency may not capture the complete channel energy across
+the entire signal bandwidth.
+
+Shen \textit{et al.} investigated this limitation and proposed a
+phase-shifter-aided beam-selection network
+\cite{Shen2019}. In the proposed architecture, a single RF
+chain can support multiple focused-energy beams. The system combines
+beam selection and beamspace precoding to capture the
+frequency-dependent energy distribution without requiring an RF
+chain for every beam.
+
+These communication-oriented studies demonstrate the theoretical
+potential of lens antenna arrays for beam selection, RF-chain
+reduction, and path-dependent spatial multiplexing. However, most of
+them model the lens using an ideal spatial transformation or an
+analytical sinc-like response.
+
+Such models provide valuable theoretical insight, but they do not
+always include the complete physical characteristics of a practical
+metasurface lens. These characteristics include finite aperture size,
+insertion loss, focal-spot width, sidelobes, phase errors, unit-cell
+coupling, manufacturing tolerances, and the actual radiation patterns
+observed at different focal-plane antenna positions.
+
+
+\subsection{Existing Research on Antenna Lenses}
+\label{subsec:existing_antenna_lens_research}
+
+Existing antenna-lens research can be broadly divided into physical
+electromagnetic-lens development and communication-oriented
+lens-assisted system studies. Physical studies generally focus on
+transmission magnitude, transmission phase, focusing intensity, focal
+distance, antenna gain, bandwidth, polarization, and beam steering.
+Communication-oriented studies instead emphasize beam selection,
+spectral efficiency, path separation, RF-chain reduction, and
+system-level throughput.
+
+At microwave frequencies, Al-Joumayly and Behdad demonstrated
+wideband planar lenses based on subwavelength spatial phase shifters
+\cite{Al-Joumayly2011}. Their results showed that compact
+periodic structures could provide different local transmission phases
+while maintaining relatively stable responses over a useful bandwidth
+and angular range. However, the implementation used multiple closely
+spaced periodic layers to obtain the required transmission response.
+
+At 28~GHz, several metasurface-lens functions have been demonstrated.
+Yoon and Oh proposed a polarization-dependent thin lens based on
+multiple rectangular patches and slotted grids
+\cite{Yoon2019}. The lens produced different
+electromagnetic responses for two orthogonal incident polarizations.
+For one polarization, the structure operated as a focusing lens,
+whereas for the other polarization, it behaved primarily as a
+frequency-selective surface.
+
+Tiwari \textit{et al.} developed a $25\times25$ digital metasurface
+lens at 28~GHz with four discrete phase states
+\cite{Tiwari2023}. Three switchable feed antennas were placed
+below the lens to produce beams at broadside and approximately
+$\pm30^{\circ}$. The measured broadside gain was 19~dBi, with a
+reported gain enhancement of 14.9~dB and a scan loss of approximately
+1~dB.
+
+Although the approach provides active beam steering with relatively
+few switching elements, the available beam directions are determined
+by the finite number of feed positions. Increasing the number of beam
+directions would require additional feed antennas, switching
+components, or a more complex reconfigurable surface.
+
+Lee \textit{et al.} proposed a large-aperture metamaterial lens for
+multilayer MIMO transmission at 28~GHz
+\cite{Lee2022Large}. The lens contained a $28\times28$
+unit-cell array within an aperture of approximately
+$50.4\times50.4$~mm$^2$. A channel model was developed by
+representing propagation through the feed, metasurface, and
+free-space regions as a sequence of channel components.
+
+The measured and simulated results indicated lens gain of up to
+approximately 14~dB, while system-level simulations demonstrated an
+increase in user throughput. This study provides an important
+connection between a physical metamaterial lens and communication
+performance. However, its primary system-level objective was
+throughput enhancement rather than a detailed investigation of
+channel correlation and spatial-mode structure.
+
+At frequencies around 38~GHz, Lee \textit{et al.} demonstrated a
+single-layer phase-gradient metasurface lens operating from 35 to
+40~GHz \cite{Lee2021}. The metasurface contained a
+$13\times13$ array of unit cells with a period of 3~mm, resulting in
+an aperture size of $39\times39$~mm$^2$. The structure consisted of
+two patterned metallic layers separated by a single dielectric
+substrate.
+
+By varying the geometrical parameters of the unit cells, the design
+provided approximately full transmission-phase coverage while
+maintaining satisfactory transmission magnitude. The metasurface was
+designed for a nominal focal distance of 13~mm at 38~GHz and
+demonstrated focusing over the frequency range from 35 to 40~GHz.
+
+The focusing response was also characterized under different incident
+angles. The lens maintained a spatially concentrated focal response
+for incident angles up to approximately $30^{\circ}$. This result
+demonstrates that a compact single-layer metasurface can provide
+broadband and relatively angle-stable focusing around 38~GHz.
+
+Nevertheless, the demonstrated lens was limited to a
+$13\times13$ aperture. The study primarily evaluated the focal-field
+distribution, focal position, transmission response, polarization,
+and incident-angle stability. It did not investigate whether the same
+unit-cell library could be extended to a substantially larger
+aperture while maintaining the predicted phase and transmission
+responses.
+
+At higher mmWave frequencies, Bagheri \textit{et al.} proposed a
+three-layer Huygens metalens operating from 60 to 74~GHz
+\cite{Bagheri2023}. The structure used a $50\times50$ array of
+two-state unit cells and was illuminated by a dipole antenna. The
+maximum reported antenna gain was approximately 25~dBi at 69~GHz.
+
+The Huygens configuration combines electric and magnetic responses to
+improve electromagnetic transmission while controlling the
+transmitted phase. However, using only two phase states produces
+relatively coarse spatial phase quantization compared with a
+continuous or multistate phase distribution.
+
+Torres \textit{et al.} experimentally demonstrated a metallic
+epsilon-near-zero lens around 144~GHz
+\cite{Torres2015}. The structure consisted of narrow metallic
+waveguides operating close to their cutoff frequency. The lens
+provided a measured transmission enhancement of 15.9~dB and a
+directivity of 17.6~dBi.
+
+Although the study confirmed epsilon-near-zero focusing at
+millimeter-wave frequencies, its curved metallic construction differs
+substantially from low-profile printed metasurface lenses and may be
+less suitable for direct integration with planar focal-plane antenna
+arrays.
+
+
+\begin{table}[t]
+\centering
+\caption{Representative Existing Antenna-Lens Studies}
+\label{tab:existing_lens_studies}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}
+{
+>{\raggedright\arraybackslash}p{2.4cm}
+>{\centering\arraybackslash}p{1.3cm}
+>{\raggedright\arraybackslash}p{2.1cm}
+>{\raggedright\arraybackslash}X
+>{\raggedright\arraybackslash}X
+}
+\toprule
+Reference &
+Frequency &
+Configuration &
+Main contribution &
+Relevant limitation \\
+\midrule
+
+Al-Joumayly and Behdad \cite{Al-Joumayly2011} &
+X-band &
+MEFSS planar lens &
+Wideband subwavelength spatial phase shifters with angular stability &
+Multilayer structure and antenna-level evaluation \\
+
+Yoon and Oh \cite{Yoon2019} &
+28~GHz &
+Polarization-dependent thin lens &
+Polarization-selective focusing with compact unit cells &
+Limited transmission-phase range for the focusing polarization \\
+
+Tiwari \textit{et al.} \cite{Tiwari2023} &
+28~GHz &
+$25\times25$ digital lens &
+Discrete beam steering using switchable feed antennas &
+Finite beam directions determined by feed positions \\
+
+Lee \textit{et al.} \cite{Lee2022Large} &
+28~GHz &
+$28\times28$ metamaterial lens &
+Large-aperture multibeam gain and system-throughput evaluation &
+Limited channel-decorrelation and spatial-mode analysis \\
+
+Lee \textit{et al.} \cite{Lee2021} &
+38~GHz &
+$13\times13$ single-layer lens &
+Broadband and incident-angle-stable focusing &
+Scalability toward substantially larger apertures was not demonstrated \\
+
+Bagheri \textit{et al.} \cite{Bagheri2023} &
+69~GHz &
+$50\times50$ Huygens metalens &
+High-gain broadband metalens using electric and magnetic responses &
+Coarse two-state phase quantization \\
+
+Torres \textit{et al.} \cite{Torres2015} &
+144~GHz &
+Metallic ENZ lens &
+Experimental ENZ focusing and high directivity &
+Nonplanar metallic construction \\
+
+Zeng and Zhang \cite{Zeng2016} &
+mmWave &
+Analytical lens array &
+Path-division multiplexing and angle-dependent focusing model &
+Idealized analytical lens response \\
+
+Zeng \textit{et al.} \cite{Zeng2018} &
+mmWave &
+Full-dimensional lens array &
+Multiuser path-based access and delay compensation &
+Limited inclusion of physical metasurface imperfections \\
+
+Shen \textit{et al.} \cite{Shen2019} &
+28~GHz &
+Wideband beamspace MIMO &
+Beam-squint-aware beam selection and precoding &
+Primarily based on an analytical lens response \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+\subsection{Research Gaps and Limitations}
+\label{subsec:research_gaps}
+
+The reviewed literature demonstrates considerable progress in both
+physical antenna-lens design and lens-assisted communication theory.
+Nevertheless, several limitations remain relevant to the development
+of a practical 38-GHz lens-assisted MIMO system.
+
+First, physical metasurface-lens studies and communication-oriented
+lens-MIMO studies have largely developed as separate research
+directions. Physical studies commonly characterize unit-cell
+transmission, focal-field intensity, gain enhancement, bandwidth,
+polarization response, and radiation patterns. In contrast,
+communication studies commonly evaluate beamspace sparsity,
+RF-chain reduction, beam selection, spectral efficiency, and
+path-based multiplexing.
+
+Consequently, the relationship between the electromagnetic focusing
+behaviour of a practical metasurface lens and the resulting MIMO
+channel matrix remains insufficiently investigated. Antenna-gain
+enhancement alone does not establish an improvement in spatial
+multiplexing. A lens may increase the received signal power while the
+channel remains dominated by one spatial mode.
+
+Therefore, a complete evaluation of lens-assisted MIMO should include
+not only antenna gain and focal-field intensity but also spatial
+correlation, singular-value distribution, condition number, effective
+rank, and achievable channel capacity.
+
+Second, although a metasurface lens has already been experimentally
+demonstrated around 38~GHz, the scalability of its unit-cell library
+toward electrically larger apertures was not established
+\cite{Lee2021}. The reported structure used a
+$13\times13$ array with a physical aperture of
+$39\times39$~mm$^2$.
+
+Therefore, the research gap is not the complete absence of an antenna
+lens at 38~GHz. Instead, the limitation is that the demonstrated
+38-GHz unit-cell design was validated only for a relatively compact
+aperture, and its suitability for substantially larger apertures was
+not systematically investigated.
+
+A sufficiently wide transmission-phase range allows a unit-cell
+library to reproduce the phase distribution required over a large
+surface. However, phase coverage alone does not guarantee that the
+same unit-cell designs will maintain their performance when arranged
+over a substantially larger aperture.
+
+When the aperture is enlarged while the focal distance remains
+relatively short, unit cells near the outer regions of the lens are
+illuminated at larger local incident angles. Their transmission
+magnitude and phase may therefore differ from those obtained using
+normal-incidence periodic simulations.
+
+A larger aperture can also require more rapid spatial transitions
+between neighbouring unit-cell geometries near the aperture edges.
+These abrupt transitions may increase spatial discretization errors,
+mutual coupling between dissimilar unit cells, and deviations from the
+locally periodic approximation.
+
+Most unit-cell libraries are generated by simulating one geometry
+under periodic boundary conditions. This simulation assumes that the
+unit cell is surrounded by identical copies of itself. In an actual
+phase-gradient metasurface lens, however, neighbouring unit cells
+often have different geometrical dimensions and different
+transmission phases.
+
+As a result, the electromagnetic response of a unit cell embedded in
+the complete lens may not be identical to the response predicted by
+its isolated periodic model. This difference may become more
+significant for larger apertures containing sharper spatial phase
+variations.
+
+A scalable metasurface-lens unit cell should consequently provide a
+wide phase-control range, high and relatively uniform transmission,
+stable behaviour under oblique incidence, sufficiently fine spatial
+sampling, low sensitivity to neighbouring dissimilar cells, and
+acceptable fabrication tolerance.
+
+These characteristics have not been systematically demonstrated for
+an electrically larger single-layer metasurface lens at 38~GHz.
+Large-aperture metasurface lenses have been investigated at other
+frequencies, including 28~GHz and approximately 69~GHz
+\cite{Lee2022Large,Bagheri2023}. However, their
+unit-cell structures, material configurations, layer counts, and
+operating frequencies differ from those of the existing single-layer
+38-GHz design.
+
+Therefore, their results do not directly establish that the
+single-layer 38-GHz unit-cell topology can be scaled toward a larger
+aperture without degrading transmission efficiency or focusing
+performance.
+
+Third, limited attention has been given to the placement of multiple
+receiving antennas within the physical focal region of a practical
+metasurface lens. Analytical lens-MIMO models generally assume that
+signals arriving from different directions are mapped to clearly
+defined antenna locations.
+
+In a practical lens, however, the focal response has a finite spatial
+width. The energy associated with one incident direction may therefore
+be received by several neighbouring antenna elements. Focal-spot
+overlap, sidelobes, insertion loss, phase errors, and finite-aperture
+diffraction can reduce the separation between different focal-plane
+responses.
+
+Consequently, the number, spacing, and positions of the focal-plane
+antennas should be selected based on the actual electromagnetic
+response of the lens rather than only on an idealized focal-arc
+model. These placement parameters may directly affect channel
+correlation and the number of usable spatial modes.
+
+Fourth, systematic comparisons between lens-assisted focal-plane
+arrays and conventional coplanar arrays remain limited. A fair
+comparison requires consistent transmitter positions, propagation
+environments, transmit power, bandwidth, antenna count, channel
+normalization, and noise assumptions.
+
+Without consistent comparison conditions, an observed improvement may
+be caused primarily by increased antenna gain rather than a genuine
+improvement in the spatial structure of the MIMO channel.
+
+Accordingly, the present work investigates a metasurface
+antenna-lens-assisted MIMO system operating at 38~GHz. The work
+extends the investigation of a compact single-layer focusing
+metasurface toward a larger aperture suitable for focal-plane MIMO
+reception.
+
+The selected unit-cell topology is applied over an increased number
+of elements to investigate its aperture scalability. The resulting
+electromagnetic response is subsequently incorporated into the
+communication-channel analysis.
+
+The focal-plane receiving configuration is compared with a
+conventional coplanar antenna arrangement. Instead of evaluating only
+gain enhancement or focal-field intensity, the resulting MIMO channel
+is characterized using spatial correlation, singular values,
+condition number, effective rank, and achievable capacity.
+
+The objective is to determine whether an enlarged physical
+metasurface lens at 38~GHz can provide sufficiently distinct
+angle-dependent receive responses to reduce channel correlation and
+improve spatial-multiplexing capability.
+
+% \section{Literature Review}
+% \begin{itemize}
+%     \item Conventional millimeter-wave MIMO systems
+%     \begin{itemize}
+%         \item Use of MIMO
+%     \end{itemize}
+%     \item Antenna lens technologies for beam focusing
+%     \item Beamspace MIMO and lens-assisted communication systems
+%     \begin{itemize}
+%         \item Reference relevant prior work (e.g., studies from Lajos Hanzo's group)
+%     \end{itemize}
+%     \item Existing research on antenna lenses
+%     \begin{itemize}
+%         \item Dielectric lens approaches
+%         \item Power improvement via aperture advantage
+%     \end{itemize}
+%     \item Research gaps and limitations
+%     \begin{itemize}
+%         \item Existing work is largely theoretical, with antenna behavior captured only through mathematical models
+%         \item Limited Fidelity Simulation on MIMO System with Antenna lens on FR2 Band e.g., 38 GHz
+%     \end{itemize}
+% \end{itemize}
+
+- Most Antenna Lens is design in 
+
+% % \paragraph{Propagational Challenges and Hardware Complexity in 5G FR2}
+% The utilization of the high-frequency FR2 spectrum is inherently linked to significant propagation challenges arising from its short wavelengths. Signals at these frequencies suffer from severe free-space path loss, substantial penetration losses, and extreme sensitivity to physical blockages, which collectively restrict overall coverage \cite{Zeng2016}. Consequently, maintaining reliable wireless links in FR2 environments requires sophisticated techniques such as directional transmissions and high antenna gains. While the small wavelength size facilitates the integration of numerous antenna elements into a compact aperture, it also necessitates advanced spatial processing capabilities. Conventional approaches to achieve this include Massive MIMO systems designed to provide sufficient beamforming gain; however, fully digital MIMO architectures—which require an independent RF chain for every antenna element—pose substantial practical hurdles at FR2 frequencies. The high-frequency environment demands complex and costly components such as power amplifiers (PAs), low-noise amplifiers (LNAs), mixers, local oscillators, and high-speed ADCs or DACs \cite{Heath2016}. Scaling the number of RF chains in these systems significantly escalates hardware complexity, power consumption, manufacturing costs, and the stringency of calibration requirements.
+
+% % \paragraph{Lens Antenna Array for Beamspace Communication in FR2 MIMO}
+% The lens antenna array presents a compelling alternative to conventional MIMO systems by utilizing an electromagnetic lens in conjunction with antenna elements positioned on the focal region or surface. This configuration allows the lens to provide varying phase delays across the aperture, facilitating the passive spatial transformation of signals from the antenna space into a beamspace \cite{shen2019}. By focusing waves originating from different directions onto specific subsets of antenna elements, only those receiving dominant energy need to be connected to the RF chains. This characteristic is particularly advantageous for Frequency Range 2 (FR2) MIMO systems, where propagation channels are typically characterized by a limited number of dominant paths and a relatively sparse beamspace \cite{Zeng2016}. In such environments, most channel energy is concentrated on only a few beams or antennas, allowing for efficient beam selection to significantly reduce the required number of RF chains. Furthermore, the integration of lens antennas can enhance system performance by improving angular separation, spatial channel decorrelation, effective channel rank, spatial multiplexing capability, and overall channel capacity \cite{Zeng2016}.
+
+% % \paragraph{Metasurface-Based Planar Lens Solutions for High-Frequency Communication}
+% While conventional dielectric lenses are valued for their high focusing capabilities and gain, they possess several significant drawbacks that hinder their integration into modern wireless systems. These include thick profiles, substantial weight, curved surfaces, and reflection losses stemming from impedance mismatches \cite{Al-Joumayly2011}. Furthermore, dielectric lenses can be bulky, expensive to manufacture at certain microwave frequencies, and inherently difficult to integrate with planar antenna arrays due to their complex geometries. To overcome these limitations, there is a growing shift toward planar lens architectures. A prominent solution in this area is the metasurface-based planar antenna lens, which comprises an array of sub-wavelength unit cells that act as individual spatial phase shifters \cite{Al-Joumayly2011}. By adjusting the geometric dimensions of these unit cells, one can precisely control the transmission magnitude, phase, and frequency response across the aperture. The distribution of these cells allows for the synthesis of specific phase profiles capable of transforming spherical wavefronts into planar ones or vice versa, effectively focusing waves while maintaining a compact and low-profile form factor \cite{Al-Joumayly2011}.
+
+% \section{Research Motivation}
+% \begin{itemize}
+%     \item Channel correlation in conventional coplanar MIMO arrays
+%     \item Potential advantages of focal-plane antenna placement
+%     \item Need for a systematic evaluation of antenna placement effects on MIMO performance
+% \end{itemize}
+
+\section{Motivation}
+% \paragraph{Design Motivation and Requirements for 5G FR2 Lens Antennas}
+The primary motivation for this research stems from the necessity of developing compact and easily integrable devices for 5G FR2 systems. To address the limitations of conventional dielectric lenses, which are often thick, heavy, and curved, there is a significant demand for planar, low-profile lens architectures that can be fabricated using standard PCB techniques. Such structures facilitate seamless integration with patch antennas and focal-plane receivers while maintaining high phase coverage and controlled insertion loss. Furthermore, the proposed metasurface lens leverages passive focusing at 38 GHz to enhance received power without the need for active phase shifters. This design allows the focus to adapt dynamically to the angle of incidence, enabling multiple antenna receivers to be strategically positioned along a focal arc or plane, thereby optimizing spatial coverage and performance in high-frequency environments.
+
+% Poin utama Paragraf 1:
+% Mengembangkan lens yang planar dan low-profile.
+% Menghindari struktur dielectric lens yang tebal dan melengkung.
+% Menggunakan teknik fabrikasi PCB.
+% Mengintegrasikan lens dengan patch antenna dan focal-plane receiver.
+% Menghasilkan phase coverage yang besar dengan insertion loss yang tetap terkendali.
+
+% Poin utama Paragraf 2:
+% Metasurface lens mengontrol phase gelombang tanpa active phase shifter.
+% Fokus yang dihasilkan dapat meningkatkan received power.
+% Fokus berubah sesuai incidence angle.
+% Beberapa antenna receiver dapat ditempatkan pada focal arc atau focal plane.
+
+% \paragraph{Beyond Antenna Gain Enhancement}
+It is critical to emphasize that the contributions of this thesis extend beyond mere antenna gain enhancement. While increased gain is a primary objective, the core novelty lies in the lens's ability to fundamentally alter the structure of the communication channel matrix. By facilitating field separation at the focal region, the proposed design effectively reduces channel overlap between spatially distinct paths. Consequently, it is hypothesized that this spatial transformation will lead to a significant reduction in spatial correlation and more balanced singular values within the channel matrix. These improvements are expected to enhance the condition number and increase the effective rank of the channel, ultimately leading to a substantial increase in overall channel capacity for high-frequency MIMO systems.
+
+% Poin utama:
+% Lens bukan hanya gain enhancer.
+% Lens dapat mengubah struktur channel matrix.
+% Pemisahan field pada focal region dapat menurunkan channel overlap.
+% Hipotesis penelitian:
+% spatial correlation menurun;
+% singular values menjadi lebih seimbang;
+% condition number membaik;
+% effective rank meningkat;
+% channel capacity meningkat.
+
+% \section{Research Objectives}
+% \begin{itemize}
+%     \item Develop a 38 GHz antenna lens-assisted MIMO system
+%     \item Investigate the influence of antenna placement on MIMO channel decorrelation
+%     \item Evaluate spatial multiplexing capability using different antenna configurations
+%     \item Validate the proposed channel-modeling approach
+%     \item Demonstrate the communication benefits of antenna lens-assisted MIMO systems
+% \end{itemize}
+
+\section{Research Objectives}
+Building on this motivation, the specific objectives of this thesis are as follows:
+\begin{itemize}
+    \item To design and characterize a 38~GHz patch feed antenna and a planar metasurface transmitarray lens capable of focal-plane beam steering, implemented and validated in Ansys HFSS.
+    \item To investigate how antenna placement -- specifically, positioning receive elements along the lens focal plane versus in a conventional coplanar array -- influences the spatial correlation and decorrelation of the resulting MIMO channel.
+    \item To evaluate the spatial multiplexing capability enabled by the antenna lens across different antenna configurations, in terms of channel condition number, effective rank, and ergodic capacity.
+    \item To validate the proposed S-parameter-based channel-modeling approach through cross-validation across three independent electromagnetic and ray-tracing solvers, namely Sionna-RT, HFSS SBR+, and HFSS Hybrid.
+    \item To demonstrate, through Monte Carlo evaluation under randomized user distributions, the communication-performance benefits of the antenna lens-assisted MIMO system relative to a conventional coplanar baseline.
+\end{itemize}
+
+\section{Thesis Organization}
+
+The remainder of this thesis is organized as follows. Chapter~2, \textit{Methodology and Model Validation}, describes the design and characterization of the 38~GHz patch feed antenna and the $20\times20$-element metasurface transmitarray lens in Ansys HFSS. It then formulates the S-parameter-based MIMO channel model and its evaluation metrics, including singular values, condition number, effective rank, spatial correlation, and channel capacity. Finally, the chapter cross-validates the lens effect for a $3\times3$ focal-plane configuration using three independent simulation tools: HFSS SBR+, HFSS Hybrid, and Sionna-RT.
+
+Chapter~3, \textit{MIMO Communication Performance Evaluation}, evaluates the lens-assisted system at the communication-system level using Sionna-RT and randomized transmitter locations in an indoor environment. It compares the focal-plane lens configuration with a conventional coplanar array under identical Monte Carlo geometries in terms of capacity, throughput, delay spread, channel conditioning, effective rank, and virtual MIMO capacity. The chapter also investigates computational and communication-performance scalability for $3\times3$, $5\times5$, and $9\times9$ configurations, and discusses the trade-off between received-power improvement and spatial-multiplexing capability.
+
+Chapter~4, \textit{Conclusions and Future Work}, summarizes the main findings and draws conclusions regarding lens focusing, channel decorrelation, system-level gain, and higher-order MIMO scalability. It also identifies the limitations of the present study and proposes directions for future work, including experimental validation, evaluation in richer propagation environments, larger Monte Carlo studies, fixed-power-budget comparisons, and extensions toward higher-order, wideband, mobile, and multi-user lens-assisted MIMO systems.
+
+% ## Chapter 1: Introduction
+
+% ### 1.1 Background
+
+% * Evolution of millimeter-wave communication systems
+
+%   * FR1(Cellular Band maybe become full, move to mmwave)
+% * Challenges of line-of-sight-dominant MIMO channels
+
+%   * Share abouts many mmwave challenges, Show Paper Proof
+% * Importance of channel decorrelation and spatial multiplexing
+
+%   * idk
+% * Motivation for antenna lens-assisted MIMO systems
+
+%   * Should to improve channel decorellation and Spatial MultiPlexing
+
+% ### 1.2 Literature Review
+
+% * Conventional millimeter-wave MIMO systems
+
+%   * Using MIMO
+% * Antenna lens technologies for beam focusing
+% * Beamspace MIMO and lens-assisted communication systems
+
+%   * Paper muridnya Lajos Hanzo
+%   *
+% * Existing research on antenna lenses
+
+%   * Using Dielectric Lens
+%   * Just in case improve the Power with Advantage Aparture
+% * Research gaps and limitations
+%   * Commonly Only Based On Theory, Antenna still on Math Model.
+
+% ### 1.3 Research Motivation
+
+% * Channel correlation in conventional coplanar MIMO arrays
+% * Potential advantages of focal-plane antenna placement
+
+%   * We try to
+% * Need for a systematic evaluation of antenna placement effects on MIMO performance
+
+% ### 1.4 Research Objectives
+
+% * Develop a 38 GHz antenna lens-assisted MIMO system
+% * Investigate the influence of antenna placement on MIMO channel decorrelation
+% * Evaluate spatial multiplexing capability using different antenna configurations
+% * Validate the proposed channel-modeling approach
+% * Demonstrate the communication benefits of antenna lens-assisted MIMO systems
+
+% ### 1.5 Thesis Organization

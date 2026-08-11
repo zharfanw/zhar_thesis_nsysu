@@ -1,0 +1,7 @@
+scenario,label,trajectory,waypoints,length_m,magnitude_median_db,snr_median_db,capacity_median_bits_s_hz,pooled_correlation,pooled_decorrelation,median_correlation,median_decorrelation,raw_cross_correlation,raw_difference_power,condition_number_median_db,effective_rank_median,mimo_capacity_10db_median,min_tx_rx_distance_m,collision_risk
+linear_lens,Linear — lens,linear,21,19.0,-99.03,3.5,1.66,0.0889,0.9111,0.4684,0.5316,2.190912e-11,4.943463e-10,33.791878,3.889464,20.602467,9.008512029590902,False
+linear_wolens,Linear — without lens,linear,21,19.0,-103.99,-1.0,0.84,0.0826,0.9174,0.6303,0.3697,7.344891e-12,1.718077e-10,47.367516,3.330013,18.279614,9.0,False
+half_lens,Half-circle — lens,half,37,28.27,-100.52,2.1,1.38,0.1305,0.8695,0.5395,0.4605,3.096483e-11,4.669522e-10,35.553332,3.425642,19.641332,12.723533038715464,False
+half_wolens,Half-circle — without lens,half,37,28.27,-100.5,1.0,1.16,0.0521,0.9479,0.8402,0.1598,5.76697e-12,2.201923e-10,43.102797,3.64808,18.899228,12.712290481828994,False
+full_lens,Full-circle — lens,full,73,56.53,-99.02,3.7,1.72,0.2485,0.7515,0.5407,0.4593,9.322382e-08,1.068748e-06,35.586388,3.382336,19.476426,0.01699962599588482,True
+full_wolens,Full-circle — without lens,full,73,56.53,-99.36,2.7,1.5,0.1916,0.8084,0.7711,0.2289,3.18229e-08,3.081265e-07,43.785206,3.41276,18.304372,1.102182119232618e-15,True

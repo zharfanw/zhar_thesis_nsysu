@@ -1,0 +1,40 @@
+\chapter{Conclusions and Future Work}
+
+\section{Summary}
+This thesis studied a metasurface transmitarray lens-assisted MIMO system at 38~GHz, asking whether an electrically enlarged lens improves not only received power but the spatial structure -- correlation, singular-value balance, effective rank, and capacity -- of the MIMO channel. Chapter~2 designed and characterized a $20\times20$-element feed antenna and lens in HFSS, formulated an S-parameter-based channel model, and cross-validated it for a $3\times3$ focal-plane configuration across three solvers (HFSS SBR+, HFSS Hybrid, Sionna-RT). Chapter~3 extended this model to system-level Monte Carlo evaluation against a coplanar baseline and to higher-order MIMO scaling ($N=3,5,9$).
+
+\section{Conclusions}
+
+\textbf{Lens design and characterization.} The unit-cell library was scaled to a $20\times20$, $44.24\times44.24\,\text{mm}^2$ transmitarray at 38~GHz ($S_{21}>-5\,\text{dB}$ per cell). The realized focal distance settles at $\approx14$~mm rather than the 30~mm design target, due to phase quantization in the discretized unit-cell database. The lens steers its focal spot along a focal arc for incidence from $0^\circ$ to $-60^\circ$, with focusing sharpness degrading at wider angles -- confirming that the topology remains realizable at a substantially larger aperture than previously reported at 38~GHz.
+
+\textbf{Channel-model validation.} All three solvers agree qualitatively at 38~GHz: the lens concentrates power onto the diagonal of the $3\times3$ channel, cuts mean off-diagonal correlation (e.g., 0.77$\to$0.21 RX with SBR+; 0.39--0.56$\to$0.09--0.26 with Hybrid; 0.30$\to$0.18 with Sionna-RT), and raises condition number, effective rank, and Frobenius-normalized capacity. Solvers agree on the sign of the lens effect in 92.6\% of compared link-frequency points, confirming a genuine physical effect rather than a solver artifact, though absolute magnitudes and baselines differ across solvers.
+
+\textbf{Gain versus decorrelation at system level.} The clearest component-level ($3\times3$) decorrelation does not carry over cleanly to the system-level $9\times9$ Monte Carlo evaluation. There, the lens raises median capacity by only $\sim$5.2\% (7.29$\to$7.67~bit/s/Hz) and cuts median delay spread by $\sim$4.8\%, but the gain is strongly angle-dependent ($-0.61$~bit/s/Hz at $+60^\circ$ to $+1.03$ at $-30^\circ$) and the 5th-percentile capacity actually \emph{drops} by 1.46~bit/s/Hz. Virtual $9\times9$ conditioning is not improved: condition number worsens slightly (49.4$\to$54.0), effective rank is unchanged ($4.09\to4.07$ of 9), and 10~dB-SNR capacity decreases (21.72$\to$21.11~bit/s/Hz). In its present fixed-orientation form, the lens therefore behaves mainly as an angle-selective power-gain mechanism at the system level, not as a genuine channel decorrelator -- a distinction only a full system-level evaluation, rather than gain or focal-field intensity alone, could reveal.
+
+\textbf{Scalability.} For $N=3,5,9$, median capacity, throughput, and delay spread all rise monotonically with $N$, but the virtual $N\times N$ condition number worsens monotonically (17.5$\to$24.6$\to$34.6~dB) and the effective-rank-to-$N$ ratio falls (64\%$\to$55\%$\to$45\%): a classic diminishing-returns pattern in which added spatial dimensions are increasingly weak or correlated rather than fully independent.
+
+\textbf{Overall.} The five research objectives of Chapter~1 are met: the lens and feed antenna were designed and HFSS-validated; placement effects on correlation were shown to depend on whether evaluation is done at component or system level; multiplexing capability was quantified across array sizes; the channel model was cross-validated across three solvers; and a genuine, but modest and angle-dependent, system-level capacity gain was demonstrated in place of the larger uniform decorrelation benefit initially hypothesized. The finding that component-level decorrelation does not automatically translate into system-level multiplexing gain is itself a contribution to the lens-assisted MIMO literature.
+
+\section{Limitations}
+\begin{itemize}
+    \item No experimental (measured) validation of the fabricated lens, antenna, or channel.
+    \item Limited Monte Carlo statistics: 20 drops and $100{,}000$ path samples per source, below the recommended $1{,}000{,}000$.
+    \item Isotropic TX pattern and per-transmitter power scaling with $N$, rather than a fixed total power budget.
+    \item Idealized Shannon capacity bound, excluding modulation, coding, and interference.
+    \item Angular mapping (e.g., positive/negative steering asymmetry) not yet verified against physical antenna orientation; RX angle sets differ across $N=3,5,9$.
+    \item Single concrete-walled indoor room only; no outdoor, cluttered, or blockage scenarios.
+    \item Aperture scalability demonstrated only up to $20\times20$ elements.
+\end{itemize}
+
+\section{Future Work}
+\begin{itemize}
+    \item \textbf{Experimental verification}: fabricate and measure the lens, feed antenna, and an over-the-air $3\times3$/$9\times9$ channel.
+    \item \textbf{Richer propagation environments}: outdoor, multi-room, and blockage/clutter scenarios.
+    \item \textbf{Larger-scale Monte Carlo}: more drops and path samples to tighten percentile estimates.
+    \item \textbf{Fixed power-budget scaling study}: isolate array-size effects from total-power growth with $N$.
+    \item \textbf{Higher-order and multi-lens MIMO}: $N>9$ and multi-focal-arc configurations to counteract falling effective rank.
+    \item \textbf{Wideband and beam-squint analysis} across the transmitarray aperture.
+    \item \textbf{Dynamic/mobile channel evaluation}: Doppler spread and coherence time under moving users.
+    \item \textbf{Precoding- and multi-user-aware evaluation} on top of the virtual MIMO channel.
+    \item \textbf{Integration into 6G beamspace MIMO} studies: RF-chain reduction, hybrid beamforming, beam selection.
+\end{itemize}

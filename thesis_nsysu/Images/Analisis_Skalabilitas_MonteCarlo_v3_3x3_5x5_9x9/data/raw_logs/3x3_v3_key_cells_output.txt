@@ -1,0 +1,88 @@
+# Raw output log -- Setupv3_20mx20m_lens_3x3_Patch_randomCom.ipynb
+# Cells extracted verbatim (unmodified) from stored notebook outputs: [11, 33, 36, 39, 43, 48, 50]
+
+===== CELL 11  (source starts: 'FREQ_GHZ = 38') =====
+3 TX elements (fixed, pattern=csv) x 3 RX scenarios
+  Simul_+45deg: csv=farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv  rx_pos=[-9.01 -0.01  2.  ]  rx_orient_deg=[-90.  90.   0.]
+  Simul_+0deg: csv=farfieldAntennaData/FarFieldData_0deg_detailFreq.csv  rx_pos=[-9.02  0.    2.  ]  rx_orient_deg=[-90. -90.   0.]
+  Simul_-45deg: csv=farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv  rx_pos=[-9.01  0.01  2.  ]  rx_orient_deg=[-90.  90.   0.]
+
+===== CELL 33  (source starts: 'print("=" * 60)') =====
+============================================================
+EVALUATION SUMMARY -- 3 TX elements x 3 RX lens scenarios @ 38 GHz
+============================================================
+        name  rx_lens_angle_deg  combined_gain_db  mean_|rho|_offdiag  max_|rho|_offdiag  capacity_10dB_bits/s/Hz
+ Simul_+0deg                  0        -42.234242            0.911496           0.990868                 3.459060
+Simul_+45deg                 45        -52.556171            0.927186           0.964855                 3.456534
+Simul_-45deg                -45        -52.917195            0.905020           0.964233                 3.456664
+
+Best RX scenario (combined gain): Simul_+0deg  (-42.2 dB, capacity@10dB=3.46 bits/s/Hz)
+
+===== CELL 36  (source starts: 'H_3x3 = H_all  # (rx_config, tx_element, freq) -- direct combination, ') =====
+H_3x3 shape: (3, 3, 401)  # (rx, tx, freq) -- combined from 3 simulations of 3x1
+============================================================
+3x3 MIMO SUMMARY (combined from 3 simulations) @ 38 GHz
+============================================================
+Condition number : median = 3.8  (11.7 dB)
+Effective rank   : median = 1.61 / 3
+Capacity @ 10dB  : 7.87 bits/s/Hz
+
+===== CELL 39  (source starts: 'def rx_correlation_3x3(H9):') =====
+============================================================
+SPATIAL CORRELATION (DECORRELATION) -- combined 3x3 MIMO, RX side
+============================================================
+Mean |rho| off-diagonal : 0.2700
+Max  |rho| off-diagonal : 0.3597
+(closer to 0 = more decorrelated/independent -- good for diversity/multiplexing gain; closer to 1 = more correlated, limiting effective rank & MIMO capacity)
+
+===== CELL 43  (source starts: '# --- Random-TX experiment parameters (edit here) ---') =====
+Random-TX: 20 drops x 3 TX x 3 RX scenarios, seed=20260718  (60 total PathSolver runs)
+
+===== CELL 48  (source starts: 'if RUN_RANDOM_TX_MONTE_CARLO and not random_tx_results.empty:') =====
+========================================================================
+RANDOM-TX MONTE CARLO SUMMARY -- combined across all RX scenarios
+========================================================================
+Drops / TX per drop / RX scenarios : 20 / 3 / 3
+Total runs (drop x RX)              : 60
+Capacity median (combined)          : 5.94 bit/s/Hz
+Capacity 5%-95% (combined)          : 3.00 - 7.72 bit/s/Hz
+Throughput median (combined)        : 2.38 Gbit/s
+Delay spread median (combined)      : 59.13 ns
+Drop-RX outage C < 1.0           : 0.0%
+
+Per RX scenario:
+ rx_config_index rx_config_name  rx_lens_angle_deg  capacity_median  capacity_p05  capacity_p95  snr_median_db  outage
+               0   Simul_+45deg                 45         5.380282      2.907510      7.297654      16.590826     0.0
+               1    Simul_+0deg                  0         6.433945      2.984139      7.665920      19.562149     0.0
+               2   Simul_-45deg                -45         5.784050      3.716327      8.503910      17.895313     0.0
+
+===== CELL 50  (source starts: 'random_tx_mimo_results = pd.DataFrame()') =====
+========================================================================
+SVD/3x3 MIMO SUMMARY PER DROP -- Random-TX Monte Carlo
+========================================================================
+Condition number median (across drops)  : 7.5  (17.5 dB)
+Condition number 5%-95% (dB)            : 8.9 - 26.6 dB
+Effective rank median (across drops)     : 1.91 / 3
+Capacity @ 10 dB median (across drops)    : 8.03 bit/s/Hz
+    drop  cond_median  cond_median_db  erank_median  capacity_10db
+0      0     5.614554       14.986306      1.849163       8.036146
+1      1    47.359507       33.508143      1.170168       5.904545
+2      2     6.679171       16.494451      1.669664       7.794513
+3      3     2.723774        8.703420      2.267442       9.257696
+4      4    10.430168       20.365826      1.423794       6.923503
+5      5     3.207719       10.123926      2.193106       8.935914
+6      6     8.502340       18.590769      1.868969       7.899759
+7      7    10.178578       20.153742      1.943281       8.025299
+8      8     4.099768       12.255185      2.062271       8.660684
+9      9     5.976525       15.528974      2.049612       8.417321
+10    10     8.336039       18.419194      1.843007       7.786162
+11    11     2.773531        8.860659      2.377759       9.300830
+12    12     3.910407       11.844440      2.066256       8.677340
+13    13    18.480723       25.334379      1.151376       5.861637
+14    14    10.211499       20.181790      1.764466       7.788671
+15    15     3.929194       11.886070      2.093591       8.574350
+16    16     4.634246       13.319582      1.983869       8.464852
+17    17    19.907837       25.980482      1.694824       7.581847
+18    18     9.735358       19.767039      1.987682       8.080320
+19    19    10.546754       20.462377      1.440816       6.948955
+

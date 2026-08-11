@@ -1,0 +1,6 @@
+name,kind,x,y,z,dx,dy,dz
+array_center,point,0.0,-5.0,25.0,0.0,0.0,0.0
+feed,point,0.0,15.0,50.0,0.0,0.0,0.0
+selected_element,point,2.0,-8.25,25.0,0.0,0.0,0.0
+main_beam,vector,0.0,-5.0,25.0,0.0,-20.0,-25.0
+observation,vector,0.0,-5.0,25.0,2.5,-18.0,-18.0

@@ -1,0 +1,779 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.10)  27 JUL 2026 18:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./current_report.tex
+(current_report.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen150
+)
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks18
+
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count287
+\float@exts=\toks19
+\float@box=\box53
+\@float@everytoks=\toks20
+\@floatcapt=\box54
+)
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen161
+\captionmargin=\dimen162
+\caption@leftmargin=\dimen163
+\caption@rightmargin=\dimen164
+\caption@width=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+Package caption Info: float package is loaded.
+)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
+
+(C:\Program Files\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Program Files\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Program Files\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(C:\Program Files\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Program Files\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count290
+)
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count291
+)
+(C:\Program Files\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen169
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-04-24 v7.01q Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Program Files\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count294
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-04-24 v7.01q Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count295
+
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen170
+
+(C:\Program Files\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count296
+\Field@Width=\dimen171
+\Fld@charsize=\dimen172
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-04-24 v7.01q Hyperref driver for pdfTeX
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
+
+(C:\Program Files\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Program Files\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip51
+)
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen173
+))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen174
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count302
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count303
+\leftroot@=\count304
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count305
+\DOTSCASE@=\count306
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen175
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count307
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count308
+\dotsspace@=\muskip18
+\c@parentequation=\count309
+\dspbrk@lvl=\count310
+\tag@help=\toks23
+\row@=\count311
+\column@=\count312
+\maxfields@=\count313
+\andhelp@=\toks24
+\eqnshift@=\dimen176
+\alignsep@=\dimen177
+\tagshift@=\dimen178
+\tagwidth@=\dimen179
+\totwidth@=\dimen180
+\lineht@=\dimen181
+\@envbody=\toks25
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(C:\Program Files\MiKTeX\tex/latex/cite\cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip55
+\enit@outerparindent=\dimen182
+\enit@toks=\toks27
+\enit@inbox=\box57
+\enit@count@id=\count314
+\enitdp@description=\count315
+)
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count316
+)
+(current_report.aux)
+\openout1 = `current_report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(57.81621pt, 481.87546pt, 57.81621pt)
+* v-part:(T,H,B)=(54.2025pt, 718.57436pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=481.87546pt
+* \textheight=718.57436pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
+* \topmargin=-55.06749pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count317
+\scratchdimen=\dimen183
+\scratchbox=\box58
+\nofMPsegments=\count318
+\nofMParguments=\count319
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen184
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
+\everyMPtoPDFconversion=\toks29
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 32.
+
+(current_report.out) (current_report.out)
+\@outlinefile=\write3
+\openout3 = `current_report.out'.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<image/SionnaSim_TotalView.png, id=259, 898.3161pt x 426.393pt>
+File: image/SionnaSim_TotalView.png Graphic file (type png)
+<use image/SionnaSim_TotalView.png>
+Package pdftex.def Info: image/SionnaSim_TotalView.png  used on input line 78.
+(pdftex.def)             Requested size: 409.59708pt x 194.41249pt.
+<image/SionnaSim_ZoomView.png, id=261, 912.0474pt x 426.393pt>
+File: image/SionnaSim_ZoomView.png Graphic file (type png)
+<use image/SionnaSim_ZoomView.png>
+Package pdftex.def Info: image/SionnaSim_ZoomView.png  used on input line 85.
+(pdftex.def)             Requested size: 409.59708pt x 191.4912pt.
+ [1
+
+{C:/Users/DELL 7540/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./image/
+SionnaSim_TotalView.png>] [2 <./image/SionnaSim_ZoomView.png>]
+<image/Sionna_result.png, id=296, 1129.21875pt x 391.4625pt>
+File: image/Sionna_result.png Graphic file (type png)
+<use image/Sionna_result.png>
+Package pdftex.def Info: image/Sionna_result.png  used on input line 181.
+(pdftex.def)             Requested size: 481.87546pt x 167.05328pt.
+ [3 <./image/Sionna_result.png (PNG copy)>]
+<image/sionna_lens_effect_delta.png, id=313, 1004.0712pt x 285.7074pt>
+File: image/sionna_lens_effect_delta.png Graphic file (type png)
+<use image/sionna_lens_effect_delta.png>
+Package pdftex.def Info: image/sionna_lens_effect_delta.png  used on input line
+ 271.
+(pdftex.def)             Requested size: 481.87546pt x 137.11618pt.
+<image/sionna_mimo_quality.png, id=314, 931.3194pt x 321.3606pt>
+File: image/sionna_mimo_quality.png Graphic file (type png)
+<use image/sionna_mimo_quality.png>
+Package pdftex.def Info: image/sionna_mimo_quality.png  used on input line 314.
+
+(pdftex.def)             Requested size: 481.87546pt x 166.27486pt.
+ [4 <./image/sionna_lens_effect_delta.png>]
+<image/sionna_mimo_capacity.png, id=326, 1003.5894pt x 285.7074pt>
+File: image/sionna_mimo_capacity.png Graphic file (type png)
+<use image/sionna_mimo_capacity.png>
+Package pdftex.def Info: image/sionna_mimo_capacity.png  used on input line 361
+.
+(pdftex.def)             Requested size: 481.87546pt x 137.18593pt.
+<image/sionna_mimo_capacity_summary.png, id=328, 1003.5894pt x 285.7074pt>
+File: image/sionna_mimo_capacity_summary.png Graphic file (type png)
+<use image/sionna_mimo_capacity_summary.png>
+Package pdftex.def Info: image/sionna_mimo_capacity_summary.png  used on input 
+line 378.
+(pdftex.def)             Requested size: 481.87546pt x 137.18593pt.
+ [5 <./image/sionna_mimo_quality.png> <./image/sionna_mimo_capacity.png>]
+<image/sionna_spatial_correlation.png, id=338, 521.3076pt x 524.1984pt>
+File: image/sionna_spatial_correlation.png Graphic file (type png)
+<use image/sionna_spatial_correlation.png>
+Package pdftex.def Info: image/sionna_spatial_correlation.png  used on input li
+ne 417.
+(pdftex.def)             Requested size: 395.1414pt x 397.34709pt.
+ [6 <./image/sionna_mimo_capacity_summary.png>]
+<image/Room_withCloseup.png, id=346, 1079.03125pt x 833.1125pt>
+File: image/Room_withCloseup.png Graphic file (type png)
+<use image/Room_withCloseup.png>
+Package pdftex.def Info: image/Room_withCloseup.png  used on input line 448.
+(pdftex.def)             Requested size: 409.59708pt x 316.24281pt.
+ [7 <./image/sionna_spatial_correlation.png>]
+<image/SetupEnvironment_0deg.png, id=354, 923.45pt x 716.6775pt>
+File: image/SetupEnvironment_0deg.png Graphic file (type png)
+<use image/SetupEnvironment_0deg.png>
+Package pdftex.def Info: image/SetupEnvironment_0deg.png  used on input line 49
+0.
+(pdftex.def)             Requested size: 154.20367pt x 119.6683pt.
+<image/SetupEnvironment_45deg.png, id=355, 830.10126pt x 793.96625pt>
+File: image/SetupEnvironment_45deg.png Graphic file (type png)
+<use image/SetupEnvironment_45deg.png>
+Package pdftex.def Info: image/SetupEnvironment_45deg.png  used on input line 4
+96.
+(pdftex.def)             Requested size: 154.20367pt x 147.4872pt.
+<image/SetupEnvironment_m45deg.png, id=356, 1235.61626pt x 975.645pt>
+File: image/SetupEnvironment_m45deg.png Graphic file (type png)
+<use image/SetupEnvironment_m45deg.png>
+Package pdftex.def Info: image/SetupEnvironment_m45deg.png  used on input line 
+502.
+(pdftex.def)             Requested size: 154.20367pt x 121.7469pt.
+ [8 <./image/Room_withCloseup.png>]
+<image/result_field_incident_0deg_edited.PNG, id=367, 836.12375pt x 538.01pt>
+File: image/result_field_incident_0deg_edited.PNG Graphic file (type png)
+<use image/result_field_incident_0deg_edited.PNG>
+Package pdftex.def Info: image/result_field_incident_0deg_edited.PNG  used on i
+nput line 562.
+(pdftex.def)             Requested size: 154.20367pt x 99.21832pt.
+<image/result_field_incident_45deg_edited.PNG, id=368, 589.20125pt x 528.97626p
+t>
+File: image/result_field_incident_45deg_edited.PNG Graphic file (type png)
+<use image/result_field_incident_45deg_edited.PNG>
+Package pdftex.def Info: image/result_field_incident_45deg_edited.PNG  used on 
+input line 568.
+(pdftex.def)             Requested size: 154.20367pt x 138.44266pt.
+<image/result_field_incident_m45deg_edited.PNG, id=369, 589.20125pt x 531.9875p
+t>
+File: image/result_field_incident_m45deg_edited.PNG Graphic file (type png)
+<use image/result_field_incident_m45deg_edited.PNG>
+Package pdftex.def Info: image/result_field_incident_m45deg_edited.PNG  used on
+ input line 574.
+(pdftex.def)             Requested size: 154.20367pt x 139.23076pt.
+ [9 <./image/SetupEnvironment_0deg.png> <./image/SetupEnvironment_45deg.png> <.
+/image/SetupEnvironment_m45deg.png>]
+<image/Result_Hybrid_SParam_db_compareLensandNon.png, id=389, 978.65625pt x 316
+.18124pt>
+File: image/Result_Hybrid_SParam_db_compareLensandNon.png Graphic file (type pn
+g)
+<use image/Result_Hybrid_SParam_db_compareLensandNon.png>
+Package pdftex.def Info: image/Result_Hybrid_SParam_db_compareLensandNon.png  u
+sed on input line 589.
+(pdftex.def)             Requested size: 409.59708pt x 132.33205pt.
+<image/Result_Hybrid_SParam_db.png, id=390, 978.65625pt x 316.18124pt>
+File: image/Result_Hybrid_SParam_db.png Graphic file (type png)
+<use image/Result_Hybrid_SParam_db.png>
+Package pdftex.def Info: image/Result_Hybrid_SParam_db.png  used on input line 
+595.
+(pdftex.def)             Requested size: 409.59708pt x 132.33205pt.
+<image/Result_Hybrid_SParam_phase.png, id=391, 978.65625pt x 316.18124pt>
+File: image/Result_Hybrid_SParam_phase.png Graphic file (type png)
+<use image/Result_Hybrid_SParam_phase.png>
+Package pdftex.def Info: image/Result_Hybrid_SParam_phase.png  used on input li
+ne 601.
+(pdftex.def)             Requested size: 409.59708pt x 132.33205pt.
+ [10 <./image/result_field_incident_0deg_edited.PNG> <./image/result_field_inci
+dent_45deg_edited.PNG> <./image/result_field_incident_m45deg_edited.PNG> <./ima
+ge/Result_Hybrid_SParam_db_compareLensandNon.png (PNG copy)> <./image/Result_Hy
+brid_SParam_db.png (PNG copy)>]
+[11 <./image/Result_Hybrid_SParam_phase.png (PNG copy)>] [12] [13]
+<image/evaluation_result_channelQualityMetrics.png, id=441, 828.09375pt x 316.1
+8124pt>
+File: image/evaluation_result_channelQualityMetrics.png Graphic file (type png)
+
+<use image/evaluation_result_channelQualityMetrics.png>
+Package pdftex.def Info: image/evaluation_result_channelQualityMetrics.png  use
+d on input line 974.
+(pdftex.def)             Requested size: 409.59708pt x 156.39682pt.
+<image/evaluation_result_CSICap_perRXvsSNR.png, id=442, 828.09375pt x 677.53125
+pt>
+File: image/evaluation_result_CSICap_perRXvsSNR.png Graphic file (type png)
+<use image/evaluation_result_CSICap_perRXvsSNR.png>
+Package pdftex.def Info: image/evaluation_result_CSICap_perRXvsSNR.png  used on
+ input line 1015.
+(pdftex.def)             Requested size: 457.78021pt x 374.55591pt.
+ [14 <./image/evaluation_result_channelQualityMetrics.png (PNG copy)>]
+<image/evaluation_result_CSICap_Combine.png, id=453, 828.09375pt x 286.06876pt>
+
+File: image/evaluation_result_CSICap_Combine.png Graphic file (type png)
+<use image/evaluation_result_CSICap_Combine.png>
+Package pdftex.def Info: image/evaluation_result_CSICap_Combine.png  used on in
+put line 1067.
+(pdftex.def)             Requested size: 457.78021pt x 158.14583pt.
+ [15 <./image/evaluation_result_CSICap_perRXvsSNR.png (PNG copy)>] [16 <./image
+/evaluation_result_CSICap_Combine.png (PNG copy)>]
+<image/evaluation_result_corelation.png, id=476, 1016.29688pt x 662.475pt>
+File: image/evaluation_result_corelation.png Graphic file (type png)
+<use image/evaluation_result_corelation.png>
+Package pdftex.def Info: image/evaluation_result_corelation.png  used on input 
+line 1253.
+(pdftex.def)             Requested size: 457.78021pt x 298.40414pt.
+ [17]
+<image/Room_SBR_withCloseup.png, id=491, 1079.03125pt x 832.10875pt>
+File: image/Room_SBR_withCloseup.png Graphic file (type png)
+<use image/Room_SBR_withCloseup.png>
+Package pdftex.def Info: image/Room_SBR_withCloseup.png  used on input line 127
+1.
+(pdftex.def)             Requested size: 409.59708pt x 315.86179pt.
+ [18 <./image/evaluation_result_corelation.png (PNG copy)>]
+<image/SetupEnvirontment_SBR_WithLens_up_edited.PNG, id=499, 882.29625pt x 1071
+.00125pt>
+File: image/SetupEnvirontment_SBR_WithLens_up_edited.PNG Graphic file (type png
+)
+<use image/SetupEnvirontment_SBR_WithLens_up_edited.PNG>
+Package pdftex.def Info: image/SetupEnvirontment_SBR_WithLens_up_edited.PNG  us
+ed on input line 1308.
+(pdftex.def)             Requested size: 409.59708pt x 497.19333pt.
+ [19 <./image/Room_SBR_withCloseup.png>]
+<image/SetupEnvirontment_SBR_WithLens.PNG, id=510, 442.65375pt x 319.94531pt>
+File: image/SetupEnvirontment_SBR_WithLens.PNG Graphic file (type png)
+<use image/SetupEnvirontment_SBR_WithLens.PNG>
+Package pdftex.def Info: image/SetupEnvirontment_SBR_WithLens.PNG  used on inpu
+t line 1321.
+(pdftex.def)             Requested size: 231.29816pt x 167.18292pt.
+<image/SetupEnvirontment_SBR_WithoutLens.PNG, id=511, 447.17062pt x 330.48468pt
+>
+File: image/SetupEnvirontment_SBR_WithoutLens.PNG Graphic file (type png)
+<use image/SetupEnvirontment_SBR_WithoutLens.PNG>
+Package pdftex.def Info: image/SetupEnvirontment_SBR_WithoutLens.PNG  used on i
+nput line 1327.
+(pdftex.def)             Requested size: 231.29816pt x 170.94531pt.
+ [20 <./image/SetupEnvirontment_SBR_WithLens_up_edited.PNG>]
+<image/Result_SBR_SParam_db.png, id=519, 903.375pt x 451.6875pt>
+File: image/Result_SBR_SParam_db.png Graphic file (type png)
+<use image/Result_SBR_SParam_db.png>
+Package pdftex.def Info: image/Result_SBR_SParam_db.png  used on input line 134
+4.
+(pdftex.def)             Requested size: 457.78021pt x 228.89642pt.
+ [21 <./image/SetupEnvirontment_SBR_WithLens.PNG> <./image/SetupEnvirontment_SB
+R_WithoutLens.PNG> <./image/Result_SBR_SParam_db.png (PNG copy)>] [22]
+<image/evaluation_SBR_result_channelQualityMetrics.png, id=545, 677.53125pt x 2
+63.48438pt>
+File: image/evaluation_SBR_result_channelQualityMetrics.png Graphic file (type 
+png)
+<use image/evaluation_SBR_result_channelQualityMetrics.png>
+Package pdftex.def Info: image/evaluation_SBR_result_channelQualityMetrics.png 
+ used on input line 1504.
+(pdftex.def)             Requested size: 433.68497pt x 168.66158pt.
+ [23 <./image/evaluation_SBR_result_channelQualityMetrics.png (PNG copy)>]
+<image/evaluation_result_SBR_CSICHannelCapacity.png, id=555, 903.375pt x 263.48
+438pt>
+File: image/evaluation_result_SBR_CSICHannelCapacity.png Graphic file (type png
+)
+<use image/evaluation_result_SBR_CSICHannelCapacity.png>
+Package pdftex.def Info: image/evaluation_result_SBR_CSICHannelCapacity.png  us
+ed on input line 1576.
+(pdftex.def)             Requested size: 457.78021pt x 133.5229pt.
+ [24 <./image/evaluation_result_SBR_CSICHannelCapacity.png (PNG copy)>]
+<image/evaluation_SBR_result_corelation.png, id=569, 639.89063pt x 587.19376pt>
+
+File: image/evaluation_SBR_result_corelation.png Graphic file (type png)
+<use image/evaluation_SBR_result_corelation.png>
+Package pdftex.def Info: image/evaluation_SBR_result_corelation.png  used on in
+put line 1657.
+(pdftex.def)             Requested size: 433.68497pt x 397.97833pt.
+ [25 <./image/evaluation_SBR_result_corelation.png (PNG copy)>]
+<image/evaluation_result_SBR_MIMOCapacitySummary.png, id=579, 903.375pt x 263.4
+8438pt>
+File: image/evaluation_result_SBR_MIMOCapacitySummary.png Graphic file (type pn
+g)
+<use image/evaluation_result_SBR_MIMOCapacitySummary.png>
+Package pdftex.def Info: image/evaluation_result_SBR_MIMOCapacitySummary.png  u
+sed on input line 1704.
+(pdftex.def)             Requested size: 457.78021pt x 133.5229pt.
+
+[26 <./image/evaluation_result_SBR_MIMOCapacitySummary.png (PNG copy)>]
+<image/channel_comparison_results/channel_3x3_with_magnitude_db.png, id=591, 11
+48.18962pt x 850.97925pt>
+File: image/channel_comparison_results/channel_3x3_with_magnitude_db.png Graphi
+c file (type png)
+<use image/channel_comparison_results/channel_3x3_with_magnitude_db.png>
+Package pdftex.def Info: image/channel_comparison_results/channel_3x3_with_magn
+itude_db.png  used on input line 1814.
+(pdftex.def)             Requested size: 481.87546pt x 357.14915pt.
+<image/channel_comparison_results/channel_3x3_without_magnitude_db.png, id=592,
+ 1148.18962pt x 850.97925pt>
+File: image/channel_comparison_results/channel_3x3_without_magnitude_db.png Gra
+phic file (type png)
+<use image/channel_comparison_results/channel_3x3_without_magnitude_db.png>
+Package pdftex.def Info: image/channel_comparison_results/channel_3x3_without_m
+agnitude_db.png  used on input line 1822.
+(pdftex.def)             Requested size: 481.87546pt x 357.14915pt.
+
+[27 <./image/channel_comparison_results/channel_3x3_with_magnitude_db.png>]
+<image/channel_comparison_results/inter_solver_pairwise_discrepancy.png, id=601
+, 930.92793pt x 354.123pt>
+File: image/channel_comparison_results/inter_solver_pairwise_discrepancy.png Gr
+aphic file (type png)
+<use image/channel_comparison_results/inter_solver_pairwise_discrepancy.png>
+Package pdftex.def Info: image/channel_comparison_results/inter_solver_pairwise
+_discrepancy.png  used on input line 1841.
+(pdftex.def)             Requested size: 443.32452pt x 168.64244pt.
+
+[28 <./image/channel_comparison_results/channel_3x3_without_magnitude_db.png> <
+./image/channel_comparison_results/inter_solver_pairwise_discrepancy.png>]
+<image/channel_comparison_results/channel_3x3_lens_gain.png, id=610, 1147.73793
+pt x 850.97925pt>
+File: image/channel_comparison_results/channel_3x3_lens_gain.png Graphic file (
+type png)
+<use image/channel_comparison_results/channel_3x3_lens_gain.png>
+Package pdftex.def Info: image/channel_comparison_results/channel_3x3_lens_gain
+.png  used on input line 1867.
+(pdftex.def)             Requested size: 481.87546pt x 357.27899pt.
+<image/channel_comparison_results/lens_effect_direction_agreement.png, id=612, 
+451.6875pt x 398.84006pt>
+File: image/channel_comparison_results/lens_effect_direction_agreement.png Grap
+hic file (type png)
+<use image/channel_comparison_results/lens_effect_direction_agreement.png>
+Package pdftex.def Info: image/channel_comparison_results/lens_effect_direction
+_agreement.png  used on input line 1885.
+(pdftex.def)             Requested size: 279.48865pt x 246.80359pt.
+
+[29 <./image/channel_comparison_results/channel_3x3_lens_gain.png>]
+<image/channel_comparison_results/mimo_evaluation_raw.png, id=623, 1140.05925pt
+ x 639.5895pt>
+File: image/channel_comparison_results/mimo_evaluation_raw.png Graphic file (ty
+pe png)
+<use image/channel_comparison_results/mimo_evaluation_raw.png>
+Package pdftex.def Info: image/channel_comparison_results/mimo_evaluation_raw.p
+ng  used on input line 1900.
+(pdftex.def)             Requested size: 481.87546pt x 270.3434pt.
+ [30 <./image/channel_comparison_results/lens_effect_direction_agreement.png> <
+./image/channel_comparison_results/mimo_evaluation_raw.png>]
+<image/channel_comparison_results/mimo_normalized_singular_values.png, id=633, 
+1069.14432pt x 639.5895pt>
+File: image/channel_comparison_results/mimo_normalized_singular_values.png Grap
+hic file (type png)
+<use image/channel_comparison_results/mimo_normalized_singular_values.png>
+Package pdftex.def Info: image/channel_comparison_results/mimo_normalized_singu
+lar_values.png  used on input line 1948.
+(pdftex.def)             Requested size: 481.87546pt x 288.2713pt.
+<image/channel_comparison_results/mimo_spatial_correlation_evaluation.png, id=6
+35, 926.86275pt x 639.5895pt>
+File: image/channel_comparison_results/mimo_spatial_correlation_evaluation.png 
+Graphic file (type png)
+<use image/channel_comparison_results/mimo_spatial_correlation_evaluation.png>
+Package pdftex.def Info: image/channel_comparison_results/mimo_spatial_correlat
+ion_evaluation.png  used on input line 1968.
+(pdftex.def)             Requested size: 481.87546pt x 332.52013pt.
+ [31 <./image/channel_comparison_results/mimo_normalized_singular_values.png>] 
+[32 <./image/channel_comparison_results/mimo_spatial_correlation_evaluation.png
+>] [33] [34] [35] [36]
+(current_report.bbl [37]) [38] (current_report.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-05-26>
+ ***********
+Package rerunfilecheck Info: File `current_report.out' has not changed.
+(rerunfilecheck)             Checksum: EAABE552CF70984E9F6EF8F53FDAE84C;13682.
+ ) 
+Here is how much of TeX's memory you used:
+ 12744 strings out of 467508
+ 209437 string characters out of 5418854
+ 631266 words of memory out of 5000000
+ 41567 multiletter control sequences out of 15000+600000
+ 643395 words of font info for 98 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 74i,15n,79p,636b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\DELL 7540\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm0900.pk> <C:\Users\DELL 7540\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cmextra/cmmib8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on current_report.pdf (38 pages, 6377388 bytes).
+PDF statistics:
+ 942 PDF objects out of 1000 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
+ 708 words of extra memory for PDF output out of 10000 (max. 10000000)
+

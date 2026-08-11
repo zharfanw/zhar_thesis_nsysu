@@ -1,0 +1,7 @@
+========================================================================
+SVD/9x9 MIMO SUMMARY PER DROP -- Random-TX Monte Carlo
+========================================================================
+Condition number median (across drops)  : 54.0  (34.6 dB)
+Condition number 5%-95% (dB)            : 29.4 - 40.6 dB
+Effective rank median (across drops)     : 4.07 / 9
+Capacity @ 10 dB median (across drops)    : 21.11 bit/s/Hz

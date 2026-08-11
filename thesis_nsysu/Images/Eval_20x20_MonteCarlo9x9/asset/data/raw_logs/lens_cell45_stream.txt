@@ -1,0 +1,180 @@
+drop 01/20  RX=Simul_+60deg (+60 deg): SNR=20.1 dB, C=6.68 bit/s/Hz, DS=168.19 ns
+drop 01/20  RX=Simul_+45deg (+45 deg): SNR=24.6 dB, C=8.17 bit/s/Hz, DS=110.50 ns
+drop 01/20  RX=Simul_+30deg (+30 deg): SNR=25.7 dB, C=8.54 bit/s/Hz, DS=103.96 ns
+drop 01/20  RX=Simul_+15deg (+15 deg): SNR=30.6 dB, C=10.17 bit/s/Hz, DS=157.60 ns
+drop 01/20  RX= Simul_+0deg ( +0 deg): SNR=35.0 dB, C=11.61 bit/s/Hz, DS=149.89 ns
+drop 01/20  RX=Simul_-15deg (-15 deg): SNR=31.8 dB, C=10.57 bit/s/Hz, DS=132.11 ns
+drop 01/20  RX=Simul_-30deg (-30 deg): SNR=25.6 dB, C=8.49 bit/s/Hz, DS=91.73 ns
+drop 01/20  RX=Simul_-45deg (-45 deg): SNR=20.6 dB, C=6.76 bit/s/Hz, DS=144.38 ns
+drop 01/20  RX=Simul_-60deg (-60 deg): SNR=21.3 dB, C=6.98 bit/s/Hz, DS=127.62 ns
+drop 02/20  RX=Simul_+60deg (+60 deg): SNR=20.5 dB, C=6.72 bit/s/Hz, DS=49.35 ns
+drop 02/20  RX=Simul_+45deg (+45 deg): SNR=22.4 dB, C=7.41 bit/s/Hz, DS=42.68 ns
+drop 02/20  RX=Simul_+30deg (+30 deg): SNR=22.1 dB, C=7.32 bit/s/Hz, DS=56.17 ns
+drop 02/20  RX=Simul_+15deg (+15 deg): SNR=24.9 dB, C=8.26 bit/s/Hz, DS=89.75 ns
+drop 02/20  RX= Simul_+0deg ( +0 deg): SNR=25.7 dB, C=8.54 bit/s/Hz, DS=71.95 ns
+drop 02/20  RX=Simul_-15deg (-15 deg): SNR=26.8 dB, C=8.89 bit/s/Hz, DS=51.30 ns
+drop 02/20  RX=Simul_-30deg (-30 deg): SNR=24.3 dB, C=8.04 bit/s/Hz, DS=58.80 ns
+drop 02/20  RX=Simul_-45deg (-45 deg): SNR=26.1 dB, C=8.64 bit/s/Hz, DS=54.63 ns
+drop 02/20  RX=Simul_-60deg (-60 deg): SNR=27.2 dB, C=8.96 bit/s/Hz, DS=62.62 ns
+drop 03/20  RX=Simul_+60deg (+60 deg): SNR=26.3 dB, C=8.70 bit/s/Hz, DS=73.75 ns
+drop 03/20  RX=Simul_+45deg (+45 deg): SNR=22.6 dB, C=7.49 bit/s/Hz, DS=82.73 ns
+drop 03/20  RX=Simul_+30deg (+30 deg): SNR=21.5 dB, C=7.13 bit/s/Hz, DS=50.59 ns
+drop 03/20  RX=Simul_+15deg (+15 deg): SNR=26.8 dB, C=8.89 bit/s/Hz, DS=43.58 ns
+drop 03/20  RX= Simul_+0deg ( +0 deg): SNR=23.4 dB, C=7.75 bit/s/Hz, DS=55.20 ns
+drop 03/20  RX=Simul_-15deg (-15 deg): SNR=24.7 dB, C=8.19 bit/s/Hz, DS=78.52 ns
+drop 03/20  RX=Simul_-30deg (-30 deg): SNR=25.2 dB, C=8.37 bit/s/Hz, DS=83.07 ns
+drop 03/20  RX=Simul_-45deg (-45 deg): SNR=24.6 dB, C=8.15 bit/s/Hz, DS=81.04 ns
+drop 03/20  RX=Simul_-60deg (-60 deg): SNR=14.6 dB, C=4.85 bit/s/Hz, DS=77.79 ns
+drop 04/20  RX=Simul_+60deg (+60 deg): SNR=18.8 dB, C=6.21 bit/s/Hz, DS=72.39 ns
+drop 04/20  RX=Simul_+45deg (+45 deg): SNR=24.1 dB, C=8.00 bit/s/Hz, DS=73.57 ns
+drop 04/20  RX=Simul_+30deg (+30 deg): SNR=23.9 dB, C=7.93 bit/s/Hz, DS=65.23 ns
+drop 04/20  RX=Simul_+15deg (+15 deg): SNR=24.2 dB, C=8.02 bit/s/Hz, DS=59.96 ns
+drop 04/20  RX= Simul_+0deg ( +0 deg): SNR=23.9 dB, C=7.89 bit/s/Hz, DS=75.87 ns
+drop 04/20  RX=Simul_-15deg (-15 deg): SNR=28.9 dB, C=9.58 bit/s/Hz, DS=79.94 ns
+drop 04/20  RX=Simul_-30deg (-30 deg): SNR=29.2 dB, C=9.68 bit/s/Hz, DS=84.85 ns
+drop 04/20  RX=Simul_-45deg (-45 deg): SNR=24.1 dB, C=7.93 bit/s/Hz, DS=88.63 ns
+drop 04/20  RX=Simul_-60deg (-60 deg): SNR=20.7 dB, C=6.83 bit/s/Hz, DS=95.14 ns
+drop 05/20  RX=Simul_+60deg (+60 deg): SNR=16.8 dB, C=5.50 bit/s/Hz, DS=92.09 ns
+drop 05/20  RX=Simul_+45deg (+45 deg): SNR=16.9 dB, C=5.57 bit/s/Hz, DS=85.89 ns
+drop 05/20  RX=Simul_+30deg (+30 deg): SNR=14.2 dB, C=4.68 bit/s/Hz, DS=78.18 ns
+drop 05/20  RX=Simul_+15deg (+15 deg): SNR=15.7 dB, C=5.21 bit/s/Hz, DS=77.30 ns
+drop 05/20  RX= Simul_+0deg ( +0 deg): SNR=23.2 dB, C=7.69 bit/s/Hz, DS=54.24 ns
+drop 05/20  RX=Simul_-15deg (-15 deg): SNR=28.4 dB, C=9.42 bit/s/Hz, DS=54.45 ns
+drop 05/20  RX=Simul_-30deg (-30 deg): SNR=28.9 dB, C=9.60 bit/s/Hz, DS=56.31 ns
+drop 05/20  RX=Simul_-45deg (-45 deg): SNR=24.4 dB, C=8.10 bit/s/Hz, DS=62.83 ns
+drop 05/20  RX=Simul_-60deg (-60 deg): SNR=22.1 dB, C=7.30 bit/s/Hz, DS=77.06 ns
+drop 06/20  RX=Simul_+60deg (+60 deg): SNR=21.2 dB, C=7.03 bit/s/Hz, DS=39.59 ns
+drop 06/20  RX=Simul_+45deg (+45 deg): SNR=22.6 dB, C=7.49 bit/s/Hz, DS=40.93 ns
+drop 06/20  RX=Simul_+30deg (+30 deg): SNR=22.8 dB, C=7.57 bit/s/Hz, DS=45.49 ns
+drop 06/20  RX=Simul_+15deg (+15 deg): SNR=26.2 dB, C=8.71 bit/s/Hz, DS=45.35 ns
+drop 06/20  RX= Simul_+0deg ( +0 deg): SNR=22.4 dB, C=7.41 bit/s/Hz, DS=62.04 ns
+drop 06/20  RX=Simul_-15deg (-15 deg): SNR=22.7 dB, C=7.51 bit/s/Hz, DS=57.20 ns
+drop 06/20  RX=Simul_-30deg (-30 deg): SNR=26.1 dB, C=8.66 bit/s/Hz, DS=66.83 ns
+drop 06/20  RX=Simul_-45deg (-45 deg): SNR=27.0 dB, C=8.98 bit/s/Hz, DS=69.35 ns
+drop 06/20  RX=Simul_-60deg (-60 deg): SNR=24.7 dB, C=8.19 bit/s/Hz, DS=41.86 ns
+drop 07/20  RX=Simul_+60deg (+60 deg): SNR=21.8 dB, C=7.21 bit/s/Hz, DS=55.50 ns
+drop 07/20  RX=Simul_+45deg (+45 deg): SNR=25.6 dB, C=8.45 bit/s/Hz, DS=79.04 ns
+drop 07/20  RX=Simul_+30deg (+30 deg): SNR=22.1 dB, C=7.27 bit/s/Hz, DS=56.72 ns
+drop 07/20  RX=Simul_+15deg (+15 deg): SNR=19.5 dB, C=6.45 bit/s/Hz, DS=47.15 ns
+drop 07/20  RX= Simul_+0deg ( +0 deg): SNR=22.8 dB, C=7.53 bit/s/Hz, DS=45.75 ns
+drop 07/20  RX=Simul_-15deg (-15 deg): SNR=23.2 dB, C=7.66 bit/s/Hz, DS=54.46 ns
+drop 07/20  RX=Simul_-30deg (-30 deg): SNR=19.5 dB, C=6.44 bit/s/Hz, DS=66.34 ns
+drop 07/20  RX=Simul_-45deg (-45 deg): SNR=22.3 dB, C=7.38 bit/s/Hz, DS=54.71 ns
+drop 07/20  RX=Simul_-60deg (-60 deg): SNR=21.1 dB, C=7.00 bit/s/Hz, DS=62.96 ns
+drop 08/20  RX=Simul_+60deg (+60 deg): SNR=28.6 dB, C=9.51 bit/s/Hz, DS=150.61 ns
+drop 08/20  RX=Simul_+45deg (+45 deg): SNR=28.6 dB, C=9.48 bit/s/Hz, DS=133.11 ns
+drop 08/20  RX=Simul_+30deg (+30 deg): SNR=27.7 dB, C=9.20 bit/s/Hz, DS=85.06 ns
+drop 08/20  RX=Simul_+15deg (+15 deg): SNR=24.2 dB, C=8.02 bit/s/Hz, DS=68.17 ns
+drop 08/20  RX= Simul_+0deg ( +0 deg): SNR=26.2 dB, C=8.69 bit/s/Hz, DS=39.95 ns
+drop 08/20  RX=Simul_-15deg (-15 deg): SNR=25.9 dB, C=8.59 bit/s/Hz, DS=39.08 ns
+drop 08/20  RX=Simul_-30deg (-30 deg): SNR=21.3 dB, C=7.06 bit/s/Hz, DS=104.99 ns
+drop 08/20  RX=Simul_-45deg (-45 deg): SNR=22.5 dB, C=7.43 bit/s/Hz, DS=76.34 ns
+drop 08/20  RX=Simul_-60deg (-60 deg): SNR=23.7 dB, C=7.82 bit/s/Hz, DS=79.68 ns
+drop 09/20  RX=Simul_+60deg (+60 deg): SNR=20.4 dB, C=6.67 bit/s/Hz, DS=40.60 ns
+drop 09/20  RX=Simul_+45deg (+45 deg): SNR=20.8 dB, C=6.89 bit/s/Hz, DS=30.71 ns
+drop 09/20  RX=Simul_+30deg (+30 deg): SNR=21.1 dB, C=6.99 bit/s/Hz, DS=44.46 ns
+drop 09/20  RX=Simul_+15deg (+15 deg): SNR=22.1 dB, C=7.34 bit/s/Hz, DS=43.30 ns
+drop 09/20  RX= Simul_+0deg ( +0 deg): SNR=21.7 dB, C=7.18 bit/s/Hz, DS=59.68 ns
+drop 09/20  RX=Simul_-15deg (-15 deg): SNR=25.6 dB, C=8.49 bit/s/Hz, DS=57.81 ns
+drop 09/20  RX=Simul_-30deg (-30 deg): SNR=24.9 dB, C=8.27 bit/s/Hz, DS=50.23 ns
+drop 09/20  RX=Simul_-45deg (-45 deg): SNR=21.6 dB, C=7.12 bit/s/Hz, DS=45.06 ns
+drop 09/20  RX=Simul_-60deg (-60 deg): SNR=14.8 dB, C=4.93 bit/s/Hz, DS=39.79 ns
+drop 10/20  RX=Simul_+60deg (+60 deg): SNR=20.3 dB, C=6.60 bit/s/Hz, DS=86.09 ns
+drop 10/20  RX=Simul_+45deg (+45 deg): SNR=22.8 dB, C=7.48 bit/s/Hz, DS=77.17 ns
+drop 10/20  RX=Simul_+30deg (+30 deg): SNR=23.0 dB, C=7.60 bit/s/Hz, DS=50.44 ns
+drop 10/20  RX=Simul_+15deg (+15 deg): SNR=21.8 dB, C=7.19 bit/s/Hz, DS=37.18 ns
+drop 10/20  RX= Simul_+0deg ( +0 deg): SNR=21.0 dB, C=6.91 bit/s/Hz, DS=32.37 ns
+drop 10/20  RX=Simul_-15deg (-15 deg): SNR=24.8 dB, C=8.23 bit/s/Hz, DS=60.48 ns
+drop 10/20  RX=Simul_-30deg (-30 deg): SNR=25.3 dB, C=8.39 bit/s/Hz, DS=58.02 ns
+drop 10/20  RX=Simul_-45deg (-45 deg): SNR=19.5 dB, C=6.29 bit/s/Hz, DS=48.35 ns
+drop 10/20  RX=Simul_-60deg (-60 deg): SNR=15.2 dB, C=5.03 bit/s/Hz, DS=71.63 ns
+drop 11/20  RX=Simul_+60deg (+60 deg): SNR=13.3 dB, C=4.43 bit/s/Hz, DS=61.11 ns
+drop 11/20  RX=Simul_+45deg (+45 deg): SNR=14.2 dB, C=4.68 bit/s/Hz, DS=62.11 ns
+drop 11/20  RX=Simul_+30deg (+30 deg): SNR=16.3 dB, C=5.42 bit/s/Hz, DS=76.62 ns
+drop 11/20  RX=Simul_+15deg (+15 deg): SNR=24.5 dB, C=8.12 bit/s/Hz, DS=75.83 ns
+drop 11/20  RX= Simul_+0deg ( +0 deg): SNR=26.1 dB, C=8.66 bit/s/Hz, DS=80.02 ns
+drop 11/20  RX=Simul_-15deg (-15 deg): SNR=27.7 dB, C=9.19 bit/s/Hz, DS=82.33 ns
+drop 11/20  RX=Simul_-30deg (-30 deg): SNR=26.5 dB, C=8.80 bit/s/Hz, DS=60.79 ns
+drop 11/20  RX=Simul_-45deg (-45 deg): SNR=26.1 dB, C=8.67 bit/s/Hz, DS=58.83 ns
+drop 11/20  RX=Simul_-60deg (-60 deg): SNR=23.4 dB, C=7.73 bit/s/Hz, DS=50.31 ns
+drop 12/20  RX=Simul_+60deg (+60 deg): SNR=26.3 dB, C=8.74 bit/s/Hz, DS=71.41 ns
+drop 12/20  RX=Simul_+45deg (+45 deg): SNR=29.3 dB, C=9.73 bit/s/Hz, DS=143.45 ns
+drop 12/20  RX=Simul_+30deg (+30 deg): SNR=35.6 dB, C=11.84 bit/s/Hz, DS=186.95 ns
+drop 12/20  RX=Simul_+15deg (+15 deg): SNR=41.5 dB, C=13.79 bit/s/Hz, DS=190.81 ns
+drop 12/20  RX= Simul_+0deg ( +0 deg): SNR=35.8 dB, C=11.89 bit/s/Hz, DS=191.77 ns
+drop 12/20  RX=Simul_-15deg (-15 deg): SNR=25.2 dB, C=8.30 bit/s/Hz, DS=157.69 ns
+drop 12/20  RX=Simul_-30deg (-30 deg): SNR=23.1 dB, C=7.64 bit/s/Hz, DS=137.29 ns
+drop 12/20  RX=Simul_-45deg (-45 deg): SNR=22.9 dB, C=7.53 bit/s/Hz, DS=54.24 ns
+drop 12/20  RX=Simul_-60deg (-60 deg): SNR=23.2 dB, C=7.68 bit/s/Hz, DS=109.63 ns
+drop 13/20  RX=Simul_+60deg (+60 deg): SNR=22.1 dB, C=7.13 bit/s/Hz, DS=101.93 ns
+drop 13/20  RX=Simul_+45deg (+45 deg): SNR=23.3 dB, C=7.69 bit/s/Hz, DS=76.27 ns
+drop 13/20  RX=Simul_+30deg (+30 deg): SNR=25.1 dB, C=8.33 bit/s/Hz, DS=58.63 ns
+drop 13/20  RX=Simul_+15deg (+15 deg): SNR=26.2 dB, C=8.67 bit/s/Hz, DS=57.03 ns
+drop 13/20  RX= Simul_+0deg ( +0 deg): SNR=20.7 dB, C=6.82 bit/s/Hz, DS=67.64 ns
+drop 13/20  RX=Simul_-15deg (-15 deg): SNR=14.1 dB, C=4.64 bit/s/Hz, DS=83.73 ns
+drop 13/20  RX=Simul_-30deg (-30 deg): SNR=20.9 dB, C=6.91 bit/s/Hz, DS=92.27 ns
+drop 13/20  RX=Simul_-45deg (-45 deg): SNR=25.3 dB, C=8.41 bit/s/Hz, DS=95.47 ns
+drop 13/20  RX=Simul_-60deg (-60 deg): SNR=21.5 dB, C=7.09 bit/s/Hz, DS=71.23 ns
+drop 14/20  RX=Simul_+60deg (+60 deg): SNR=16.9 dB, C=5.59 bit/s/Hz, DS=62.96 ns
+drop 14/20  RX=Simul_+45deg (+45 deg): SNR=15.8 dB, C=5.18 bit/s/Hz, DS=66.35 ns
+drop 14/20  RX=Simul_+30deg (+30 deg): SNR=13.0 dB, C=4.27 bit/s/Hz, DS=73.88 ns
+drop 14/20  RX=Simul_+15deg (+15 deg): SNR=14.8 dB, C=4.84 bit/s/Hz, DS=70.97 ns
+drop 14/20  RX= Simul_+0deg ( +0 deg): SNR=18.5 dB, C=6.11 bit/s/Hz, DS=61.88 ns
+drop 14/20  RX=Simul_-15deg (-15 deg): SNR=23.8 dB, C=7.86 bit/s/Hz, DS=55.22 ns
+drop 14/20  RX=Simul_-30deg (-30 deg): SNR=22.5 dB, C=7.45 bit/s/Hz, DS=61.38 ns
+drop 14/20  RX=Simul_-45deg (-45 deg): SNR=25.1 dB, C=8.31 bit/s/Hz, DS=66.26 ns
+drop 14/20  RX=Simul_-60deg (-60 deg): SNR=28.0 dB, C=9.27 bit/s/Hz, DS=48.81 ns
+drop 15/20  RX=Simul_+60deg (+60 deg): SNR=15.7 dB, C=5.20 bit/s/Hz, DS=69.60 ns
+drop 15/20  RX=Simul_+45deg (+45 deg): SNR=16.1 dB, C=5.36 bit/s/Hz, DS=93.05 ns
+drop 15/20  RX=Simul_+30deg (+30 deg): SNR=19.4 dB, C=6.44 bit/s/Hz, DS=94.11 ns
+drop 15/20  RX=Simul_+15deg (+15 deg): SNR=25.3 dB, C=8.40 bit/s/Hz, DS=95.32 ns
+drop 15/20  RX= Simul_+0deg ( +0 deg): SNR=24.1 dB, C=7.99 bit/s/Hz, DS=69.09 ns
+drop 15/20  RX=Simul_-15deg (-15 deg): SNR=25.0 dB, C=8.29 bit/s/Hz, DS=66.27 ns
+drop 15/20  RX=Simul_-30deg (-30 deg): SNR=25.0 dB, C=8.26 bit/s/Hz, DS=60.13 ns
+drop 15/20  RX=Simul_-45deg (-45 deg): SNR=27.1 dB, C=8.97 bit/s/Hz, DS=72.66 ns
+drop 15/20  RX=Simul_-60deg (-60 deg): SNR=26.7 dB, C=8.83 bit/s/Hz, DS=114.33 ns
+drop 16/20  RX=Simul_+60deg (+60 deg): SNR=17.4 dB, C=5.71 bit/s/Hz, DS=69.26 ns
+drop 16/20  RX=Simul_+45deg (+45 deg): SNR=20.9 dB, C=6.93 bit/s/Hz, DS=57.27 ns
+drop 16/20  RX=Simul_+30deg (+30 deg): SNR=18.8 dB, C=6.21 bit/s/Hz, DS=61.15 ns
+drop 16/20  RX=Simul_+15deg (+15 deg): SNR=22.5 dB, C=7.46 bit/s/Hz, DS=70.70 ns
+drop 16/20  RX= Simul_+0deg ( +0 deg): SNR=23.2 dB, C=7.68 bit/s/Hz, DS=75.40 ns
+drop 16/20  RX=Simul_-15deg (-15 deg): SNR=23.0 dB, C=7.64 bit/s/Hz, DS=65.94 ns
+drop 16/20  RX=Simul_-30deg (-30 deg): SNR=27.0 dB, C=8.95 bit/s/Hz, DS=59.81 ns
+drop 16/20  RX=Simul_-45deg (-45 deg): SNR=28.2 dB, C=9.35 bit/s/Hz, DS=53.13 ns
+drop 16/20  RX=Simul_-60deg (-60 deg): SNR=22.9 dB, C=7.57 bit/s/Hz, DS=51.88 ns
+drop 17/20  RX=Simul_+60deg (+60 deg): SNR=23.8 dB, C=7.88 bit/s/Hz, DS=40.94 ns
+drop 17/20  RX=Simul_+45deg (+45 deg): SNR=23.5 dB, C=7.78 bit/s/Hz, DS=49.08 ns
+drop 17/20  RX=Simul_+30deg (+30 deg): SNR=23.3 dB, C=7.73 bit/s/Hz, DS=49.56 ns
+drop 17/20  RX=Simul_+15deg (+15 deg): SNR=23.8 dB, C=7.89 bit/s/Hz, DS=69.22 ns
+drop 17/20  RX= Simul_+0deg ( +0 deg): SNR=21.6 dB, C=7.16 bit/s/Hz, DS=74.05 ns
+drop 17/20  RX=Simul_-15deg (-15 deg): SNR=19.1 dB, C=6.30 bit/s/Hz, DS=63.65 ns
+drop 17/20  RX=Simul_-30deg (-30 deg): SNR=26.0 dB, C=8.62 bit/s/Hz, DS=63.46 ns
+drop 17/20  RX=Simul_-45deg (-45 deg): SNR=28.7 dB, C=9.52 bit/s/Hz, DS=61.22 ns
+drop 17/20  RX=Simul_-60deg (-60 deg): SNR=18.1 dB, C=5.98 bit/s/Hz, DS=73.61 ns
+drop 18/20  RX=Simul_+60deg (+60 deg): SNR=30.4 dB, C=10.10 bit/s/Hz, DS=79.62 ns
+drop 18/20  RX=Simul_+45deg (+45 deg): SNR=30.3 dB, C=10.04 bit/s/Hz, DS=78.96 ns
+drop 18/20  RX=Simul_+30deg (+30 deg): SNR=24.2 dB, C=8.01 bit/s/Hz, DS=66.19 ns
+drop 18/20  RX=Simul_+15deg (+15 deg): SNR=24.6 dB, C=8.15 bit/s/Hz, DS=50.68 ns
+drop 18/20  RX= Simul_+0deg ( +0 deg): SNR=21.5 dB, C=7.10 bit/s/Hz, DS=56.60 ns
+drop 18/20  RX=Simul_-15deg (-15 deg): SNR=19.6 dB, C=6.45 bit/s/Hz, DS=58.98 ns
+drop 18/20  RX=Simul_-30deg (-30 deg): SNR=21.5 dB, C=7.11 bit/s/Hz, DS=42.76 ns
+drop 18/20  RX=Simul_-45deg (-45 deg): SNR=21.0 dB, C=6.95 bit/s/Hz, DS=52.82 ns
+drop 18/20  RX=Simul_-60deg (-60 deg): SNR=23.0 dB, C=7.60 bit/s/Hz, DS=70.16 ns
+drop 19/20  RX=Simul_+60deg (+60 deg): SNR=14.8 dB, C=4.92 bit/s/Hz, DS=67.76 ns
+drop 19/20  RX=Simul_+45deg (+45 deg): SNR=17.0 dB, C=5.56 bit/s/Hz, DS=52.80 ns
+drop 19/20  RX=Simul_+30deg (+30 deg): SNR=19.6 dB, C=6.47 bit/s/Hz, DS=26.62 ns
+drop 19/20  RX=Simul_+15deg (+15 deg): SNR=16.0 dB, C=5.20 bit/s/Hz, DS=51.93 ns
+drop 19/20  RX= Simul_+0deg ( +0 deg): SNR=23.9 dB, C=7.90 bit/s/Hz, DS=55.24 ns
+drop 19/20  RX=Simul_-15deg (-15 deg): SNR=29.1 dB, C=9.67 bit/s/Hz, DS=57.98 ns
+drop 19/20  RX=Simul_-30deg (-30 deg): SNR=28.1 dB, C=9.34 bit/s/Hz, DS=58.15 ns
+drop 19/20  RX=Simul_-45deg (-45 deg): SNR=25.1 dB, C=8.34 bit/s/Hz, DS=56.87 ns
+drop 19/20  RX=Simul_-60deg (-60 deg): SNR=24.0 dB, C=7.93 bit/s/Hz, DS=64.78 ns
+drop 20/20  RX=Simul_+60deg (+60 deg): SNR=21.8 dB, C=7.17 bit/s/Hz, DS=54.30 ns
+drop 20/20  RX=Simul_+45deg (+45 deg): SNR=19.9 dB, C=6.57 bit/s/Hz, DS=55.15 ns
+drop 20/20  RX=Simul_+30deg (+30 deg): SNR=20.9 dB, C=6.91 bit/s/Hz, DS=44.73 ns
+drop 20/20  RX=Simul_+15deg (+15 deg): SNR=22.9 dB, C=7.59 bit/s/Hz, DS=48.96 ns
+drop 20/20  RX= Simul_+0deg ( +0 deg): SNR=23.1 dB, C=7.66 bit/s/Hz, DS=46.87 ns
+drop 20/20  RX=Simul_-15deg (-15 deg): SNR=25.0 dB, C=8.28 bit/s/Hz, DS=56.16 ns
+drop 20/20  RX=Simul_-30deg (-30 deg): SNR=22.1 dB, C=7.34 bit/s/Hz, DS=67.72 ns
+drop 20/20  RX=Simul_-45deg (-45 deg): SNR=16.2 dB, C=5.31 bit/s/Hz, DS=81.12 ns
+drop 20/20  RX=Simul_-60deg (-60 deg): SNR=21.5 dB, C=7.08 bit/s/Hz, DS=84.74 ns
