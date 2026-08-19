@@ -1,0 +1,193 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions and Future Work}
+
+\begin{frame}[t]{The Four Research Questions Receive Conditional Answers}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.49\textwidth}
+  \begin{block}{RQ1 --- Physical realization: supported}
+    The $20\times20$ transmitarray produces a realized focus near 14~mm, a
+    focal arc, and angle-dependent far-field responses.
+  \end{block}
+  \begin{block}{RQ3 --- Mobile comparison: no universal gain}
+    Under equal weighting, the baseline has higher median link and constructed
+    MIMO capacity; the lens has stronger typical-block decorrelation.
+  \end{block}
+
+  \column{0.49\textwidth}
+  \begin{block}{RQ2 --- Cross-solver trend: mostly supported}
+    All solvers predict matched-link reinforcement, cross-link suppression,
+    lower correlation, and higher raw capacity; normalized gains differ.
+  \end{block}
+  \begin{block}{RQ4 --- Higher order: gain with lower efficiency}
+    Capacity grows from $3\times3$ to $9\times9$, while conditioning, rank
+    fraction, and capacity per dimension deteriorate.
+  \end{block}
+\end{columns}
+\Takeaway{The spatial transformation is real; its system benefit depends on
+receiver operation and geometry.}
+\SourceNote{Chapter 4: Principal Findings}
+\end{frame}
+
+
+\begin{frame}[t]{Principal Contributions}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.49\textwidth}
+  \begin{block}{Physical and computational bridge}
+    \raggedright
+    \begin{itemize}
+      \setlength{\itemsep}{0.30em}
+      \item Full-wave characterized planar $20\times20$ transmitarray and
+            focal-plane RX arrangement at 38~GHz.
+      \item Common raw/normalized MIMO framework for HFSS S-parameters and
+            Sionna-RT channel responses.
+      \item Three-solver evidence with 92.6\% agreement on the sign of the
+            link-level lens effect.
+    \end{itemize}
+  \end{block}
+
+  \column{0.49\textwidth}
+  \begin{block}{System-level evidence}
+    \raggedright
+    \begin{itemize}
+      \setlength{\itemsep}{0.30em}
+      \item Paired mobile study explaining why local decorrelation does not
+            automatically increase aggregate capacity.
+      \item Explicit comparison of global, waypoint-local, and block-median
+            decorrelation estimators.
+      \item Higher-order evidence of absolute capacity growth with declining
+            per-dimension efficiency.
+    \end{itemize}
+  \end{block}
+\end{columns}
+\SourceNote{Chapter 4: Contributions}
+\end{frame}
+
+
+\begin{frame}[t]{Overall Conclusion: Focusing Is Necessary but Not Sufficient}
+\small
+\begin{columns}[T,onlytextwidth]
+  \column{0.31\textwidth}
+  \begin{block}{What works}
+    Passive focusing and angular filtering reshape channel amplitudes and
+    improve local separability.
+  \end{block}
+  \column{0.31\textwidth}
+  \begin{block}{What limits it}
+    Misalignment, equal branch weighting, and geometry-limited singular modes
+    can erase the link-level benefit.
+  \end{block}
+  \column{0.31\textwidth}
+  \begin{block}{What is required}
+    Placement, channel geometry, normalization, and beam management must be
+    designed jointly.
+  \end{block}
+\end{columns}
+
+\vspace{0.35cm}
+\begin{beamercolorbox}[rounded=true,sep=1.0ex,wd=\linewidth]{takeaway}
+  \centering\large\bfseries
+  The transmitarray is an effective passive spatial transformer --- not an
+  automatic MIMO-capacity multiplier.
+\end{beamercolorbox}
+\SourceNote{Chapter 4: Overall Conclusion}
+\end{frame}
+
+
+\begin{frame}[t]{Limitations I: Physical Validation and Channel Construction}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.49\textwidth}
+  \begin{block}{Physical and numerical validation}
+    \begin{itemize}
+      \setlength{\itemsep}{0.15em}
+      \item Simulation only; no fabricated prototype or coherent OTA channel.
+      \item Solver formulations and absolute reference quantities differ.
+      \item Realized 14~mm focus differs from the 30~mm design target.
+    \end{itemize}
+  \end{block}
+
+  \column{0.49\textwidth}
+  \begin{block}{Receiver construction}
+    \begin{itemize}
+      \setlength{\itemsep}{0.15em}
+      \item $N\times N$ matrices stack sequential $N\times1$ simulations.
+      \item Mutual coupling, common phase, switching overhead, and joint RX
+            noise are omitted.
+      \item The reconstructed matrix is a controlled proxy, not a simultaneous
+            measured multiport channel.
+    \end{itemize}
+  \end{block}
+\end{columns}
+\CautionNote{Absolute values from different solvers and channel constructions
+are not directly interchangeable.}
+\SourceNote{Chapter 4: Limitations}
+\end{frame}
+
+
+\begin{frame}[t]{Limitations II: Fair Comparison and Reproducibility}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.49\textwidth}
+  \begin{block}{Comparison confounds}
+    \begin{itemize}
+      \setlength{\itemsep}{0.15em}
+      \item Lens and baseline designs differ in both placement and pattern.
+      \item Order study changes power, aperture, RX count, and angular grid.
+      \item Only the $0^\circ$ receive branch is common across all array orders.
+    \end{itemize}
+  \end{block}
+
+  \column{0.49\textwidth}
+  \begin{block}{Sampling and reproducibility}
+    \begin{itemize}
+      \setlength{\itemsep}{0.15em}
+      \item One room and controlled trajectories; no multi-seed confidence
+            intervals or convergence sweep.
+      \item 100{,}000 ray samples/source; outage is saturated.
+      \item Source notebooks and complete complex tensors are absent from the
+            current trajectory archive.
+    \end{itemize}
+  \end{block}
+\end{columns}
+\CautionNote{Evidence supports controlled mechanisms, not universal deployment
+performance.}
+\SourceNote{Chapter 4: Limitations}
+\end{frame}
+
+
+\begin{frame}[t]{Future Work: Turn Angular Selectivity into Operational Gain}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.49\textwidth}
+  \begin{block}{1. Measure the physical system}
+    Fabricate the feed and transmitarray; measure focal distance, patterns, and
+    simultaneous coherent multiport channels.
+  \end{block}
+  \begin{block}{3. Make comparisons causal and fair}
+    Isolate placement from pattern, then hold total TX power, aperture, and RX
+    angle set fixed across orders.
+  \end{block}
+
+  \column{0.49\textwidth}
+  \begin{block}{2. Add adaptive beam management}
+    Evaluate selection, switching, combining, and hybrid beamforming with
+    training overhead and alignment error.
+  \end{block}
+  \begin{block}{4. Broaden and reproduce the evidence}
+    Retain tensors and notebooks; add seeds, convergence tests, blockage,
+    mobility, richer scenes, multi-user precoding, and orders $N>9$.
+  \end{block}
+\end{columns}
+
+\vspace{0.10cm}
+\begin{beamercolorbox}[rounded=true,sep=0.75ex,wd=\linewidth]{takeaway}
+  \centering
+  \textbf{Joint target:}\quad lens design $+$ channel geometry $+$ RX placement
+  $+$ beam-management algorithm.
+\end{beamercolorbox}
+\SourceNote{Chapter 4: Future Work}
+\end{frame}

@@ -1,0 +1,10 @@
+trajectory,system,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+Half-Circular,Lens,0,Simul_+60deg,60,4.96016,3.830114,-87.275742,14.91794,0.0
+Half-Circular,Lens,1,Simul_+45deg,45,4.764493,3.214714,-88.285187,14.380116,0.0
+Half-Circular,Lens,2,Simul_+30deg,30,4.791027,2.161673,-88.644394,14.532838,0.0
+Half-Circular,Lens,3,Simul_+15deg,15,5.755849,2.041071,-85.143204,17.389341,0.0
+Half-Circular,Lens,4,Simul_+0deg,0,4.565209,2.991693,-89.806458,13.803255,0.0
+Half-Circular,Lens,5,Simul_-15deg,-15,5.799728,2.057747,-84.891624,17.530281,0.0
+Half-Circular,Lens,6,Simul_-30deg,-30,4.780087,2.177842,-88.719971,14.526042,0.0
+Half-Circular,Lens,7,Simul_-45deg,-45,4.795386,3.199308,-88.038239,14.486645,0.0
+Half-Circular,Lens,8,Simul_-60deg,-60,5.033358,3.865873,-87.18618,15.173904,0.0

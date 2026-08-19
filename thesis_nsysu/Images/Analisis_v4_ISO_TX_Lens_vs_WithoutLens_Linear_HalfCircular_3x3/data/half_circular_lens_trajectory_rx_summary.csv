@@ -1,0 +1,4 @@
+trajectory,system,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+Half-Circular,Lens,0,Simul_+45deg,45,3.66721,2.186741,-87.263504,11.113518,0.0
+Half-Circular,Lens,1,Simul_+0deg,0,3.484653,2.647002,-87.285545,10.563115,0.0
+Half-Circular,Lens,2,Simul_-45deg,-45,3.639605,2.162086,-87.368904,11.054661,0.0

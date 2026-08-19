@@ -1,0 +1,6 @@
+order_n,order_label,rx_config_index,name,rx_lens_angle_deg,combined_gain_db,mean_|rho|_offdiag,max_|rho|_offdiag,capacity_10dB_bits/s/Hz
+5,5×5,2,Simul_+0deg,0,-70.708602,0.85576,0.999864,3.452402
+5,5×5,3,Simul_-30deg,-30,-71.947776,0.616963,0.976211,3.421207
+5,5×5,1,Simul_+30deg,30,-72.023515,0.654238,0.978708,3.433293
+5,5×5,4,Simul_-60deg,-60,-72.802534,0.766984,0.910831,3.395952
+5,5×5,0,Simul_+60deg,60,-72.981454,0.773844,0.934458,3.421451

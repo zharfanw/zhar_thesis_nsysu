@@ -1,0 +1,37 @@
+trajectory,system,rx_config_index,name,rx_lens_angle_deg,combined_gain_db,mean_|rho|_offdiag,max_|rho|_offdiag,capacity_10dB_bits/s/Hz
+Linear,Without Lens,6,Simul_-2,0,-73.051344,0.429977,0.907665,3.446991
+Linear,Without Lens,2,Simul_+2,0,-73.053082,0.42664,0.903382,3.446777
+Linear,Without Lens,7,Simul_-3,0,-73.06987,0.432792,0.922257,3.445367
+Linear,Without Lens,1,Simul_+3,0,-73.073398,0.432523,0.929348,3.445591
+Linear,Without Lens,3,Simul_+1,0,-73.099488,0.43388,0.961103,3.442143
+Linear,Without Lens,5,Simul_-1,0,-73.100953,0.436418,0.962948,3.442207
+Linear,Without Lens,0,Simul_+4,0,-73.107034,0.442547,0.972367,3.434321
+Linear,Without Lens,8,Simul_-4,0,-73.108836,0.444916,0.97537,3.433313
+Linear,Without Lens,4,Simul_0,0,-73.116644,0.434924,0.999916,3.432399
+Half-Circular,Without Lens,6,Simul_-2,0,-73.051345,0.429976,0.907663,3.446991
+Half-Circular,Without Lens,2,Simul_+2,0,-73.05308,0.426639,0.903382,3.446777
+Half-Circular,Without Lens,7,Simul_-3,0,-73.069877,0.432792,0.922257,3.445368
+Half-Circular,Without Lens,1,Simul_+3,0,-73.073396,0.432523,0.929348,3.445591
+Half-Circular,Without Lens,3,Simul_+1,0,-73.099488,0.43388,0.961103,3.442143
+Half-Circular,Without Lens,5,Simul_-1,0,-73.100954,0.436418,0.962948,3.442207
+Half-Circular,Without Lens,0,Simul_+4,0,-73.106996,0.442547,0.972367,3.434321
+Half-Circular,Without Lens,8,Simul_-4,0,-73.108839,0.444917,0.975369,3.433314
+Half-Circular,Without Lens,4,Simul_0,0,-73.116632,0.434924,0.999916,3.432402
+Linear,Lens,5,Simul_-15deg,-15,-68.031056,0.39066,0.9559,3.445236
+Linear,Lens,3,Simul_+15deg,15,-68.066115,0.383226,0.942312,3.450547
+Linear,Lens,4,Simul_+0deg,0,-69.938792,0.456078,0.999864,3.450224
+Linear,Lens,6,Simul_-30deg,-30,-70.563431,0.403088,0.976211,3.419912
+Linear,Lens,2,Simul_+30deg,30,-70.624861,0.427131,0.978708,3.425617
+Linear,Lens,7,Simul_-45deg,-45,-71.632274,0.421676,0.921482,3.411245
+Linear,Lens,1,Simul_+45deg,45,-71.800309,0.421073,0.92546,3.404008
+Linear,Lens,8,Simul_-60deg,-60,-71.870379,0.42983,0.910831,3.417224
+Linear,Lens,0,Simul_+60deg,60,-72.040084,0.41279,0.934458,3.432547
+Half-Circular,Lens,5,Simul_-15deg,-15,-68.031057,0.390659,0.955899,3.445236
+Half-Circular,Lens,3,Simul_+15deg,15,-68.06612,0.383226,0.942313,3.450547
+Half-Circular,Lens,4,Simul_+0deg,0,-69.938793,0.456078,0.999864,3.450224
+Half-Circular,Lens,6,Simul_-30deg,-30,-70.56343,0.403088,0.976211,3.419912
+Half-Circular,Lens,2,Simul_+30deg,30,-70.624865,0.427132,0.978707,3.425617
+Half-Circular,Lens,7,Simul_-45deg,-45,-71.632273,0.421676,0.921481,3.411245
+Half-Circular,Lens,1,Simul_+45deg,45,-71.800326,0.421078,0.925461,3.404008
+Half-Circular,Lens,8,Simul_-60deg,-60,-71.870382,0.42983,0.910831,3.417224
+Half-Circular,Lens,0,Simul_+60deg,60,-72.04008,0.41279,0.934459,3.432547

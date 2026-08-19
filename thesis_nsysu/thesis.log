@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.3)  10 AUG 2026 13:25
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.3)  19 AUG 2026 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1099,251 +1099,211 @@ Package hyperref Info: Link coloring OFF on input line 13.
 
 File: Images/logo_nsysu_thesis.jpg Graphic file (type bmp)
 <Images/logo_nsysu_thesis.jpg>
-
-Overfull \hbox (149.20865pt too wide) in paragraph at lines 36--36
- \TU/bkai00m0.TTF(0)/m/n/18 天線透鏡輔助毫米波多輸入多輸出系統之通道去相關與空間多工效能評估 
- []
-
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 40.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 46.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-0.
-(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
+6.
+ (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-40.
+46.
 
 (C:\Program Files\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-40.
+46.
 
 (C:\Program Files\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-40.
+46.
 
 (C:\Program Files\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 40.
+(Font)              scaled to size 8.80005pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 16.0pt on input line 40.
+(Font)              scaled to size 16.0pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 11.67993pt on input line 40.
+(Font)              scaled to size 11.67993pt on input line 46.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 40.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(Font)              scaled to size 8.80005pt on input line 46.
  [1
 
-]
-[2] [3] [1] [2] [3] [4] [5] [6]
-File: Images/watermark.jpg Graphic file (type bmp)
-<Images/watermark.jpg>
- [7] (thesis.toc
+] [2] [1] [2] [3]
+[4]
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.6pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.8pt on input line 130.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.6pt on input line 130.
+ [5] [6] [7] (thesis.toc
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
 
-[10] (thesis.lof
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.0pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
+[11] (thesis.lof
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
+(Font)              scaled to size 6.6pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 12.0pt on input line 11.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 8.8pt on input line 11.
+(Font)              scaled to size 8.8pt on input line 13.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 6.6pt on input line 11.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11]
-Overfull \hbox (0.18475pt too wide) in paragraph at lines 28--28
- [][] [][]\TU/lmr/m/n/12 Sionna-RT: mean off-diagonal spatial correlation with 
-and with- 
- []
-
-
-Overfull \hbox (7.29274pt too wide) in paragraph at lines 30--30
- [][] [][]\TU/lmr/m/n/12 Mean pairwise absolute-magnitude and centered frequenc
-y-shape 
- []
-
-
-Overfull \hbox (1.19708pt too wide) in paragraph at lines 30--30
- \TU/lmr/m/n/12 discrepancies among the Hybrid, SBR+, and Sionna-RT solvers; 
- []
-
-
-Overfull \hbox (6.36075pt too wide) in paragraph at lines 31--31
- [][] [][]\TU/lmr/m/n/12 Lens-induced channel-magnitude change for every canoni
-cal TX– 
- []
-
-
-Overfull \hbox (0.13274pt too wide) in paragraph at lines 39--39
- [][] [][]\TU/lmr/m/n/12 Aggregate lens-assisted and without-lens comparison ac
-ross tra- 
- []
-
-
-Overfull \hbox (6.35435pt too wide) in paragraph at lines 39--39
- \TU/lmr/m/n/12 relation, median-block decorrelation, and median condition num-
- 
+(Font)              scaled to size 6.6pt on input line 13.
+ [12] [13]
+Overfull \hbox (0.25035pt too wide) in paragraph at lines 50--50
+ [][] [][]\TU/lmr/m/n/12 Aggregate link, constructed-MIMO, dimension-normalized
+, and 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-Overfull \hbox (5.48474pt too wide) in paragraph at lines 42--42
- [][] [][]\TU/lmr/m/n/12 Diagnostic along-trajectory comparison for the full-ci
-rcular path. 
- []
-
-
-Overfull \hbox (5.80077pt too wide) in paragraph at lines 43--43
- [][] [][]\TU/lmr/m/n/12 Compute-cost scalability: actual vs. naive \TU/lmtt/m/
-n/12 PathSolver \TU/lmr/m/n/12 run count 
+ [14]
+Overfull \hbox (4.14616pt too wide) in paragraph at lines 54--54
+ [][] [][]\TU/lmr/m/n/12 Raw center-TX spatial difference power across RX lens 
+branches. 
  []
 
 )
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- [13] (thesis.lot
-Overfull \hbox (6.39557pt too wide) in paragraph at lines 15--15
- [][] [][]\TU/lmr/m/n/12 Aggregate spatial-channel results. $\OML/ntxmi/m/it/12
- D[]$ \TU/lmr/m/n/12 and $\OML/ntxmi/m/it/12 D[]$ \TU/lmr/m/n/12 denote pooled 
+ [15] (thesis.lot
+Overfull \hbox (12.65674pt too wide) in paragraph at lines 15--15
+ [][] [][]\TU/lmr/m/n/12 Order-dependent parameters for the lens-assisted linea
+r-trajectory 
+ []
 
+
+Overfull \hbox (22.74608pt too wide) in paragraph at lines 16--16
+ \TU/lmr/m/n/12 metrics along the common linear trajectory. The channel-magnitu
+de 
  []
 
 )
 \tf@lot=\write7
 \openout7 = `thesis.lot'.
 
- [14] (Chapters/v2_chapter1-introduction.tex
+ [16] (Chapters/v3_chapter1-introduction.tex
 Chapter 1.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1352,12 +1312,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Overfull \hbox (12.54869pt too wide) in paragraph at lines 133--145
-\TU/lmr/m/n/12 ventional antenna arrays can provide substantial beamforming and
- spatial-multiplexing
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
@@ -1379,32 +1333,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Overfull \hbox (3.11871pt too wide) in paragraph at lines 336--336
-|[]\TU/lmr/bx/n/14.4 Beamspace MIMO and Lens-Assisted Communications| 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-Overfull \hbox (7.71828pt too wide) in paragraph at lines 412--417
-\TU/lmr/m/n/12 tial of lens antenna arrays for beam selection, RF-chain reducti
-on, and path-dependent
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Overfull \hbox (44.32867pt too wide) in paragraph at lines 429--437
-[]\TU/lmr/m/n/12 Existing antenna-lens research can be broadly divided into phy
-sical electromagnetic-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
@@ -1414,45 +1351,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Overfull \hbox (11.87022pt too wide) in paragraph at lines 622--622
- []|\TU/lmr/m/n/10.95 Frequency| 
- []
-
-
-Overfull \hbox (6.0038pt too wide) in paragraph at lines 622--622
-[]|\TU/lmr/m/n/10.95 Configuration|  
- []
-
-
-Overfull \hbox (1.57999pt too wide) in paragraph at lines 622--622
-[]|\TU/lmr/m/n/10.95 Polarization- 
- []
-
-
-Overfull \hbox (3.5373pt too wide) in paragraph at lines 622--622
- []|\TU/lmr/m/n/10.95 144 GHz| 
- []
-
-
-Overfull \hbox (6.19814pt too wide) in paragraph at lines 622--622
- []|\TU/lmr/m/n/10.95 mmWave| 
- []
-
-
-Overfull \hbox (6.19814pt too wide) in paragraph at lines 622--622
- []|\TU/lmr/m/n/10.95 mmWave| 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Overfull \hbox (7.7975pt too wide) in paragraph at lines 655--661
-[]\TU/lmr/m/n/12 Second, although a metasurface lens has already been experimen
-tally demon-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
@@ -1465,31 +1366,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Overfull \hbox (9.41269pt too wide) in paragraph at lines 857--858
-[]\TU/lmr/m/n/12 To validate the proposed S-parameter-based channel-modeling ap
-proach through
- []
-
-
-Overfull \hbox (13.26468pt too wide) in paragraph at lines 857--858
-\TU/lmr/m/n/12 cross-validation across three independent electromagnetic and ra
-y-tracing solvers,
- []
-
-
-Overfull \hbox (5.97748pt too wide) in paragraph at lines 858--859
-\TU/lmr/m/n/12 tributions, the communication-performance benefits of the antenn
-a lens-assisted
+[20]
+Overfull \hbox (9.90466pt too wide) in paragraph at lines 867--868
+[]\TU/lmr/m/n/12 To characterize configuration-level higher-order scaling for c
+omplete lens-assisted
  []
 
 [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22])
-(Chapters/v2_chapter2-second-chapter-Backup.tex [23] [24]
+(Chapters/v3_chapter2-second-chapter-Backup.tex [23] [24]
 Chapter 2.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1506,20 +1393,66 @@ LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-File: Images/AntennaPatch_ReturnLoss.PNG Graphic file (type bmp)
-<Images/AntennaPatch_ReturnLoss.PNG>
-File: Images/AntennaPatch_Design_Fields.PNG Graphic file (type bmp)
-<Images/AntennaPatch_Design_Fields.PNG>
-
-Underfull \vbox (badness 1418) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
+File: Images/AntennaAndPattern.PNG Graphic file (type bmp)
+<Images/AntennaAndPattern.PNG>
+File: Images/AntennaPatchReturnLoss.png Graphic file (type bmp)
+<Images/AntennaPatchReturnLoss.png>
+File: Images/GainThetaAntennaPatch.png Graphic file (type bmp)
+<Images/GainThetaAntennaPatch.png>
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 66.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 66.
 File: Images/Unitcell_Design.png Graphic file (type bmp)
 <Images/Unitcell_Design.png>
 File: Images/Unitcell_Design_geometry.png Graphic file (type bmp)
 <Images/Unitcell_Design_geometry.png>
 
-[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+[29]
 File: Images/FloqBoundary-1.png Graphic file (type bmp)
 <Images/FloqBoundary-1.png>
 File: Images/FloqBoundary-2.png Graphic file (type bmp)
@@ -1529,23 +1462,39 @@ File: Images/FloqPort-1.png Graphic file (type bmp)
 File: Images/FloqPort-2.png Graphic file (type bmp)
 <Images/FloqPort-2.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1502) has occurred while \output is active []
 
- [29]
-File: Images/UnitCell_Magnitude.png Graphic file (type bmp)
-<Images/UnitCell_Magnitude.png>
-File: Images/UnitCell_Phase.png Graphic file (type bmp)
-<Images/UnitCell_Phase.png>
-
-[30] [31]
-Overfull \hbox (5.98679pt too wide) in paragraph at lines 200--211
- [] 
+ [30]
+Overfull \hbox (0.13268pt too wide) in paragraph at lines 162--163
+\TU/lmr/m/n/12 strong transmission around the design frequency while exhibiting
+ different frequency-
  []
 
+[31]
+File: Images/UnitCellProfile_Magnitude_Accepted.png Graphic file (type bmp)
+<Images/UnitCellProfile_Magnitude_Accepted.png>
+File: Images/UnitCellProfile_PhaseAt38GHz_Accepted.png Graphic file (type bmp)
+<Images/UnitCellProfile_PhaseAt38GHz_Accepted.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [32]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[33]
+File: Images/AntennaLensFrontView.PNG Graphic file (type bmp)
+<Images/AntennaLensFrontView.PNG>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+File: Images/AntennaLensTopView_edited.PNG Graphic file (type bmp)
+<Images/AntennaLensTopView_edited.PNG>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
 File: Images/AntennaLens20x20_VerifFocalPoint.png Graphic file (type bmp)
 <Images/AntennaLens20x20_VerifFocalPoint.png>
 File: Images/FocalCharacter_0deg.png Graphic file (type bmp)
@@ -1559,104 +1508,88 @@ File: Images/FocalCharacter_m45deg.png Graphic file (type bmp)
 File: Images/FocalCharacter_m60deg.png Graphic file (type bmp)
 <Images/FocalCharacter_m60deg.png>
 
-Underfull \vbox (badness 5133) has occurred while \output is active []
-
- [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34]
+ [36]
+[37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
 File: Images/AntennaLensRadiationPatternAsset/TransmitArray_CoorSystem.PNG Grap
 hic file (type bmp)
 <Images/AntennaLensRadiationPatternAsset/TransmitArray_CoorSystem.PNG>
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxmia/b/it' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsym/b/n' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxsyc/b/n' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 10.95pt on input line 307.
+(Font)              scaled to size 10.95pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 8.0pt on input line 307.
+(Font)              scaled to size 8.0pt on input line 329.
 LaTeX Font Info:    Font shape `U/ntxexa/b/n' will be
-(Font)              scaled to size 6.1pt on input line 307.
+(Font)              scaled to size 6.1pt on input line 329.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[39]
+File: Images/AntennaPatternWithLens.png Graphic file (type bmp)
+<Images/AntennaPatternWithLens.png>
+File: Images/RXAntennaRadiationPattern.png Graphic file (type bmp)
+<Images/RXAntennaRadiationPattern.png>
 
- [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-File: Images/AntennaLensRadiationPatternOutput/matlab_visualization/figures/mat
-lab_radiation_pattern_3d_all_patterns.png Graphic file (type bmp)
-<Images/AntennaLensRadiationPatternOutput/matlab_visualization/figures/matlab_r
-adiation_pattern_3d_all_patterns.png>
-File: Images/AntennaLensRadiationPatternOutput/vertical_cut_360/figures/vertica
-l_cut_360_all_patterns.png Graphic file (type bmp)
-<Images/AntennaLensRadiationPatternOutput/vertical_cut_360/figures/vertical_cut
-_360_all_patterns.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
-Underfull \vbox (badness 2512) has occurred while \output is active []
-
- [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41]
+[41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
-Overfull \hbox (6.1806pt too wide) in paragraph at lines 445--446
-[]\TU/lmr/m/n/12 Under this convention, the diagonal entries $\OML/ntxmi/m/it/1
-2 S\LMS/ntxsy/m/n/12 ¹[][]\OML/ntxmi/m/it/12 ; [][]\LMS/ntxsy/m/n/12 º$ \TU/lmr
-/m/n/12 correspond to matched
- []
-
-
-Overfull \hbox (5.89668pt too wide) in paragraph at lines 447--448
-[]\TU/lmr/m/n/12 The corresponding frequency-domain input-output relation can b
-e expressed
- []
-
 [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
 File: Images/Room_SBR_withCloseup.png Graphic file (type bmp)
 <Images/Room_SBR_withCloseup.png>
 File: Images/Room_withCloseup.png Graphic file (type bmp)
@@ -1664,8 +1597,8 @@ File: Images/Room_withCloseup.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
-[45]
+ [49]
+[50]
 File: Images/SetupEnvirontment_SBR_WithLens.PNG Graphic file (type bmp)
 <Images/SetupEnvirontment_SBR_WithLens.PNG>
 File: Images/SetupEnvirontment_SBR_WithLens_TopDetails.PNG Graphic file (type b
@@ -1677,18 +1610,13 @@ File: Images/SetupEnvirontment_WithLens_Hybrid_TopDetails.png Graphic file (typ
 e bmp)
 <Images/SetupEnvirontment_WithLens_Hybrid_TopDetails.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6510) has occurred while \output is active []
 
- [46]
-[47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
+ [51]
+[52] [53]
 File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/power_distribution.
 png Graphic file (type bmp)
 <Images/channel_evaluation_per_method/HFSS_SBR+_Solver/power_distribution.png>
-
-[49]
 File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/channel_3x3_magnitu
 de_db.png Graphic file (type bmp)
 <Images/channel_evaluation_per_method/HFSS_SBR+_Solver/channel_3x3_magnitude_db
@@ -1697,14 +1625,10 @@ File: Images/channel_evaluation_per_method/HFSS_SBR+_Solver/spatial_correlation
 .png Graphic file (type bmp)
 <Images/channel_evaluation_per_method/HFSS_SBR+_Solver/spatial_correlation.png>
 
-
+ [54] [55] [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50]
-[51] [52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53]
+ [57]
 File: Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/power_distributio
 n.png Graphic file (type bmp)
 <Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/power_distribution.png
@@ -1718,230 +1642,271 @@ on.png Graphic file (type bmp)
 <Images/channel_evaluation_per_method/HFSS_Hybrid_Solver/spatial_correlation.pn
 g>
 
-[54] [55] [56]
+[58] [59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [60]
 File: Images/channel_evaluation_per_method/SIonna-RT/power_distribution.png Gra
 phic file (type bmp)
 <Images/channel_evaluation_per_method/SIonna-RT/power_distribution.png>
-File: Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.p
-ng Graphic file (type bmp)
-<Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
-[59]
+ [61]
+File: Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.p
+ng Graphic file (type bmp)
+<Images/channel_evaluation_per_method/SIonna-RT/channel_3x3_magnitude_db.png>
 File: Images/channel_evaluation_per_method/SIonna-RT/spatial_correlation.png Gr
 aphic file (type bmp)
 <Images/channel_evaluation_per_method/SIonna-RT/spatial_correlation.png>
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 2689) has occurred while \output is active []
-
- [60]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
-File: Images/channel_comparison_results/channel_3x3_with_magnitude_db.png Graph
-ic file (type bmp)
-<Images/channel_comparison_results/channel_3x3_with_magnitude_db.png>
-File: Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png G
-raphic file (type bmp)
-<Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png>
-
-Overfull \hbox (6.41396pt too wide) in paragraph at lines 751--752
-[]\TU/lmr/m/n/12 Figure []2-27[] shows the lens-induced magnitude change $\U/nt
-xmia/m/it/12 ^^A\OML/ntxmi/m/it/12 H[] \U/ntxmia/m/it/12 = \OML/ntxmi/m/it/12 H
-[] \LMS/ntxsy/m/n/12 ^^@
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62]
+[63] [64]
+File: Images/channel_comparison_results/channel_3x3_with_magnitude_db.png Graph
+ic file (type bmp)
+<Images/channel_comparison_results/channel_3x3_with_magnitude_db.png>
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+ [65]
+File: Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png G
+raphic file (type bmp)
+<Images/channel_comparison_results/inter_solver_pairwise_discrepancy.png>
 File: Images/channel_comparison_results/channel_3x3_lens_gain.png Graphic file 
 (type bmp)
 <Images/channel_comparison_results/channel_3x3_lens_gain.png>
+
+[66] [67]
 File: Images/channel_comparison_results/lens_effect_direction_agreement.png Gra
 phic file (type bmp)
 <Images/channel_comparison_results/lens_effect_direction_agreement.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63]
-[64]
 File: Images/channel_comparison_results/mimo_evaluation_raw.png Graphic file (t
 ype bmp)
 <Images/channel_comparison_results/mimo_evaluation_raw.png>
-
-Overfull \hbox (49.2967pt too wide) in paragraph at lines 783--795
- [] 
- []
-
-[65]
+ [68]
 File: Images/channel_comparison_results/mimo_normalized_singular_values.png Gra
 phic file (type bmp)
 <Images/channel_comparison_results/mimo_normalized_singular_values.png>
 
-Overfull \hbox (9.32231pt too wide) in paragraph at lines 808--809
-\TU/lmr/m/n/12 Sionna-RT; without the lens, the corresponding values rise to 0.
-393/0.561, 0.767/0.767,
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[66]
+ [69]
 File: Images/channel_comparison_results/mimo_spatial_correlation_evaluation.png
  Graphic file (type bmp)
 <Images/channel_comparison_results/mimo_spatial_correlation_evaluation.png>
 
-Underfull \vbox (badness 1515) has occurred while \output is active []
+[70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67])
-(Chapters/v3_chapter3-third-chapter.tex [68]
+ [71])
+(Chapters/v4_chapter3-third-chapter.tex [72]
 Chapter 3.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69
+ [73
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70]
-File: Images/3_1_PositionofReceiverAntennaLens.png Graphic file (type bmp)
-<Images/3_1_PositionofReceiverAntennaLens.png>
-File: Images/3_1_PositionofReceiverWOAntennaLens.png Graphic file (type bmp)
-<Images/3_1_PositionofReceiverWOAntennaLens.png>
-File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/01_geometry_six
-_scenarios.png Graphic file (type bmp)
-<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/01_geometry_six_scen
-arios.png>
-
-[71] [72]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
 [75]
-File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/03_aggregate_co
-mparison.png Graphic file (type bmp)
-<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/03_aggregate_compari
-son.png>
- [76] [77
-
-
-] [78]
-File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_line
-ar_all_parameters.png Graphic file (type bmp)
-<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_linear_al
-l_parameters.png>
- [79] [80
-
-
-]
-File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_half
-_all_parameters.png Graphic file (type bmp)
-<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_half_all_
-parameters.png>
- [81] [82
-
-
-]
-File: Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_full
-_all_parameters.png Graphic file (type bmp)
-<Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_full_all_
-parameters.png>
- [83]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/01_geometry_and_arrays_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/01_geometry_and_arrays_matlab.png>
+ [76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84
+ [77
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85]
-[86]
-File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig1_compu
-te_cost_scalability.png Graphic file (type bmp)
-<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig1_compute_co
-st_scalability.png>
+ [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/02_static_rx_scenario_comparison_matlab.png Graphic file (type bmp)
+
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/02_static_rx_scenario_comparison_matlab.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/03_static_mimo_comparison_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/03_static_mimo_comparison_matlab.png>
+
+Underfull \vbox (badness 6428) has occurred while \output is active []
+
+ [81]
+[82]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/08_aggregate_comparison_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/08_aggregate_comparison_matlab.png>
+ [83] [84
+
+
+]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/04_channel_metrics_along_trajectory_matlab.png Graphic file (type b
+mp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/04_channel_metrics_along_trajectory_matlab.png>
+ [85] [86
+
+
+]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/05_trajectory_mimo_metrics_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/05_trajectory_mimo_metrics_matlab.png>
  [87]
-File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig4_monte
-carlo_aggregate_vs_N.png Graphic file (type bmp)
-<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig4_montecarlo
-_aggregate_vs_N.png>
-File: Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig5_mimo_
-per_drop_boxplot_vs_N.png Graphic file (type bmp)
-<Images/Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig5_mimo_per_d
-rop_boxplot_vs_N.png>
- [88] [89]
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/06_spatial_decorrelation_comparison_matlab.png Graphic file (type b
+mp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/06_spatial_decorrelation_comparison_matlab.png>
+File: Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/fig
+ures_matlab/07_raw_spatial_difference_power_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_
+matlab/07_raw_spatial_difference_power_matlab.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [90])
-(Chapters/v2_chapter4-fourth-chapter.tex
+ [88
+
+
+]
+[89]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [91]
-[92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92]
+[93]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/01
+_geometry_order_comparison_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/01_geom
+etry_order_comparison_matlab.png>
+ [94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/02
+_static_rx_by_order_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/02_stat
+ic_rx_by_order_matlab.png>
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/03
+_static_mimo_scaling_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/03_stat
+ic_mimo_scaling_matlab.png>
+
+[96] [97] [98]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/08
+_aggregate_order_comparison_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/08_aggr
+egate_order_comparison_matlab.png>
+ [99]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/04
+_channel_along_trajectory_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/04_chan
+nel_along_trajectory_matlab.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100
+
+
+]
+[101]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/05
+_trajectory_mimo_scaling_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/05_traj
+ectory_mimo_scaling_matlab.png>
+ [102]
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/06
+_spatial_decorrelation_by_order_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/06_spat
+ial_decorrelation_by_order_matlab.png>
+File: Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/07
+_raw_spatial_difference_by_order_matlab.png Graphic file (type bmp)
+<Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/07_raw_
+spatial_difference_by_order_matlab.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103
+
+
+]
+[104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105])
+(Chapters/v3_chapter4-fourth-chapter.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106]
+[107] [108
+
+]
 Chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93
-
-]
-Overfull \hbox (15.81665pt too wide) in paragraph at lines 12--13
-\TU/lmr/m/n/12 changed ($\OT1/lmr/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/lmr/m/n/12 0
-9 \LMS/ntxsy/m/n/12 ! \OT1/lmr/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/lmr/m/n/12 07$ 
-\TU/lmr/m/n/12 of 9), and 10 dB-SNR capacity decreases (21.72$\LMS/ntxsy/m/n/12
- !$\TU/lmr/m/n/12 21.11 bit/s/Hz).
- []
-
-
+ [109]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
-[95]
-Overfull \hbox (20.49432pt too wide) in paragraph at lines 32--33
-[]\TU/lmr/bx/n/12 Richer propagation environments\TU/lmr/m/n/12 : outdoor, mult
-i-room, and blockage/clutter
- []
+ [110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[96]) (thesis.bbl [97] [98]
-Underfull \hbox (badness 1817) in paragraph at lines 115--120
+ [111]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [112]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [115]
+[116] [117] [118] [119]) [120] (thesis.bbl [121] [122]
+Underfull \hbox (badness 1817) in paragraph at lines 116--121
 []\TU/lmr/m/n/12 V. Torres, B. Orazbayev, V. Pacheco-Peña, J. Teniente, M. Beru
 ete,
  []
 
-[99]
-Underfull \hbox (badness 10000) in paragraph at lines 152--157
-[] [] [][][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][] [] [][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [
-]
- []
-
-) [100] [101] (thesis.aux)
+[123]) [124] [125] (thesis.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 47D602B96714D3D155C0C3D6523C62E3;12265.
+(rerunfilecheck)             Checksum: F6646954E0DBF5EFD673E28A8FC208A8;15002.
  ) 
 Here is how much of TeX's memory you used:
- 30950 strings out of 402627
- 606476 string characters out of 5443440
- 1044022 words of memory out of 5000000
- 59464 multiletter control sequences out of 15000+600000
- 772901 words of font info for 229 fonts, out of 8000000 for 9000
+ 31076 strings out of 402627
+ 615788 string characters out of 5443440
+ 1044657 words of memory out of 5000000
+ 59581 multiletter control sequences out of 15000+600000
+ 784626 words of font info for 241 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,14n,121p,1513b,758s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,14n,121p,1605b,752s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on thesis.pdf (118 pages).
+Output written on thesis.pdf (143 pages).

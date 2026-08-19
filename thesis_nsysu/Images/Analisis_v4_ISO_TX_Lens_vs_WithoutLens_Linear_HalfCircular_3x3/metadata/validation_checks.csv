@@ -1,0 +1,21 @@
+scenario,check,passed,detail
+linear_without_lens,waypoint_rx_row_count,True,observed=63; expected=63
+linear_without_lens,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+linear_without_lens,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+linear_without_lens,three_iso_tx_invariant,True,pattern=iso; tx_count=3
+linear_without_lens,trajectory_mimo_row_count,True,rows=21; waypoints=21
+half_circular_without_lens,waypoint_rx_row_count,True,observed=111; expected=111
+half_circular_without_lens,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+half_circular_without_lens,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+half_circular_without_lens,three_iso_tx_invariant,True,pattern=iso; tx_count=3
+half_circular_without_lens,trajectory_mimo_row_count,True,rows=37; waypoints=37
+linear_lens,waypoint_rx_row_count,True,observed=63; expected=63
+linear_lens,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+linear_lens,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+linear_lens,three_iso_tx_invariant,True,pattern=iso; tx_count=3
+linear_lens,trajectory_mimo_row_count,True,rows=21; waypoints=21
+half_circular_lens,waypoint_rx_row_count,True,observed=111; expected=111
+half_circular_lens,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+half_circular_lens,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+half_circular_lens,three_iso_tx_invariant,True,pattern=iso; tx_count=3
+half_circular_lens,trajectory_mimo_row_count,True,rows=37; waypoints=37

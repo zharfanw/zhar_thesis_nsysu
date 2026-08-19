@@ -1,0 +1,9 @@
+figure,family,question,file
+01,Geometry,Aperture TX dan cakupan sudut RX,01_geometry_order_comparison.png
+02,Trend,Snapshot per sudut RX,02_static_rx_by_order.png
+03,Comparison,Static MIMO scaling,03_static_mimo_scaling.png
+04,Trend,Link sepanjang trajectory,04_channel_along_trajectory.png
+05,Trend,MIMO sepanjang trajectory,05_trajectory_mimo_scaling.png
+06,Trend,Pooled/median decorrelation,06_spatial_decorrelation_by_order.png
+07,Trend,Raw spatial difference,07_raw_spatial_difference_by_order.png
+08,Comparison,Ringkasan scaling order,08_aggregate_order_comparison.png

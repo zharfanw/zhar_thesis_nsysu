@@ -1,0 +1,9 @@
+figure,family,question,file
+01,Geometry,Kesetaraan trajectory dan perbedaan array,01_geometry_and_arrays.png
+02,Comparison,Section 9 per RX,02_static_rx_scenario_comparison.png
+03,Comparison,Static 9×9 MIMO,03_static_mimo_comparison.png
+04,Trend,SNR/capacity sepanjang trajectory,04_channel_metrics_along_trajectory.png
+05,Trend,MIMO conditioning sepanjang trajectory,05_trajectory_mimo_metrics.png
+06,Trend,Pooled dan median decorrelation,06_spatial_decorrelation_comparison.png
+07,Trend,Raw spatial difference,07_raw_spatial_difference_power.png
+08,Comparison,Ringkasan efek Lens,08_aggregate_comparison.png

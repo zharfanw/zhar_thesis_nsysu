@@ -1,0 +1,37 @@
+trajectory,system,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+Linear,Without Lens,0,Simul_+4,0,6.995364,5.865586,-79.775803,21.069962,0.0
+Linear,Without Lens,1,Simul_+3,0,7.003834,5.898459,-79.77713,21.093618,0.0
+Linear,Without Lens,2,Simul_+2,0,6.996498,5.914945,-79.771355,21.07176,0.0
+Linear,Without Lens,3,Simul_+1,0,7.003177,5.918782,-79.77681,21.095438,0.0
+Linear,Without Lens,4,Simul_0,0,7.001233,5.910312,-79.773567,21.082909,0.0
+Linear,Without Lens,5,Simul_-1,0,7.002463,5.916549,-79.774818,21.094856,0.0
+Linear,Without Lens,6,Simul_-2,0,6.997077,5.901855,-79.779587,21.073212,0.0
+Linear,Without Lens,7,Simul_-3,0,7.003666,5.885008,-79.774132,21.091185,0.0
+Linear,Without Lens,8,Simul_-4,0,6.995902,5.879734,-79.778061,21.071255,0.0
+Half-Circular,Without Lens,0,Simul_+4,0,6.040781,5.861768,-83.596207,18.235914,0.0
+Half-Circular,Without Lens,1,Simul_+3,0,6.048547,5.874701,-83.597816,18.257879,0.0
+Half-Circular,Without Lens,2,Simul_+2,0,6.049348,5.880483,-83.59761,18.257082,0.0
+Half-Circular,Without Lens,3,Simul_+1,0,6.038876,5.919628,-83.603035,18.216238,0.0
+Half-Circular,Without Lens,4,Simul_0,0,6.024246,5.927459,-83.600929,18.222181,0.0
+Half-Circular,Without Lens,5,Simul_-1,0,6.041735,5.90606,-83.588547,18.215763,0.0
+Half-Circular,Without Lens,6,Simul_-2,0,6.046958,5.865896,-83.592102,18.249376,0.0
+Half-Circular,Without Lens,7,Simul_-3,0,6.049247,5.885696,-83.585136,18.260323,0.0
+Half-Circular,Without Lens,8,Simul_-4,0,6.043545,5.87515,-83.590286,18.245644,0.0
+Linear,Lens,0,Simul_+60deg,60,4.762234,3.856338,-88.222351,14.260545,0.0
+Linear,Lens,1,Simul_+45deg,45,5.206644,3.669613,-86.548111,15.783835,0.0
+Linear,Lens,2,Simul_+30deg,30,5.179326,2.555081,-86.14444,15.570322,0.0
+Linear,Lens,3,Simul_+15deg,15,5.711494,2.0392,-85.110397,17.439201,0.0
+Linear,Lens,4,Simul_+0deg,0,4.964177,3.578584,-87.408806,14.959954,0.0
+Linear,Lens,5,Simul_-15deg,-15,5.685271,2.027839,-85.332664,17.390329,0.0
+Linear,Lens,6,Simul_-30deg,-30,5.193699,2.526245,-86.133331,15.613548,0.0
+Linear,Lens,7,Simul_-45deg,-45,5.189403,3.676514,-86.646873,15.776613,0.0
+Linear,Lens,8,Simul_-60deg,-60,4.785147,3.892985,-88.193283,14.332309,0.0
+Half-Circular,Lens,0,Simul_+60deg,60,4.96016,3.830114,-87.275742,14.91794,0.0
+Half-Circular,Lens,1,Simul_+45deg,45,4.764493,3.214714,-88.285187,14.380116,0.0
+Half-Circular,Lens,2,Simul_+30deg,30,4.791027,2.161673,-88.644394,14.532838,0.0
+Half-Circular,Lens,3,Simul_+15deg,15,5.755849,2.041071,-85.143204,17.389341,0.0
+Half-Circular,Lens,4,Simul_+0deg,0,4.565209,2.991693,-89.806458,13.803255,0.0
+Half-Circular,Lens,5,Simul_-15deg,-15,5.799728,2.057747,-84.891624,17.530281,0.0
+Half-Circular,Lens,6,Simul_-30deg,-30,4.780087,2.177842,-88.719971,14.526042,0.0
+Half-Circular,Lens,7,Simul_-45deg,-45,4.795386,3.199308,-88.038239,14.486645,0.0
+Half-Circular,Lens,8,Simul_-60deg,-60,5.033358,3.865873,-87.18618,15.173904,0.0

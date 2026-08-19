@@ -1,0 +1,4 @@
+trajectory,system,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+Linear,Lens,0,Simul_+45deg,45,3.612021,2.258436,-86.491104,10.956356,0.0
+Linear,Lens,1,Simul_+0deg,0,3.53673,1.958338,-86.854622,10.702959,0.0
+Linear,Lens,2,Simul_-45deg,-45,3.552169,2.292136,-86.745621,10.906945,0.0

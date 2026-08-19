@@ -1,0 +1,4 @@
+trajectory,system,rx_config_index,name,rx_lens_angle_deg,combined_gain_db,mean_|rho|_offdiag,max_|rho|_offdiag,capacity_10dB_bits/s/Hz
+Linear,Without Lens,2,Simul_-1,0,-79.754653,0.946501,0.962948,3.415498
+Linear,Without Lens,0,Simul_+1,0,-79.762177,0.932043,0.961103,3.417024
+Linear,Without Lens,1,Simul_0,0,-79.840301,0.928452,0.999779,3.389999

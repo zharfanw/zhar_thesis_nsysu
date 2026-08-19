@@ -1,303 +1,377 @@
 \chapter{MIMO Communication Performance Evaluation}
 
-Having characterized the antenna element and the metasurface transmitarray lens individually in the preceding chapter, this chapter evaluates their system-level communication performance in a multi-antenna link. The evaluation is carried out with Sionna-RT, which reconstructs the wireless channel from the propagation environment and imported antenna far-field patterns. Two complementary protocols are used. First, controlled linear, half-circular, and full-circular transmitter trajectories provide paired lens-assisted and without-lens comparisons at identical waypoints. Second, a Monte Carlo analysis evaluates the scalability of higher-order receive configurations under randomized transmitter placements. The controlled trajectories reveal where the complete receiver configuration changes link quality and channel structure, whereas the Monte Carlo analysis characterizes array-size trends over a broader distribution of geometries.
+Having characterized the antenna element and the metasurface transmitarray lens individually in the preceding chapter, this chapter evaluates their system-level communication performance in a multi-antenna link. The evaluation is carried out with Sionna-RT, which reconstructs the wireless channel from the propagation environment and imported antenna far-field patterns. Two complementary controlled protocols are used. First, linear and half-circular transmitter trajectories provide paired lens-assisted and without-lens comparisons at identical waypoints for the $9\times9$ configuration. Second, lens-assisted $3\times3$, $5\times5$, and $9\times9$ configurations traverse the same linear trajectory to characterize higher-order scaling. The first protocol compares complete RX placement-and-pattern designs, whereas the second shows how absolute and normalized channel metrics evolve when array order, total radiated power, aperture, and RX angular sampling change together.
 
 \section{Comparison of Different Antenna Placements}\label{sec:comparison-antenna-placements}
 
-This section compares two complete nine-element receiver configurations: a lens-assisted focal-arc arrangement and a conventional coplanar arrangement without the lens. For each configuration, the same nine-element transmitter array follows three prescribed trajectories. The lens-assisted and without-lens cases use identical waypoint sequences within each trajectory, making each within-trajectory comparison paired with respect to transmitter motion. The measured difference nevertheless represents the combined effect of receiver placement and radiation pattern: the focal-arc elements use angle-specific lens patterns, whereas the coplanar elements use the same $0^\circ$ patch pattern. It should not be interpreted as the effect of physical displacement alone.
+This section compares two complete nine-branch receiver (RX) configurations using the four ISO-TX simulation datasets in the available analysis package, which covers Sections~1--14 of the source workflow. In every case, a nine-element isotropic transmitter (TX) array radiates simultaneously while its center follows either a linear or half-circular trajectory. The lens-assisted and without-lens cases reuse the same TX array and waypoint sequence within each trajectory, so the within-trajectory comparison is paired with respect to TX motion.
 
-The principal result is that the lens improves median SNR and equivalent-SISO capacity on all three recorded trajectories, with the clearest and most physically defensible improvement occurring on the linear path. The half-circular path also shows a consistent link-quality improvement. Although the full-circle data exhibit the same direction of median change, that path passes through the receiver location and produces a near-collision; consequently, it is retained as a diagnostic case and excluded from the final physical-performance inference. The spatial-channel results are more nuanced: the lens improves robust median-block decorrelation and lowers the median condition number, but globally pooled decorrelation remains higher without the lens. Both estimators are therefore reported rather than selecting only the more favorable one.
+Under the equal-weight aggregation used in these simulations, the without-lens baseline provides the higher median link capacity and constructed MIMO capacity, as well as a higher effective rank, on both trajectories. The lens-assisted configuration instead produces a much wider spread across its angle-specific RX branches and higher typical-block decorrelation. These results characterize the complete RX designs rather than the lens alone: the lens branches occupy a compact focal arc and use different angle-specific far-field patterns, whereas the baseline branches form a coplanar array and use the same $0^\circ$ patch pattern. Placement and imported pattern therefore change together.
 
-\subsection{Receiver Arrangements and Paired Trajectories}
+\subsection{Simulation Configuration and Paired Trajectories}
 
-The physical receiver layouts are shown in Figure~\ref{fig:mc9x9-rx-placement}. The lens-assisted elements occupy a compact focal arc centered near $(-9.013,0,2)$~m and span approximately $29.4$~mm in the $y$ direction. Their imported patterns represent lens angles from $+60^\circ$ to $-60^\circ$ in $15^\circ$ increments. The conventional elements form a straight line at $x=-9$~m, span approximately $44.2$~mm in $y$, and share the same patch pattern. Thus, the layouts preserve the same number of receive channels while implementing different spatial and angular sampling mechanisms.
+The common simulation settings are listed in Table~\ref{tab:iso9x9-simulation-setup}. The linear path contains 21 waypoints along a 19~m line. The half-circular path contains 37 waypoints on a 9~m-radius semicircle, giving a path length of 28.27~m. Each waypoint is sampled over 16 mobility time steps. Consequently, the lens and without-lens cases contain 189 waypoint--RX observations each on the linear path and 333 each on the half-circular path.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Common simulation configuration for the paired 9-ISO-TX comparison.}
+    \label{tab:iso9x9-simulation-setup}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.15}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.31\linewidth} >{\raggedright\arraybackslash}X@{}}
+        \toprule
+        \textbf{Parameter} & \textbf{Value} \\
+        \midrule
+        Room; carrier frequency & $20\,\text{m}\times20\,\text{m}\times3\,\text{m}$; 38~GHz \\
+        Bandwidth; frequency sampling & 400~MHz; 401 frequency bins \\
+        TX configuration & Nine simultaneous isotropic elements; 10~dBm per element \\
+        Noise model & 7~dB noise figure at 290~K \\
+        Mobility sampling & 1~kHz; 16 time steps per waypoint; 1~m/s \\
+        Ray-tracing samples & 100{,}000 path samples per source \\
+        Linear trajectory & 21 waypoints; 19.00~m \\
+        Half-circular trajectory & 37 waypoints; 9~m radius; 28.27~m \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+Figure~\ref{fig:iso9x9-trajectory-geometry} shows that both RX clusters have nearly the same room-scale reference location near $(-9,0,2)$~m and that the TX trajectories are identical across the two configurations. Locally, however, the baseline elements lie on a 44.24~mm straight line, while the lens-assisted points follow a compact focal arc spanning approximately 29.44~mm in the $y$ direction. The latter use nine lens patterns from $+60^\circ$ to $-60^\circ$ in $15^\circ$ increments. Thus, matching branch indices identify ordinal design cases rather than co-located antenna elements.
+
+\clearpage
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/01_geometry_and_arrays_matlab.png}
+    \caption{Paired TX trajectories and local array geometry for the 9-ISO-TX comparison. The linear and half-circular waypoint sequences are identical for the two RX designs, but the baseline uses a coplanar RX array whereas the lens-assisted configuration uses a compact focal-arc arrangement with angle-specific patterns.}
+    \label{fig:iso9x9-trajectory-geometry}
+\end{figure}
+\clearpage
+
+\subsection{Evaluation Metrics and Aggregation}
+
+For each active RX branch, the nine isotropic TX contributions are combined non-coherently in the link budget. If $H_i(f)$ is the channel response of TX element $i$ at frequency $f$, the received power, SNR, and equivalent-SISO Shannon capacity are
+\begin{equation}
+    \begin{aligned}
+        P_\mathrm{RX}(f)&=P_\mathrm{TX}\sum_{i=1}^{9}|H_i(f)|^2,
+        &\gamma(f)&=\frac{P_\mathrm{RX}(f)}{kTB\,10^{\mathrm{NF}/10}},\\
+        C_\mathrm{link}&=\frac{1}{N_f}\sum_f\log_2\!\left(1+\gamma(f)\right).
+    \end{aligned}
+    \label{eq:iso9x9-link-capacity}
+\end{equation}
+This link-budget capacity represents nine TX elements feeding one active RX branch; it is distinct from the constructed $9\times9$ MIMO capacity described below.
+
+At every waypoint, the nine sequential $9\times1$ RX simulations are stacked to form a constructed channel matrix $\mathbf{H}(f)$. With singular values $\sigma_1(f)\geq\cdots\geq\sigma_9(f)$, the condition number and effective rank are
+\begin{equation}
+    \kappa(f)=\frac{\sigma_1(f)}{\sigma_9(f)},
+    \qquad
+    r_\mathrm{eff}(f)=\exp\!\left[-\sum_{i=1}^{9}p_i(f)\ln p_i(f)\right],
+    \qquad
+    p_i(f)=\frac{\sigma_i^2(f)}{\sum_{j=1}^{9}\sigma_j^2(f)}.
+    \label{eq:mc9x9-condrank}
+\end{equation}
+The equal-power ideal capacity of this constructed matrix is
+\begin{equation}
+    C_\mathrm{MIMO}(\gamma)=\mathbb{E}_f\!\left[
+    \sum_{i=1}^{9}\log_2\!\left(1+\frac{\gamma}{N_t}\sigma_i^2(f)\right)
+    \right],
+    \qquad N_t=9,
+    \label{eq:mc9x9-mimocapacity}
+\end{equation}
+and is evaluated at 10~dB after the fixed-SNR channel normalization used by the source workflow. It is therefore a channel-structure metric rather than an absolute link-budget quantity and is not directly comparable with $C_\mathrm{link}$ in Equation~\ref{eq:iso9x9-link-capacity}. A smaller condition number and a larger effective rank are favorable. Because the nine RX channels are simulated sequentially rather than measured simultaneously, these quantities diagnose spatial structure and diversity potential; they do not represent the directly realizable capacity of a single nine-port receiver.
+
+Spatial decorrelation is evaluated separately for the center TX element (index~4) across the nine RX responses. Let $h_i[n]$ and $h_j[n]$ be complex channel-frequency-response samples for RX branches $i$ and $j$. Their normalized correlation and decorrelation are
+\begin{equation}
+    \rho_{ij}=\frac{\sum_n h_i[n]h_j^*[n]}
+    {\sqrt{\left(\sum_n|h_i[n]|^2\right)\left(\sum_n|h_j[n]|^2\right)}},
+    \qquad D_{ij}=1-|\rho_{ij}|.
+    \label{eq:iso9x9-spatial-correlation}
+\end{equation}
+Two aggregation scopes are retained. The global pooled value applies Equation~\ref{eq:iso9x9-spatial-correlation} after concatenating all waypoint, time, and frequency samples. The robust value first evaluates block-level correlation and then takes its median,
+\begin{equation}
+    D_{ij}^{\mathrm{med}}=1-\operatorname{median}_{w,t}\!\left|\rho_{ij}^{(w,t)}\right|.
+    \label{eq:iso9x9-median-decorrelation}
+\end{equation}
+The along-path pooled curves instead pool samples separately within each waypoint. These three summaries have different weighting and must not be treated as interchangeable. The unnormalized difference power, $Q_{ij}^{\mathrm{raw}}=N^{-1}\sum_n|h_i[n]-h_j[n]|^2$, is also retained to show absolute channel-power differences, but it cannot by itself establish channel independence.
+
+\subsection{Static Snapshot Characterization}
+
+The static snapshot in Figure~\ref{fig:iso9x9-static-rx} illustrates the main design contrast. The without-lens combined gain is almost invariant across the nine RX branches, ranging only from approximately $-73.12$ to $-73.05$~dB. The angle-specific lens branches span approximately $-72.04$ to $-68.03$~dB and are stronger at all nine ordinal indices in this snapshot; their median is $-70.63$~dB, compared with $-73.10$~dB without the lens. This wide range confirms strong angular selectivity, but it does not imply that all lens branches retain the same advantage as the TX moves. The normalized per-branch capacities at 10~dB remain close to 3.4~bit/s/Hz for both designs because this particular snapshot comparison normalizes the operating SNR.
 
 \begin{figure}[htbp]
     \centering
-    \begin{minipage}{0.75\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Images/3_1_PositionofReceiverAntennaLens.png}
-        (a)
-    \end{minipage}
-
-    \vspace{0.5em}
-    \begin{minipage}{0.75\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{Images/3_1_PositionofReceiverWOAntennaLens.png}
-        (b)
-    \end{minipage}
-    \caption{Physical placement of the nine receive elements: (a) the compact focal-arc arrangement with angle-specific lens-assisted patterns; and (b) the conventional coplanar arrangement with a common $0^\circ$ patch pattern. Each image presents a top view and a zoomed three-dimensional view.}
-    \label{fig:mc9x9-rx-placement}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/02_static_rx_scenario_comparison_matlab.png}
+    \caption{Static comparison of combined gain, TX-branch correlation, and normalized capacity for the nine RX design cases. Matching indices are ordinal design pairs rather than co-located elements.}
+    \label{fig:iso9x9-static-rx}
 \end{figure}
 
-Figure~\ref{fig:trajectory-six-scenarios} presents the three TX-center paths. The linear trajectory contains 21 waypoints along a 19~m line at $x=0$~m. The half-circular trajectory contains 37 waypoints along the right-hand half of a circle of radius 9~m, and the full-circle trajectory contains 73 waypoints over the complete circumference. The latter geometry intersects the RX region near $(-9,0,2)$~m. Table~\ref{tab:trajectory-design} quantifies the resulting separation and establishes why the full-circle result cannot be treated in the same manner as the other two trajectories.
+The constructed static matrix in Figure~\ref{fig:iso9x9-static-mimo} gives a similarly mixed result. The lens lowers the snapshot condition number from 30.60 to 25.10~dB, but the effective rank decreases from 5.42 to 5.12 and capacity at 10~dB changes only from 24.06 to 23.88~bit/s/Hz. The mean off-diagonal RX correlation also increases from 0.22 to 0.27. Consequently, a lower condition number alone is insufficient evidence of improved multiplexing; the singular-value distribution, correlation, and capacity must be considered together.
 
-\begin{figure}[p]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.94\linewidth]{Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/01_geometry_six_scenarios.png}
-    \caption{TX-center trajectories and the fixed RX-array reference position for the six paired simulations. Rows show the linear, half-circular, and full-circular paths; columns show the lens-assisted and without-lens cases. Blue markers denote sampled TX-center waypoints, and the yellow square denotes the centroid of the nine-element RX array; the individual RX placements are shown in Figure~\ref{fig:mc9x9-rx-placement}. The full-circle path approaches and intersects the RX location.}
-    \label{fig:trajectory-six-scenarios}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/03_static_mimo_comparison_matlab.png}
+    \caption{Constructed $9\times9$ MIMO metrics at the static snapshot. The matrix combines nine sequential $9\times1$ RX simulations and is used as a channel-structure diagnostic.}
+    \label{fig:iso9x9-static-mimo}
 \end{figure}
+
+\subsection{Aggregate and Along-Trajectory Link Performance}
+
+Table~\ref{tab:iso9x9-aggregate-results} and Figure~\ref{fig:iso9x9-aggregate} summarize the main trajectory results. Medians are computed from the complete waypoint--RX population for each configuration. For both paths, the equal-weight ensemble favors the without-lens baseline in channel magnitude and link capacity. On the linear path, the lens decreases median channel magnitude by 6.87~dB and link capacity by 1.81~bit/s/Hz, or 25.86\%. On the half-circular path, the corresponding decreases are 3.64~dB and 1.03~bit/s/Hz, or 17.05\%.
 
 \begin{table}[htbp]
     \centering
-    \caption{Paired trajectory design and minimum TX--RX separation.}
-    \label{tab:trajectory-design}
-    \footnotesize
+    \caption{Aggregate link, constructed-MIMO, and spatial-decorrelation metrics for the paired trajectories. Both capacity columns are in bit/s/Hz. $D_\mathrm{global}$ is pooled over all realizations; $D_\mathrm{med}$ is the median block-level decorrelation.}
+    \label{tab:iso9x9-aggregate-results}
+    \scriptsize
     \renewcommand{\arraystretch}{1.15}
-    \begin{tabularx}{\linewidth}{@{}l c c >{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{0.20\linewidth}@{}}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.13\linewidth} >{\raggedright\arraybackslash}p{0.14\linewidth} *{7}{>{\centering\arraybackslash}X}@{}}
         \toprule
-        \textbf{Trajectory} & \textbf{Waypoints} & \textbf{Length (m)} & \textbf{TX-center path} & \textbf{Minimum separation} \\
-        & & & & \textbf{lens/no lens (m)} \\
+        \textbf{Path} & \textbf{RX design} & \textbf{$|H|_\mathrm{med}$ (dB)} & \textbf{$C_\mathrm{link}$} & \textbf{$\kappa_\mathrm{med}$ (dB)} & \textbf{$r_\mathrm{eff,med}$} & \textbf{$C_\mathrm{MIMO}$} & \textbf{$D_\mathrm{global}$} & \textbf{$D_\mathrm{med}$} \\
         \midrule
-        Linear & 21 & 19.00 & $x=0$~m, $y=-9.5$ to $9.5$~m & $9.009/9.000$ \\
-        Half-circle & 37 & 28.27 & Right half-circle, radius 9~m & $12.724/12.712$ \\
-        Full-circle & 73 & 56.53 & Complete circle, radius 9~m & $0.017/\approx0$ \\
+        Linear & Without lens & $-79.78$ & $7.00$ & $43.56$ & $3.160$ & $17.20$ & $0.9493$ & $0.0885$ \\
+        Linear & Lens & $-86.65$ & $5.19$ & $42.88$ & $2.043$ & $14.56$ & $0.8570$ & $0.4876$ \\
+        Half-circular & Without lens & $-83.60$ & $6.04$ & $39.90$ & $3.965$ & $19.99$ & $0.9236$ & $0.2109$ \\
+        Half-circular & Lens & $-87.24$ & $5.01$ & $40.81$ & $2.391$ & $16.17$ & $0.8634$ & $0.5840$ \\
         \bottomrule
     \end{tabularx}
 \end{table}
 
-\subsection{Channel Data and Evaluation Metrics}
+\clearpage
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/08_aggregate_comparison_matlab.png}
+    \caption{Aggregate comparison of the lens-assisted and without-lens RX designs for nine isotropic TX elements. Channel magnitude and link capacity are medians over waypoint--RX observations; MIMO metrics use the constructed $9\times9$ channel; spatial decorrelation is reported at both global-pooled and median-block scopes.}
+    \label{fig:iso9x9-aggregate}
+\end{figure}
+\clearpage
 
-The six simulation outputs comprise three lens/without-lens pairs. Each waypoint provides SNR and equivalent-SISO capacity for nine RX channels, together with pairwise correlation summaries, unnormalized raw pairwise metrics, and singular-value-based MIMO diagnostics. Let $h_i[n]$ denote a complex channel-frequency-response (CFR) sample for receive channel $i$, where $n$ indexes the samples included in the selected aggregation. The normalized correlation and decorrelation of channels $i$ and $j$ are
-\begin{equation}
-    \rho_{ij}=
-    \frac{\sum_n h_i[n]h_j^{*}[n]}
-    {\sqrt{\left(\sum_n |h_i[n]|^2\right)
-    \left(\sum_n |h_j[n]|^2\right)}},
-    \qquad D_{ij}=1-|\rho_{ij}|.
-    \label{eq:trajectory-correlation}
-\end{equation}
-The pooled estimator applies Equation~\ref{eq:trajectory-correlation} after combining waypoint, mobility-time, and frequency samples. It therefore gives greater influence to samples carrying more channel energy. A complementary robust estimator first evaluates correlation within each waypoint--time block and then takes the median,
-\begin{equation}
-    C_{ij}^{\mathrm{med}}=
-    \operatorname{median}_{w,t}\!\left|\rho_{ij}^{(w,t)}\right|,
-    \qquad
-    D_{ij}^{\mathrm{med}}=1-C_{ij}^{\mathrm{med}}.
-    \label{eq:trajectory-median-decorrelation}
-\end{equation}
-These quantities describe channel similarity; for example, $D=0.5$ denotes a decorrelation coefficient and does not imply a 50\% loss of signal power.
-
-To retain absolute channel-energy information removed by normalization, the analysis also reports raw cross-correlation and raw difference power,
-\begin{equation}
-    G_{ij}^{\mathrm{raw}}=
-    \left|\frac{1}{N}\sum_n h_i[n]h_j^{*}[n]\right|,
-    \qquad
-    Q_{ij}^{\mathrm{raw}}=
-    \frac{1}{N}\sum_n |h_i[n]-h_j[n]|^2.
-    \label{eq:trajectory-raw-metrics}
-\end{equation}
-Because neither metric is energy-normalized, a larger value may result from a stronger received channel as well as from a change in inter-channel similarity. The raw and normalized metrics must consequently be interpreted together.
-
-Equivalent-SISO capacity uses the ideal Shannon relation $C_\mathrm{SISO}=\log_2(1+\gamma)$, where $\gamma$ is the evaluated SNR. For each $9\times9$ MIMO channel matrix $\mathbf{H}$, singular-value decomposition gives $\mathbf{H}=\mathbf{U}\boldsymbol{\Sigma}\mathbf{V}^{H}$, with singular values $\sigma_1\geq\cdots\geq\sigma_9$. Condition number and effective rank are evaluated as
-\begin{equation}
-    \kappa_\mathrm{dB}=20\log_{10}\!\left(\frac{\sigma_1}{\sigma_9}\right),
-    \qquad
-    r_\mathrm{eff}=\exp\!\left(-\sum_{k=1}^{9}p_k\ln p_k\right),
-    \qquad
-    p_k\geq0,\quad \sum_{k=1}^{9}p_k=1,
-    \label{eq:mc9x9-condrank}
-\end{equation}
-where $p_k$ is the normalized singular-value weight used during post-processing. A lower condition number indicates more balanced spatial modes, whereas a larger effective rank indicates that more modes carry appreciable energy. With equal power allocation, the corresponding ideal MIMO capacity is
-\begin{equation}
-    C_\mathrm{MIMO}=\log_2\det\!\left(
-    \mathbf{I}_{N_r}+\frac{\gamma}{N_t}\mathbf{H}\mathbf{H}^{H}
-    \right), \qquad N_t=N_r=9,
-    \label{eq:mc9x9-mimocapacity}
-\end{equation}
-and is reported at an evaluation SNR of 10~dB. These quantities are descriptive upper-bound and channel-structure measures; they do not include practical modulation, coding, receiver loss, or multi-user interference.
-
-\subsection{Aggregate Comparison Across Trajectories}
-
-Figure~\ref{fig:trajectory-aggregate} and Tables~\ref{tab:trajectory-link-results}--\ref{tab:trajectory-spatial-results} provide the aggregate comparison. Higher SNR, capacity, decorrelation, and effective rank are favorable, whereas a lower condition number is favorable. In the detailed figures, the SNR and SISO-capacity curves are per-waypoint means over nine RX channels; the other curves are per-waypoint pairwise or MIMO summaries. The tables instead report medians over the complete waypoint--RX set for each configuration. The connecting segments in Figure~\ref{fig:trajectory-aggregate} are visual guides between categorical trajectory cases and do not imply interpolation.
+Figure~\ref{fig:iso9x9-link-trajectory} shows that the mean without-lens SNR and capacity remain above the lens mean at every sampled waypoint on both paths. The shaded lens region is the minimum-to-maximum range across the nine RX cases, not a confidence interval. Its width shows that individual angle-specific branches can be much stronger or weaker than the ensemble mean. All four configurations record 0\% outage at the 1~bit/s/Hz threshold. This threshold is therefore saturated and cannot distinguish reliability; higher thresholds or capacity percentiles are required for a useful outage comparison.
 
 \clearpage
 \begin{figure}[p]
     \centering
-    \includegraphics[width=0.98\linewidth]{Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/charts/03_aggregate_comparison.png}
-    \caption{Aggregate lens-assisted and without-lens comparison across trajectory types. The panels report median channel magnitude, median SNR, median equivalent-SISO capacity, pooled decorrelation, median-block decorrelation, and median condition number. Full-circle values are shown for diagnostic completeness but are affected by the near-collision in Table~\ref{tab:trajectory-design}.}
-    \label{fig:trajectory-aggregate}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/04_channel_metrics_along_trajectory_matlab.png}
+    \caption{Mean SNR and equivalent-SISO link capacity along the linear and half-circular trajectories. Lines are means across the nine RX cases, and the shaded lens bands are the corresponding minimum-to-maximum ranges. The horizontal capacity reference is the 1~bit/s/Hz outage threshold.}
+    \label{fig:iso9x9-link-trajectory}
 \end{figure}
 \clearpage
 
-\begin{table}[htbp]
-    \centering
-    \caption{Aggregate link-quality results. Full-circle rows are diagnostic because of the near-collision.}
-    \label{tab:trajectory-link-results}
-    \footnotesize
-    \renewcommand{\arraystretch}{1.15}
-    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X *{4}{>{\centering\arraybackslash}X}@{}}
-        \toprule
-        \textbf{Trajectory} & \textbf{Config.} & \textbf{Median $|H|$ (dB)} & \textbf{Median SNR (dB)} & \textbf{Median $C_\mathrm{SISO}$ (bit/s/Hz)} & \textbf{Min. distance (m)} \\
-        \midrule
-        Linear & Lens & $-99.03$ & $3.5$ & $1.66$ & $9.009$ \\
-        Linear & Without lens & $-103.99$ & $-1.0$ & $0.84$ & $9.000$ \\
-        Half-circle & Lens & $-100.52$ & $2.1$ & $1.38$ & $12.724$ \\
-        Half-circle & Without lens & $-100.50$ & $1.0$ & $1.16$ & $12.712$ \\
-        Full-circle$^{\dagger}$ & Lens & $-99.02$ & $3.7$ & $1.72$ & $0.017$ \\
-        Full-circle$^{\dagger}$ & Without lens & $-99.36$ & $2.7$ & $1.50$ & $\approx0$ \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
+\subsection{Constructed MIMO Performance Along the Trajectories}
 
-\begin{table}[htbp]
-    \centering
-    \caption{Aggregate spatial-channel results. $D_\mathrm{pool}$ and $D_\mathrm{med}$ denote pooled and median-block decorrelation; $C_\mathrm{MIMO}$ is evaluated at 10~dB. Full-circle rows ($\dagger$) are diagnostic only.}
-    \label{tab:trajectory-spatial-results}
-    \footnotesize
-    \renewcommand{\arraystretch}{1.15}
-    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.14\linewidth} >{\raggedright\arraybackslash}p{0.16\linewidth} *{5}{>{\centering\arraybackslash}X}@{}}
-        \toprule
-        \textbf{Trajectory} & \textbf{Config.} & \textbf{$D_\mathrm{pool}$} & \textbf{$D_\mathrm{med}$} & \textbf{$\kappa_\mathrm{med}$ (dB)} & \textbf{$r_\mathrm{eff,med}$} & \textbf{$C_\mathrm{MIMO}$} \\
-        \midrule
-        Linear & Lens & $0.9111$ & $0.5316$ & $33.79$ & $3.889$ & $20.60$ \\
-        Linear & Without lens & $0.9174$ & $0.3697$ & $47.37$ & $3.330$ & $18.28$ \\
-        Half-circle & Lens & $0.8695$ & $0.4605$ & $35.55$ & $3.426$ & $19.64$ \\
-        Half-circle & Without lens & $0.9479$ & $0.1598$ & $43.10$ & $3.648$ & $18.90$ \\
-        Full-circle$^{\dagger}$ & Lens & $0.7515$ & $0.4593$ & $35.59$ & $3.382$ & $19.48$ \\
-        Full-circle$^{\dagger}$ & Without lens & $0.8084$ & $0.2289$ & $43.79$ & $3.413$ & $18.30$ \\
-        \bottomrule
-    \end{tabularx}
-\end{table}
+The lens-assisted design also produces lower median constructed-MIMO capacity and effective rank on both paths. For the linear trajectory, median capacity at 10~dB falls from 17.20 to 14.56~bit/s/Hz and effective rank from 3.160 to 2.043. The median condition number improves only slightly, from 43.56 to 42.88~dB. For the half-circular trajectory, capacity falls from 19.99 to 16.17~bit/s/Hz, effective rank from 3.965 to 2.391, and the condition number worsens slightly from 39.90 to 40.81~dB. Thus, neither a small condition-number change nor local beam separation compensates for the lower effective rank under the present construction.
 
-\subsection{Linear Trajectory: Strongest Lens-Assisted Improvement}
-
-The linear trajectory provides the clearest evidence of a lens-assisted benefit. As shown in Figure~\ref{fig:trajectory-linear-results}, the lens raises median channel magnitude by 4.96~dB, from $-103.99$ to $-99.03$~dB. Median SNR consequently increases by 4.5~dB and median equivalent-SISO capacity increases from 0.84 to 1.66~bit/s/Hz, an absolute gain of 0.82~bit/s/Hz. This is approximately a 97.6\% relative increase, although the absolute change is more stable because the baseline is below 1~bit/s/Hz.
-
-The lens also improves the principal MIMO diagnostics on this path. Median condition number decreases by 13.58~dB, median effective rank increases from 3.330 to 3.889, and median MIMO capacity at 10~dB rises by 2.32~bit/s/Hz. Median-block decorrelation increases from 0.3697 to 0.5316. In contrast, pooled decorrelation is nearly unchanged and remains marginally higher without the lens (0.9174 versus 0.9111). The combined evidence supports improved typical local channel separation and conditioning, but not a universal improvement under every aggregation rule.
+Figure~\ref{fig:iso9x9-mimo-trajectory} also reveals a sharp symmetry-related impairment near the midpoint of the linear path at 9.5~m: the condition number reaches 89.51~dB without the lens and 71.89~dB with the lens, while the corresponding MIMO capacities fall to 8.06 and 7.84~bit/s/Hz. The half-circular trajectory avoids such a severe isolated singularity and yields a higher median effective rank and MIMO capacity for both designs. This between-path difference is descriptive, however, because path shape, location, distance distribution, and waypoint count change together.
 
 \clearpage
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\linewidth]{Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_linear_all_parameters.png}
-    \caption{Along-trajectory lens-assisted and without-lens comparison for the linear path. The panels show mean SNR, mean equivalent-SISO capacity, pooled and median-block decorrelation, unnormalized raw cross-correlation and difference power, median condition number, median effective rank, and MIMO capacity at 10~dB. The abscissa is cumulative trajectory distance; raw-power panels use logarithmic scales.}
-    \label{fig:trajectory-linear-results}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/05_trajectory_mimo_metrics_matlab.png}
+    \caption{Condition number, effective rank, and ideal capacity at 10~dB for the constructed $9\times9$ channel along the two trajectories. The linear midpoint produces a pronounced conditioning singularity in both configurations.}
+    \label{fig:iso9x9-mimo-trajectory}
 \end{figure}
 \clearpage
 
-\subsection{Half-Circular Trajectory: Link Gain with Mixed Rank Behavior}
+\subsection{Spatial Decorrelation}
 
-The half-circular trajectory provides a second physically valid paired comparison because its minimum TX--RX separation remains approximately 12.7~m. Figure~\ref{fig:trajectory-half-results} shows that median channel magnitudes are essentially equal: $-100.52$~dB with the lens and $-100.50$~dB without it. Nevertheless, the lens increases median SNR from 1.0 to 2.1~dB and median equivalent-SISO capacity from 1.16 to 1.38~bit/s/Hz. The along-path curves show that the improvement is most pronounced over the latter part of the half-circle.
+The spatial result depends strongly on aggregation scope. When all realizations are concatenated before normalization, global pooled decorrelation is higher without the lens: 0.9493 versus 0.8570 on the linear path and 0.9236 versus 0.8634 on the half-circular path. By contrast, the block-median decorrelation favors the lens by a wide margin, increasing from 0.0885 to 0.4876 on the linear path and from 0.2109 to 0.5840 on the half-circular path. The waypoint-level curves in Figure~\ref{fig:iso9x9-decorrelation} likewise favor the lens because pooling is performed separately within each waypoint rather than over the full trajectory. The mean waypoint-level values are 0.4934 with the lens versus 0.1135 without it on the linear path and 0.5881 versus 0.2152 on the half-circular path.
 
-Median condition number improves from 43.10 to 35.55~dB, and median-block decorrelation rises from 0.1598 to 0.4605. Nevertheless, median effective rank decreases slightly, from 3.648 to 3.426, while MIMO capacity at 10~dB increases only from 18.90 to 19.64~bit/s/Hz. Pooled decorrelation again favors the without-lens case (0.9479 versus 0.8695). The result therefore supports better link quality and a more favorable condition-number distribution, but not a uniform increase in effective spatial modes.
+These findings are not contradictory. Global pooling is energy-weighted over the complete trajectory and measures the coherence of the concatenated response. Median-block and waypoint-level summaries give more comparable weight to local conditions and show that a typical lens block has more differentiated angle responses. In addition, these metrics use only the center TX element, so they should not be equated with the full constructed $9\times9$ singular-value metrics.
 
-\clearpage
-\begin{figure}[p]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_half_all_parameters.png}
-    \caption{Along-trajectory lens-assisted and without-lens comparison for the half-circular path. The panels report link quality, normalized spatial decorrelation, unnormalized raw pairwise metrics, channel conditioning, effective rank, and MIMO capacity at 10~dB as functions of cumulative trajectory distance. Raw-power quantities are displayed logarithmically.}
-    \label{fig:trajectory-half-results}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/06_spatial_decorrelation_comparison_matlab.png}
+    \caption{Waypoint-level pooled and median-based spatial decorrelation of the center TX element (index~4) across nine RX branches. Higher values indicate less-correlated local RX responses; these curves use a different aggregation scope from the global-pooled values in Table~\ref{tab:iso9x9-aggregate-results}.}
+    \label{fig:iso9x9-decorrelation}
 \end{figure}
-\clearpage
 
-\subsection{Full-Circular Trajectory: Near-Collision Diagnostic}
+The unnormalized difference power in Figure~\ref{fig:iso9x9-raw-difference} supplies amplitude context. Its ordering reflects both path loss and the RX-pattern gain, as well as the difference between channel responses. A larger value therefore cannot independently be interpreted as better decorrelation or higher multiplexing capacity.
 
-The full-circle path produces median SNR and capacity increases of 1.0~dB and 0.22~bit/s/Hz, respectively, when the lens is introduced. The corresponding median condition number is also lower. These aggregate values must not be used as final physical-performance evidence because the path intersects the receiver region. Minimum separation is only 0.017~m for the lens-assisted configuration and effectively zero without the lens. As Figure~\ref{fig:trajectory-full-results} shows, the near-collision at approximately 42.4~m along the path creates sharp, non-propagation-representative excursions across the evaluated metrics.
-
-The full-circle result is retained as a geometry robustness check: it demonstrates that aggregate metrics can be dominated by an invalid local geometry even when medians appear plausible. A defensible rerun should reduce the radius to approximately 7.5--8~m or shift the circle center so that a prescribed minimum TX--RX separation is enforced before ray tracing.
-
-\clearpage
-\begin{figure}[p]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{Images/Comparison_Linear_Half_Full_Lens_Wolens_9x9/matlab_figures/02_full_all_parameters.png}
-    \caption{Diagnostic along-trajectory comparison for the full-circular path. The abrupt excursion near 42.4~m is caused by the TX--RX near-collision and is not interpreted as an antenna-lens performance gain. Raw cross-correlation and difference-power panels are unnormalized and use logarithmic scales.}
-    \label{fig:trajectory-full-results}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/figures_matlab/07_raw_spatial_difference_power_matlab.png}
+    \caption{Unnormalized spatial difference power along the linear and half-circular paths. Because the metric retains path loss and RX-pattern gain, it is interpreted only alongside the normalized decorrelation and link-budget metrics.}
+    \label{fig:iso9x9-raw-difference}
 \end{figure}
-\clearpage
 
 \subsection{Discussion and Limitations}
 
-Taken together, the linear and half-circular cases show that the lens-assisted receiver can improve link quality under two non-colliding mobility geometries. The strongest evidence is the simultaneous improvement in median SNR, equivalent-SISO capacity, condition number, and MIMO capacity on the linear path. On the half-circle, SNR and capacity also improve and condition number decreases, but effective rank changes in the opposite direction. Accordingly, the present data support the narrower conclusion that the lens redistributes received energy and can improve channel conditioning in the evaluated scene; they do not support the stronger claim that it uniformly increases spatial rank.
+The combined results indicate a trade-off between uniform link performance and angular selectivity. The coplanar baseline applies the same patch pattern to nine closely spaced positions and therefore gives nearly uniform branch responses. The lens configuration instead samples nine directional patterns. Its median within-waypoint capacity spread is 6.78~bit/s/Hz on the linear path and 6.32~bit/s/Hz on the half-circular path, compared with only 0.02 and 0.05~bit/s/Hz, respectively, without the lens. At a given waypoint, one or more aligned beams can therefore be strong while non-aligned beams are weak; assigning equal statistical weight to all nine RX configurations lowers the reported lens median even though the local responses are more differentiated. The present result is specific to fixed, all-branch reporting and should not be generalized to a receiver that performs beam selection or combining. Such an operating strategy must be evaluated explicitly with a practical selection rule and switching overhead.
 
-The opposite ordering of pooled and median-block decorrelation is central to this interpretation. The median-block estimator gives comparable weight to each local waypoint--time block and is robust to a small number of unusually strong samples. Its consistent increase with the lens indicates that a typical local block exhibits less pairwise similarity. The pooled estimator combines the complete sample set before normalization and is sensitive to energy concentration and coherent structure over the full trajectory. Its higher value without the lens indicates that global aggregation remains more decorrelated for that configuration. These observations are not contradictory because the estimators answer different questions; reporting either one alone would give an incomplete account.
+The half-circular path is more favorable to the constructed MIMO metrics for both RX designs because it avoids the severe midpoint singularity of the linear path and samples a broader sequence of relative angles. The available experiment does not isolate trajectory curvature as the cause, since the two paths also differ in position, distance distribution, length, and sample count. Only lens versus without-lens differences within the same trajectory are paired comparisons.
 
-The raw metrics provide a related caution. The lens generally produces larger raw cross-correlation and raw difference power because it changes both absolute channel energy and pairwise differences. Since these measures are not normalized, they cannot independently establish improved or degraded channel independence. They should be read alongside SNR, normalized decorrelation, condition number, and effective rank.
-
-Several limitations bound the conclusions. First, the original complex CFR tensor $h(t,f)$ was not retained in the comparison package; only derived per-waypoint and aggregate metrics are available, so the complete analysis cannot be independently reconstructed from these exports. Second, the paths have different lengths and waypoint counts, making between-trajectory comparisons descriptive; only lens versus without-lens comparisons within the same trajectory are strictly matched. Third, the results are specific to the simulated scene, antenna patterns, frequency and mobility sampling, and ray-tracing parameters. Fourth, the Shannon and fixed-SNR MIMO capacities are theoretical channel measures rather than predictions of coded throughput. Finally, because placement and imported pattern change together, the experiment evaluates the complete receiver configuration and does not separately identify the contribution of focal-arc displacement and the lens pattern.
+Several limitations constrain the inference. First, each constructed $9\times9$ matrix combines nine sequential $9\times1$ RX simulations, so simultaneous multiport reception, mutual coupling, and inter-port hardware phase consistency are not represented. Second, RX placement and far-field pattern differ together, preventing attribution to the lens material or focal displacement alone. Third, the results cover one scene, one ray-tracing realization set, and no multi-seed convergence or confidence-interval study. Fourth, 100{,}000 path samples per source were used, whereas the source workflow recommends 1{,}000{,}000 for a final high-accuracy run. Fifth, the along-path SNR and capacity curves were recovered from rounded notebook logs, although the headline medians use the higher-precision stored summaries. Finally, the exported package contains derived tables and figures rather than the complete complex CFR tensor, and it does not include the source notebooks or shared parser referenced by its provenance record. End-to-end regeneration and independent re-analysis beyond the reported metrics are therefore not possible from the present archive alone. The capacities are ideal Shannon or fixed-SNR channel measures and are not predictions of coded throughput.
 
 \subsection{Summary of the Placement Comparison}
 
-The paired simulations yield three main conclusions. First, the lens-assisted configuration improves median SNR and equivalent-SISO capacity on both physically valid paths, with the largest gain on the linear trajectory ($+4.5$~dB SNR and $+0.82$~bit/s/Hz capacity). Second, the spatial-channel effect depends on the metric: median-block decorrelation and condition number improve, whereas pooled decorrelation remains higher without the lens and effective rank improves only on the linear path. Third, the full-circle case is invalid for final performance claims because of its TX--RX near-collision. The linear and half-circular paths therefore constitute the defensible evidence set. Future simulations should enforce a minimum link distance, retain the complete complex CFR tensor, and report pooled correlation, robust block-level correlation, raw-power metrics, condition number, effective rank, and MIMO capacity jointly.
+For nine simultaneous isotropic TX elements and equal statistical weighting of all nine RX configurations, the without-lens baseline provides stronger aggregate link and constructed-MIMO performance on the two evaluated trajectories. Relative to the baseline, the lens reduces median link capacity by 1.81~bit/s/Hz on the linear path and 1.03~bit/s/Hz on the half-circular path, while constructed-MIMO capacity decreases by 2.64 and 3.83~bit/s/Hz, respectively. The lens nevertheless produces substantially higher typical-block decorrelation, confirming stronger angular selectivity, while global pooled decorrelation remains higher without the lens. The half-circular path avoids the pronounced linear-path singularity and yields better constructed-MIMO statistics for both designs, but this is a descriptive path comparison. Future work should evaluate practical beam selection and combining, repeat the comparison at co-located RX coordinates, increase the path-sample count and random seeds, retain the full complex CFR tensor, and use informative outage thresholds or capacity percentiles.
 
-\section{Higher-Order MIMO Systems}
+\section{Higher-Order MIMO Systems}\label{sec:higher-order-mimo}
 
-This section examines higher-order lens-assisted MIMO configurations by repeating the Monte Carlo methodology for RX-lens arrays of size $N=3$, $5$, and $9$. All three configurations share an identical room geometry, carrier frequency, bandwidth, transmit power per element, noise figure, and random seed (see the list below). However, increasing $N$ also increases the total transmit power and changes the physical aperture and the set of RX lens angles. The results therefore characterize the combined scaling behavior of the evaluated configurations; they do not isolate array order as the sole causal variable. This Monte Carlo dataset is separate from the controlled trajectory dataset in Section~\ref{sec:comparison-antenna-placements}; the two analyses share channel-structure metrics but address different geometrical sampling questions.
+This section compares the complete lens-assisted $N\times N$ configurations for $N=3$, $5$, and $9$ using the controlled linear-trajectory outputs through Section~14 of the available analysis package. In every configuration, $N$ isotropic TX elements radiate simultaneously and the center of the TX array follows the same 21-waypoint path. The main result is a trade-off: increasing $N$ raises the link-budget capacity and fixed-SNR constructed-MIMO capacity, but the median condition number worsens and both effective rank per dimension and MIMO capacity per dimension decrease.
 
-\begin{itemize}
-    \item \textbf{RX lens-angle scenarios}: $-45^\circ,0^\circ,+45^\circ$ ($N=3$); $-60^\circ$ to $+60^\circ$ in $30^\circ$ steps ($N=5$); $-60^\circ$ to $+60^\circ$ in $15^\circ$ steps ($N=9$)
-    \item \textbf{TX array aperture ($Y$)}: $\pm0.45$~m ($N=3$), $\pm0.90$~m ($N=5$), $\pm1.80$~m ($N=9$)
-    \item \textbf{Monte Carlo drops}: 20, common to all three array sizes
-    \item \textbf{Total Monte Carlo rows} ($20\times N$): 60 ($N=3$), 100 ($N=5$), 180 ($N=9$)
-    \item \textbf{Room size, carrier, bandwidth}: $20\,\text{m}\times20\,\text{m}\times3\,\text{m}$; 38~GHz, 400~MHz (401 frequency points)
-    \item \textbf{Power per TX / noise figure}: 10~dBm / 7~dB at 290~K
-    \item \textbf{Path samples per source}: 100{,}000 (recommended final value: 1{,}000{,}000)
-\end{itemize}
+This trend is a configuration-level scaling result rather than a causal estimate of antenna order alone. The simulations apply 10~dBm to every TX element, keep the inter-element spacing fixed, and assign a different lens-angle grid to each order. Consequently, total radiated power, physical aperture, number of RX scenarios, and angular sampling all change with $N$.
 
-\subsection{Compute-Cost Scalability}
+\subsection{Simulation Configuration and Order Comparability}
 
-Because all TX elements share one radiated pattern and are traced simultaneously within a single scene, the number of \texttt{PathSolver} calls grows linearly with $N$ rather than quadratically as it would if every element were simulated one at a time. Figure~\ref{fig:mc-scalability-compute-cost} contrasts the two schemes for both the fixed-geometry loop and the 20-drop Monte Carlo loop: going from $N=3$ to $N=9$ (a $3\times$ increase in array size), the actual run count also rises $3\times$ (60 to 180 Monte Carlo runs), whereas a naive one-element-per-run scheme would rise $9\times$ (180 to 1620 runs). This linear scaling is what keeps the $N=9$ configuration (180 runs $\times$ 100,000 ray samples) computationally practical.
+The common environment is a $20\,\text{m}\times20\,\text{m}\times3\,\text{m}$ room at 38~GHz. The channel is sampled over 400~MHz using 401 frequency bins. The linear trajectory runs from $y=-9.5$~m to $y=+9.5$~m at $x=0$ and $z=2$~m, giving 21 waypoints and a total length of 19~m. Motion is evaluated at 1~m/s with 16 time samples per waypoint at 1~kHz. All configurations use a 7~dB receiver noise figure at 290~K and 100{,}000 path samples per source.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.85\linewidth]{Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig1_compute_cost_scalability.png}
-    \caption{Compute-cost scalability: actual vs.\ naive \texttt{PathSolver} run count for the fixed-geometry loop and the 20-drop Monte Carlo loop, for $N=3,5,9$.}
-    \label{fig:mc-scalability-compute-cost}
-\end{figure}
-
-\subsection{Capacity and Channel-Conditioning Scalability}
-
-Table~\ref{tab:mc-scalability-aggregate} summarizes the aggregate Monte Carlo capacity, throughput, and delay spread, together with the virtual $N\times N$ MIMO conditioning averaged per drop (using the metrics of Equations~\ref{eq:mc9x9-condrank}--\ref{eq:mc9x9-mimocapacity} with $N_t=N$), across the three array sizes.
+Table~\ref{tab:iso-order-simulation-setup} lists the quantities that change with order. The 0.45~m TX spacing expands the aperture from 0.90 to 3.60~m. Because the power is fixed at 10~dBm per TX, nominal total TX power rises by 4.77~dB from $N=3$ to $N=9$. The RX grids also differ; only the $0^\circ$ lens branch is common to all three configurations. The 63, 105, and 189 observations are waypoint--RX combinations, not independent Monte Carlo drops.
 
 \begin{table}[htbp]
     \centering
-    \caption{Aggregate scalability metrics vs.\ array size $N$ (medians over 20 Monte Carlo drops).}
-    \label{tab:mc-scalability-aggregate}
-    \small
+    \caption{Order-dependent configuration for the controlled lens-assisted linear-trajectory comparison.}
+    \label{tab:iso-order-simulation-setup}
+    \footnotesize
     \renewcommand{\arraystretch}{1.15}
-    \begin{tabularx}{\linewidth}{
-        >{\raggedright\arraybackslash}X
-        *{3}{>{\centering\arraybackslash}X}
-    }
+    \begin{tabularx}{\linewidth}{@{}>{\centering\arraybackslash}p{0.10\linewidth} >{\centering\arraybackslash}p{0.16\linewidth} >{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{0.17\linewidth} >{\centering\arraybackslash}p{0.16\linewidth}@{}}
         \toprule
-        \textbf{Metric} & \textbf{$N=3$} & \textbf{$N=5$} & \textbf{$N=9$} \\
+        \textbf{Order} & \textbf{TX aperture} & \textbf{RX lens-angle grid} & \textbf{Waypoint--RX observations} & \textbf{Nominal total TX power} \\
         \midrule
-        Median equivalent-SISO capacity & 5.94~bit/s/Hz & 6.46~bit/s/Hz & 7.67~bit/s/Hz \\
-        Median ideal throughput & 2.38~Gbit/s & 2.58~Gbit/s & 3.07~Gbit/s \\
-        Median RMS delay spread & 59.13~ns & 63.46~ns & 65.00~ns \\
-        Virtual $N\times N$ condition number (per-drop median) & 7.5 (17.5~dB) & 17.1 (24.6~dB) & 54.0 (34.6~dB) \\
-        Effective rank / $N$ (per-drop median) & 1.91/3 (64\%) & 2.77/5 (55\%) & 4.07/9 (45\%) \\
-        Virtual MIMO capacity @ 10~dB SNR (per-drop median) & 8.03~bit/s/Hz & 12.81~bit/s/Hz & 21.11~bit/s/Hz \\
+        $3\times3$ & 0.90~m & $-45^\circ,0^\circ,+45^\circ$ & 63 & 14.77~dBm \\
+        $5\times5$ & 1.80~m & $-60^\circ$ to $+60^\circ$ in $30^\circ$ steps & 105 & 16.99~dBm \\
+        $9\times9$ & 3.60~m & $-60^\circ$ to $+60^\circ$ in $15^\circ$ steps & 189 & 19.54~dBm \\
         \bottomrule
     \end{tabularx}
 \end{table}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.9\linewidth]{Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig4_montecarlo_aggregate_vs_N.png}
-    \caption{Monte Carlo aggregate summary vs.\ array size $N$: (a) median equivalent-SISO capacity with 5th--95th percentile band, (b) median ideal throughput, (c) median RMS delay spread.}
-    \label{fig:mc-scalability-aggregate}
-\end{figure}
+Figure~\ref{fig:iso-order-geometry} shows the common trajectory and the order-dependent TX and RX geometry. The increasingly dense lens grid does not compare the same set of physical RX branches at every order. Accordingly, all-order aggregate comparisons characterize each complete design, while the common $0^\circ$ branch is retained as a narrower sensitivity check.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.9\linewidth]{Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9/figures/fig5_mimo_per_drop_boxplot_vs_N.png}
-    \caption{Per-drop distribution (20 drops) of the virtual $N\times N$ MIMO channel condition number and effective-rank ratio, vs.\ array size $N$.}
-    \label{fig:mc-scalability-per-drop}
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/01_geometry_order_comparison_matlab.png}
+    \caption{Common linear TX trajectory and order-dependent TX aperture and RX lens-angle grids for the $3\times3$, $5\times5$, and $9\times9$ configurations.}
+    \label{fig:iso-order-geometry}
 \end{figure}
 
-Every aggregate metric in Table~\ref{tab:mc-scalability-aggregate} and Figure~\ref{fig:mc-scalability-aggregate} rises monotonically with $N$: more simultaneously active TX elements non-coherently combine at the receiver, raising the received SNR and hence the equivalent-SISO capacity and throughput, while the wider TX aperture at larger $N$ spreads the range of path lengths and raises the RMS delay spread. However, this capacity growth is not free of trade-offs. As Figure~\ref{fig:mc-scalability-per-drop} shows, the virtual $N\times N$ MIMO condition number worsens monotonically with $N$ (17.5~dB $\to$ 24.6~dB $\to$ 34.6~dB), and the effective-rank-to-$N$ ratio decreases monotonically (64\%~$\to$~55\%~$\to$~45\%): although the virtual MIMO capacity at 10~dB SNR keeps rising in absolute terms (8.03~$\to$~12.81~$\to$~21.11~bit/s/Hz), it grows less than proportionally to $N$, since an increasing share of the additional spatial modes are weak or correlated rather than fully independent. This is the classic diminishing-returns pattern of MIMO array scaling: adding lens-steered elements increases the total capacity and link power, but not the proportion of channel dimensions that are genuinely usable for spatial multiplexing.
+\subsection{Metrics and Normalization}
 
-These conclusions are subject to the limitations of the Monte Carlo scalability dataset: a modest number of drops and path samples relative to recommended practice, an idealized Shannon-capacity bound, and transmit power that scales with $N$ rather than being held at a fixed total budget. In addition, the set of RX lens angles differs across $N$ (3, 5, and 9 angles, spaced $45^\circ$, $30^\circ$, and $15^\circ$ apart, respectively), so part of the observed variation could stem from the different angular sampling rather than from $N$ alone.
+The link-budget capacity follows Equation~\ref{eq:iso9x9-link-capacity}, with the TX summation limit changed from 9 to $N$. It combines the received power from all simultaneously active TX elements at one active RX branch. The aggregate link statistics pool all waypoint--RX observations within an order. They therefore include both the growing total TX power and the different RX-angle populations.
 
+For the spatial analysis, the $N$ sequential $N\times1$ RX simulations at each waypoint are stacked to construct an $N\times N$ channel matrix. Equations~\ref{eq:mc9x9-condrank} and~\ref{eq:mc9x9-mimocapacity} are applied after replacing every upper limit of 9 and $N_t=9$ by $N$. The reported condition number is $20\log_{10}\kappa$, and the ideal equal-power MIMO capacity is evaluated at a fixed normalized SNR of 10~dB. This constructed capacity diagnoses channel structure and is distinct from the absolute link-budget capacity. The sequentially simulated RX branches do not represent simultaneous physical receiver ports.
 
-\subsection{Discussion on Higher-Order MIMO Systems}
+Absolute metrics naturally tend to grow when dimensions are added. Two normalized quantities are therefore used to evaluate how efficiently the available dimensions are utilized:
+\begin{equation}
+    \eta_r(N)=\frac{r_\mathrm{eff}}{N},
+    \qquad
+    \eta_C(N)=\frac{C_\mathrm{MIMO}(10~\mathrm{dB})}{N}.
+    \label{eq:iso-order-normalized-metrics}
+\end{equation}
+A favorable scaling trend increases absolute capacity without materially reducing $\eta_r$ or $\eta_C$.
 
-The higher-order results demonstrate that the adopted simulation strategy remains computationally scalable as the array grows. Increasing the array size from $N=3$ to $N=9$ triples the number of Monte Carlo \texttt{PathSolver} calls, from 60 to 180, rather than increasing it by a factor of nine as in the naive element-by-element approach. Consequently, the ray-tracing cost grows linearly with $N$ because all active TX elements are evaluated simultaneously in each scene. This property makes the analysis of larger arrays practical, although the total post-processing cost and the size of the resulting channel matrices still increase with the number of antenna pairs.
+Spatial decorrelation follows Equations~\ref{eq:iso9x9-spatial-correlation} and~\ref{eq:iso9x9-median-decorrelation} using the center TX element, corresponding to zero-based indices 1, 2, and 4 for $N=3$, $5$, and $9$, respectively. The global pooled estimator concatenates all realizations before normalization, whereas the block-median estimator gives a typical local result. Figure~\ref{fig:iso-order-decorrelation} uses waypoint-local pooling, so its curves need not equal the global summary values. The raw difference power remains amplitude-sensitive and is interpreted only as supporting context.
 
-From a communication-performance perspective, a larger array provides a consistent improvement in received-link performance. Between $N=3$ and $N=9$, the median equivalent-SISO capacity increases from 5.94 to 7.67~bit/s/Hz, corresponding to an increase of approximately 29\%, while the median ideal throughput rises from 2.38 to 3.07~Gbit/s. The median virtual-MIMO capacity at 10~dB SNR also increases substantially, from 8.03 to 21.11~bit/s/Hz. These results confirm that adding lens-steered antenna elements introduces additional received power and spatial modes that can be exploited to increase the total achievable rate. The accompanying increase in median RMS delay spread, from 59.13 to 65.00~ns, is comparatively modest but indicates that the larger physical aperture also captures paths with a wider range of propagation delays.
+\subsection{Static Snapshot Scaling}
 
-However, the increase in absolute capacity does not imply a proportional improvement in spatial-multiplexing quality. The median condition number deteriorates from 7.5 (17.5~dB) for $N=3$ to 54.0 (34.6~dB) for $N=9$, whereas the normalized effective rank decreases from 64\% to 45\%. Thus, the number of usable spatial modes increases in absolute terms, but more slowly than the number of antenna elements. This behavior suggests that the additional lens directions do not produce fully independent channels; instead, some beams observe overlapping multipath components or similar angular sectors and therefore remain correlated. As the array order increases, power is consequently distributed increasingly unevenly among the singular modes, producing diminishing multiplexing returns.
+The static RX results in Figure~\ref{fig:iso-order-static-rx} show that the center-branch combined gain improves from $-72.98$~dB for $N=3$ to $-70.71$~dB for $N=5$ and $-69.94$~dB for $N=9$. The normalized per-branch capacity remains close to 3.4~bit/s/Hz because the static comparison fixes the operating SNR. These values therefore illustrate angular response and channel structure rather than the absolute link-budget advantage of the additional TX power.
 
-The observed gains must also be interpreted with care. The transmit power is fixed per element and therefore the total radiated power increases with $N$, so the reported capacity growth combines array-size benefits with an increase in the total power budget. In addition, array aperture and RX angular sampling change together with $N$, preventing the present results from isolating array order as the only causal factor. The use of 20 Monte Carlo drops, 100{,}000 path samples per source, and an ideal Shannon-capacity model further limits the statistical and implementation-level generality of the comparison. A stricter scalability study should hold the total transmit power and physical aperture constant, use a common angular grid, increase the number of drops and path samples, and evaluate practical modulation, coding, and interference assumptions.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/02_static_rx_by_order_matlab.png}
+    \caption{Static combined gain, TX-channel correlation, and normalized per-RX capacity for the three lens-assisted orders. The RX angle grids differ with order.}
+    \label{fig:iso-order-static-rx}
+\end{figure}
 
-In summary, scaling the lens-assisted system to higher-order MIMO is beneficial for total capacity and throughput and is computationally feasible under the simultaneous-source ray-tracing method. Nevertheless, channel conditioning and normalized effective rank worsen as $N$ increases, showing that additional elements alone do not guarantee proportionally more independent spatial channels. The principal design implication is that future higher-order arrays should optimize focal-plane element placement, lens orientation, and beam selection for channel decorrelation, rather than pursuing array size alone. Under the present configuration, higher-order scaling is therefore best characterized as a capacity-enhancing strategy with diminishing spatial-multiplexing efficiency.
+The constructed static matrix does not exhibit a monotonic conditioning trend. As Figure~\ref{fig:iso-order-static-mimo} shows, the condition number is 28.70, 23.40, and 25.10~dB for $N=3$, $5$, and $9$, respectively. The $5\times5$ snapshot also has the largest normalized effective rank (0.666) and capacity per dimension (2.810~bit/s/Hz), compared with 0.533 and 2.413~bit/s/Hz for $N=3$ and 0.569 and 2.653~bit/s/Hz for $N=9$. Meanwhile, mean RX correlation decreases from 0.5636 to 0.2674 as $N$ increases. Thus, the static position suggests favorable angular diversity at higher order, but it cannot represent the complete trajectory.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/03_static_mimo_scaling_matlab.png}
+    \caption{Constructed static $N\times N$ MIMO metrics versus order. The $5\times5$ configuration is best conditioned and has the highest normalized rank and capacity in this single snapshot.}
+    \label{fig:iso-order-static-mimo}
+\end{figure}
+
+\subsection{Aggregate and Along-Trajectory Link Scaling}
+
+Table~\ref{tab:iso-order-aggregate-results} and Figure~\ref{fig:iso-order-aggregate} summarize the trajectory results. Median channel magnitude remains within 0.29~dB across the three orders, whereas median link capacity rises from 3.57 to 5.19~bit/s/Hz. The 1.62~bit/s/Hz increase from $N=3$ to $N=9$ corresponds to 45.4\%, but it occurs together with a 4.77~dB increase in nominal total TX power. Outage at the 1~bit/s/Hz threshold is 0\% for every order and is therefore non-discriminating.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Aggregate link, constructed-MIMO, and spatial-decorrelation metrics along the common linear trajectory. The two capacity metrics are in bit/s/Hz; $D_\mathrm{global}$ and $D_\mathrm{med}$ denote global-pooled and block-median decorrelation, respectively.}
+    \label{tab:iso-order-aggregate-results}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.13}
+    \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X *{3}{>{\centering\arraybackslash}p{0.145\linewidth}}@{}}
+        \toprule
+        \textbf{Metric} & \textbf{$3\times3$} & \textbf{$5\times5$} & \textbf{$9\times9$} \\
+        \midrule
+        Nominal total TX power (dBm) & 14.77 & 16.99 & 19.54 \\
+        Median channel magnitude (dB) & $-86.75$ & $-86.94$ & $-86.65$ \\
+        Median link capacity & 3.57 & 4.13 & 5.19 \\
+        Median condition number (dB) & 25.55 & 34.24 & 42.88 \\
+        Median effective rank & 1.154 & 1.332 & 2.043 \\
+        Effective rank fraction, $\eta_r$ & 0.385 & 0.266 & 0.227 \\
+        Median MIMO capacity at 10~dB & 5.851 & 8.254 & 14.562 \\
+        MIMO capacity per dimension, $\eta_C$ & 1.950 & 1.651 & 1.618 \\
+        $D_\mathrm{global}$ & 0.9807 & 0.9276 & 0.8570 \\
+        $D_\mathrm{med}$ & 0.5308 & 0.5166 & 0.4876 \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\clearpage
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/08_aggregate_order_comparison_matlab.png}
+    \caption{Aggregate link, constructed-MIMO, normalized-efficiency, and spatial-decorrelation metrics for the three lens-assisted orders along the common linear trajectory.}
+    \label{fig:iso-order-aggregate}
+\end{figure}
+\clearpage
+
+The common $0^\circ$ RX branch helps separate the changing angular populations, although it does not remove the TX-power and aperture differences. Its median channel magnitude changes from $-86.85$ to $-87.41$~dB between $N=3$ and $N=9$, while SNR rises from 10.70 to 14.96~dB and link capacity from 3.54 to 4.96~bit/s/Hz. The slightly weaker channel response but higher SNR is consistent with the growing aggregate TX power; it does not demonstrate a power-independent order gain.
+
+Figure~\ref{fig:iso-order-link-trajectory} shows the mean channel magnitude and link capacity at each waypoint. The shaded regions are the minimum-to-maximum ranges across the RX branches at a given order, not confidence intervals. Capacity generally rises with order, but the changing band widths and local crossings show that the benefit is dependent on position and lens angle.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/04_channel_along_trajectory_matlab.png}
+    \caption{Mean channel magnitude and link-budget capacity along the common linear trajectory. Shaded regions indicate the minimum-to-maximum range across RX lens branches, not statistical confidence intervals.}
+    \label{fig:iso-order-link-trajectory}
+\end{figure}
+
+\subsection{Constructed MIMO Scaling Along the Trajectory}
+
+The constructed MIMO capacity increases from 5.851 to 14.562~bit/s/Hz between $N=3$ and $N=9$, an increase of 8.711~bit/s/Hz or approximately 148.9\%. Absolute effective rank also rises from 1.154 to 2.043. These gains are nevertheless sublinear in the number of dimensions. Over the same comparison, effective-rank fraction decreases from 0.385 to 0.227, a relative reduction of approximately 41.0\%, and capacity per dimension decreases from 1.950 to 1.618~bit/s/Hz, or approximately 17.0\%. Median condition number concurrently worsens by 17.33~dB, from 25.55 to 42.88~dB. Higher order therefore adds usable capacity, but the additional dimensions are progressively less balanced and less efficiently utilized.
+
+Figure~\ref{fig:iso-order-mimo-trajectory} also shows a shared bottleneck at the 9.5~m trajectory midpoint. The condition number reaches 55.09, 62.06, and 71.89~dB for $N=3$, $5$, and $9$; effective rank falls to 1.035, 1.061, and 1.085; and MIMO capacity reaches its respective trajectory minimum of 5.185, 6.251, and 7.842~bit/s/Hz. The alignment of the impairment across all orders indicates sensitivity to the common path geometry. It also explains why the non-monotonic static ordering does not persist in the trajectory medians.
+
+\clearpage
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/05_trajectory_mimo_scaling_matlab.png}
+    \caption{Condition number, effective rank, normalized effective rank, and ideal MIMO capacity at 10~dB for the constructed $N\times N$ channels along the common trajectory. All orders exhibit a midpoint bottleneck.}
+    \label{fig:iso-order-mimo-trajectory}
+\end{figure}
+\clearpage
+
+\subsection{Spatial Decorrelation Across Orders}
+
+Both aggregate decorrelation estimators decrease monotonically with order. Global pooled decorrelation falls from 0.9807 for $N=3$ to 0.9276 for $N=5$ and 0.8570 for $N=9$. The block-median estimator decreases more modestly, from 0.5308 to 0.5166 and 0.4876. This indicates greater average similarity among the center-TX RX responses in the higher-order configurations under the respective aggregation rules. It does not establish an order-only effect because the RX-pair population grows from 3 to 10 and 36 pairs, and the $9\times9$ grid introduces many closely spaced $15^\circ$ pairs. The number and spacing of RX lens angles therefore change together with $N$.
+
+Figure~\ref{fig:iso-order-decorrelation} presents waypoint-local rather than global-pooled estimates. The mean waypoint-local pooled values are 0.5502, 0.5215, and 0.4934, while the corresponding mean median-based values are 0.5414, 0.5110, and 0.4836. Their overall ordering agrees with the aggregate summary, but the curves cross along the path. Hence, $N=3$ is not more decorrelated at every waypoint, and numerical values from the local curves should not be substituted for the global statistics in Table~\ref{tab:iso-order-aggregate-results}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/06_spatial_decorrelation_by_order_matlab.png}
+    \caption{Waypoint-local pooled and median-based decorrelation of the center-TX responses across RX lens branches. The curves cross locally even though their trajectory averages decrease with order.}
+    \label{fig:iso-order-decorrelation}
+\end{figure}
+
+The mean raw difference power in Figure~\ref{fig:iso-order-raw-difference} is non-monotonic: $4.863\times10^{-8}$, $4.205\times10^{-8}$, and $4.628\times10^{-8}$ for $N=3$, $5$, and $9$, respectively. Since this metric preserves path loss and pattern gain, it neither contradicts the normalized decorrelation result nor serves as an independent measure of spatial-channel quality.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\linewidth]{Images/Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/07_raw_spatial_difference_by_order_matlab.png}
+    \caption{Raw center-TX spatial difference power across RX lens branches. The metric is amplitude-sensitive and shows no monotonic order trend.}
+    \label{fig:iso-order-raw-difference}
+\end{figure}
+
+\subsection{Discussion and Limitations}
+
+The higher-order comparison shows that absolute rate and spatial efficiency answer different design questions. For the link budget, activating more TX elements increases the nominal total radiated power and the reported capacity. Separately, the larger constructed matrix supports a higher absolute MIMO capacity at the same normalized 10~dB SNR. However, the rise in effective rank is much smaller than the rise in $N$, the singular-value spread grows, and both normalized metrics in Equation~\ref{eq:iso-order-normalized-metrics} decrease. Under the evaluated configurations, higher order therefore offers additional aggregate capacity with diminishing utilization of each added spatial dimension.
+
+Position sensitivity is also important. At the static snapshot, $N=5$ has the best condition number and normalized efficiencies, whereas the full-trajectory medians worsen monotonically with $N$. All three configurations experience their worst conditioning and minimum MIMO capacity at the same path midpoint. A single static position can therefore overstate or reverse the order ranking, and higher-order design should be evaluated over its intended motion and orientation distribution.
+
+Several factors prevent causal attribution to $N$ alone. First, 10~dBm is assigned to every TX, so nominal total TX power increases from 14.77 to 19.54~dBm. Second, fixed 0.45~m spacing causes a fourfold aperture increase, and the RX angle grids change in both extent and resolution. Third, only the $0^\circ$ RX branch is common across all orders. Controlled follow-up studies should separately hold total power, aperture, and RX angles constant to quantify their individual contributions.
+
+The channel construction imposes further limitations. Each $N\times N$ matrix stacks $N$ sequential $N\times1$ simulations rather than simultaneous multiport RX measurements; mutual coupling, receiver hardware phase consistency, joint combining, and switching overhead are not represented. The results cover one room, one trajectory, and one stored simulation output without a multi-seed convergence study or confidence intervals. The ray-tracing run uses 100{,}000 path samples per source rather than the 1{,}000{,}000 recommended by the source workflow for a final high-accuracy run. The 1~bit/s/Hz outage threshold is saturated, and the fixed-SNR MIMO capacity is an ideal channel-structure bound rather than coded throughput. Finally, the derived CSV tables and figures pass all 21 packaged validation checks, but the source notebooks referenced by the provenance record are not present in the current archive; the analysis therefore cannot presently be regenerated end to end from the saved notebook outputs.
+
+\subsection{Summary of Higher-Order Scaling}
+
+Along the common lens-assisted linear trajectory, scaling from $3\times3$ to $9\times9$ increases median link capacity from 3.57 to 5.19~bit/s/Hz and constructed-MIMO capacity at 10~dB from 5.851 to 14.562~bit/s/Hz. The gain is not proportional: median condition number worsens by 17.33~dB, effective-rank fraction falls from 0.385 to 0.227, capacity per dimension falls from 1.950 to 1.618~bit/s/Hz, and both aggregate decorrelation estimators decrease. Higher order therefore increases total capacity with diminishing spatial efficiency, but the present results do not establish a power-normalized or aperture-independent advantage.

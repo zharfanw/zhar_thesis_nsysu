@@ -1,0 +1,424 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\subsection{Research Context}
+
+\begin{frame}[t]{Why 38~GHz? A High-Capacity Opportunity with a Spatial Cost}
+\begin{columns}[T,onlytextwidth]
+  \column{0.54\textwidth}
+  \scriptsize
+  \begin{itemize}
+    \setlength{\itemsep}{-0.15em}
+    \item Traffic growth and fragmented bands motivate mmWave \cite{Rappaport2013}.
+    \item \textbf{38~GHz} is in FR2-1 / NR n260 (37--40~GHz), offering almost
+          3~GHz of spectrum \cite{TSGR2021}.
+    \item Short wavelengths enable compact arrays but intensify path loss,
+          blockage, and sparse scattering \cite{Rappaport2013}.
+    \item Directional gain is necessary; \emph{independent} channels remain
+          difficult \cite{Payami2020}.
+  \end{itemize}
+
+  \column{0.42\textwidth}
+  \centering
+  \resizebox{\linewidth}{!}{%
+  \begin{tikzpicture}[x=0.72cm,y=0.76cm,font=\scriptsize]
+    \draw[gray!50,line width=2.2pt] (0,0)--(6.4,0);
+    \draw[Blue,line width=8pt] (0.25,0)--(1.55,0);
+    \node[below=7pt,align=center] at (0.9,0) {conventional\\cellular bands};
+    \draw[Teal,line width=8pt] (2.25,0)--(6.15,0);
+    \node[below=7pt] at (4.2,0) {FR2-1};
+    \draw[Gold,line width=13pt] (4.65,0)--(5.55,0);
+    \draw[red!80!black,line width=1.4pt] (4.95,-0.35)--(4.95,0.55);
+    \node[above=5pt,text=red!70!black,font=\bfseries\scriptsize] at (4.95,0.55) {38~GHz};
+    \node[below=20pt,font=\bfseries\scriptsize] at (5.1,0) {n260: 37--40~GHz};
+
+    \node[draw=Blue,rounded corners=3pt,fill=SoftBlue,
+          minimum width=5.0cm,minimum height=0.8cm,align=center] at (3.2,-2.25)
+          {Wide bandwidth $\Rightarrow$ high data-rate potential};
+    \node[draw=Gold!80!black,rounded corners=3pt,fill=SoftGold,
+          minimum width=5.0cm,minimum height=0.8cm,align=center] at (3.2,-3.35)
+          {Sparse/LoS channel $\Rightarrow$ correlation risk};
+    \draw[-latex,thick,gray!70] (3.2,-2.67)--(3.2,-2.92);
+  \end{tikzpicture}}
+\end{columns}
+
+\note{
+    \begin{itemize}
+      \item Conventional cellular bands are crowded; so we move to mmWave Band is a solution.
+      \item Which mean 38~GHz is a good candidate for high data rate, but the channel is sparse and LoS dominant.
+      \item The bandwidth is wide on FR2-1 especially n260 offer 3ghz of spectrum, high data rate potential, but the channel is sparse and LoS dominant.
+      \item Spatial multiplexing depends on $\mathbf H$, not bandwidth or antenna count.
+    \end{itemize}
+  }
+\end{frame}
+
+
+\begin{frame}[t]{The Conventional mmWave MIMO Dilemma}
+\small
+\begin{columns}[T,onlytextwidth]
+  \column{0.315\textwidth}
+  \begin{block}{Fully digital}
+    \centering\textbf{1 RF chain / element}\par
+    \vspace{0.25cm}
+    \raggedright
+    \textcolor{green!60!black}{$+$ Maximum precoding flexibility}\par
+    \textcolor{green!60!black}{$+$ Multiple streams}\par
+    \textcolor{red!75!black}{$-$ Cost, power, calibration}
+  \end{block}
+
+  \column{0.315\textwidth}
+  \begin{block}{Analog}
+    \centering\textbf{1 RF chain / beam} \cite{Zeng2018}\par
+    \vspace{0.25cm}
+    \raggedright
+    \textcolor{green!60!black}{$+$ High array gain}\par
+    \textcolor{green!60!black}{$+$ Lower RF complexity}\par
+    \textcolor{red!75!black}{$-$ Typically one data stream}
+  \end{block}
+
+  \column{0.315\textwidth}
+  \begin{block}{Hybrid}
+    \centering\textbf{Few RF chains} \cite{Payami2020}\par
+    \vspace{0.25cm}
+    \raggedright
+    \textcolor{green!60!black}{$+$ Gain--multiplexing trade-off}\par
+    \textcolor{red!75!black}{$-$ Phase shifters and RF routing}\par
+    \textcolor{red!75!black}{$-$ Insertion loss / wideband design}
+  \end{block}
+\end{columns}
+
+\note{
+    \begin{itemize}
+      \item There's 3 types of mmWave MIMO architecture, fully digital, analog, and hybrid. they have their own advantages and disadvantages.
+      \item Fully digital has maximum precoding flexibility and multiple streams, but it is costly, power hungry, and calibration is difficult.
+      \item Analog has high array gain and lower RF complexity, but it typically supports only one data stream.
+      \item Hybrid offers a gain-multiplexing trade-off, but it has phase shifters and RF routing issues, as well as insertion loss and wideband design challenges.
+      \item In a LoS-dominant channel, similarly oriented antennas can observe
+            nearly the same field: $|\rho_{ij}|\!\rightarrow\!1$,
+            $\sigma_3\!\rightarrow\!0$, and adding elements does \textbf{not}
+            guarantee more usable spatial streams.
+      \item so in this thesis, we will explore the metasurface lens as a passive spatial transformer to improve the MIMO channel beyond received-power gain.
+    \end{itemize}
+  }
+\end{frame}
+
+
+\subsection{Lens-Assisted Beamspace MIMO}
+
+\begin{frame}[t]{Metasurface Lens as a Passive Spatial Transformer}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.41\textwidth}
+  \begin{itemize}
+    \setlength{\itemsep}{0em}
+    \item Sub-wavelength cells impose a position-dependent transmission phase
+          \cite{Al-Joumayly2011}.
+    \item By reciprocity, different arrival angles focus at distinct points
+          \cite{Zeng2016}.
+    \item The lens maps \textbf{antenna space} to \textbf{beamspace} in the
+          electromagnetic domain \cite{Zeng2016}.
+    \item No active phase shifter is required per aperture element
+          \cite{Shen2019}.
+  \end{itemize}
+
+  \column{0.55\textwidth}
+  \centering
+  \begin{tikzpicture}[x=0.78cm,y=0.78cm,>=latex,font=\scriptsize]
+    % Incident angular paths
+    \draw[Blue,very thick,-latex] (-0.4,2.4)--(2.15,1.35);
+    \draw[Teal,very thick,-latex] (-0.4,0.9)--(2.15,0.9);
+    \draw[Gold!90!black,very thick,-latex] (-0.4,-0.6)--(2.15,0.45);
+    \node[Blue,left] at (-0.35,2.4) {$-45^\circ$};
+    \node[Teal,left] at (-0.35,0.9) {$0^\circ$};
+    \node[Gold!90!black,left] at (-0.35,-0.6) {$+45^\circ$};
+  
+    % Metasurface aperture
+    \draw[rounded corners=2pt,fill=Blue!12,draw=Blue,very thick]
+      (2.2,-0.2) rectangle (2.65,2.0);
+    \foreach \y in {0.0,0.35,...,1.85}{\draw[Blue!55] (2.2,\y)--(2.65,\y);}
+    \node[rotate=90,font=\bfseries\scriptsize] at (2.425,0.9) {metasurface};
+  
+    % Focused paths
+    \draw[Blue,very thick] (2.65,1.35)..controls(3.7,1.3)..(4.8,1.85);
+    \draw[Teal,very thick] (2.65,0.9)..controls(3.7,0.9)..(4.8,0.9);
+    \draw[Gold!90!black,very thick] (2.65,0.45)..controls(3.7,0.5)..(4.8,-0.05);
+    \draw[gray!60,dashed] (4.8,-0.2) arc[start angle=-60,end angle=60,radius=2.2];
+  
+    \foreach \p/\c/\lab in {(4.8,1.85)/Blue/$\mathrm{rx}_3$,
+                              (4.8,0.9)/Teal/$\mathrm{rx}_1$,
+                              (4.8,-0.05)/Gold!90!black/$\mathrm{rx}_2$}{
+      \fill[\c] \p circle (0.13);
+      \node[right=3pt] at \p {\lab};
+    }
+    \node[align=center,font=\bfseries\scriptsize] at (5.6,2.65)
+      {angle-dependent\\focal responses};
+    \draw[-latex,thick,gray!70] (5.15,2.35)--(4.95,2.02);
+  
+    \node[draw=Teal,rounded corners=3pt,fill=SoftTeal,align=center,
+          minimum width=5.2cm] at (3.0,-1.2)
+      {separated energy $\Rightarrow$ selected ports / RF chains};
+  \end{tikzpicture}
+\end{columns}
+
+\note{
+    \begin{itemize}
+      \item The metasurface lens is a passive spatial transformer that maps antenna space to beamspace.
+      \item It uses sub-wavelength cells to impose a position-dependent transmission phase, which focuses different arrival angles at distinct points(focal arc).
+      \item This allows for separated energy and selected ports or RF chains without the need for active phase shifters per aperture element. or simplify like Angle filter, but with lower cost, power, and complexity.
+      \item Target: a direction-selective MIMO channel matrix $\mathbf H$, not
+            aperture gain alone.
+    \end{itemize}
+  }
+\end{frame}
+
+
+\subsection{Literature Gap}
+
+\begin{frame}[t]{What Prior Work Established --- and What Remains Open}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\grayrowrule}{%
+  \noalign{\vskip 1pt\begingroup\color{gray!35}\hrule height 0.3pt\endgroup\vskip 1pt}}
+\begin{tabularx}{\linewidth}{
+  >{\raggedright\arraybackslash}p{2.05cm}
+  >{\raggedright\arraybackslash}p{2.20cm}
+  >{\raggedright\arraybackslash}X
+  >{\raggedright\arraybackslash}X}
+  \toprule
+  \textbf{Representative work} & \textbf{Physical system} &
+  \textbf{What it established} & \textbf{Limitation relevant here} \\
+  \midrule
+  Al-Joumayly \& Behdad \cite{Al-Joumayly2011} & X-band MEFSS lens &
+  Wideband sub-wavelength spatial phase shifters &
+  Multilayer, primarily antenna-level evaluation \\
+  \grayrowrule
+  Lee \textit{et al.} (2021) \cite{Lee2021} & 38~GHz, $13\!\times\!13$ lens &
+  35--40~GHz focusing and incident-angle stability &
+  Scalability to a substantially larger aperture not shown \\
+  \grayrowrule
+  Lee \textit{et al.} (2022) \cite{Lee2022Large} & 28~GHz, $28\!\times\!28$ lens &
+  Large-aperture gain and throughput improvement &
+  Limited channel-decorrelation and spatial-mode analysis \\
+  \grayrowrule
+  Zeng / Shen \textit{et al.} \cite{Zeng2016,Shen2019} & Analytical lens arrays &
+  Beam selection, RF-chain reduction, path multiplexing &
+  Idealized response; finite aperture and physical errors omitted \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.15cm}
+\begin{columns}[T,onlytextwidth]
+  \column{0.48\textwidth}
+  \MethodNote{\textbf{Physical-lens studies:} phase, focus, gain, bandwidth.}
+  \column{0.48\textwidth}
+  \MethodNote{\textbf{Communication studies:} sparsity, selection, capacity.}
+\end{columns}
+
+\note{
+    \fontsize{8.5}{9.5}\selectfont
+    \begin{itemize}
+      \setlength{\itemsep}{0.25em}
+      \setlength{\parskip}{0pt}
+      \item Al-Joumayly and Behdad's work focused on X-band MEFSS lens, which established wideband sub-wavelength spatial phase shifters, but it was primarily an antenna-level evaluation. His idea is most easy to understand, but it is not a complete system-level evaluation.
+      \item Wonwoo Lee et al. (2021) worked on a 38~GHz, $13\times13$ lens, which demonstrated focusing and incident-angle stability, but scalability to a larger aperture was not shown. which is close to our work bandwidth.
+      \item Korean Samsung Engineer(Jaehyun Lee) publish about MIMO Transmission for 6G Lee et al. (2022) worked on a 28~GHz, $28\times28$ lens, which improved large-aperture gain and throughput, but had limited channel-decorrelation and spatial-mode analysis. it is close to our work, but the frequency is different. and as last time i track his paper, this is his last published paper about antenna-lens.
+      \item If i not worng In Singapore, Yong Zeng and Rui Shen et al. worked on analytical lens arrays, which focused on beam selection, RF-chain reduction, and path multiplexing, but their work was idealized and omitted finite aperture and physical errors. Yong Zeng's work Path Division Multiplexing influence our work, make me understand the concept of beamspace MIMO. Most of his published paper that i read usually use idealized lens response, and his published paper about antenna-lens MIMO in 2021, which is collaboration with Prof. Wen writing about Extreme Large Lens Antenna arrays. At this moment, i little bit nerveous because Prof. Wen become my oral defense committee member. 
+      \item \textit{Optional to say:} The missing bridge is a physical
+            metasurface response evaluated as a MIMO channel, not merely as an
+            antenna-gain device.
+    \end{itemize}
+  }
+\end{frame}
+
+
+\begin{frame}[t]{Four Research Gaps Define the Thesis}
+\footnotesize
+\begin{itemize}
+  \setlength{\itemsep}{0.25em}
+  \item[\textbf{1.}] \textbf{Electromagnetics $\leftrightarrow$ communications:}
+        Physical focusing and the resulting MIMO matrix have rarely been
+        evaluated in one consistent workflow \cite{Lee2022Large,Bagheri2023}.
+  \item[\textbf{2.}] \textbf{38~GHz aperture scalability:}
+        Prior 38~GHz work did not establish substantially larger-aperture
+        performance \cite{Lee2021}.
+  \item[\textbf{3.}] \textbf{Practical focal-plane placement:}
+        Finite spot width, sidelobes, loss, phase error, and diffraction can
+        make neighboring focal responses overlap.
+  \item[\textbf{4.}] \textbf{Controlled array comparison:}
+        Lens-assisted focal-plane and conventional coplanar arrays must be
+        compared under matched geometry, power, bandwidth, and noise
+        assumptions.
+\end{itemize}
+
+\vspace{-0.15cm}
+\CautionNote{\centering\textbf{Antenna-gain enhancement alone does not establish
+an improvement in spatial multiplexing.}}
+\note{
+    \fontsize{7}{8}\selectfont
+    \begin{itemize}
+      \setlength{\itemsep}{0.3em}
+      \setlength{\parskip}{0pt}
+      \item This slide summarizes the four gaps that motivate my thesis.
+      \item First, electromagnetic studies usually report phase, focusing, and
+            antenna gain, while communication studies analyze the channel
+            matrix. These two perspectives are rarely evaluated together in
+            one consistent workflow.
+      \item Second, earlier work close to 38~GHz demonstrated a $13\!\times\!13$
+            lens. My work investigates a larger $20\!\times\!20$ aperture and
+            checks whether its designed phase response still produces the
+            intended focusing behavior.
+      \item Third, a practical focus is not an ideal point. Finite spot width,
+            sidelobes, loss, phase error, and diffraction can cause adjacent
+            focal responses to overlap, so antenna placement along the focal
+            region must be evaluated carefully.
+      \item Fourth, a fair lens-versus-baseline comparison requires consistent
+            operating assumptions, including frequency, bandwidth, transmit
+            power, noise, propagation environment, and array order.
+      \item The key message is that higher antenna gain only proves stronger
+            received power. A spatial-multiplexing improvement must also be
+            supported by the channel correlation, singular values, effective
+            rank, and MIMO capacity.
+    \end{itemize}
+  }
+\end{frame}
+
+
+\subsection{Research Question and Objectives}
+
+\begin{frame}[t]{Research Logic and Testable Component-Level Hypothesis}
+\begin{beamercolorbox}[rounded=true,sep=1.0ex,wd=\linewidth]{takeaway}
+  \centering\large\bfseries
+  Can a physical 38~GHz transmitarray create distinct angle-dependent responses
+  that alter the MIMO channel beyond received-power gain?
+\end{beamercolorbox}
+
+\vspace{0.55cm}
+\centering
+\begin{tikzpicture}[node distance=0.55cm,>=latex,font=\scriptsize]
+  \node[draw=Blue,fill=SoftBlue,rounded corners,minimum width=2.55cm,
+        minimum height=0.85cm,align=center] (focus) {physical lens\\focusing};
+  \node[draw=Teal,fill=SoftTeal,rounded corners,minimum width=2.55cm,
+        minimum height=0.85cm,align=center,right=of focus] (matrix) {less overlap in\\$\mathbf H$};
+  \node[draw=Gold!80!black,fill=SoftGold,rounded corners,minimum width=2.55cm,
+        minimum height=0.85cm,align=center,right=of matrix] (modes) {more balanced\\$\sigma_1,\sigma_2,\sigma_3$};
+  \node[draw=Blue,fill=SoftBlue,rounded corners,minimum width=2.55cm,
+        minimum height=0.85cm,align=center,right=of modes] (perf) {better MIMO\\performance};
+  \draw[->,thick] (focus)--(matrix);
+  \draw[->,thick] (matrix)--(modes);
+  \draw[->,thick] (modes)--(perf);
+\end{tikzpicture}
+
+\vspace{0.6cm}
+\begin{columns}[T,onlytextwidth]
+  \column{0.19\textwidth}\centering
+    $|\rho_{ij}|\,\downarrow$\\[-1pt]{\scriptsize decorrelation}
+  \column{0.19\textwidth}\centering
+    $\kappa\,\downarrow$\\[-1pt]{\scriptsize better conditioning}
+  \column{0.19\textwidth}\centering
+    $r_{\mathrm{eff}}\,\uparrow$\\[-1pt]{\scriptsize more modes}
+  \column{0.19\textwidth}\centering
+    $C_{\mathrm{raw}}\,\uparrow$\\[-1pt]{\scriptsize link-budget benefit}
+  \column{0.19\textwidth}\centering
+    $|H_{ii}|/|H_{ij}|\,\uparrow$\\[-1pt]{\scriptsize angular selectivity}
+\end{columns}
+
+\SourceNote{Chapter 1: Motivation and Research Gaps}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This slide presents the testable component-level hypothesis of my
+          research, rather than an assumed conclusion.
+    \item The main question is whether the physical 38~GHz transmitarray only
+          improves received power, or whether it also changes the spatial
+          structure of the MIMO channel matrix $\mathbf H$.
+    \item If the lens produces distinct angle-dependent focal responses,
+          energy arriving from different directions should be mapped to
+          different receiver ports. This should strengthen the desired
+          diagonal terms $H_{ii}$ relative to the cross terms $H_{ij}$.
+    \item Less overlap between the channel responses should reduce the
+          off-diagonal correlation $|\rho_{ij}|$ and produce more-balanced
+          singular values $\sigma_1,\sigma_2,\sigma_3$.
+    \item More-balanced singular values correspond to a lower condition number
+          $\kappa$ and a higher effective rank $r_{\mathrm{eff}}$, meaning that
+          more spatial modes may become usable.
+    \item Raw capacity may also increase because of the improved link budget.
+          However, raw capacity alone does not prove a spatial-multiplexing
+          improvement; it must be interpreted together with correlation,
+          singular values, effective rank, and normalized capacity.
+    \item The following chapters test each step of this proposed chain. The
+          metrics do not have to improve simultaneously, particularly when the
+          analysis moves from the component level to the complete system.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Four Research Questions Connect Component and System Scales}
+\footnotesize
+\begin{itemize}
+  \setlength{\itemsep}{0.45em}
+  \item[] \textbf{RQ1. Physical realization:}
+        Can the unit-cell library form a $20\times20$ transmitarray with a
+        usable focal region and angle-dependent receive patterns?
+  \item[] \textbf{RQ2. Solver robustness:}
+        Which raw-gain and normalized spatial-mode trends persist across HFSS
+        SBR+, HFSS Hybrid, and Sionna-RT?
+  \item[] \textbf{RQ3. Complete RX designs:}
+        How do focal-plane lens-assisted and coplanar $9\times9$ RX designs
+        compare on matched linear and half-circular trajectories?
+  \item[] \textbf{RQ4. Higher-order scaling:}
+        What happens to absolute capacity and per-dimension efficiency when the
+        complete lens-assisted system scales from $3\times3$ to $9\times9$?
+\end{itemize}
+\SourceNote{Chapter 1: Research Questions}
+\note{
+  \begin{itemize}
+    \item RQ : Research Question, 
+    \item This Four research questions that this thesis will answer
+    \item The thesis tests a conditional system hypothesis; focusing or a
+          larger array does not guarantee improved multiplexing.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Research Objectives and Evaluation Scope}
+\scriptsize
+\setlength{\tabcolsep}{0pt}
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.42cm}>{\raggedright\arraybackslash}X}
+  1 & Characterize the 38~GHz feed and $20\times20$ transmitarray: focus,
+      focal arc, and angle-dependent patterns. \\[0.10em]
+  2 & Build a common raw and Frobenius-normalized MIMO framework for HFSS and
+      Sionna-RT. \\[0.10em]
+  3 & Cross-validate lens-induced trends across HFSS SBR+, HFSS Hybrid, and
+      Sionna-RT. \\[0.10em]
+  4 & Compare complete lens-assisted and baseline $9\times9$ RX designs on
+      paired mobile trajectories. \\[0.10em]
+  5 & Evaluate $3\times3$, $5\times5$, and $9\times9$ scaling using absolute
+      and per-dimension metrics.
+\end{tabularx}
+
+\vspace{0.12cm}
+\begin{block}{Scope boundary}
+  \begin{itemize}
+    \setlength{\itemsep}{-0.10em}
+    \item 38~GHz; $20\!\times\!20$ lens and focal-plane patterns.
+    \item Static $3\times3$ cross-solver; mobile $9\times9$ and order scaling.
+    \item Simulations only; no prototype claim.
+  \end{itemize}
+\end{block}
+
+\vspace{-0.05cm}
+\SourceNote{Chapter 1: Research Objectives and Thesis Organization}
+\note{
+  \begin{itemize}
+    \item An 5 research objectives that this thesis will achieve
+    \item Takeaway: Received-power gain is separated from relative spatial-mode improvement.
+  \end{itemize}
+}
+\end{frame}

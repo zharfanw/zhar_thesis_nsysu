@@ -1,0 +1,214 @@
+% !TeX root = thesis.tex
+% !TeX program = xelatex
+%% copyright 2020 Dony Darmawan Putra & Hasan Albinsaid
+ 
+\documentclass[12pt, twoside , openright]{book}
+
+%%%%%%%%%% instant packages %%%%%%%%%%
+\input{packages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% for body of document %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%% cover %%%%%%%%%%
+\thispagestyle{empty}
+\begin{center}
+	\onehalfspacing
+	\includegraphics[width=0.205\textwidth]{logo_nsysu_thesis}\\[0.6cm]
+
+	{\chinnesesize \zh{國立中山大學電信工程國際碩士學位學程}\\}
+	\vspace{1cm}
+
+	{\chinnesesize \zh{碩士論文}\\}
+	\vspace{1cm}
+
+	{\bigsize Master's Program in Telecommunication Engineering\\}
+	\vspace{0.5cm}
+
+	{\bigsize National Sun Yat-sen University\\}
+	\vspace{0.5cm}
+
+	{\bigsize Master Thesis\\}
+	
+	\vspace{1cm}
+	{\chinnesesize \zh{38 GHz 天線透鏡輔助毫米波多輸入多輸出系統之通道去相關與空間多工效能評估}\\}
+	{\bigsize Evaluation of Channel Decorrelation and Spatial Multiplexing in a 38 GHz Antenna Lens-Assisted Millimeter-Wave MIMO System\\}
+	\vspace{1cm}
+    {\bigsize
+    \[
+        \begin{aligned}
+        \text{\zh{研究生：}}&\quad \text{\zh{趙爾凡}}\\
+                        &\quad \text{Muhammad Zharfan Wiranata}\\
+        \text{\zh{指導教授：}}&\quad \text{\zh{洪子聖 博士}}\\
+                        &\quad \text{Dr. Tzyy-Sheng Horng}
+        \end{aligned}
+	\]
+    }
+	
+	\vspace{1.5cm}
+	
+	{\bigsize \zh{中華民國114年5月}\\
+		January 2025\\
+		
+	}
+\end{center}
+
+\newpage
+\mbox{}
+\thispagestyle{empty}
+\newpage
+\pagenumbering{roman}
+
+
+
+%%%%%%%%%% for thesis Validation Letter %%%%%%%%%%
+\addcontentsline{toc}{chapter}{Thesis Validation Letter}
+\begin{center}
+	{\chinnesesize Thesis Validation Letter }
+\end{center}
+Validation letter
+\newpage
+\mbox{}
+\newpage
+
+
+%%%%%%%%%% acknowledgment %%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\begin{center}
+	{\chinnesesize Acknowledgements}
+\end{center}
+\begin{center}
+	\textit{bismi al-ll\_ahi al-rra.hm\_ani al-rra.hImi}
+\end{center}
+
+Alhamdulllahirabbil'alamin, finally got to this point, a splash of success that You gave me Rabb Allah SWT is the Almighty, endlessly thanking you. Prayers and greetings to the Prophet Muhammad SAW and his noble friends.  
+
+In accordance with the words of the Prophet Muhammad SAW that when we have an advantage we might help the other people, as mentioned in hadith narrated by Ath-Thabrani:
+
+\begin{center}
+	\textit{a.habba Al-nnaasi 'il\_A al-ll\_ahi ta`aa l\_A aanfa`uhum lil-nnaasi..}
+\end{center}
+
+
+"The most loved Man/Woman by Allah is the most beneficial to humans  beings.." (Narrated by Ath-Thabrani in Al Mu'jam Al Kabir no. 13280).
+
+Hopefully, this NSYSU Thesis LaTEX template can be useful for all of us, and you'll get the best results for your thesis.
+
+\noindent
+Author :
+
+\vspace{-2em}
+- Dony Darmawan Putra
+
+\vspace{-2em}
+- Hasan Albinsaid
+
+\newpage
+\mbox{}
+\newpage
+
+
+
+
+ABSTRACT V3
+%%%%%%%%%% chinnese abstract %%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{chapter}{\zh{摘 要}}
+\begin{center}
+	{\chinnesesize \zh{摘 要}}
+\end{center}
+This is Abstract, but in chinese language. \blindtext[1]
+\newpage
+\mbox{}
+\newpage
+
+%%%%%%%%%% english abstract %%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{center}
+	{\chinnesesize Abstract}
+\end{center}
+
+This is Abstract. \blindtext[1]
+
+\BackImage[trim=0 +12cm 0 0, width=15.5em]{watermark.jpg} %watermark e-thesis (optional, usualy when we need to give to library)
+
+\noindent Keywords: keyword1, keyword2, keyword3.
+\newpage
+
+
+
+
+%%%%%%%%%%
+\tableofcontents
+\newpage
+
+
+
+
+%%%%%%%%%%
+\listoffigures
+\newpage
+
+
+
+
+%%%%%%%%%%
+\listoftables
+\newpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%for Main Contents%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+
+
+% \input{Chapters/chapter1-introduction}
+% \input{Chapters/chapter2-second-chapter}
+% \input{Chapters/chapter2-second-chapter}
+% \input{Chapters/chapter3-third-chapter}
+% \input{Chapters/chapter4-simulation-results}
+% \input{Chapters/chapter5-conclusion}
+
+% V2 follow Horng advice
+% \input{Chapters/v2_chapter1-introduction}
+% \input{Chapters/v2_chapter2-second-chapter-Backup}
+% \input{Chapters/v2_chapter3-third-chapter}
+% \input{Chapters/v2_chapter4-fourth-chapter}
+% \input{Chapters/chapter2-second-chapter}
+
+
+% V3 follow Horng advice
+\input{Chapters/v2_chapter1-introduction}
+\input{Chapters/v3_chapter2-second-chapter-Backup}
+\input{Chapters/v3_chapter3-third-chapter}
+\input{Chapters/v2_chapter4-fourth-chapter}
+
+% \input{Chapters/chapter2-second-chapter}
+% \input{Chapters/chapter3-third-chapter}
+% \input{Chapters/chapter4-simulation-results}
+% \input{Chapters/chapter5-conclusion}
+
+
+
+%% for Reference
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\begin{center}
+	{\chinnesesize References}
+\end{center}
+\bibliographystyle{IEEETran}
+\bibliography{references}
+
+\newpage
+\mbox{}
+\newpage
+
+\end{document}

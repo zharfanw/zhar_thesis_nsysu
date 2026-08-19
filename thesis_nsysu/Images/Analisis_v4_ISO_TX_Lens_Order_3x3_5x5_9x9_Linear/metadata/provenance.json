@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-08-13T21:53:31.281346+00:00",
+  "section_scope": "Sections 1-14 only",
+  "ray_tracing_rerun": false,
+  "shared_parser": "Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/build_analysis.py",
+  "notebooks": [
+    {
+      "scenario": "order_3x3",
+      "order_n": 3,
+      "notebook": "Setupv4_20mx20m_lens_3x3_Patch_iso_LinearTrajectory.ipynb",
+      "sha256": "30fd02c9b72ff31ce4842608174f6b0d22d14c385c82dcb9d06447dda9e1a4ca",
+      "bytes": 3103379,
+      "modified_local": "2026-08-14T04:46:08.479577+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 3,
+      "rx_scenario_count": 3,
+      "selected_tx_index_sections_12_14": 1
+    },
+    {
+      "scenario": "order_5x5",
+      "order_n": 5,
+      "notebook": "Setupv4_20mx20m_lens_5x5_Patch_iso_LinearTrajectory.ipynb",
+      "sha256": "f1e9620fff067c9d481867e8a92775c323f9868b0eac3a9056c545c2e6a03ed0",
+      "bytes": 3513814,
+      "modified_local": "2026-08-14T05:14:45.795526+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 5,
+      "rx_scenario_count": 5,
+      "selected_tx_index_sections_12_14": 2
+    },
+    {
+      "scenario": "order_9x9",
+      "order_n": 9,
+      "notebook": "Setupv4_20mx20m_lens_9x9_Patch_iso_TrajectoryTxCom.ipynb",
+      "sha256": "e0b9c15bc7db158daef110a0fa1b6f477fdc9428526adca8cd0be56f4e5d42ea",
+      "bytes": 4693622,
+      "modified_local": "2026-08-14T03:59:50.316448+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 9,
+      "rx_scenario_count": 9,
+      "selected_tx_index_sections_12_14": 4
+    }
+  ]
+}

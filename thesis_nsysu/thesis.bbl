@@ -32,8 +32,9 @@ T.~S. Rappaport, S.~Sun, R.~Mayzus, H.~Zhao, Y.~Azar, K.~Wang, G.~N. Wong,
 
 \bibitem{TSGR2021}
 \BIBentryALTinterwordspacing
-TSGR, ``Ts 138 104 - v16.7.0 - 5g; nr; base station (bs) radio transmission and
-  reception (3gpp ts 38.104 version 16.7.0 release 16),'' 2021. [Online].
+{3rd Generation Partnership Project (3GPP)}, ``{5G}; {NR}; base station ({BS})
+  radio transmission and reception,'' European Telecommunications Standards
+  Institute, Tech. Rep. 3GPP TS 38.104 V16.7.0, Release 16, 2021. [Online].
   Available: \url{https://portal.etsi.org/TB/ETSIDeliverableStatus.aspx}
 \BIBentrySTDinterwordspacing
 
@@ -125,42 +126,37 @@ N.~Corporation, ``Primer on electromagnetics,'' 2026. [Online]. Available:
 \BIBentrySTDinterwordspacing
 
 \bibitem{ConstantineABalanis2016}
-\BIBentryALTinterwordspacing
-C.~A. Balanis, ``Antenna theory analysis and design 4th edition c2016.pdf,'' p.
-  1104, 2016. [Online]. Available:
-  \url{https://www.wiley.com/en-us/Antenna+Theory%3A+Analysis+and+Design%2C+4th+Edition-p-9781118642061}
-\BIBentrySTDinterwordspacing
+C.~A. Balanis, \emph{Antenna Theory: Analysis and Design}, 4th~ed.\hskip 1em
+  plus 0.5em minus 0.4em\relax Hoboken, NJ, USA: Wiley, 2016.
 
 \bibitem{Lee2022}
 \BIBentryALTinterwordspacing
 K.~Lee, H.~Y. Hong, W.~Lee, S.~Jo, H.~S. Park, J.~Yang, C.~Park, H.~Lee, and
   S.~K. Hong, ``Broadband metasurface superstrate for polarization-independent
-  wave focusing and gain enhancement at ka-band,'' \emph{Scientific Reports
-  2022 12:1}, vol.~12, pp. 12\,015--, 7 2022. [Online]. Available:
+  wave focusing and gain enhancement at ka-band,'' \emph{Scientific Reports},
+  vol.~12, no.~1, p. 12015, 7 2022. [Online]. Available:
   \url{https://www.nature.com/articles/s41598-022-16037-1}
 \BIBentrySTDinterwordspacing
 
 \bibitem{RezkiElArif2023}
 \BIBentryALTinterwordspacing
 R.~E. Arif, ``Chest-worn cardiovascular activity monitors based on
-  self-injection-locked doppler radar,'' Tech. Rep., 2023. [Online]. Available:
+  self-injection-locked doppler radar,'' National Sun Yat-sen University, Tech.
+  Rep., 2023. [Online]. Available:
   \url{https://etd.lis.nsysu.edu.tw/ETD-db/ETD-search-c/view_etd?URN=etd-0012123-104533}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Tse2005}
-\BIBentryALTinterwordspacing
-D.~Tse and V.~Pramod, ``Fundamentals of wireless communication,''
-  \emph{Fundamentals of Wireless Communication}, vol. 9780521845274, pp.
-  1--564, 1 2005. [Online]. Available:
-  \url{https://www.cambridge.org/core/books/fundamentals-of-wireless-communication/04C749B2C2247374B36E573078356350}
-\BIBentrySTDinterwordspacing
+D.~Tse and P.~Viswanath, \emph{Fundamentals of Wireless Communication}.\hskip
+  1em plus 0.5em minus 0.4em\relax Cambridge, U.K.: Cambridge University Press,
+  2005.
 
 \bibitem{Challita2022}
 \BIBentryALTinterwordspacing
-F.~Challita, ``Massive mimo channel characterization and propagation-based
-  antenna selection strategies : application to 5g and industry 4.0,''
-  \emph{Ph.D. dissertation}, 2022. [Online]. Available:
-  \url{https://theses.hal.science/tel-03624170v2}
+F.~Challita, ``Massive {MIMO} channel characterization and propagation-based
+  antenna selection strategies: Application to {5G} and industry 4.0,'' Ph.D.
+  dissertation, Universit{\'e} de Lille, Lille, France, 2022. [Online].
+  Available: \url{https://theses.hal.science/tel-03624170v2}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

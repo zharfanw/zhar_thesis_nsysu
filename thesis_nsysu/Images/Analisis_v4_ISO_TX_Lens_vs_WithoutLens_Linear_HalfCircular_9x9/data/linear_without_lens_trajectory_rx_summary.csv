@@ -1,0 +1,10 @@
+trajectory,system,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+Linear,Without Lens,0,Simul_+4,0,6.995364,5.865586,-79.775803,21.069962,0.0
+Linear,Without Lens,1,Simul_+3,0,7.003834,5.898459,-79.77713,21.093618,0.0
+Linear,Without Lens,2,Simul_+2,0,6.996498,5.914945,-79.771355,21.07176,0.0
+Linear,Without Lens,3,Simul_+1,0,7.003177,5.918782,-79.77681,21.095438,0.0
+Linear,Without Lens,4,Simul_0,0,7.001233,5.910312,-79.773567,21.082909,0.0
+Linear,Without Lens,5,Simul_-1,0,7.002463,5.916549,-79.774818,21.094856,0.0
+Linear,Without Lens,6,Simul_-2,0,6.997077,5.901855,-79.779587,21.073212,0.0
+Linear,Without Lens,7,Simul_-3,0,7.003666,5.885008,-79.774132,21.091185,0.0
+Linear,Without Lens,8,Simul_-4,0,6.995902,5.879734,-79.778061,21.071255,0.0

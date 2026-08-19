@@ -1,0 +1,60 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[color]{changebar}
+\cbcolor{Blue}
+
+\RequirePackage[fixamsmath, disallowspaces]{mathtools}	
+	\mathtoolsset{showonlyrefs, showmanualtags}
+
+\usepackage[skins, breakable]{tcolorbox}
+
+\usepackage[cmtip]{xy}
+
+\usepackage{
+adjustbox,
+afterpage,
+amsmath,
+amssymb,
+amsthm,
+appendix,
+appendixnumberbeamer,
+accents,
+booktabs,
+changepage,
+dsfont,
+duckuments,
+etoolbox,
+dirtytalk,
+epigraph,
+enumitem,
+graphicx,
+hanging,
+lipsum,
+lmodern,
+longtable,
+marginnote,
+makeidx,
+nicefrac,
+polynom,
+polynomial,
+setspace,
+scalerel,
+scrextend,
+soul,
+subfig,
+verbatim,
+wrapfig,
+xcolor,
+youngtab
+}
+
+% The original template used the RSFS math alphabet, whose small-size bitmap
+% fonts are not available in every MiKTeX installation.  These thesis slides do
+% not need a distinct script alphabet, so use the standard calligraphic one as
+% a portable fallback.
+\providecommand{\mathscr}[1]{\mathcal{#1}}
+
+%%%%%%%%%%						TABULAR
+\hfuzz=0.64pt
+\usepackage{makecell}
+\usepackage{subcaption}

@@ -1,0 +1,10 @@
+trajectory,system,rx_config_index,name,rx_lens_angle_deg,combined_gain_db,mean_|rho|_offdiag,max_|rho|_offdiag,capacity_10dB_bits/s/Hz
+Half-Circular,Without Lens,6,Simul_-2,0,-73.051345,0.429976,0.907663,3.446991
+Half-Circular,Without Lens,2,Simul_+2,0,-73.05308,0.426639,0.903382,3.446777
+Half-Circular,Without Lens,7,Simul_-3,0,-73.069877,0.432792,0.922257,3.445368
+Half-Circular,Without Lens,1,Simul_+3,0,-73.073396,0.432523,0.929348,3.445591
+Half-Circular,Without Lens,3,Simul_+1,0,-73.099488,0.43388,0.961103,3.442143
+Half-Circular,Without Lens,5,Simul_-1,0,-73.100954,0.436418,0.962948,3.442207
+Half-Circular,Without Lens,0,Simul_+4,0,-73.106996,0.442547,0.972367,3.434321
+Half-Circular,Without Lens,8,Simul_-4,0,-73.108839,0.444917,0.975369,3.433314
+Half-Circular,Without Lens,4,Simul_0,0,-73.116632,0.434924,0.999916,3.432402

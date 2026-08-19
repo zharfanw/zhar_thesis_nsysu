@@ -1,0 +1,134 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                 FIGURE CAPTIONS
+\usepackage{caption}
+\captionsetup{
+	format=hang,
+	indention=0cm,
+	labelformat= simple,		%%%%%    or 'empty'
+	labelsep=period,		    %%%%%    or 'none', 'colon', 'space'
+	labelfont=bf,
+	width=.6\textwidth,
+	skip=15pt}
+
+%%%%%	                              DESCRIPTION / ITEMIZE / ENUMERATE
+\newsavebox{\labelbox}
+\newlength{\mylabelwidth}
+
+\newcommand{\boxlabel}[2]{
+    \sbox{\labelbox}{
+        \tcbox[
+            colframe=white,
+            boxrule=0pt,
+            colback=gray!20,
+            sharp corners,
+            boxsep=0pt,
+            left=5pt,
+            right=5pt
+        ]{\parbox{#2}{\textbf{#1}}}
+    }
+    \setlength{\mylabelwidth}{\wd\labelbox}
+    \usebox{\labelbox}}
+
+\setlist[description]{
+    leftmargin=!,
+    labelwidth=!,
+    labelindent=0\parindent,
+    labelsep=1em,
+    topsep=\baselineskip,
+    itemsep=1.5\baselineskip,
+    parsep=-.75\baselineskip,
+    style=sameline}
+
+\newcommand{\labelitemi}{\scalebox{.85}{$\diamond$}}
+\setlist[itemize]{style=multiline,
+	topsep=\baselineskip,
+	itemsep=-.4cm,
+	parsep=.5cm,
+	labelwidth=.4cm,
+	labelindent=\parindent,
+	leftmargin=1cm}
+
+\setlist[enumerate]{style=multiline,
+	topsep=\baselineskip,
+    itemsep=-.4cm,
+	parsep=.5cm,
+	labelwidth=0.4cm,
+	labelindent=\parindent,
+    leftmargin=1cm}
+
+%%%%%                           	MATH ENVIRONMENTS
+\setbeamercolor{EnvCol}{bg=gray!20,fg=black} % define a new color theme for the box
+
+    %%%%%%%%%% THEOREM
+\makeatletter
+\newenvironment{The}[1][\bf\TheoremName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+	%%%%%%%%%% PROPOSITION
+\makeatletter
+\newenvironment{Pro}[1][\bf\PropositionName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+	%%%%%%%%%% LEMMA
+\makeatletter
+\newenvironment{Le}[1][\bf\LemmaName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+	%%%%%%%%%% COROLLARY
+\makeatletter
+\newenvironment{Co}[1][\bf\CorollaryName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+	%%%%%%%%%% DEFINITION
+\makeatletter
+\newenvironment{De}[1][\bf\DefinitionName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+    %%%%%%%%%%  PROOF 
+\makeatletter
+\renewenvironment{Proof}[1][\bf\ProofName]{
+  \par\pushQED{\qed}
+  \normalfont\topsep5pt \trivlist
+  \item[\hskip\labelsep \itshape #1\@addpunct{}]
+}{
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+	%%%%%%%%%% EXAMPLE
+\makeatletter
+\newenvironment{Exa}[1][\bf\ExampleName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother
+	%%%%%%%%%% REMARK
+\makeatletter
+\newenvironment{Rmk}[1][\bf\RemarkName]{
+  \begin{beamercolorbox}[rounded=true,shadow=false,sep=0pt,wd=\textwidth]{EnvCol}
+  \normalfont\vspace{0pt}
+  \noindent\textit{#1\@addpunct{}}
+  \par\smallskip
+}{\vspace{2pt}\end{beamercolorbox}}
+\makeatother

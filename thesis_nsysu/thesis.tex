@@ -2,9 +2,9 @@
 % !TeX program = xelatex
 %% copyright 2020 Dony Darmawan Putra & Hasan Albinsaid
  
-\documentclass[12pt, twoside , openright]{book}
+\documentclass[12pt, twoside, openright]{book}
 
-%%%%%%%%%% instant packages %%%%%%%%%%
+%%%%%%%%%% packages %%%%%%%%%%
 \input{packages}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,26 +16,32 @@
 \thispagestyle{empty}
 \begin{center}
 	\onehalfspacing
-	\includegraphics[width=0.205\textwidth]{logo_nsysu_thesis}\\[0.6cm]
+	\includegraphics[width=0.18\textwidth]{logo_nsysu_thesis}\\[0.25cm]
 
 	{\chinnesesize \zh{國立中山大學電信工程國際碩士學位學程}\\}
-	\vspace{1cm}
+	\vspace{0.40cm}
 
 	{\chinnesesize \zh{碩士論文}\\}
-	\vspace{1cm}
+	\vspace{0.40cm}
 
-	{\bigsize Master's Program in Telecommunication Engineering\\}
-	\vspace{0.5cm}
+	{\bigsize International Master's Program in Telecommunication Engineering\\}
+	\vspace{0.20cm}
 
 	{\bigsize National Sun Yat-sen University\\}
-	\vspace{0.5cm}
+	\vspace{0.20cm}
 
-	{\bigsize Master Thesis\\}
-	
-	\vspace{1cm}
-	{\chinnesesize \zh{38 GHz 天線透鏡輔助毫米波多輸入多輸出系統之通道去相關與空間多工效能評估}\\}
-	{\bigsize Evaluation of Channel Decorrelation and Spatial Multiplexing in a 38 GHz Antenna Lens-Assisted Millimeter-Wave MIMO System\\}
-	\vspace{1cm}
+	{\bigsize Master's Thesis\\}
+
+	\vspace{0.40cm}
+	% % Judul Lama
+	% {\chinnesesize \zh{38 GHz 天線透鏡輔助毫米波多輸入多輸出系統之通道去相關與空間多工效能評估}\\}
+	% {\bigsize Evaluation of Channel Decorrelation and Spatial Multiplexing in a 38 GHz Antenna Lens-Assisted Millimeter-Wave MIMO System\\}
+
+	% Judul V3
+	{\chinnesesize \zh{用於通道去相關與空間多工增強之 38 GHz 天線透鏡輔助毫米波多輸入多輸出系統}\\}
+	{\bigsize Antenna-Lens-Assisted Millimeter-Wave MIMO Systems for Channel Decorrelation and Spatial Multiplexing Enhancement at 38 GHz\\}
+
+	\vspace{0.20cm}
     {\bigsize
     \[
         \begin{aligned}
@@ -47,10 +53,10 @@
 	\]
     }
 	
-	\vspace{1.5cm}
+	\vspace{0.20cm}
 	
-	{\bigsize \zh{中華民國114年5月}\\
-		January 2025\\
+	{\bigsize \zh{中華民國115年8月}\\
+		August 2026\\
 		
 	}
 \end{center}
@@ -66,7 +72,7 @@
 %%%%%%%%%% for thesis Validation Letter %%%%%%%%%%
 \addcontentsline{toc}{chapter}{Thesis Validation Letter}
 \begin{center}
-	{\chinnesesize Thesis Validation Letter }
+	{\chinnesesize Thesis Validation Letter}
 \end{center}
 Validation letter
 \newpage
@@ -81,30 +87,26 @@ Validation letter
 	{\chinnesesize Acknowledgements}
 \end{center}
 \begin{center}
-	\textit{bismi al-ll\_ahi al-rra.hm\_ani al-rra.hImi}
+	\textit{Bismillahirrahmanirrahim}
 \end{center}
 
-Alhamdulllahirabbil'alamin, finally got to this point, a splash of success that You gave me Rabb Allah SWT is the Almighty, endlessly thanking you. Prayers and greetings to the Prophet Muhammad SAW and his noble friends.  
+Alhamdulillahi rabbil alamin. By the grace and guidance of Allah SWT, I have reached this milestone, and I offer my deepest gratitude to Him. May peace and blessings be upon the Prophet Muhammad SAW, his family, and his noble companions.
 
-In accordance with the words of the Prophet Muhammad SAW that when we have an advantage we might help the other people, as mentioned in hadith narrated by Ath-Thabrani:
+This work is guided by the teaching that the advantages granted to us should be used to benefit others, as expressed in a hadith narrated by al-Tabarani:
 
 \begin{center}
-	\textit{a.habba Al-nnaasi 'il\_A al-ll\_ahi ta`aa l\_A aanfa`uhum lil-nnaasi..}
+	\textit{Ahabbu al-nasi ila Allahi anfa'uhum lil-nasi.}
 \end{center}
 
 
-"The most loved Man/Woman by Allah is the most beneficial to humans  beings.." (Narrated by Ath-Thabrani in Al Mu'jam Al Kabir no. 13280).
+``The people most beloved to Allah are those who are most beneficial to others'' (narrated by al-Tabarani in
+\textit{Al-Mu'jam al-Kabir}, no.~13280).
 
-Hopefully, this NSYSU Thesis LaTEX template can be useful for all of us, and you'll get the best results for your thesis.
+I hope that this thesis will benefit its readers and support future research.
 
 \noindent
-Author :
-
-\vspace{-2em}
-- Dony Darmawan Putra
-
-\vspace{-2em}
-- Hasan Albinsaid
+Author:\\[1em]
+Muhammad Zharfan Wiranata
 
 \newpage
 \mbox{}
@@ -113,14 +115,26 @@ Author :
 
 
 
-
-%%%%%%%%%% chinnese abstract %%%%%%%%%%
+% ABSTRACT V3
+%%%%%%%%%% Chinese abstract %%%%%%%%%%
 \phantomsection
 \addcontentsline{toc}{chapter}{\zh{摘 要}}
 \begin{center}
 	{\chinnesesize \zh{摘 要}}
 \end{center}
-This is Abstract, but in chinese language. \blindtext[1]
+\begingroup
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip=0pt plus 1pt
+\setstretch{1.5}
+\setlength{\parskip}{0.5em}
+\zh{本論文研究一種工作於 38~GHz 的超穎表面透射陣列透鏡，探討被動聚焦除了改變接收功率之外，是否亦能改善多輸入多輸出（MIMO）通道的去相關與空間多工能力。首先，使用 Ansys HFSS 設計並分析一個由 $20\times20$ 個單元組成的五層平面透射陣列。該透鏡的設計焦距為 30~mm，但模擬軸向場強峰值約位於 14~mm；此焦點偏移可能與有限相位涵蓋範圍、離散相位量化、振幅變化、單元間互耦及有限孔徑效應等因素有關。不同入射角則形成焦弧及角度相依的遠場方向圖。本文進一步建立適用於 HFSS 散射參數及 Sionna-RT 通道頻率響應的共同分析框架，分別評估原始鏈路效能與正規化後的空間模態結構。}
+
+\zh{在靜態 $3\times3$ 通道中，HFSS SBR+、HFSS Hybrid 與 Sionna-RT 均顯示透鏡會增強方向匹配鏈路並抑制多數非匹配鏈路；在取樣的 27 個鏈路與頻率組合中，三種求解器有 25 個變化方向一致（92.6\%）。此比例僅為描述性一致性指標，因為各樣本及求解流程並非完全獨立。在系統層級，完整的三分支透鏡輔助與無透鏡接收器設計沿相同的直線及半圓軌跡進行比較。等權統計結果顯示，透鏡使鏈路容量中位數在直線軌跡由 5.41 降至 3.57~bit/s/Hz，在半圓軌跡由 5.08 降至 3.53~bit/s/Hz；固定 10~dB 的正規化建構式 MIMO 容量亦分別由 6.12 降至 5.85~bit/s/Hz，以及由 6.71 降至 6.58~bit/s/Hz。然而，典型區塊的去相關中位數由 0.0909 提升至 0.5308，並由 0.0638 提升至 0.5518，顯示透鏡可提供明顯的局部角度選擇性。}
+
+\zh{透鏡輔助系統由 $3\times3$ 擴展至 $9\times9$ 時，固定 10~dB 的正規化建構式 MIMO 容量由 5.851 增至 14.562~bit/s/Hz，但有效秩比例由 0.385 降至 0.227，每維容量亦由 1.950 降至 1.618~bit/s/Hz。由於此比較同時改變總發射功率、孔徑及接收角度取樣，因此不能視為單一陣列階數的因果效應。整體而言，該透射陣列是有效的被動聚焦與角度濾波元件；其 MIMO 效益取決於對準、接收器配置、傳播幾何、資料彙整及波束選擇或合併策略。}
+
+\noindent\zh{關鍵詞：毫米波多輸入多輸出、超穎表面透射陣列、天線透鏡、通道去相關、空間多工、射線追蹤。}
+\endgroup
 \newpage
 \mbox{}
 \newpage
@@ -136,11 +150,20 @@ This is Abstract, but in chinese language. \blindtext[1]
 	{\chinnesesize Abstract}
 \end{center}
 
-This is Abstract. \blindtext[1]
+\begingroup
+\setstretch{1.5}
+\setlength{\parskip}{0.3em}
+This thesis examines how a passive 38~GHz metasurface transmitarray lens changes received power and whether it improves multiple-input multiple-output (MIMO) channel decorrelation and spatial multiplexing. A five-layer, $20\times20$-element planar transmitarray is characterized in Ansys HFSS. Its simulated axial field peaks at approximately 14~mm rather than at the 30~mm design focal distance; this shift is not attributed to a single mechanism. Incidence-angle sweeps reveal a focal arc and angle-dependent far-field patterns. A common framework separates raw link performance from normalized spatial-mode structure in the HFSS and Sionna-RT channel results.
 
-\BackImage[trim=0 +12cm 0 0, width=15.5em]{watermark.jpg} %watermark e-thesis (optional, usualy when we need to give to library)
+For a static $3\times3$ channel, HFSS SBR+, HFSS Hybrid, and Sionna-RT reinforce direction-matched links and suppress most mismatched links. They agree on the direction of change in 25 of 27 sampled link--frequency combinations (92.6\%), a descriptive measure because neither the samples nor the solver routes are fully independent. Paired three-branch lens-assisted and without-lens receivers are then compared at identical waypoints. Under equal branch weighting, the lens lowers median link capacity from 5.41 to 3.57~bit/s/Hz on the linear path and from 5.08 to 3.53~bit/s/Hz on the half-circular path. The corresponding median normalized constructed-MIMO capacity at 10~dB decreases from 6.12 to 5.85~bit/s/Hz and from 6.71 to 6.58~bit/s/Hz. In contrast, median block decorrelation increases from 0.0909 to 0.5308 and from 0.0638 to 0.5518, indicating strong local angular selectivity.
 
-\noindent Keywords: keyword1, keyword2, keyword3.
+Across the lens-assisted order configurations, moving from $3\times3$ to $9\times9$ raises normalized constructed-MIMO capacity at 10~dB from 5.851 to 14.562~bit/s/Hz, but lowers the effective-rank fraction from 0.385 to 0.227 and capacity per dimension from 1.950 to 1.618~bit/s/Hz. Because transmit power, aperture, and receiver-angle sampling vary concurrently, this is not an order-only causal effect. The transmitarray is therefore a passive focusing and angular-filtering device whose MIMO benefit depends on alignment, receiver placement, propagation geometry, aggregation, and beam-selection or combining.
+
+\BackImage[trim=0 +12cm 0 0, width=15.5em]{watermark.jpg} % watermark for the electronic thesis (optional; typically required for library submission)
+
+% \noindent Keywords: millimeter-wave MIMO, metasurface transmitarray, antenna lens, channel decorrelation, spatial multiplexing, ray tracing.
+\noindent Keywords: millimeter-wave MIMO, metasurface transmitarray, antenna lens, channel decorrelation, spatial multiplexing, ray tracing.
+\endgroup
 \newpage
 
 
@@ -168,7 +191,7 @@ This is Abstract. \blindtext[1]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%for Main Contents%%%%%%%%%%
+%%%%%%%%%% main content %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 
@@ -190,10 +213,16 @@ This is Abstract. \blindtext[1]
 
 
 % V3 follow Horng advice
-\input{Chapters/v2_chapter1-introduction}
-\input{Chapters/v2_chapter2-second-chapter-Backup}
-\input{Chapters/v3_chapter3-third-chapter}
-\input{Chapters/v2_chapter4-fourth-chapter}
+% \input{Chapters/v3_chapter1-introduction}
+% \input{Chapters/v3_chapter2-second-chapter-Backup}
+% \input{Chapters/v3_chapter3-third-chapter}
+% \input{Chapters/v3_chapter4-fourth-chapter}
+
+% V4: update placement comparison to 3x3
+\input{Chapters/v3_chapter1-introduction}
+\input{Chapters/v3_chapter2-second-chapter-Backup}
+\input{Chapters/v4_chapter3-third-chapter}
+\input{Chapters/v3_chapter4-fourth-chapter}
 
 % \input{Chapters/chapter2-second-chapter}
 % \input{Chapters/chapter3-third-chapter}
@@ -202,7 +231,7 @@ This is Abstract. \blindtext[1]
 
 
 
-%% for Reference
+%% references
 \phantomsection
 \addcontentsline{toc}{chapter}{References}
 \begin{center}

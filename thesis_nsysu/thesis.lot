@@ -1,19 +1,19 @@
 \noaddvspace 
 \linespread {1}\selectfont 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table~1-1}{\ignorespaces Representative Existing Antenna-Lens Studies}}{24}{table.caption.4}%
+\contentsline {table}{\numberline {Table~1-1}{\ignorespaces Representative antenna-lens studies}}{24}{table.caption.4}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table~2-1}{\ignorespaces Design parameters of the metasurface antenna lens}}{32}{table.caption.9}%
-\contentsline {table}{\numberline {Table~2-2}{\ignorespaces Angular position and role of each receive and transmit index used in $\mathbf {H}(f)$}}{43}{table.caption.16}%
-\contentsline {table}{\numberline {Table~2-3}{\ignorespaces HFSS SBR+ solver: MIMO channel-quality metrics at 38\,GHz}}{52}{table.caption.28}%
-\contentsline {table}{\numberline {Table~2-4}{\ignorespaces HFSS Hybrid solver: MIMO channel-quality metrics at 38\,GHz}}{56}{table.caption.32}%
-\contentsline {table}{\numberline {Table~2-5}{\ignorespaces Sionna-RT: MIMO channel-quality metrics at 38\,GHz}}{61}{table.caption.36}%
-\contentsline {table}{\numberline {Table~2-6}{\ignorespaces Raw-channel MIMO metrics at 38 GHz across the three solvers}}{65}{table.caption.42}%
+\contentsline {table}{\numberline {Table~2-1}{\ignorespaces Design parameters of the metasurface antenna lens.}}{34}{table.caption.9}%
+\contentsline {table}{\numberline {Table~2-2}{\ignorespaces Angular position and role of the receive and transmit indices in $\mathbf {H}(f)$.}}{43}{table.caption.17}%
+\contentsline {table}{\numberline {Table~2-3}{\ignorespaces HFSS SBR+ solver: MIMO channel-quality metrics at 38~GHz.}}{56}{table.caption.28}%
+\contentsline {table}{\numberline {Table~2-4}{\ignorespaces HFSS Hybrid solver: MIMO channel-quality metrics at 38~GHz.}}{60}{table.caption.32}%
+\contentsline {table}{\numberline {Table~2-5}{\ignorespaces Sionna-RT: MIMO channel-quality metrics at 38~GHz.}}{64}{table.caption.36}%
+\contentsline {table}{\numberline {Table~2-6}{\ignorespaces Raw-channel MIMO metrics at 38~GHz across the three solvers.}}{68}{table.caption.42}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {Table~3-1}{\ignorespaces Paired trajectory design and minimum TX--RX separation.}}{73}{table.caption.47}%
-\contentsline {table}{\numberline {Table~3-2}{\ignorespaces Aggregate link-quality results. Full-circle rows are diagnostic because of the near-collision.}}{77}{table.caption.49}%
-\contentsline {table}{\numberline {Table~3-3}{\ignorespaces Aggregate spatial-channel results. $D_\mathrm {pool}$ and $D_\mathrm {med}$ denote pooled and median-block decorrelation; $C_\mathrm {MIMO}$ is evaluated at 10~dB. Full-circle rows ($\dagger $) are diagnostic only.}}{77}{table.caption.50}%
-\contentsline {table}{\numberline {Table~3-4}{\ignorespaces Aggregate scalability metrics vs.\ array size $N$ (medians over 20 Monte Carlo drops).}}{88}{table.caption.55}%
+\contentsline {table}{\numberline {Table~3-1}{\ignorespaces Common simulation configuration for the paired comparison with three isotropic TX elements.}}{75}{table.caption.45}%
+\contentsline {table}{\numberline {Table~3-2}{\ignorespaces Aggregate link, constructed-MIMO, and spatial-decorrelation metrics for the paired trajectories. Both capacity columns are in bit/s/Hz. The channel-magnitude summary uses all 16 mobility samples, whereas the link and constructed-MIMO metrics use the first sample at each waypoint. $D_\mathrm {global}$ pools all waypoint, mobility-time, and frequency samples; $D_\mathrm {med}$ is the block-median decorrelation. Both decorrelation values are averaged over unique RX pairs.}}{82}{table.caption.49}%
+\contentsline {table}{\numberline {Table~3-3}{\ignorespaces Order-dependent parameters for the lens-assisted linear-trajectory comparison.}}{93}{table.caption.55}%
+\contentsline {table}{\numberline {Table~3-4}{\ignorespaces Aggregate link, constructed-MIMO, and spatial-decorrelation metrics along the common linear trajectory. The channel-magnitude summary uses all 16 mobility samples, whereas the link and constructed-MIMO metrics use the first sample at each waypoint. The two capacity metrics are in bit/s/Hz; $D_\mathrm {global}$ and $D_\mathrm {med}$ denote global-pooled and block-median decorrelation, respectively, computed from all 16 samples.}}{98}{table.caption.59}%
 \addvspace {10\p@ }
 \contentsfinish 
 \contentsfinish 

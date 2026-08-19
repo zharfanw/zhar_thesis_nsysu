@@ -1,0 +1,104 @@
+% !TeX program = pdflatex
+% !TeX encoding = UTF-8
+\documentclass[aspectratio=169,compress,11pt]{beamer}
+
+\usepackage[english]{babel}
+
+\usepackage{Custom}
+\usepackage{Custom-2}
+\usepackage{AuxiliaryFiles/AuxiliaryFiles}
+\usepackage{tabularx}
+
+% Presenter notes mode.
+% Use \presenternotesfalse when exporting the audience-only slide deck.
+\newif\ifpresenternotes
+% \presenternotestrue
+\presenternotesfalse
+
+\ifpresenternotes
+  \setbeameroption{show notes on second screen=right}
+\else
+  \setbeameroption{hide notes}
+\fi
+
+% Thesis figures are kept in the thesis source tree so that the slides always
+% use the same validated assets as the complete thesis.
+\graphicspath{{../thesis_nsysu/Images/}}
+
+% Presentation accents and reusable slide helpers.
+\definecolor{Teal}{RGB}{0,132,137}
+\definecolor{Gold}{RGB}{224,153,0}
+\definecolor{SoftBlue}{RGB}{235,244,251}
+\definecolor{SoftTeal}{RGB}{232,247,246}
+\definecolor{SoftGold}{RGB}{255,247,224}
+\setbeamercolor{takeaway}{fg=black,bg=SoftBlue}
+\setbeamercolor{method}{fg=black,bg=SoftTeal}
+\setbeamercolor{caution}{fg=black,bg=SoftGold}
+\setbeamertemplate{itemize item}{\color{Teal}$\blacktriangleright$}
+\setbeamertemplate{itemize subitem}{\color{Teal}$\vcenter{\hbox{\tiny$\bullet$}}$}
+\setbeamertemplate{bibliography item}[text]
+
+\newcommand{\ImageRoot}{../thesis_nsysu/Images}
+\newcommand{\SlideCaption}[1]{%
+  \par\vspace{0.4ex}{\centering\fontsize{5.5}{6.5}\selectfont\color{gray!80}#1\par}}
+% Use the number assigned in the thesis rather than Beamer's local figure
+% counter, because the presentation intentionally omits several thesis figures.
+\newcommand{\ThesisFigureCaption}[2]{%
+  \SlideCaption{\textbf{Figure #1.} #2}}
+\newcommand{\SourceNote}[1]{%
+  \par\vfill\hfill{\fontsize{5.3}{6.2}\selectfont\color{gray!80}#1}}
+\newcommand{\Takeaway}[1]{%
+  \begin{beamercolorbox}[rounded=true,sep=0.65ex,wd=\linewidth]{takeaway}
+    \footnotesize\textbf{Takeaway:} #1
+  \end{beamercolorbox}}
+\newcommand{\MethodNote}[1]{%
+  \begin{beamercolorbox}[rounded=true,sep=0.65ex,wd=\linewidth]{method}
+    \footnotesize #1
+  \end{beamercolorbox}}
+\newcommand{\CautionNote}[1]{%
+  \begin{beamercolorbox}[rounded=true,sep=0.65ex,wd=\linewidth]{caution}
+    \footnotesize #1
+  \end{beamercolorbox}}
+\newcommand{\HC}[2]{\colorbox{#1}{\makebox[0.73cm][c]{\strut #2}}}
+
+\begin{document}
+
+\TitlePage
+\SectionPage
+\ProgressBar
+\PageNumbering
+
+\begin{frame}{Presentation Roadmap}
+  \tableofcontents[hideallsubsections]
+
+  \note{
+    \begin{itemize}
+      \item Narrative: physical focusing $\rightarrow$ validated channel effect
+            $\rightarrow$ mobile system performance $\rightarrow$ the conditions
+            under which angular selectivity becomes a communication benefit.
+      \item Start from the physical focusing mechanism.
+      \item Then connect the validated channel effect to mobile-system performance.
+      \item Emphasize that angular selectivity is beneficial only under the
+            conditions identified in this thesis.
+    \end{itemize}
+  }
+\end{frame}
+
+\input{Slides/Chapter1}
+\input{Slides/Chapter2}
+\input{Slides/Chapter3}
+\input{Slides/Chapter4}
+
+% References and the closing slide are excluded from the main-frame count.
+\input{AuxiliaryFiles/SettingBackup}
+
+\begin{frame}[allowframebreaks]{Selected References}
+  \scriptsize
+  \bibliographystyle{IEEEtran}
+  \bibliography{../thesis_nsysu/references}
+\end{frame}
+
+\input{AuxiliaryFiles/Thanks}
+% \input{Slides/Appendix}
+
+\end{document}

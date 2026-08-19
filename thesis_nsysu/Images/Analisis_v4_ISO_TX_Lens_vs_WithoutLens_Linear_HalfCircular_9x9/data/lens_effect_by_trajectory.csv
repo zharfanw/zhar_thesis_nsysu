@@ -1,0 +1,3 @@
+trajectory,channel_magnitude_delta_db,link_capacity_delta,link_capacity_relative_percent,outage_delta_percentage_points,mimo_condition_delta_db,mimo_erank_delta,mimo_capacity_delta,pooled_decorrelation_delta,median_decorrelation_delta,raw_difference_power_ratio_db
+Linear,-6.8700000000000045,-1.8099999999999996,-25.857142857142858,0.0,-0.6753569999999982,-1.1179010000000003,-2.6377819999999996,-0.09230000000000005,0.3991,3.188477006089773
+Half-Circular,-3.6400000000000006,-1.0300000000000002,-17.052980132450337,0.0,0.912939999999999,-1.573846,-3.825554999999998,-0.06020000000000003,0.3731,2.99014678909521

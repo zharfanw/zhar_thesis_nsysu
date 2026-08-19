@@ -1,0 +1,13 @@
+trajectory,system,rx_config_index,rx_config_name,rx_x_m,rx_y_m,rx_z_m,rx_orientation_alpha_deg,rx_orientation_beta_deg,rx_orientation_gamma_deg,rx_lens_angle_deg,rx_farfield_csv
+Linear,Without Lens,0,Simul_+1,-9.0,-0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Linear,Without Lens,1,Simul_0,-9.0,0.0,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Linear,Without Lens,2,Simul_-1,-9.0,0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Half-Circular,Without Lens,0,Simul_+1,-9.0,-0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Half-Circular,Without Lens,1,Simul_0,-9.0,0.0,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Half-Circular,Without Lens,2,Simul_-1,-9.0,0.00553,2.0,-90,90,0.0,0,farfieldAntennaData/FarFieldData_Patch_38GHz.csv
+Linear,Lens,0,Simul_+45deg,-9.012021,-0.012021,2.0,-90,90,0.0,45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv
+Linear,Lens,1,Simul_+0deg,-9.017,0.0,2.0,-90,-90,0.0,0,farfieldAntennaData/FarFieldData_0deg_detailFreq.csv
+Linear,Lens,2,Simul_-45deg,-9.012021,0.012021,2.0,-90,90,0.0,-45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv
+Half-Circular,Lens,0,Simul_+45deg,-9.012021,-0.012021,2.0,-90,90,0.0,45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv
+Half-Circular,Lens,1,Simul_+0deg,-9.017,0.0,2.0,-90,-90,0.0,0,farfieldAntennaData/FarFieldData_0deg_detailFreq.csv
+Half-Circular,Lens,2,Simul_-45deg,-9.012021,0.012021,2.0,-90,90,0.0,-45,farfieldAntennaData/FarFieldData_m45deg_detailFreq.csv

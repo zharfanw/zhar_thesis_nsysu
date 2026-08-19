@@ -1,0 +1,257 @@
+scenario,cell_index,cell_type,execution_count,section,included,output_count,source_first_line
+linear_without_lens,0,markdown,,,True,0,# Setup 20m × 20m — 3-TX Patch × 3-RX Patch + Linear TX-User Trajectory (Without Lens)
+linear_without_lens,1,code,1.0,,True,1,import os
+linear_without_lens,2,markdown,,1.0,True,0,"## 1. Antenna pattern loader (farfield HFSS, rotation baked-in)"
+linear_without_lens,3,code,2.0,1.0,True,0,class HFSSPattern(AntennaPattern):
+linear_without_lens,4,markdown,,2.0,True,0,"## 2. Orientation utilities (world-frame Euler angle, Sionna convention)"
+linear_without_lens,5,code,3.0,2.0,True,0,def R_of(o):
+linear_without_lens,6,markdown,,3.0,True,0,"## 3. Room scene (20m x 20m x 3m), reused from `Setup_20mx20m_9x9.ipynb`"
+linear_without_lens,7,code,4.0,3.0,True,0,"def generate_room_xml(room_x=20, room_y=20, room_z=3, xml_path=""room_20x20.xml""):"
+linear_without_lens,8,markdown,,4.0,True,0,## 4. RX lens farfield — angle mapping & mirroring the positive side
+linear_without_lens,9,code,5.0,4.0,True,0,"LENS_DIR = Path(""farfieldAntennaData"")"
+linear_without_lens,10,markdown,,5.0,True,0,## 5. ⚠️ CONFIGURATION — EDIT HERE
+linear_without_lens,11,code,6.0,5.0,True,1,FREQ_GHZ = 38
+linear_without_lens,12,markdown,,5.0,True,0,### 5b. Full layout preview (3 TX x 3 RX) — top view & 3D perspective
+linear_without_lens,13,code,7.0,5.0,True,2,"def plot_full_layout(tx_positions, sim_configs, room_x, room_y, room_z, figsize=(14, 6)):"
+linear_without_lens,14,markdown,,5.0,True,0,### 5c. RX cluster — zoomed view
+linear_without_lens,15,code,8.0,5.0,True,2,"def plot_rx_zoom(sim_configs, pad_ratio=0.3, figsize=(14, 6)):"
+linear_without_lens,16,markdown,,6.0,True,0,"## 6. Scene builder — 3 TX (same pattern, simultaneous radiation) + 1 RX (lens differs per simulation)"
+linear_without_lens,17,code,9.0,6.0,True,0,"def build_scene(tx_positions, tx_orientation_deg, tx_pattern_name,"
+linear_without_lens,18,markdown,,7.0,True,0,"## 7. Beamform validation utilities (position, orientation, peak beam direction in world frame)"
+linear_without_lens,19,code,10.0,7.0,True,0,def _p3(v):
+linear_without_lens,20,markdown,,7.0,True,0,"### 7b. Antenna pattern profile (radiation pattern, `compute_gain`/`show`)"
+linear_without_lens,21,code,11.0,7.0,True,0,"def get_builtin_pattern(name, polarization=""V"", polarization_model=""tr38901_2""):"
+linear_without_lens,22,markdown,,7.0,True,0,### 7c. TX Antenna Profile — review before the main loop
+linear_without_lens,23,code,12.0,7.0,True,4,"print(""="" * 60)"
+linear_without_lens,24,markdown,,7.0,True,0,### 7d. RX Antenna Profile — review all scenarios before the main loop
+linear_without_lens,25,code,13.0,7.0,True,4,"print(""="" * 60)"
+linear_without_lens,26,markdown,,8.0,True,0,"## 8. Main loop — 3 simulations (3 RX scenarios, each with 3 simultaneous TX)"
+linear_without_lens,27,code,14.0,8.0,True,0,"def plot_received_power(cfg, Hf, freqs):"
+linear_without_lens,28,code,15.0,8.0,True,25,"generate_room_xml(ROOM_X, ROOM_Y, ROOM_Z, ROOM_XML)"
+linear_without_lens,29,markdown,,9.0,True,0,## 9. Per-RX-scenario evaluation
+linear_without_lens,30,code,16.0,9.0,True,1,def tx_branch_correlation(Hf_i):
+linear_without_lens,31,code,17.0,9.0,True,1,"fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))"
+linear_without_lens,32,code,18.0,9.0,True,1,"fig, axes = plt.subplots(3, 3, figsize=(13, 12))"
+linear_without_lens,33,code,19.0,9.0,True,1,"print(""="" * 60)"
+linear_without_lens,34,markdown,,10.0,True,0,## 10. Combine the channels into a 3x3 MIMO matrix (from 3 simulations of 3x1)
+linear_without_lens,35,code,20.0,10.0,True,0,def mimo_metrics_3x3(H9):
+linear_without_lens,36,code,21.0,10.0,True,1,"H_3x3 = H_all  # (rx_config, tx_element, freq) -- direct combination, already in 3x3 MIMO form"
+linear_without_lens,37,code,22.0,10.0,True,2,if SHOW_MIMO_PLOTS:
+linear_without_lens,38,markdown,,10.0,True,0,### 10b. Spatial correlation (decorrelation) evaluation — combined 3x3 MIMO
+linear_without_lens,39,code,23.0,10.0,True,1,def rx_correlation_3x3(H9):
+linear_without_lens,40,code,24.0,10.0,True,1,if SHOW_MIMO_PLOTS:
+linear_without_lens,41,markdown,,10.0,True,0,## Notes & further TODOs
+linear_without_lens,42,markdown,,11.0,True,0,## 11. TX user bergerak linear — without lens
+linear_without_lens,43,code,25.0,11.0,True,1,# --- Parameter lintasan linear TX user (edit di sini) ---
+linear_without_lens,44,code,26.0,11.0,True,0,"def linear_tx_trajectory(start, end, n_points, element_positions=TX_POSITIONS,"
+linear_without_lens,45,code,27.0,11.0,True,2,trajectory_results = pd.DataFrame()
+linear_without_lens,46,markdown,,11.0,True,0,### 11b. Visualisasi lintasan dan data channel patch
+linear_without_lens,47,code,28.0,11.0,True,2,"def plot_linear_tx_trajectory(centers, tx_positions, rx_position,"
+linear_without_lens,48,code,29.0,11.0,True,2,if RUN_LINEAR_TX_TRAJECTORY and not trajectory_results.empty:
+linear_without_lens,49,markdown,,11.0,True,0,### 11c. Conditioning 3×3 MIMO sepanjang linear trajectory
+linear_without_lens,50,code,30.0,11.0,True,3,trajectory_mimo_results = pd.DataFrame()
+linear_without_lens,51,markdown,,11.0,True,0,### Interpretasi hasil linear trajectory without lens
+linear_without_lens,52,markdown,,12.0,True,0,## 12. Evaluasi spatial decorrelation — 1 TX × 3 RX
+linear_without_lens,53,code,31.0,12.0,True,2,# --- Spatial-decorrelation configuration ---
+linear_without_lens,54,code,32.0,12.0,True,2,"def plot_matrix_with_values(ax, matrix, labels, title, cmap, vmin=0.0, vmax=1.0):"
+linear_without_lens,55,markdown,,12.0,True,0,### Interpretasi spatial decorrelation
+linear_without_lens,56,markdown,,13.0,True,0,## 13. Spatial decorrelation tanpa normalisasi — 3 RX patch without lens
+linear_without_lens,57,code,33.0,13.0,True,2,def raw_spatial_matrices(H_rx_samples):
+linear_without_lens,58,code,34.0,13.0,True,2,if raw_spatial_cross_correlation_overall.size:
+linear_without_lens,59,markdown,,13.0,True,0,### Interpretasi hasil tanpa normalisasi
+linear_without_lens,60,markdown,,14.0,True,0,## 14. Median-based spatial correlation — 3 RX patch without lens
+linear_without_lens,61,code,35.0,14.0,True,2,def correlation_blocks_frequency(H_rx_time_frequency):
+linear_without_lens,62,code,36.0,14.0,True,2,if median_spatial_correlation_overall.size:
+linear_without_lens,63,markdown,,14.0,True,0,### Interpretasi metode median
+half_circular_without_lens,0,markdown,,,True,0,# Setup 20m × 20m — 3-TX Patch × 3-RX Patch + Half-Circular TX Trajectory (Without Lens)
+half_circular_without_lens,1,code,1.0,,True,1,import os
+half_circular_without_lens,2,markdown,,1.0,True,0,"## 1. Antenna pattern loader (farfield HFSS, rotation baked-in)"
+half_circular_without_lens,3,code,2.0,1.0,True,0,class HFSSPattern(AntennaPattern):
+half_circular_without_lens,4,markdown,,2.0,True,0,"## 2. Orientation utilities (world-frame Euler angle, Sionna convention)"
+half_circular_without_lens,5,code,3.0,2.0,True,0,def R_of(o):
+half_circular_without_lens,6,markdown,,3.0,True,0,"## 3. Room scene (20m x 20m x 3m), reused from `Setup_20mx20m_9x9.ipynb`"
+half_circular_without_lens,7,code,4.0,3.0,True,0,"def generate_room_xml(room_x=20, room_y=20, room_z=3, xml_path=""room_20x20.xml""):"
+half_circular_without_lens,8,markdown,,4.0,True,0,## 4. RX lens farfield — angle mapping & mirroring the positive side
+half_circular_without_lens,9,code,5.0,4.0,True,0,"LENS_DIR = Path(""farfieldAntennaData"")"
+half_circular_without_lens,10,markdown,,5.0,True,0,## 5. ⚠️ CONFIGURATION — EDIT HERE
+half_circular_without_lens,11,code,6.0,5.0,True,1,FREQ_GHZ = 38
+half_circular_without_lens,12,markdown,,5.0,True,0,### 5b. Full layout preview (3 TX x 3 RX) — top view & 3D perspective
+half_circular_without_lens,13,code,7.0,5.0,True,2,"def plot_full_layout(tx_positions, sim_configs, room_x, room_y, room_z, figsize=(14, 6)):"
+half_circular_without_lens,14,markdown,,5.0,True,0,### 5c. RX cluster — zoomed view
+half_circular_without_lens,15,code,8.0,5.0,True,2,"def plot_rx_zoom(sim_configs, pad_ratio=0.3, figsize=(14, 6)):"
+half_circular_without_lens,16,markdown,,6.0,True,0,"## 6. Scene builder — 3 TX (same pattern, simultaneous radiation) + 1 RX (lens differs per simulation)"
+half_circular_without_lens,17,code,9.0,6.0,True,0,"def build_scene(tx_positions, tx_orientation_deg, tx_pattern_name,"
+half_circular_without_lens,18,markdown,,7.0,True,0,"## 7. Beamform validation utilities (position, orientation, peak beam direction in world frame)"
+half_circular_without_lens,19,code,10.0,7.0,True,0,def _p3(v):
+half_circular_without_lens,20,markdown,,7.0,True,0,"### 7b. Antenna pattern profile (radiation pattern, `compute_gain`/`show`)"
+half_circular_without_lens,21,code,11.0,7.0,True,0,"def get_builtin_pattern(name, polarization=""V"", polarization_model=""tr38901_2""):"
+half_circular_without_lens,22,markdown,,7.0,True,0,### 7c. TX Antenna Profile — review before the main loop
+half_circular_without_lens,23,code,12.0,7.0,True,4,"print(""="" * 60)"
+half_circular_without_lens,24,markdown,,7.0,True,0,### 7d. RX Antenna Profile — review all scenarios before the main loop
+half_circular_without_lens,25,code,13.0,7.0,True,4,"print(""="" * 60)"
+half_circular_without_lens,26,markdown,,8.0,True,0,"## 8. Main loop — 3 simulations (3 RX scenarios, each with 3 simultaneous TX)"
+half_circular_without_lens,27,code,14.0,8.0,True,0,"def plot_received_power(cfg, Hf, freqs):"
+half_circular_without_lens,28,code,15.0,8.0,True,25,"generate_room_xml(ROOM_X, ROOM_Y, ROOM_Z, ROOM_XML)"
+half_circular_without_lens,29,markdown,,9.0,True,0,## 9. Per-RX-scenario evaluation
+half_circular_without_lens,30,code,16.0,9.0,True,1,def tx_branch_correlation(Hf_i):
+half_circular_without_lens,31,code,17.0,9.0,True,1,"fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))"
+half_circular_without_lens,32,code,18.0,9.0,True,1,"fig, axes = plt.subplots(3, 3, figsize=(13, 12))"
+half_circular_without_lens,33,code,19.0,9.0,True,1,"print(""="" * 60)"
+half_circular_without_lens,34,markdown,,10.0,True,0,## 10. Combine the channels into a 3x3 MIMO matrix (from 3 simulations of 3x1)
+half_circular_without_lens,35,code,20.0,10.0,True,0,def mimo_metrics_3x3(H9):
+half_circular_without_lens,36,code,21.0,10.0,True,1,"H_3x3 = H_all  # (rx_config, tx_element, freq) -- direct combination, already in 3x3 MIMO form"
+half_circular_without_lens,37,code,22.0,10.0,True,2,if SHOW_MIMO_PLOTS:
+half_circular_without_lens,38,markdown,,10.0,True,0,### 10b. Spatial correlation (decorrelation) evaluation — combined 3x3 MIMO
+half_circular_without_lens,39,code,23.0,10.0,True,1,def rx_correlation_3x3(H9):
+half_circular_without_lens,40,code,24.0,10.0,True,1,if SHOW_MIMO_PLOTS:
+half_circular_without_lens,41,markdown,,10.0,True,0,## Notes & further TODOs
+half_circular_without_lens,42,markdown,,11.0,True,0,## 11. TX user bergerak pada half-circular trajectory
+half_circular_without_lens,43,code,25.0,11.0,True,1,# --- Parameter half-circular trajectory TX user (edit di sini) ---
+half_circular_without_lens,44,code,26.0,11.0,True,0,"def half_circular_tx_trajectory(center, radius, start_angle_deg, end_angle_deg,"
+half_circular_without_lens,45,code,27.0,11.0,True,2,trajectory_results = pd.DataFrame()
+half_circular_without_lens,46,markdown,,11.0,True,0,### 11b. Visualisasi half-circular trajectory dan data channel patch
+half_circular_without_lens,47,code,28.0,11.0,True,2,"def plot_half_circular_tx_trajectory(centers, tx_positions, rx_position,"
+half_circular_without_lens,48,code,29.0,11.0,True,2,if RUN_HALF_CIRCULAR_TX_TRAJECTORY and not trajectory_results.empty:
+half_circular_without_lens,49,markdown,,11.0,True,0,### 11c. Conditioning 3×3 MIMO sepanjang half-circular trajectory
+half_circular_without_lens,50,code,30.0,11.0,True,3,trajectory_mimo_results = pd.DataFrame()
+half_circular_without_lens,51,markdown,,11.0,True,0,### Interpretasi hasil half-circular trajectory without lens
+half_circular_without_lens,52,markdown,,12.0,True,0,## 12. Evaluasi spatial decorrelation — 1 TX × 3 RX
+half_circular_without_lens,53,code,31.0,12.0,True,2,# --- Spatial-decorrelation configuration ---
+half_circular_without_lens,54,code,32.0,12.0,True,2,"def plot_matrix_with_values(ax, matrix, labels, title, cmap, vmin=0.0, vmax=1.0):"
+half_circular_without_lens,55,markdown,,12.0,True,0,### Interpretasi spatial decorrelation
+half_circular_without_lens,56,markdown,,13.0,True,0,## 13. Spatial decorrelation tanpa normalisasi — 3 RX patch without lens
+half_circular_without_lens,57,code,33.0,13.0,True,2,def raw_spatial_matrices(H_rx_samples):
+half_circular_without_lens,58,code,34.0,13.0,True,2,if raw_spatial_cross_correlation_overall.size:
+half_circular_without_lens,59,markdown,,13.0,True,0,### Interpretasi hasil tanpa normalisasi
+half_circular_without_lens,60,markdown,,14.0,True,0,## 14. Median-based spatial correlation — 3 RX patch without lens
+half_circular_without_lens,61,code,35.0,14.0,True,2,def correlation_blocks_frequency(H_rx_time_frequency):
+half_circular_without_lens,62,code,36.0,14.0,True,2,if median_spatial_correlation_overall.size:
+half_circular_without_lens,63,markdown,,14.0,True,0,### Interpretasi metode median
+linear_lens,0,markdown,,,True,0,# Setup 20m x 20m — Lens Antenna 3-TX x 1-RX + Linear TX-User Trajectory
+linear_lens,1,code,1.0,,True,1,import os
+linear_lens,2,markdown,,1.0,True,0,"## 1. Antenna pattern loader (farfield HFSS, rotation baked-in)"
+linear_lens,3,code,2.0,1.0,True,0,class HFSSPattern(AntennaPattern):
+linear_lens,4,markdown,,2.0,True,0,"## 2. Orientation utilities (world-frame Euler angle, Sionna convention)"
+linear_lens,5,code,3.0,2.0,True,0,def R_of(o):
+linear_lens,6,markdown,,3.0,True,0,"## 3. Room scene (20m x 20m x 3m), reused from `Setup_20mx20m_9x9.ipynb`"
+linear_lens,7,code,4.0,3.0,True,0,"def generate_room_xml(room_x=20, room_y=20, room_z=3, xml_path=""room_20x20.xml""):"
+linear_lens,8,markdown,,4.0,True,0,## 4. RX lens farfield — angle mapping & mirroring the positive side
+linear_lens,9,code,5.0,4.0,True,0,"LENS_DIR = Path(""farfieldAntennaData"")"
+linear_lens,10,markdown,,5.0,True,0,## 5. ⚠️ CONFIGURATION — EDIT HERE
+linear_lens,11,code,6.0,5.0,True,1,FREQ_GHZ = 38
+linear_lens,12,markdown,,5.0,True,0,### 5b. Full layout preview (3 TX x 3 RX) — top view & 3D perspective
+linear_lens,13,code,7.0,5.0,True,2,"def plot_full_layout(tx_positions, sim_configs, room_x, room_y, room_z, figsize=(14, 6)):"
+linear_lens,14,markdown,,5.0,True,0,### 5c. RX cluster — zoomed view
+linear_lens,15,code,8.0,5.0,True,2,"def plot_rx_zoom(sim_configs, pad_ratio=0.3, figsize=(14, 6)):"
+linear_lens,16,markdown,,6.0,True,0,"## 6. Scene builder — 3 TX (same pattern, simultaneous radiation) + 1 RX (lens differs per simulation)"
+linear_lens,17,code,9.0,6.0,True,0,"def build_scene(tx_positions, tx_orientation_deg, tx_pattern_name,"
+linear_lens,18,markdown,,7.0,True,0,"## 7. Beamform validation utilities (position, orientation, peak beam direction in world frame)"
+linear_lens,19,code,10.0,7.0,True,0,def _p3(v):
+linear_lens,20,markdown,,7.0,True,0,"### 7b. Antenna pattern profile (radiation pattern, `compute_gain`/`show`)"
+linear_lens,21,code,11.0,7.0,True,0,"def get_builtin_pattern(name, polarization=""V"", polarization_model=""tr38901_2""):"
+linear_lens,22,markdown,,7.0,True,0,### 7c. TX Antenna Profile — review before the main loop
+linear_lens,23,code,12.0,7.0,True,4,"print(""="" * 60)"
+linear_lens,24,markdown,,7.0,True,0,### 7d. RX Antenna Profile — review all scenarios before the main loop
+linear_lens,25,code,13.0,7.0,True,7,"print(""="" * 60)"
+linear_lens,26,markdown,,8.0,True,0,"## 8. Main loop — 3 simulations (3 RX scenarios, each with 3 simultaneous TX)"
+linear_lens,27,code,14.0,8.0,True,0,"def plot_received_power(cfg, Hf, freqs):"
+linear_lens,28,code,15.0,8.0,True,25,"generate_room_xml(ROOM_X, ROOM_Y, ROOM_Z, ROOM_XML)"
+linear_lens,29,markdown,,9.0,True,0,## 9. Per-RX-scenario evaluation
+linear_lens,30,code,16.0,9.0,True,1,def tx_branch_correlation(Hf_i):
+linear_lens,31,code,17.0,9.0,True,1,"fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))"
+linear_lens,32,code,18.0,9.0,True,1,"fig, axes = plt.subplots(1, n_rx_cfg, figsize=(4 * n_rx_cfg, 4))"
+linear_lens,33,code,19.0,9.0,True,1,"print(""="" * 60)"
+linear_lens,34,markdown,,10.0,True,0,## 10. Combine the channels into a 3x3 MIMO matrix (from 3 simulations of 3x1)
+linear_lens,35,code,20.0,10.0,True,0,def mimo_metrics_3x3(H9):
+linear_lens,36,code,21.0,10.0,True,1,"H_3x3 = H_all  # (rx_config, tx_element, freq) -- direct combination, already in 3x3 MIMO form"
+linear_lens,37,code,22.0,10.0,True,2,if SHOW_MIMO_PLOTS:
+linear_lens,38,markdown,,10.0,True,0,### 10b. Spatial correlation (decorrelation) evaluation — combined 3x3 MIMO
+linear_lens,39,code,23.0,10.0,True,1,def rx_correlation_3x3(H9):
+linear_lens,40,code,24.0,10.0,True,1,if SHOW_MIMO_PLOTS:
+linear_lens,41,markdown,,10.0,True,0,## Notes & further TODOs
+linear_lens,42,markdown,,11.0,True,0,## 11. TX user bergerak linear di dalam ruangan
+linear_lens,43,code,25.0,11.0,True,1,# --- Parameter lintasan linear TX user (edit di sini) ---
+linear_lens,44,code,26.0,11.0,True,0,"def linear_tx_trajectory(start, end, n_points, element_positions=TX_POSITIONS,"
+linear_lens,45,code,27.0,11.0,True,2,trajectory_results = pd.DataFrame()
+linear_lens,46,markdown,,11.0,True,0,### 11b. Visualisasi lintasan dan data channel TX user
+linear_lens,47,code,28.0,11.0,True,2,"def plot_linear_tx_trajectory(centers, tx_positions, rx_position,"
+linear_lens,48,code,29.0,11.0,True,2,if RUN_LINEAR_TX_TRAJECTORY and not trajectory_results.empty:
+linear_lens,49,markdown,,11.0,True,0,### 11c. Conditioning 3×3 MIMO sepanjang trajectory
+linear_lens,50,code,30.0,11.0,True,3,trajectory_mimo_results = pd.DataFrame()
+linear_lens,51,markdown,,11.0,True,0,### Interpretasi hasil trajectory
+linear_lens,52,markdown,,12.0,True,0,## 12. Evaluasi spatial decorrelation — 1 TX × 3 RX
+linear_lens,53,code,31.0,12.0,True,2,# --- Spatial-decorrelation configuration ---
+linear_lens,54,code,32.0,12.0,True,2,"def plot_matrix_with_values(ax, matrix, labels, title, cmap, vmin=0.0, vmax=1.0):"
+linear_lens,55,markdown,,12.0,True,0,### Interpretasi spatial decorrelation
+linear_lens,56,markdown,,13.0,True,0,## 13. Spatial decorrelation tanpa normalisasi energi channel
+linear_lens,57,code,33.0,13.0,True,2,def raw_spatial_matrices(H_rx_samples):
+linear_lens,58,code,34.0,13.0,True,2,if raw_spatial_cross_correlation_overall.size:
+linear_lens,59,markdown,,13.0,True,0,### Interpretasi hasil tanpa normalisasi
+linear_lens,60,markdown,,14.0,True,0,## 14. Median-based spatial correlation — robust terhadap outlier
+linear_lens,61,code,35.0,14.0,True,2,def correlation_blocks_frequency(H_rx_time_frequency):
+linear_lens,62,code,36.0,14.0,True,2,if median_spatial_correlation_overall.size:
+linear_lens,63,markdown,,14.0,True,0,### Interpretasi metode median
+half_circular_lens,0,markdown,,,True,0,# Setup 20m x 20m — Lens Antenna 3-TX x 1-RX + Half-Circular TX-User Trajectory
+half_circular_lens,1,code,1.0,,True,1,import os
+half_circular_lens,2,markdown,,1.0,True,0,"## 1. Antenna pattern loader (farfield HFSS, rotation baked-in)"
+half_circular_lens,3,code,2.0,1.0,True,0,class HFSSPattern(AntennaPattern):
+half_circular_lens,4,markdown,,2.0,True,0,"## 2. Orientation utilities (world-frame Euler angle, Sionna convention)"
+half_circular_lens,5,code,3.0,2.0,True,0,def R_of(o):
+half_circular_lens,6,markdown,,3.0,True,0,"## 3. Room scene (20m x 20m x 3m), reused from `Setup_20mx20m_9x9.ipynb`"
+half_circular_lens,7,code,4.0,3.0,True,0,"def generate_room_xml(room_x=20, room_y=20, room_z=3, xml_path=""room_20x20.xml""):"
+half_circular_lens,8,markdown,,4.0,True,0,## 4. RX lens farfield — angle mapping & mirroring the positive side
+half_circular_lens,9,code,5.0,4.0,True,0,"LENS_DIR = Path(""farfieldAntennaData"")"
+half_circular_lens,10,markdown,,5.0,True,0,## 5. ⚠️ CONFIGURATION — EDIT HERE
+half_circular_lens,11,code,6.0,5.0,True,1,FREQ_GHZ = 38
+half_circular_lens,12,markdown,,5.0,True,0,### 5b. Full layout preview (3 TX x 3 RX) — top view & 3D perspective
+half_circular_lens,13,code,7.0,5.0,True,2,"def plot_full_layout(tx_positions, sim_configs, room_x, room_y, room_z, figsize=(14, 6)):"
+half_circular_lens,14,markdown,,5.0,True,0,### 5c. RX cluster — zoomed view
+half_circular_lens,15,code,8.0,5.0,True,2,"def plot_rx_zoom(sim_configs, pad_ratio=0.3, figsize=(14, 6)):"
+half_circular_lens,16,markdown,,6.0,True,0,"## 6. Scene builder — 3 TX (same pattern, simultaneous radiation) + 1 RX (lens differs per simulation)"
+half_circular_lens,17,code,9.0,6.0,True,0,"def build_scene(tx_positions, tx_orientation_deg, tx_pattern_name,"
+half_circular_lens,18,markdown,,7.0,True,0,"## 7. Beamform validation utilities (position, orientation, peak beam direction in world frame)"
+half_circular_lens,19,code,10.0,7.0,True,0,def _p3(v):
+half_circular_lens,20,markdown,,7.0,True,0,"### 7b. Antenna pattern profile (radiation pattern, `compute_gain`/`show`)"
+half_circular_lens,21,code,11.0,7.0,True,0,"def get_builtin_pattern(name, polarization=""V"", polarization_model=""tr38901_2""):"
+half_circular_lens,22,markdown,,7.0,True,0,### 7c. TX Antenna Profile — review before the main loop
+half_circular_lens,23,code,12.0,7.0,True,4,"print(""="" * 60)"
+half_circular_lens,24,markdown,,7.0,True,0,### 7d. RX Antenna Profile — review all scenarios before the main loop
+half_circular_lens,25,code,13.0,7.0,True,7,"print(""="" * 60)"
+half_circular_lens,26,markdown,,8.0,True,0,"## 8. Main loop — 3 simulations (3 RX scenarios, each with 3 simultaneous TX)"
+half_circular_lens,27,code,14.0,8.0,True,0,"def plot_received_power(cfg, Hf, freqs):"
+half_circular_lens,28,code,15.0,8.0,True,25,"generate_room_xml(ROOM_X, ROOM_Y, ROOM_Z, ROOM_XML)"
+half_circular_lens,29,markdown,,9.0,True,0,## 9. Per-RX-scenario evaluation
+half_circular_lens,30,code,16.0,9.0,True,1,def tx_branch_correlation(Hf_i):
+half_circular_lens,31,code,17.0,9.0,True,1,"fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))"
+half_circular_lens,32,code,18.0,9.0,True,1,"fig, axes = plt.subplots(3, 3, figsize=(13, 12))"
+half_circular_lens,33,code,19.0,9.0,True,1,"print(""="" * 60)"
+half_circular_lens,34,markdown,,10.0,True,0,## 10. Combine the channels into a 3x3 MIMO matrix (from 3 simulations of 3x1)
+half_circular_lens,35,code,20.0,10.0,True,0,def mimo_metrics_3x3(H9):
+half_circular_lens,36,code,21.0,10.0,True,1,"H_3x3 = H_all  # (rx_config, tx_element, freq) -- direct combination, already in 3x3 MIMO form"
+half_circular_lens,37,code,22.0,10.0,True,2,if SHOW_MIMO_PLOTS:
+half_circular_lens,38,markdown,,10.0,True,0,### 10b. Spatial correlation (decorrelation) evaluation — combined 3x3 MIMO
+half_circular_lens,39,code,23.0,10.0,True,1,def rx_correlation_3x3(H9):
+half_circular_lens,40,code,24.0,10.0,True,1,if SHOW_MIMO_PLOTS:
+half_circular_lens,41,markdown,,10.0,True,0,## Notes & further TODOs
+half_circular_lens,42,markdown,,11.0,True,0,## 11. TX user bergerak pada half-circular trajectory
+half_circular_lens,43,code,25.0,11.0,True,1,# --- Parameter half-circular trajectory TX user (edit di sini) ---
+half_circular_lens,44,code,26.0,11.0,True,0,"def half_circular_tx_trajectory(center, radius, start_angle_deg, end_angle_deg,"
+half_circular_lens,45,code,27.0,11.0,True,2,trajectory_results = pd.DataFrame()
+half_circular_lens,46,markdown,,11.0,True,0,### 11b. Visualisasi half-circular trajectory dan data channel
+half_circular_lens,47,code,28.0,11.0,True,2,"def plot_half_circular_tx_trajectory(centers, tx_positions, rx_position,"
+half_circular_lens,48,code,29.0,11.0,True,2,if RUN_HALF_CIRCULAR_TX_TRAJECTORY and not trajectory_results.empty:
+half_circular_lens,49,markdown,,11.0,True,0,### 11c. Conditioning 3×3 MIMO sepanjang half-circular trajectory
+half_circular_lens,50,code,30.0,11.0,True,3,trajectory_mimo_results = pd.DataFrame()
+half_circular_lens,51,markdown,,11.0,True,0,### Interpretasi hasil half-circular trajectory
+half_circular_lens,52,markdown,,12.0,True,0,## 12. Evaluasi spatial decorrelation — 1 TX × 3 RX
+half_circular_lens,53,code,31.0,12.0,True,2,# --- Spatial-decorrelation configuration ---
+half_circular_lens,54,code,32.0,12.0,True,2,"def plot_matrix_with_values(ax, matrix, labels, title, cmap, vmin=0.0, vmax=1.0):"
+half_circular_lens,55,markdown,,12.0,True,0,### Interpretasi spatial decorrelation
+half_circular_lens,56,markdown,,13.0,True,0,## 13. Spatial decorrelation tanpa normalisasi energi channel
+half_circular_lens,57,code,33.0,13.0,True,2,def raw_spatial_matrices(H_rx_samples):
+half_circular_lens,58,code,34.0,13.0,True,2,if raw_spatial_cross_correlation_overall.size:
+half_circular_lens,59,markdown,,13.0,True,0,### Interpretasi hasil tanpa normalisasi
+half_circular_lens,60,markdown,,14.0,True,0,## 14. Median-based spatial correlation — robust terhadap outlier
+half_circular_lens,61,code,35.0,14.0,True,2,def correlation_blocks_frequency(H_rx_time_frequency):
+half_circular_lens,62,code,36.0,14.0,True,2,if median_spatial_correlation_overall.size:
+half_circular_lens,63,markdown,,14.0,True,0,### Interpretasi metode median

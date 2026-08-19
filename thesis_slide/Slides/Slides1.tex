@@ -1,0 +1,96 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Navigation and Presentation Commands}
+\subsection{Sections}
+    
+\begin{frame}[fragile]{Sections}{Sections}
+You can divide the document using
+    \begin{verbatim}\section{Parte}\end{verbatim}
+This way, only the sections belonging to the current part are shown in the sidebar.
+\vspace{.5cm}
+   \begin{alertblock}{Alert}
+This presentation is divided into sections: take a look at the sidebar to see the effect.
+    \end{alertblock}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Overlays}
+
+\begin{frame}[fragile]{Pause}
+    With the command
+    \begin{verbatim}\pause\end{verbatim}
+    only part of the slide is shown,
+    \pause
+    and as you proceed, the rest appears. Check out the behaviour of the progress bar!
+    
+    With
+    \begin{verbatim}\only<3,4>{Topic}\end{verbatim}
+    the content is shown only on slide repetitions number 3 and 4. You can customize on which slide numbers the content appears:\newline
+    \only<3>{This is the third repetition...}
+    \pause
+    
+    \noindent\only<4>{And this is the fourth one!}
+\end{frame}
+
+
+\begin{frame}[fragile]{Pause (second part)}
+    With
+    \begin{verbatim}\onslide<3>{Content}\end{verbatim}
+    when the content is not shown, it still leaves blank space where it would appear:\newline
+    \only<1>{This is the first repetition...}\newline
+    \pause
+    \only<2>{And this is the second one!}
+
+    \noindent This concept can also be applied to graphical effects - for example:
+    \begin{verbatim}\textbf<5>{Text}\end{verbatim}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Pause (third part)}
+We can achieve the same effects within a limited area using
+\begin{verbatim}
+    \begin{overlayarea}{\textwidth}{3cm}
+      \only<1>{First repetition}
+      \only<2>{Second repetition}
+    \end{overlayarea}
+\end{verbatim}
+
+\begin{overlayarea}{\textwidth}{2cm}
+      \only<1>{First repetition}
+      \only<2>{Second repetition}
+\end{overlayarea}
+\end{frame}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Blocks}
+\begin{frame}[fragile, shrink=30]{Blocks}
+\begin{verbatim}
+\begin{block}{Normal block}Text\end{block}
+\end{verbatim}
+\begin{block}{Normal block}
+    Text
+\end{block}
+
+\begin{verbatim}
+\begin{alertblock}{Alert block}Text\end{alertblock}
+\end{verbatim}
+\begin{alertblock}{Alert block}Text\end{alertblock}
+
+\begin{verbatim}
+\begin{exampleblock}{Example block}Text\end{exampleblock}
+\end{verbatim}
+\begin{exampleblock}{Example block}Text\end{exampleblock}
+\end{frame}

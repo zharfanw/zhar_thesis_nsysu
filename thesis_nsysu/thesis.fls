@@ -1,6 +1,6 @@
-PWD d:\Master_NSYSU\CodeRepository_ThisPeriod\zhar_thesis_nsysu\thesis_nsysu
+PWD D:\Master_NSYSU\CodeRepository_ThisPeriod\zhar_thesis_nsysu\thesis_nsysu
 INPUT C:\Users\DELL 7540\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT d:\Master_NSYSU\CodeRepository_ThisPeriod\zhar_thesis_nsysu\thesis_nsysu\thesis.tex
+INPUT thesis.tex
 OUTPUT thesis.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\book.cls
@@ -344,15 +344,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 OUTPUT thesis.xdv
-INPUT .\Images\watermark.jpg
-INPUT .\Images\watermark.jpg
-INPUT .\thesis.toc
-INPUT .\thesis.toc
-INPUT thesis.toc
-OUTPUT thesis.toc
-INPUT .\thesis.lof
-INPUT .\thesis.lof
-INPUT thesis.lof
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
@@ -377,6 +368,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
+INPUT .\thesis.toc
+INPUT .\thesis.toc
+INPUT thesis.toc
+OUTPUT thesis.toc
+INPUT .\thesis.lof
+INPUT .\thesis.lof
+INPUT thesis.lof
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
@@ -406,13 +404,13 @@ INPUT .\thesis.lot
 INPUT .\thesis.lot
 INPUT thesis.lot
 OUTPUT thesis.lot
-INPUT .\Chapters\v2_chapter1-introduction.tex
-INPUT .\Chapters\v2_chapter1-introduction.tex
-INPUT .\Chapters\v2_chapter1-introduction.tex
-INPUT .\Chapters\v2_chapter1-introduction.tex
-INPUT Chapters\v2_chapter1-introduction.tex
+INPUT .\Chapters\v3_chapter1-introduction.tex
+INPUT .\Chapters\v3_chapter1-introduction.tex
+INPUT .\Chapters\v3_chapter1-introduction.tex
+INPUT .\Chapters\v3_chapter1-introduction.tex
+INPUT Chapters\v3_chapter1-introduction.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi7.tfm
@@ -438,24 +436,56 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
-INPUT .\Chapters\v2_chapter2-second-chapter-Backup.tex
-INPUT .\Chapters\v2_chapter2-second-chapter-Backup.tex
-INPUT .\Chapters\v2_chapter2-second-chapter-Backup.tex
-INPUT .\Chapters\v2_chapter2-second-chapter-Backup.tex
-INPUT Chapters\v2_chapter2-second-chapter-Backup.tex
+INPUT .\Chapters\v3_chapter2-second-chapter-Backup.tex
+INPUT .\Chapters\v3_chapter2-second-chapter-Backup.tex
+INPUT .\Chapters\v3_chapter2-second-chapter-Backup.tex
+INPUT .\Chapters\v3_chapter2-second-chapter-Backup.tex
+INPUT Chapters\v3_chapter2-second-chapter-Backup.tex
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmss.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
-INPUT .\Images\AntennaPatch_ReturnLoss.PNG
-INPUT .\Images\AntennaPatch_ReturnLoss.PNG
-INPUT .\Images\AntennaPatch_Design_Fields.PNG
-INPUT .\Images\AntennaPatch_Design_Fields.PNG
+INPUT .\Images\AntennaAndPattern.PNG
+INPUT .\Images\AntennaAndPattern.PNG
+INPUT .\Images\AntennaPatchReturnLoss.png
+INPUT .\Images\AntennaPatchReturnLoss.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
+INPUT .\Images\GainThetaAntennaPatch.png
+INPUT .\Images\GainThetaAntennaPatch.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT .\Images\Unitcell_Design.png
 INPUT .\Images\Unitcell_Design.png
 INPUT .\Images\Unitcell_Design.png
@@ -474,12 +504,14 @@ INPUT .\Images\FloqPort-1.png
 INPUT .\Images\FloqPort-2.png
 INPUT .\Images\FloqPort-2.png
 INPUT .\Images\FloqPort-2.png
-INPUT .\Images\UnitCell_Magnitude.png
-INPUT .\Images\UnitCell_Magnitude.png
-INPUT .\Images\UnitCell_Magnitude.png
-INPUT .\Images\UnitCell_Phase.png
-INPUT .\Images\UnitCell_Phase.png
-INPUT .\Images\UnitCell_Phase.png
+INPUT .\Images\UnitCellProfile_Magnitude_Accepted.png
+INPUT .\Images\UnitCellProfile_Magnitude_Accepted.png
+INPUT .\Images\UnitCellProfile_PhaseAt38GHz_Accepted.png
+INPUT .\Images\UnitCellProfile_PhaseAt38GHz_Accepted.png
+INPUT .\Images\AntennaLensFrontView.PNG
+INPUT .\Images\AntennaLensFrontView.PNG
+INPUT .\Images\AntennaLensTopView_edited.PNG
+INPUT .\Images\AntennaLensTopView_edited.PNG
 INPUT .\Images\AntennaLens20x20_VerifFocalPoint.png
 INPUT .\Images\AntennaLens20x20_VerifFocalPoint.png
 INPUT .\Images\FocalCharacter_0deg.png
@@ -515,10 +547,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxbsyc.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxbexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxbexa.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxbexa.tfm
-INPUT .\Images\AntennaLensRadiationPatternOutput\matlab_visualization\figures\matlab_radiation_pattern_3d_all_patterns.png
-INPUT .\Images\AntennaLensRadiationPatternOutput\matlab_visualization\figures\matlab_radiation_pattern_3d_all_patterns.png
-INPUT .\Images\AntennaLensRadiationPatternOutput\vertical_cut_360\figures\vertical_cut_360_all_patterns.png
-INPUT .\Images\AntennaLensRadiationPatternOutput\vertical_cut_360\figures\vertical_cut_360_all_patterns.png
+INPUT .\Images\AntennaPatternWithLens.png
+INPUT .\Images\AntennaPatternWithLens.png
+INPUT .\Images\RXAntennaRadiationPattern.png
+INPUT .\Images\RXAntennaRadiationPattern.png
 INPUT .\Images\Room_SBR_withCloseup.png
 INPUT .\Images\Room_SBR_withCloseup.png
 INPUT .\Images\Room_withCloseup.png
@@ -563,73 +595,74 @@ INPUT .\Images\channel_comparison_results\mimo_normalized_singular_values.png
 INPUT .\Images\channel_comparison_results\mimo_normalized_singular_values.png
 INPUT .\Images\channel_comparison_results\mimo_spatial_correlation_evaluation.png
 INPUT .\Images\channel_comparison_results\mimo_spatial_correlation_evaluation.png
-INPUT .\Chapters\v3_chapter3-third-chapter.tex
-INPUT .\Chapters\v3_chapter3-third-chapter.tex
-INPUT .\Chapters\v3_chapter3-third-chapter.tex
-INPUT .\Chapters\v3_chapter3-third-chapter.tex
-INPUT Chapters\v3_chapter3-third-chapter.tex
-INPUT .\Images\3_1_PositionofReceiverAntennaLens.png
-INPUT .\Images\3_1_PositionofReceiverAntennaLens.png
-INPUT .\Images\3_1_PositionofReceiverAntennaLens.png
-INPUT .\Images\3_1_PositionofReceiverWOAntennaLens.png
-INPUT .\Images\3_1_PositionofReceiverWOAntennaLens.png
-INPUT .\Images\3_1_PositionofReceiverWOAntennaLens.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\01_geometry_six_scenarios.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\01_geometry_six_scenarios.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\01_geometry_six_scenarios.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT .\Chapters\v4_chapter3-third-chapter.tex
+INPUT .\Chapters\v4_chapter3-third-chapter.tex
+INPUT .\Chapters\v4_chapter3-third-chapter.tex
+INPUT .\Chapters\v4_chapter3-third-chapter.tex
+INPUT Chapters\v4_chapter3-third-chapter.tex
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\01_geometry_and_arrays_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\01_geometry_and_arrays_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\01_geometry_and_arrays_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\02_static_rx_scenario_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\02_static_rx_scenario_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\02_static_rx_scenario_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\03_static_mimo_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\03_static_mimo_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\03_static_mimo_comparison_matlab.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmi5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsy5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexx.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmb10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxmia.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsym.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxsyc.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\03_aggregate_comparison.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\03_aggregate_comparison.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\charts\03_aggregate_comparison.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_linear_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_linear_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_linear_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_half_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_half_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_half_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_full_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_full_all_parameters.png
-INPUT .\Images\Comparison_Linear_Half_Full_Lens_Wolens_9x9\matlab_figures\02_full_all_parameters.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig1_compute_cost_scalability.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig1_compute_cost_scalability.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig4_montecarlo_aggregate_vs_N.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig4_montecarlo_aggregate_vs_N.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig5_mimo_per_drop_boxplot_vs_N.png
-INPUT .\Images\Analisis_Skalabilitas_MonteCarlo_v3_3x3_5x5_9x9\figures\fig5_mimo_per_drop_boxplot_vs_N.png
-INPUT .\Chapters\v2_chapter4-fourth-chapter.tex
-INPUT .\Chapters\v2_chapter4-fourth-chapter.tex
-INPUT .\Chapters\v2_chapter4-fourth-chapter.tex
-INPUT .\Chapters\v2_chapter4-fourth-chapter.tex
-INPUT Chapters\v2_chapter4-fourth-chapter.tex
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\08_aggregate_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\08_aggregate_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\08_aggregate_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\04_channel_metrics_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\04_channel_metrics_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\04_channel_metrics_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\05_trajectory_mimo_metrics_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\05_trajectory_mimo_metrics_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\05_trajectory_mimo_metrics_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\06_spatial_decorrelation_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\06_spatial_decorrelation_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\06_spatial_decorrelation_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\07_raw_spatial_difference_power_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\07_raw_spatial_difference_power_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3\figures_matlab\07_raw_spatial_difference_power_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\01_geometry_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\01_geometry_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\01_geometry_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\02_static_rx_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\02_static_rx_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\02_static_rx_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\03_static_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\03_static_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\03_static_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\08_aggregate_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\08_aggregate_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\08_aggregate_order_comparison_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\04_channel_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\04_channel_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\04_channel_along_trajectory_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\05_trajectory_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\05_trajectory_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\05_trajectory_mimo_scaling_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\06_spatial_decorrelation_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\06_spatial_decorrelation_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\06_spatial_decorrelation_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\07_raw_spatial_difference_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\07_raw_spatial_difference_by_order_matlab.png
+INPUT .\Images\Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear\figures_matlab\07_raw_spatial_difference_by_order_matlab.png
+INPUT .\Chapters\v3_chapter4-fourth-chapter.tex
+INPUT .\Chapters\v3_chapter4-fourth-chapter.tex
+INPUT .\Chapters\v3_chapter4-fourth-chapter.tex
+INPUT .\Chapters\v3_chapter4-fourth-chapter.tex
+INPUT Chapters\v3_chapter4-fourth-chapter.tex
 INPUT .\thesis.bbl
 INPUT .\thesis.bbl
 INPUT thesis.bbl

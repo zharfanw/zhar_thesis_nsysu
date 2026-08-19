@@ -1,0 +1,15 @@
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Research Context}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Lens-Assisted Beamspace MIMO}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Literature Gap}{7}{0}{1}
+\beamer@subsectionintoc {1}{4}{Research Question and Objectives}{9}{0}{1}
+\beamer@sectionintoc {2}{Methodology and Model Validation}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Design and Physical Characterization}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Channel Formulation and Metrics}{21}{0}{2}
+\beamer@subsectionintoc {2}{3}{Simulation and Cross-Validation}{24}{0}{2}
+\beamer@sectionintoc {3}{MIMO Communication Performance Evaluation}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{Paired Lens and Baseline Trajectories}{30}{0}{3}
+\beamer@subsectionintoc {3}{2}{Higher-Order Lens-Assisted Scaling}{39}{0}{3}
+\beamer@sectionintoc {4}{Conclusions and Future Work}{42}{0}{4}

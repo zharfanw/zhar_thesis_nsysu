@@ -1,0 +1,12 @@
+\frametitle{PGF and Tikzpicture (fourth part)}\framesubtitle {PGF and Tikzpicture (fourth part)}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[scale=.9]
+    \begin{axis}[colormap/PuBu, samples=10, domain=-4:4, y domain=-4:4,
+    xmin=-4, xmax=4, ymin=-4, ymax=4, enlargelimits=false]
+
+    \addplot3[surf, samples=18, samples y=36]{x^2+y^2-1};
+\end{axis}
+\end{tikzpicture}	
+\caption{3D Surfaces}
+\end{figure}

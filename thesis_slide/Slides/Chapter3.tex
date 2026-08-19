@@ -1,0 +1,594 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{MIMO Communication Performance Evaluation}
+\note{
+  \begin{itemize}
+    \item In this section, we will evaluate the MIMO communication performance of the lens-assisted and baseline systems.
+    \item We will present the simulation configuration, the paired lens and baseline trajectories, and the evaluation metrics used to assess the system performance.
+    \item We will also discuss the results of the paired lens and baseline trajectories, as well as the higher-order lens-assisted scaling.
+  \end{itemize}
+}
+
+\subsection{Paired Lens and Baseline Trajectories}
+
+\begin{frame}[t]{Two Controlled Protocols Extend the Component Study}
+\begin{columns}[T,onlytextwidth]
+  \column{0.58\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.05cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_matlab/01_geometry_and_arrays_matlab.png}
+  \ThesisFigureCaption{3-1}{Matched TX trajectories and the two complete RX designs.}
+
+  \column{0.38\textwidth}
+  \scriptsize
+  \begin{block}{Protocol A: placement comparison}
+    Focal-arc lens RX versus linear baseline, both $3\times3$, at identical
+    linear and half-circular waypoints.
+  \end{block}
+  \begin{block}{Protocol B: order comparison}
+    Complete lens-assisted $3\times3$, $5\times5$, and $9\times9$ systems on one
+    linear trajectory.
+  \end{block}
+  {\tiny\color{red!70!black}\textbf{Boundary:} placement and imported RX pattern
+  change together.\par}
+\end{columns}
+\SourceNote{Chapter 3: Simulation Configuration and Paired Trajectories}
+\note{
+  \begin{itemize}
+    \item In this section we test Antenna-lens-assisted MIMO communication performance.
+    \item We will present the simulation configuration, the paired lens and baseline trajectories, and the evaluation metrics used to assess the system performance.
+    \item We will also discuss the results of the paired lens and baseline trajectories, as well as the higher-order lens-assisted scaling.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{System-Level Simulation Configuration}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.53\textwidth}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabularx}{\linewidth}{@{}>{\bfseries}p{0.43\linewidth}X@{}}
+    \toprule
+    Parameter & Value\\
+    \midrule
+    Room / carrier & $20\times20\times3$~m / 38~GHz\\
+    Bandwidth & 400~MHz, 401 bins\\
+    TX array & 3 isotropic elements, 10~dBm each\\
+    Mobility & 1~m/s; 16 time samples/waypoint\\
+    Ray samples & 100{,}000 per source\\
+    Linear path & 21 waypoints; 19.00~m\\
+    Half-circle & 37 waypoints; 9~m radius\\
+    \bottomrule
+  \end{tabularx}
+
+  \column{0.43\textwidth}
+  \begin{block}{RX branch populations}
+    Linear: $21\times3=63$ waypoint--RX observations per design.\par\smallskip
+    Half-circle: $37\times3=111$ observations per design.
+  \end{block}
+  \begin{block}{Pattern contrast}
+    Baseline branches reuse the $0^\circ$ patch pattern; lens branches use three
+    angle-specific patterns at $+45^\circ$, $0^\circ$, and $-45^\circ$.
+  \end{block}
+  \MethodNote{Matching indices are ordinal design pairs, not co-located
+  antenna elements.}
+\end{columns}
+\SourceNote{Chapter 3: Common Simulation Configuration}
+\note{
+  \begin{itemize}
+    \item This parameter table shows the simulation configuration for the lens-assisted and baseline systems.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Three Metric Scopes Answer Different Questions}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.32\textwidth}
+  \begin{block}{1. Link budget}
+    \centering
+    \begin{equation*}
+      \begin{aligned}
+        P_{\rm RX}&=P_{\rm TX}\sum_i|H_i|^2,\\[-1pt]
+        C_{\rm link}&=\mathbb E_f[\log_2(1+\gamma)]
+      \end{aligned}
+      \tag{3.1}
+    \end{equation*}
+    \vspace{-0.4em}
+    \raggedright
+    Three simultaneous TX contributions feed one active RX branch. This retains
+    absolute path loss and pattern gain.
+  \end{block}
+
+  \column{0.32\textwidth}
+  \begin{block}{2. Constructed MIMO}
+    \centering
+    $\mathbf H_{N\times N}\leftarrow$ sequential $N\times1$ runs\par\smallskip
+    \raggedright
+    Condition number, effective rank, and equal-power capacity at a fixed
+    normalized SNR of 10~dB diagnose channel structure.
+  \end{block}
+
+  \column{0.32\textwidth}
+  \begin{block}{3. Spatial decorrelation}
+    \centering
+    \begin{equation*}
+      D_{ij}=1-|\rho_{ij}|
+      \tag{3.4}
+    \end{equation*}
+    \vspace{-0.4em}
+    \raggedright
+    Center-TX responses are evaluated by global pooling, waypoint-local
+    pooling, and block-median statistics.
+  \end{block}
+\end{columns}
+\CautionNote{These metrics have different normalization and weighting. In
+particular, $C_{\rm link}$ and fixed-10-dB constructed-MIMO capacity are not
+numerically interchangeable.}
+\SourceNote{Chapter 3: Evaluation Metrics and Aggregation}
+\note{
+  \begin{itemize}
+    \item There are 3 metric scopes to answer different questions: link budget, constructed MIMO, and spatial decorrelation.
+    \item For the constructed-MIMO scope, each sequential $N\times1$ channel
+    realization forms one column of
+    $\mathbf H(f)=[\mathbf h_1(f)\ \mathbf h_2(f)\ \cdots\ \mathbf h_N(f)]$,
+    producing a constructed $N\times N$ channel matrix.
+    \item From its singular values, the condition number and effective rank are
+    $\kappa(f)=\sigma_1(f)/\sigma_3(f)$ and
+    $r_{\mathrm{eff}}(f)=\exp[-\sum_{i=1}^{3}p_i(f)\ln p_i(f)]$, where
+    $p_i(f)=\sigma_i^2(f)/\sum_{j=1}^{3}\sigma_j^2(f)$, as given in
+    Equation~(3.2).
+    \item The equal-power constructed-MIMO capacity is
+    $C_{\mathrm{MIMO}}(\gamma)=\mathbb E_f[\sum_{i=1}^{3}
+    \log_2(1+\gamma\sigma_i^2(f)/N_t)]$, with $N_t=3$, as given in
+    Equation~(3.3).
+    \item Emphasize that the matrix combines sequential simulations and is used
+    to diagnose channel structure and diversity potential; it is not a directly
+    measured simultaneous three-port channel.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{A Static Snapshot Shows Gain --- but Mixed MIMO Structure}
+\begin{columns}[T,onlytextwidth]
+  \column{0.59\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.95cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_matlab/02_static_rx_scenario_comparison_matlab.png}
+  \ThesisFigureCaption{3-2}{Static branch gain, TX correlation, and normalized capacity.}
+
+  \column{0.37\textwidth}
+  \scriptsize
+  \begin{block}{Absolute branch gain}
+    Lens branches span $-76.18$ to $-72.98$~dB; baseline spans only
+    $-79.84$ to $-79.75$~dB.
+  \end{block}
+  \begin{block}{Constructed $3\times3$ snapshot}
+    \renewcommand{\arraystretch}{1.12}
+    \begin{tabular}{@{}lcc@{}}
+      & Base & Lens\\\midrule
+      $\kappa$ (dB) & \textbf{23.90} & 28.70\\
+      $r_{\rm eff}$ & 1.42 & \textbf{1.60}\\
+      $C_{\rm MIMO}$ & 6.81 & \textbf{7.24}\\
+      RX corr. & 0.7927 & \textbf{0.5636}
+    \end{tabular}
+  \end{block}
+  % \CautionNote{A better condition number alone does not prove stronger
+  % multiplexing.}
+\end{columns}
+\SourceNote{Chapter 3: Static Snapshot Characterization}
+\note{
+  \begin{itemize}
+    \item This snapshot shows the performance of the lens-assisted and baseline systems at a static point in time.
+    \item The lens has better absolute branch gain, but the constructed MIMO metrics show mixed results.
+    \item The lens improves rank, normalized capacity, and RX correlation in this snapshot, while its condition number becomes worse.
+    \item This is a normalized single-position result. It does not imply that
+          every lens branch retains a gain or capacity advantage as the TX moves
+          along either trajectory.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Equal-Weight Trajectory Aggregation Favors the Baseline}
+\scriptsize
+\centering
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}llrrrrrr@{}}
+  \toprule
+  Path & RX & $|H|_{\rm med}$ & $C_{\rm link}$ & $\kappa$ & $r_{\rm eff}$ & $C_{\rm MIMO}$ & $D_{\rm med}$\\
+  \midrule
+  Linear & Base & $-79.74$ & \textbf{5.41} & \textbf{25.01} & \textbf{1.202} & \textbf{6.12} & 0.0909\\
+  Linear & Lens & $-86.75$ & 3.57 & 25.55 & 1.154 & 5.85 & \textbf{0.5308}\\
+  Half-circle & Base & $-80.89$ & \textbf{5.08} & 25.58 & \textbf{1.348} & \textbf{6.71} & 0.0638\\
+  Half-circle & Lens & $-87.29$ & 3.53 & \textbf{21.56} & 1.305 & 6.58 & \textbf{0.5518}\\
+  \bottomrule
+\end{tabular}
+
+\vspace{0.35cm}
+\begin{columns}[T,onlytextwidth]
+  \column{0.48\textwidth}
+  \MethodNote{\textbf{Aggregate rate and rank:} all three directional RX cases
+  receive equal statistical weight, including persistently misaligned beams.}
+  \column{0.48\textwidth}
+  \MethodNote{\textbf{Local angular differentiation:} block-median
+  decorrelation strongly favors the lens on both paths.}
+\end{columns}
+% \Takeaway{The lens improves selectivity, but equal weighting does not convert
+% that selectivity into higher aggregate capacity.}
+\SourceNote{Chapter 3: Aggregate Placement-Comparison Results; capacities in bit/s/Hz}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This table compares the lens-assisted and baseline RX systems along
+          the linear and half-circular trajectories.
+    \item Equal-weight aggregation gives the same statistical weight to all
+          three directional RX branches, including weak or misaligned lens
+          branches; no beam selection is applied.
+    \item Under this rule, the baseline achieves higher link capacity,
+          effective rank, and MIMO capacity on both trajectories. This result is
+          consistent with its more uniform branch response as the transmitter
+          moves; it does not isolate antenna pattern from RX placement.
+    \item The lens nevertheless provides much stronger median-block
+          decorrelation, confirming useful local angular selectivity.
+    \item Therefore, the lens is not universally worse. Its selectivity must be
+          exploited through beam selection or adaptive combining to avoid
+          persistently misaligned branches and potentially improve capacity.
+    \item The takeaway is that the lens improves selectivity, but equal weighting does not convert that selectivity into higher aggregate capacity.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Along Both Paths, Branch Alignment Drives a Wide Lens Spread}
+\centering
+\includegraphics[width=0.92\linewidth,height=4.55cm,keepaspectratio]
+  {Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_matlab/04_channel_metrics_along_trajectory_matlab.png}
+\ThesisFigureCaption{3-5}{Mean SNR and equivalent-SISO capacity; shaded lens
+bands are RX-branch minima--maxima.}
+\begin{columns}[T,onlytextwidth]
+  \column{0.48\textwidth}
+  \MethodNote{The baseline mean is higher at all 21 linear waypoints and at 28
+  of 37 half-circle waypoints; aligned lens branches reverse the mean locally.}
+  \column{0.48\textwidth}
+  \CautionNote{All cases have 0\% outage at 1~bit/s/Hz; this threshold is
+  saturated and cannot distinguish reliability.}
+\end{columns}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item The solid and dashed lines are means across the three RX design
+          cases. The shaded lens region is the minimum-to-maximum branch range,
+          not a confidence interval.
+    \item On the linear path, the baseline mean capacity is higher at all 21
+          waypoints. On the half-circle, it is higher at 28 of 37 waypoints.
+    \item The remaining half-circle positions show that a locally aligned lens
+          branch can raise the three-branch mean above the baseline. The lens is
+          therefore not weaker at every position, even though its aggregate
+          median is lower.
+    \item The much wider lens band is evidence of angular selectivity: one
+          branch may align strongly while another remains weak at the same
+          waypoint.
+    \item Every configuration records 0\% outage at 1~bit/s/Hz. This threshold
+          is saturated, so it cannot support a reliability comparison; a higher
+          threshold or capacity percentiles would be more informative.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{The Constructed MIMO Channel Has a Geometry Bottleneck}
+\centering
+\includegraphics[width=0.91\linewidth,height=4.35cm,keepaspectratio]
+  {Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_matlab/05_trajectory_mimo_metrics_matlab.png}
+\ThesisFigureCaption{3-6}{Conditioning, effective rank, and fixed-10-dB
+constructed-MIMO capacity.}
+\begin{columns}[T,onlytextwidth]
+  \column{0.48\textwidth}
+  \MethodNote{At the 9.5~m linear midpoint, $\kappa$ reaches 65.69~dB
+  (baseline) and 55.09~dB (lens).}
+  \column{0.48\textwidth}
+  \MethodNote{The half-circle avoids this isolated symmetry-related impairment
+  and gives higher median rank and capacity for both designs.}
+\end{columns}
+\SourceNote{Chapter 3: Constructed MIMO Performance Along the Trajectories}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This figure compares the constructed-MIMO conditioning, effective
+          rank, and fixed-10-dB capacity along both trajectories.
+    \item Under the evaluated equal-weight configuration, the lens generally
+          has lower effective rank and MIMO capacity than the baseline. Its
+          angular selectivity does not become a multiplexing gain when weak or
+          misaligned branches remain included.
+    \item The condition-number result is mixed: the lens is 0.55~dB worse in
+          median on the linear path but 4.02~dB better on the half-circle.
+    \item At the 9.5~m linear midpoint, geometric symmetry creates an isolated
+          bottleneck. The condition number reaches 65.69~dB for the baseline
+          and 55.09~dB for the lens. The lens reduces the severity, but both
+          channels remain extremely ill-conditioned.
+    \item The half-circle avoids this symmetry-related impairment and gives
+          higher median rank and capacity for both designs, showing that
+          deployment geometry remains a dominant factor.
+    \item Therefore, the lens is not worse for every metric, but it
+          underperforms the baseline in the main multiplexing metrics under
+          this operating rule. Beam selection or adaptive combining is needed
+          to exploit its directional response.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{Lens Decorrelation Gain Depends on Aggregation Scope}
+\begin{columns}[T,onlytextwidth]
+  \column{0.61\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.35cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_vs_WithoutLens_Linear_HalfCircular_3x3/figures_matlab/06_spatial_decorrelation_comparison_matlab.png}
+  \ThesisFigureCaption{3-7}{Waypoint-local decorrelation of the center-TX response.}
+
+  \column{0.35\textwidth}
+  \scriptsize
+  \begin{block}{Global pooled}
+    Lens rises only slightly: 0.9784 to 0.9807 (linear) and 0.9744 to 0.9872
+    (half-circle).
+  \end{block}
+  \begin{block}{Typical local block}
+    Lens $D_{\rm med}$: 0.5308 / 0.5518.\par
+    Baseline: 0.0909 / 0.0638.
+  \end{block}
+  {\tiny\color{red!70!black}\textbf{Not equivalent to} the singular-value
+  structure of the constructed $3\times3$ matrix.\par}
+\end{columns}
+% \Takeaway{Both estimators favor the lens; aggregation scope determines whether
+% the measured increase is slight or substantial.}
+\SourceNote{Chapter 3: Spatial Decorrelation}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This slide shows that the decorrelation result depends on the
+          aggregation scope and on where normalization is applied. A higher
+          $D=1-|\rho|$ means less-correlated RX responses.
+    \item Global pooling concatenates all waypoint, time, and frequency samples
+          before computing correlation. Under this estimator the lens is only
+          slightly higher on both trajectories.
+    \item The block-median estimator evaluates correlation locally before
+          taking a typical value. It strongly favors the lens: $D_{\rm med}$
+          increases from 0.0909 to 0.5308 on the linear path and from 0.0638 to
+          0.5518 on the half-circle.
+    \item The effect sizes differ because global pooling measures the coherence
+          of the complete concatenated trajectory, whereas the local estimator
+          shows that a typical lens block has more differentiated
+          angle-dependent responses.
+    \item Thus, aggregation changes the magnitude of the observed lens benefit,
+          not its direction: both global-pooled and block-median decorrelation
+          are higher with the lens in this $3\times3$ comparison.
+    \item This calculation uses only the center-TX response across three RX
+          branches. It is not equivalent to the singular values, effective
+          rank, or multiplexing performance of the constructed $3\times3$
+          MIMO matrix.
+    \item The appropriate conclusion is that the lens provides stronger local
+          angular selectivity, not that it automatically provides higher MIMO
+          capacity.
+    \item Takeaway: both estimators favor the lens; aggregation scope determines whether the measured increase is slight or substantial.
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{System-Level Interpretation: Select, Combine, or Pay the Penalty}
+\centering
+\resizebox{0.92\linewidth}{!}{%
+\begin{tikzpicture}[>=latex,font=\footnotesize,node distance=0.70cm]
+  \node[draw=Blue,fill=SoftBlue,rounded corners,minimum width=3.3cm,
+        minimum height=1.0cm,align=center] (lens) {lens produces\\angle-specific branches};
+  \node[draw=Teal,fill=SoftTeal,rounded corners,minimum width=3.3cm,
+        minimum height=1.0cm,align=center,right=1.2cm of lens] (spread) {large within-waypoint\\capacity spread};
+  \node[draw=Gold!85!black,fill=SoftGold,rounded corners,minimum width=3.3cm,
+        minimum height=1.0cm,align=center,right=1.2cm of spread] (decision) {receiver operating rule};
+  \node[draw=red!70!black,rounded corners,minimum width=4.0cm,
+        minimum height=1.0cm,align=center,below left=1.25cm and -0.1cm of decision] (equal) {equal weighting\\misaligned branches reduce aggregate rate};
+  \node[draw=Teal,rounded corners,minimum width=4.0cm,
+        minimum height=1.0cm,align=center,below right=1.25cm and -0.1cm of decision] (adapt) {beam selection / combining\\can exploit the strongest local branch};
+  \draw[->,thick] (lens)--(spread);
+  \draw[->,thick] (spread)--(decision);
+  \draw[->,thick] (decision)--(equal);
+  \draw[->,thick] (decision)--(adapt);
+\end{tikzpicture}}
+
+\vspace{0.45cm}
+\begin{columns}[T,onlytextwidth]
+  \column{0.48\textwidth}
+  \CautionNote{Measured result in this thesis: equal-weight lens aggregation
+  yields lower median link and constructed-MIMO capacity.}
+  \column{0.48\textwidth}
+  \MethodNote{Design implication: the lens is an angularly selective front end,
+  not a uniform-gain replacement for a coplanar array.}
+\end{columns}
+\SourceNote{Chapter 3: Discussion and Placement-Comparison Summary}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item The system-level conclusion is that the lens behaves as an
+          angle-selective front end, rather than as a uniform-gain replacement
+          for a conventional coplanar array.
+    \item Its directional branches produce a wide capacity spread at each
+          waypoint: an aligned branch can be strong, while misaligned branches
+          can remain weak.
+    \item The receiver operating rule therefore determines whether this
+          selectivity becomes useful. Giving every branch equal weight retains
+          the weak branches and reduces the aggregate link and constructed-MIMO
+          capacity in the results of this thesis.
+    \item Beam selection or adaptive combining could instead emphasize the
+          strongest locally aligned branch and avoid persistently misaligned
+          responses.
+    \item However, this adaptive strategy is a design implication and future
+          research direction; it was not directly evaluated in the present
+          equal-weight simulations.
+    \item The appropriate conclusion is not that the lens is universally
+          better or worse, but that its benefit is conditional on alignment
+          and on how the receiver processes the angle-specific branches.
+  \end{itemize}
+}
+\end{frame}
+
+
+\subsection{Higher-Order Lens-Assisted Scaling}
+
+\begin{frame}[t]{Higher-Order Study Changes Power, Aperture, and Angular Grid}
+\begin{columns}[T,onlytextwidth]
+  \column{0.61\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.50cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/01_geometry_order_comparison_matlab.png}
+  \ThesisFigureCaption{3-9}{Common linear path with order-dependent TX and RX geometry.}
+
+  \column{0.35\textwidth}
+  \scriptsize
+  \setlength{\tabcolsep}{2pt}
+  \renewcommand{\arraystretch}{1.10}
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    $N$ & Aperture & RX step & $P_{\rm TX,tot}$\\
+    \midrule
+    3 & 0.90~m & $45^\circ$ & 14.77~dBm\\
+    5 & 1.80~m & $30^\circ$ & 16.99~dBm\\
+    9 & 3.60~m & $15^\circ$ & 19.54~dBm\\
+    \bottomrule
+  \end{tabular}
+
+  \vspace{0.30cm}
+  \begin{block}{Normalization}
+    \[
+      \eta_r=\frac{r_{\rm eff}}{N},\qquad
+      \eta_C=\frac{C_{\rm MIMO}}{N}
+    \]
+  \end{block}
+  \CautionNote{This is complete-design scaling, not a causal test of order $N$
+  alone.}
+\end{columns}
+\SourceNote{Chapter 3: Higher-Order Simulation Configuration}
+\end{frame}
+
+
+\begin{frame}[t]{Higher Order Raises Capacity but Lowers Efficiency}
+\scriptsize
+\begin{columns}[T,onlytextwidth]
+  \column{0.47\textwidth}
+  \renewcommand{\arraystretch}{1.18}
+  \begin{tabularx}{\linewidth}{@{}Xrrr@{}}
+    \toprule
+    Metric & $3\times3$ & $5\times5$ & $9\times9$\\
+    \midrule
+    $C_{\rm link}$ & 3.57 & 4.13 & \textbf{5.19}\\
+    $\kappa$ (dB) & \textbf{25.55} & 34.24 & 42.88\\
+    $r_{\rm eff}$ & 1.154 & 1.332 & \textbf{2.043}\\
+    $\eta_r$ & \textbf{0.385} & 0.266 & 0.227\\
+    $C_{\rm MIMO}$ & 5.851 & 8.254 & \textbf{14.562}\\
+    $\eta_C$ & \textbf{1.950} & 1.651 & 1.618\\
+    $D_{\rm global}$ & \textbf{0.9807} & 0.9276 & 0.8570\\
+    $D_{\rm med}$ & \textbf{0.5308} & 0.5166 & 0.4876\\
+    \bottomrule
+  \end{tabularx}
+  \SlideCaption{Trajectory medians; capacities in bit/s/Hz}
+
+  \column{0.49\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.85cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/08_aggregate_order_comparison_matlab.png}
+  \ThesisFigureCaption{3-12}{Absolute, normalized, and decorrelation metrics.}
+\end{columns}
+% \Takeaway{$3\times3\rightarrow9\times9$: fixed-10-dB capacity rises 148.9\%,
+% but rank fraction falls 41.0\% and capacity per dimension falls 17.0\%.}
+\SourceNote{Chapter 3: Aggregate Higher-Order Results}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This slide separates the benefit of adding dimensions from the
+          efficiency with which those dimensions are used.
+    \item From $3\times3$ to $9\times9$, link capacity rises from 3.57 to
+          5.19~bit/s/Hz, and fixed-10-dB constructed-MIMO capacity rises by
+          148.9\%, from 5.851 to 14.562~bit/s/Hz.
+    \item However, conditioning worsens as $\kappa$ increases from 25.55 to
+          42.88~dB. Although absolute effective rank increases, the rank
+          fraction $\eta_r$ falls by 41.0\%, showing that a smaller fraction of
+          the available dimensions remains effective.
+    \item Capacity per dimension $\eta_C$ also falls by 17.0\%, and both
+          decorrelation estimators decrease. The additional dimensions are
+          therefore increasingly correlated and less efficiently utilized.
+    \item The conclusion is that higher order increases total capacity, but
+          with diminishing spatial efficiency. This is complete-design scaling,
+          not an order-only effect, because transmit power, aperture, and the
+          angular grid also change with $N$.
+    \item Takeaway : {$3\times3\rightarrow9\times9$: fixed-10-dB capacity rises 148.9\%,
+but rank fraction falls 41.0\% and capacity per dimension falls 17.0\%.}
+  \end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}[t]{More Dimensions Do Not Remove Geometry-Limited Modes}
+\begin{columns}[T,onlytextwidth]
+  \column{0.62\textwidth}
+  \centering
+  \includegraphics[width=\linewidth,height=4.05cm,keepaspectratio]
+    {Analisis_v4_ISO_TX_Lens_Order_3x3_5x5_9x9_Linear/figures_matlab/05_trajectory_mimo_scaling_matlab.png}
+  \ThesisFigureCaption{3-14}{Order-dependent conditioning, rank efficiency, and capacity.}
+
+  \column{0.34\textwidth}
+  \scriptsize
+  \begin{block}{Shared midpoint bottleneck}
+    At 9.5~m, $r_{\rm eff}\approx1$ for every order; $\kappa$ worsens from
+    55.09 to 71.89~dB.
+  \end{block}
+  \begin{block}{Decorrelation trend}
+    Global and block-median decorrelation decrease as the RX pair population
+    grows and angular spacing tightens.
+  \end{block}
+  {\tiny\color{red!70!black}\textbf{Confounds:} +4.77~dB total TX power,
+  fourfold aperture, and only one common RX angle.\par}
+\end{columns}
+
+\SourceNote{Chapter 3: Constructed MIMO Scaling and Spatial Decorrelation}
+\note{
+  \fontsize{7}{8}\selectfont
+  \begin{itemize}
+    \setlength{\itemsep}{0.3em}
+    \setlength{\parskip}{0pt}
+    \item This figure shows that adding more antenna dimensions does not remove
+          a geometry-induced channel bottleneck.
+    \item At the 9.5~m midpoint, the effective rank collapses to approximately
+          one for every order. The condition number also worsens from 55.09~dB
+          for $3\times3$ to 71.89~dB for $9\times9$.
+    \item Thus, when the propagation geometry makes the channel responses
+          nearly dependent, a larger array adds nominal dimensions but does not
+          create an equal number of usable spatial modes.
+    \item Global and block-median decorrelation decrease with order, consistent
+          with greater similarity among the growing RX-pair population and the
+          tighter angular spacing.
+    \item This trend cannot be attributed to $N$ alone: total TX power rises by
+          4.77~dB, the aperture changes by a factor of four, and the compared
+          angular grids share only one common RX angle.
+    \item The safe conclusion is that higher order raises absolute capacity,
+          but geometry-limited modes remain and spatial efficiency decreases.
+    \item Takeaway : Higher order adds capacity, but its dimensions are less balanced and
+less efficiently utilized.
+  \end{itemize}
+}
+\end{frame}

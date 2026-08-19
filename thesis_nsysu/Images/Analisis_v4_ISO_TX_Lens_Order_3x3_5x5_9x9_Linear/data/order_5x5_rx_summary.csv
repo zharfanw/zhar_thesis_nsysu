@@ -1,0 +1,6 @@
+order_n,order_label,rx_config_index,rx_config_name,rx_lens_angle_deg,capacity_median,capacity_min,channel_magnitude_median_db,snr_median_db,outage_probability
+5,5×5,0,Simul_+60deg,60,3.757487,2.984866,-88.753929,11.174016,0.0
+5,5×5,1,Simul_+30deg,30,4.428047,1.911621,-85.731232,13.28969,0.0
+5,5×5,2,Simul_+0deg,0,4.24017,2.633887,-86.938469,12.756886,0.0
+5,5×5,3,Simul_-30deg,-30,4.437798,1.894974,-85.730675,13.32575,0.0
+5,5×5,4,Simul_-60deg,-60,3.777191,3.014205,-88.750809,11.239927,0.0

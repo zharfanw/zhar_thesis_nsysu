@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-08-17T01:31:39.586593+00:00",
+  "section_scope": "Sections 1-14 only",
+  "ray_tracing_rerun": false,
+  "shared_parser": "Analisis_v5_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/build_analysis.py",
+  "notebooks": [
+    {
+      "scenario": "linear_without_lens",
+      "trajectory": "Linear",
+      "system": "Without Lens",
+      "notebook": "Setupv4_20mx20m_wolens_3x3_Patch_iso_randomCom.ipynb",
+      "sha256": "7e379d542060232bc99f29e136d5dcd1af1ff67d4b8f599bab02ebb8b1b7ee15",
+      "bytes": 2745204,
+      "modified_local": "2026-08-15T17:32:50.374230+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 3
+    },
+    {
+      "scenario": "half_circular_without_lens",
+      "trajectory": "Half-Circular",
+      "system": "Without Lens",
+      "notebook": "Setupv4_20mx20m_wolens_3x3_Patch_iso_CircularTrajectoryTxCom.ipynb",
+      "sha256": "f4fd461217594a328ff4ee74e3e2b990dfadbbd7ddc8de96de83889b400085f9",
+      "bytes": 2802890,
+      "modified_local": "2026-08-17T09:13:26.801482+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 3
+    },
+    {
+      "scenario": "linear_lens",
+      "trajectory": "Linear",
+      "system": "Lens",
+      "notebook": "Setupv4_20mx20m_lens_3x3_Patch_iso_LinearTrajectory.ipynb",
+      "sha256": "30fd02c9b72ff31ce4842608174f6b0d22d14c385c82dcb9d06447dda9e1a4ca",
+      "bytes": 3103379,
+      "modified_local": "2026-08-14T04:46:08.479577+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 3
+    },
+    {
+      "scenario": "half_circular_lens",
+      "trajectory": "Half-Circular",
+      "system": "Lens",
+      "notebook": "Setupv4_20mx20m_lens_3x3_Patch_iso_CircularTrajectoryTxCom.ipynb",
+      "sha256": "a355e03d51f6ff2a57b36c6896f919b5beedd8910e14d94cb26c1321027f8dd7",
+      "bytes": 3001302,
+      "modified_local": "2026-08-17T09:13:28.750787+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 3
+    }
+  ]
+}

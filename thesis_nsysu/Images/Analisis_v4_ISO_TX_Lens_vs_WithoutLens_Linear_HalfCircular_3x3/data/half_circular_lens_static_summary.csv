@@ -1,0 +1,4 @@
+trajectory,system,rx_config_index,name,rx_lens_angle_deg,combined_gain_db,mean_|rho|_offdiag,max_|rho|_offdiag,capacity_10dB_bits/s/Hz
+Half-Circular,Lens,1,Simul_+0deg,0,-72.977201,0.972858,0.999864,3.439221
+Half-Circular,Lens,2,Simul_-45deg,-45,-76.060373,0.76697,0.829934,3.330618
+Half-Circular,Lens,0,Simul_+45deg,45,-76.177716,0.806024,0.925461,3.296537

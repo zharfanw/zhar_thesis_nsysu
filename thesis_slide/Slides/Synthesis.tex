@@ -1,0 +1,51 @@
+% !TEX root = ../BeamerTemplate.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Chapter 1--2 Synthesis}
+
+\begin{frame}[t]{What Chapters 1 and 2 Establish}
+\footnotesize
+\begin{columns}[T,onlytextwidth]
+  \column{0.315\textwidth}
+  \begin{block}{1. Why}
+    \textbf{38~GHz offers bandwidth, yet a LoS-dominant MIMO channel can remain
+    highly correlated.}
+
+    \vspace{0.10cm}
+    Can a physical lens improve $\mathbf H$, beyond increasing received power?
+  \end{block}
+
+  \column{0.315\textwidth}
+  \begin{block}{2. How}
+    \textbf{A $20\times20$ transmitarray creates angle-dependent focal responses.}
+
+    \vspace{0.10cm}
+    One $3\times3$ channel at 37--39~GHz is evaluated through gain, SVD,
+    correlation, conditioning, rank, and capacity.
+  \end{block}
+
+  \column{0.315\textwidth}
+  \begin{block}{3. What the evidence says}
+    \textbf{All three solvers predict directional reinforcement and lower
+    correlation.}
+
+    \vspace{0.10cm}
+    HFSS predicts stronger relative mode balance; Sionna-RT attributes more of
+    the benefit to absolute link gain.
+  \end{block}
+\end{columns}
+
+\vspace{0.05cm}
+\begin{beamercolorbox}[rounded=true,sep=0.60ex,wd=\linewidth]{takeaway}
+  \centering
+  \textbf{Most defensible conclusion:} in the evaluated $3\times3$ channel, the
+  lens reinforces matched links, suppresses most cross-angular coupling, lowers
+  correlation, and increases raw capacity.
+\end{beamercolorbox}
+
+\vspace{0cm}
+\begin{beamercolorbox}[rounded=true,sep=0.45ex,wd=\linewidth]{caution}
+  \scriptsize Exact gain, phase, and baseline conditioning remain solver-specific;
+  cross-solver agreement is numerical validation, not prototype measurement.
+\end{beamercolorbox}
+\end{frame}

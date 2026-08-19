@@ -1,0 +1,22 @@
+scenario,check,passed,detail
+order_3x3,waypoint_rx_row_count,True,observed=63; expected=63
+order_3x3,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+order_3x3,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+order_3x3,order_iso_invariant,True,pattern=iso; tx=3; rx=3
+order_3x3,trajectory_mimo_row_count,True,rows=21
+order_3x3,effective_rank_bounds,True,range=1.0352-1.5273; N=3
+order_3x3,spatial_tx_is_center_element,True,selected=1; expected_center=1
+order_5x5,waypoint_rx_row_count,True,observed=105; expected=105
+order_5x5,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+order_5x5,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+order_5x5,order_iso_invariant,True,pattern=iso; tx=5; rx=5
+order_5x5,trajectory_mimo_row_count,True,rows=21
+order_5x5,effective_rank_bounds,True,range=1.0611-2.0796; N=5
+order_5x5,spatial_tx_is_center_element,True,selected=2; expected_center=2
+order_9x9,waypoint_rx_row_count,True,observed=189; expected=189
+order_9x9,outage_reconciliation,True,rounded_log=0.000%; summary=0.000%
+order_9x9,correlation_decorrelation_identity,True,max_abs_error=0.000e+00
+order_9x9,order_iso_invariant,True,pattern=iso; tx=9; rx=9
+order_9x9,trajectory_mimo_row_count,True,rows=21
+order_9x9,effective_rank_bounds,True,range=1.0852-2.6977; N=9
+order_9x9,spatial_tx_is_center_element,True,selected=4; expected_center=4

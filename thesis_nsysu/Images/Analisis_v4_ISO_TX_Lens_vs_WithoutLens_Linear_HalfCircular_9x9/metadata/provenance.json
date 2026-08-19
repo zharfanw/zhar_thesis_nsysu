@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-08-13T21:45:46.143252+00:00",
+  "section_scope": "Sections 1-14 only",
+  "ray_tracing_rerun": false,
+  "shared_parser": "Analisis_v5_Lens_vs_WithoutLens_Linear_HalfCircular_9x9/build_analysis.py",
+  "notebooks": [
+    {
+      "scenario": "linear_without_lens",
+      "trajectory": "Linear",
+      "system": "Without Lens",
+      "notebook": "Setupv4_20mx20m_wolens_9x9_Patch_iso_randomCom.ipynb",
+      "sha256": "83145a0f2a86a4b13bae960a8483e7281a0298f1131b7cab540ae997555337f0",
+      "bytes": 3278244,
+      "modified_local": "2026-08-14T03:56:20.782972+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 9
+    },
+    {
+      "scenario": "half_circular_without_lens",
+      "trajectory": "Half-Circular",
+      "system": "Without Lens",
+      "notebook": "Setupv4_20mx20m_wolens_9x9_Patch_iso_CircularTrajectoryTxCom.ipynb",
+      "sha256": "a8c97f50906e61f1c7821387bc86b76cb1689e81014bddefab6666e4a5c85d2e",
+      "bytes": 3714156,
+      "modified_local": "2026-08-14T04:06:10.464606+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 9
+    },
+    {
+      "scenario": "linear_lens",
+      "trajectory": "Linear",
+      "system": "Lens",
+      "notebook": "Setupv4_20mx20m_lens_9x9_Patch_iso_TrajectoryTxCom.ipynb",
+      "sha256": "e0b9c15bc7db158daef110a0fa1b6f477fdc9428526adca8cd0be56f4e5d42ea",
+      "bytes": 4693622,
+      "modified_local": "2026-08-14T03:59:50.316448+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 9
+    },
+    {
+      "scenario": "half_circular_lens",
+      "trajectory": "Half-Circular",
+      "system": "Lens",
+      "notebook": "Setupv4_20mx20m_lens_9x9_Patch_iso_CircularTrajectoryTxCom.ipynb",
+      "sha256": "31a17c44900bf73b5c9b2e6fcddbc5c4d874c46eb46039ef90ed86ea4a806cdd",
+      "bytes": 4544141,
+      "modified_local": "2026-08-14T04:06:36.462667+08:00",
+      "total_cells": 64,
+      "included_cells_0_based": "0-63",
+      "section_15_present": false,
+      "tx_pattern_mode": "iso",
+      "tx_element_count": 9
+    }
+  ]
+}
