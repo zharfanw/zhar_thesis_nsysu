@@ -1,0 +1,921 @@
+% ```latex
+\documentclass[11pt,a4paper]{article}
+
+% =========================================================
+% Packages
+% =========================================================
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% =========================================================
+% Document
+% =========================================================
+\begin{document}
+
+\begin{center}
+    {\Large\bfseries Inter-Solver Channel Comparison and MIMO Evaluation Methodology}
+\end{center}
+
+\vspace{0.5cm}
+
+The evaluation procedure consists of two main objectives. First, the channel responses obtained from the HFSS Hybrid Solver, HFSS SBR+ Solver, and Sionna-RT are compared under an identical physical scenario. Second, the effect of the antenna lens on the MIMO channel is evaluated in terms of channel decorrelation and spatial multiplexing performance.
+
+None of the three solvers is considered as the ground-truth reference. Therefore, the comparison is expressed using terms such as \textit{difference}, \textit{discrepancy}, \textit{spread}, and \textit{agreement}, rather than prediction error or accuracy.
+
+The overall evaluation procedure can be summarized as
+
+\[
+\boxed{
+\text{Raw CSI}
+\rightarrow
+\text{Antenna Mapping}
+\rightarrow
+\text{Frequency Alignment}
+\rightarrow
+\text{Channel Comparison}
+\rightarrow
+\text{Lens Effect}
+\rightarrow
+\mathbf{H}
+\rightarrow
+\text{MIMO Evaluation}
+}
+\]
+
+% =========================================================
+\section{MIMO Channel Representation}
+
+For a $3\times3$ MIMO configuration, the channel matrix is expressed as
+
+\[
+\mathbf{H}(f)=
+\begin{bmatrix}
+H_{11}(f) & H_{12}(f) & H_{13}(f)\\
+H_{21}(f) & H_{22}(f) & H_{23}(f)\\
+H_{31}(f) & H_{32}(f) & H_{33}(f)
+\end{bmatrix}.
+\]
+
+Two channel matrices are obtained for each solver:
+
+\[
+\mathbf{H}_{\mathrm{with}},
+\qquad
+\mathbf{H}_{\mathrm{without}},
+\]
+
+representing the configurations with and without the antenna lens, respectively.
+
+Each channel coefficient is complex and can be written as
+
+\[
+H_{ij}(f)
+=
+\Re\{H_{ij}(f)\}
++
+j\Im\{H_{ij}(f)\}.
+\]
+
+The corresponding magnitude in decibels is
+
+\[
+M_{ij}(f)
+=
+20\log_{10}|H_{ij}(f)|,
+\]
+
+while the channel phase is
+
+\[
+\phi_{ij}(f)
+=
+\angle H_{ij}(f).
+\]
+
+% =========================================================
+\section{Antenna Equivalence Mapping}
+
+Before the channel responses are compared, the antenna indices of the three simulation methods must be mapped to an identical physical TX--RX configuration.
+
+This step ensures that, for example,
+
+\[
+H_{11}^{\mathrm{Hybrid}},
+\qquad
+H_{11}^{\mathrm{SBR+}},
+\qquad
+H_{11}^{\mathrm{Sionna}}
+\]
+
+represent the same physical propagation link.
+
+This antenna equivalence mapping is essential because a comparison between different antenna locations would not provide a physically meaningful inter-solver evaluation.
+
+% =========================================================
+\section{Frequency Alignment}
+
+The full channel responses are first observed over the operating range of approximately
+
+\[
+36~\mathrm{GHz}
+\leq f
+\leq
+40~\mathrm{GHz}.
+\]
+
+For numerical comparison, three common anchor frequencies are selected:
+
+\[
+f_a
+=
+\{37,38,39\}~\mathrm{GHz}.
+\]
+
+Since different solvers may use different frequency sampling points, linear interpolation is used to obtain the channel coefficients at identical frequencies.
+
+Therefore, the solver comparison is performed under
+
+\[
+\boxed{
+\text{Same Geometry}
++
+\text{Same TX/RX Mapping}
++
+\text{Same Frequency}
+}
+\]
+
+conditions.
+
+% =========================================================
+\section{Inter-Solver Magnitude Comparison}
+
+For two solvers $A$ and $B$, the magnitude difference for channel $H_{ij}$ is
+
+\[
+\Delta M_{ij}^{(A,B)}(f)
+=
+M_{ij}^{(A)}(f)
+-
+M_{ij}^{(B)}(f).
+\]
+
+The absolute magnitude discrepancy is
+
+\[
+D_{ij}^{(A,B)}(f)
+=
+\left|
+\Delta M_{ij}^{(A,B)}(f)
+\right|.
+\]
+
+The comparison is performed symmetrically for
+
+\[
+\mathrm{Hybrid}
+\leftrightarrow
+\mathrm{SBR+},
+\]
+
+\[
+\mathrm{Hybrid}
+\leftrightarrow
+\mathrm{Sionna},
+\]
+
+and
+
+\[
+\mathrm{SBR+}
+\leftrightarrow
+\mathrm{Sionna}.
+\]
+
+For each solver pair, the mean absolute discrepancy is calculated as
+
+\[
+D_{\mathrm{mean}}
+=
+\frac{1}{N}
+\sum_{n=1}^{N}
+D_n,
+\]
+
+whereas the median discrepancy is used to represent the typical disagreement while reducing sensitivity to extreme values.
+
+The signed mean difference is also useful for identifying systematic offset between two solvers.
+
+% =========================================================
+\section{Inter-Solver Spread}
+
+A reference-independent measure of disagreement among all solvers is defined as
+
+\[
+S_{ij}(f)
+=
+\max_s
+M_{ij}^{(s)}(f)
+-
+\min_s
+M_{ij}^{(s)}(f).
+\]
+
+A small value of
+
+\[
+S_{ij}(f)
+\]
+
+indicates that the three solvers provide closely grouped channel magnitude predictions.
+
+In the ideal agreement condition,
+
+\[
+S_{ij}(f)
+\rightarrow 0.
+\]
+
+% =========================================================
+\section{Frequency-Shape Agreement}
+
+The absolute channel magnitude may differ between solvers even when the frequency-dependent response has a similar shape.
+
+To separate absolute magnitude offset from frequency variation, each channel response is centered around its own average value:
+
+\[
+M'_{ij}(f)
+=
+M_{ij}(f)
+-
+\overline{M}_{ij},
+\]
+
+where
+
+\[
+\overline{M}_{ij}
+=
+\frac{1}{N_f}
+\sum_{k=1}^{N_f}
+M_{ij}(f_k).
+\]
+
+The centered channel response is therefore used to evaluate whether different solvers predict a similar frequency-dependent channel trend even when their absolute channel levels are different.
+
+% =========================================================
+\section{Phase Agreement}
+
+Because phase is periodic, a direct subtraction may result in an incorrect interpretation near the $\pm180^\circ$ boundary.
+
+The circular phase difference between solvers $A$ and $B$ is calculated as
+
+\[
+\Delta\phi_{ij}^{(A,B)}
+=
+\arg
+\left[
+H_{ij}^{(A)}
+\left(
+H_{ij}^{(B)}
+\right)^*
+\right].
+\]
+
+A constant phase offset between two solvers is subsequently removed:
+
+\[
+\Delta\phi_{\mathrm{aligned}}
+=
+\Delta\phi
+-
+\overline{\Delta\phi}.
+\]
+
+This allows the analysis to focus on phase variation with frequency rather than an arbitrary constant phase-reference offset.
+
+% =========================================================
+\section{Antenna-Lens Effect}
+
+For each solver, the channel modification introduced by the lens is evaluated as
+
+\[
+G_{\mathrm{lens},ij}
+=
+M_{\mathrm{with},ij}
+-
+M_{\mathrm{without},ij}.
+\]
+
+A positive value indicates that the lens increases the magnitude of the corresponding channel:
+
+\[
+G_{\mathrm{lens},ij}>0.
+\]
+
+A negative value indicates attenuation:
+
+\[
+G_{\mathrm{lens},ij}<0.
+\]
+
+However, the antenna lens is not required to increase every individual channel coefficient. The primary purpose of the lens is to redistribute electromagnetic energy according to the spatial direction of the incoming or outgoing wave.
+
+Therefore, the overall structure of the MIMO channel is more important than the gain of an individual $H_{ij}$.
+
+% =========================================================
+\section{Lens-Effect Direction Agreement}
+
+The three simulation methods are also evaluated according to whether they predict the same direction of the lens-induced modification.
+
+For each channel and frequency,
+
+\[
+\operatorname{sign}
+\left(
+G_{\mathrm{lens},ij}^{(s)}
+\right)
+\]
+
+is determined.
+
+If all three solvers predict an increase, or all three predict a decrease, the result is considered a unanimous direction agreement.
+
+This evaluation is useful because the solvers may differ in their absolute predicted channel magnitude while still predicting the same physical effect of the antenna lens.
+
+% =========================================================
+\section{Normalized Channel Power Distribution}
+
+The total channel power is calculated as
+
+\[
+P_{\mathrm{tot}}
+=
+\sum_{i=1}^{3}
+\sum_{j=1}^{3}
+|H_{ij}|^2.
+\]
+
+The normalized contribution of each channel is
+
+\[
+P_{ij}
+=
+\frac{|H_{ij}|^2}
+{\displaystyle
+\sum_{m=1}^{3}
+\sum_{n=1}^{3}
+|H_{mn}|^2}.
+\]
+
+Therefore,
+
+\[
+\sum_{i,j}P_{ij}=1.
+\]
+
+This metric shows how the total channel energy is distributed among the nine TX--RX links.
+
+A strongly concentrated distribution indicates that only a small subset of channels dominates the received power, whereas a more distributed channel may support a larger number of useful spatial modes.
+
+% =========================================================
+\section{Singular Value Decomposition}
+
+The MIMO channel matrix is decomposed using singular value decomposition:
+
+\[
+\mathbf{H}
+=
+\mathbf{U}
+\mathbf{\Sigma}
+\mathbf{V}^{H},
+\]
+
+where
+
+\[
+\mathbf{\Sigma}
+=
+\operatorname{diag}
+\left(
+\sigma_1,
+\sigma_2,
+\sigma_3
+\right),
+\]
+
+with
+
+\[
+\sigma_1
+\geq
+\sigma_2
+\geq
+\sigma_3.
+\]
+
+The singular values represent the strengths of the available spatial eigenchannels.
+
+A strongly correlated MIMO channel typically has
+
+\[
+\sigma_1
+\gg
+\sigma_2,\sigma_3,
+\]
+
+which indicates that most of the channel energy is concentrated in one dominant spatial mode.
+
+A favorable spatial multiplexing channel instead exhibits more balanced singular values:
+
+\[
+\sigma_1
+\approx
+\sigma_2
+\approx
+\sigma_3.
+\]
+
+Therefore, an important indication of improvement is the increase of the weaker singular values, particularly $\sigma_2$ and $\sigma_3$ relative to $\sigma_1$.
+
+% =========================================================
+\section{Frobenius-Normalized Channel}
+
+To separate the effect of absolute channel gain from the spatial structure, the channel matrix is normalized using the Frobenius norm:
+
+\[
+\widetilde{\mathbf{H}}
+=
+\frac{\mathbf{H}}
+{\|\mathbf{H}\|_F},
+\]
+
+where
+
+\[
+\|\mathbf{H}\|_F
+=
+\sqrt{
+\sum_{i,j}|H_{ij}|^2
+}.
+\]
+
+The raw channel matrix retains both propagation gain and spatial structure.
+
+In contrast, the normalized matrix removes differences in total channel energy and therefore allows the comparison to focus on the spatial properties of the MIMO channel.
+
+This distinction is particularly important for separating two different antenna-lens effects:
+
+\[
+\text{Channel Gain Improvement}
+\]
+
+and
+
+\[
+\text{Spatial Decorrelation Improvement}.
+\]
+
+% =========================================================
+\section{Condition Number}
+
+The channel condition number is calculated from the largest and smallest singular values:
+
+\[
+\kappa
+=
+\frac{\sigma_1}{\sigma_3}.
+\]
+
+For an ideally balanced MIMO channel,
+
+\[
+\kappa
+\rightarrow 1.
+\]
+
+A large condition number indicates that the weakest spatial mode is significantly smaller than the strongest mode.
+
+Therefore, an improved MIMO channel should satisfy
+
+\[
+\boxed{
+\kappa_{\mathrm{with}}
+<
+\kappa_{\mathrm{without}}
+}
+\]
+
+when the lens improves the balance between the available spatial modes.
+
+% =========================================================
+\section{Effective Rank}
+
+The effective rank evaluates how many spatial modes significantly contribute to the MIMO channel.
+
+The normalized singular-value power is defined as
+
+\[
+p_i
+=
+\frac{\sigma_i^2}
+{\displaystyle\sum_j\sigma_j^2}.
+\]
+
+The effective rank is then
+
+\[
+r_{\mathrm{eff}}
+=
+\exp
+\left(
+-\sum_i p_i\ln p_i
+\right).
+\]
+
+For a $3\times3$ MIMO system,
+
+\[
+1
+\leq
+r_{\mathrm{eff}}
+\leq
+3.
+\]
+
+If a single mode dominates,
+
+\[
+r_{\mathrm{eff}}
+\approx 1.
+\]
+
+If all three spatial modes are similarly strong,
+
+\[
+r_{\mathrm{eff}}
+\approx 3.
+\]
+
+Hence, a favorable lens-assisted channel should satisfy
+
+\[
+\boxed{
+r_{\mathrm{eff,with}}
+>
+r_{\mathrm{eff,without}}
+}
+\]
+
+which indicates an increased number of usable spatial channels.
+
+% =========================================================
+\section{Spatial Correlation}
+
+The receive-side spatial correlation matrix is calculated as
+
+\[
+\mathbf{R}_{\mathrm{RX}}
+=
+\mathbf{H}\mathbf{H}^{H},
+\]
+
+while the transmit-side correlation matrix is
+
+\[
+\mathbf{R}_{\mathrm{TX}}
+=
+\mathbf{H}^{H}\mathbf{H}.
+\]
+
+The normalized correlation coefficient between two channels is
+
+\[
+\rho_{ij}
+=
+\frac{R_{ij}}
+{\sqrt{R_{ii}R_{jj}}}.
+\]
+
+The magnitude of the off-diagonal coefficient,
+
+\[
+|\rho_{ij}|,
+\]
+
+is used as a measure of spatial correlation.
+
+For weakly correlated channels,
+
+\[
+|\rho_{ij}|
+\rightarrow 0,
+\]
+
+whereas highly correlated channels approach
+
+\[
+|\rho_{ij}|
+\rightarrow 1.
+\]
+
+The mean off-diagonal correlation is
+
+\[
+\overline{\rho}
+=
+\operatorname{mean}_{i\neq j}
+|\rho_{ij}|,
+\]
+
+and the maximum off-diagonal correlation is
+
+\[
+\rho_{\max}
+=
+\max_{i\neq j}
+|\rho_{ij}|.
+\]
+
+Therefore, successful channel decorrelation is indicated by
+
+\[
+\boxed{
+\overline{\rho}_{\mathrm{with}}
+<
+\overline{\rho}_{\mathrm{without}}
+}
+\]
+
+and ideally
+
+\[
+\boxed{
+\rho_{\max,\mathrm{with}}
+<
+\rho_{\max,\mathrm{without}}.
+}
+\]
+
+% =========================================================
+\section{MIMO Channel Capacity}
+
+For equal-power transmission, the MIMO capacity is evaluated as
+
+\[
+C
+=
+\sum_{i=1}^{N_T}
+\log_2
+\left(
+1+
+\frac{\rho}{N_T}
+\sigma_i^2
+\right),
+\]
+
+where $\rho$ represents the nominal SNR in linear scale.
+
+For a $3\times3$ system,
+
+\[
+N_T=3.
+\]
+
+For a nominal SNR of 20 dB,
+
+\[
+\rho
+=
+10^{20/10}
+=
+100.
+\]
+
+The resulting capacity is expressed in
+
+\[
+\mathrm{bit/s/Hz}.
+\]
+
+When only one singular value is dominant, the capacity is primarily provided by one spatial mode.
+
+When several singular values have significant magnitude, multiple independent data streams can contribute to the total capacity.
+
+% =========================================================
+\section{Interpretation of Raw and Normalized Capacity}
+
+The capacity obtained from the raw channel contains both the effects of absolute channel strength and spatial multiplexing:
+
+\[
+C_{\mathrm{raw}}
+=
+f
+\left(
+\text{Channel Gain},
+\text{Spatial Structure}
+\right).
+\]
+
+In contrast, the Frobenius-normalized channel removes differences in total channel energy.
+
+Therefore, the normalized evaluation is more appropriate for studying whether the antenna lens improves the intrinsic spatial structure of the channel.
+
+If both
+
+\[
+C_{\mathrm{raw,with}}
+>
+C_{\mathrm{raw,without}}
+\]
+
+and
+
+\[
+C_{\mathrm{norm,with}}
+>
+C_{\mathrm{norm,without}},
+\]
+
+the lens can be interpreted as providing both channel-strength improvement and spatial multiplexing improvement.
+
+% =========================================================
+\section{Overall Interpretation}
+
+The physical interpretation of the proposed evaluation can be summarized as
+
+\[
+\boxed{
+\begin{aligned}
+\text{Antenna Lens}
+&\rightarrow
+\text{Spatial Energy Focusing}
+\\
+&\rightarrow
+\text{Channel Differentiation}
+\\
+&\rightarrow
+\text{Lower Spatial Correlation}
+\\
+&\rightarrow
+\text{More Balanced Singular Values}
+\\
+&\rightarrow
+\text{Lower Condition Number}
+\\
+&\rightarrow
+\text{Higher Effective Rank}
+\\
+&\rightarrow
+\text{Improved Spatial Multiplexing}.
+\end{aligned}
+}
+\]
+
+Therefore, the evaluation should not rely on a single MIMO parameter.
+
+A stronger conclusion is obtained when several metrics consistently indicate the same channel improvement:
+
+\[
+\boxed{
+|\rho|\downarrow,
+\qquad
+\kappa\downarrow,
+\qquad
+r_{\mathrm{eff}}\uparrow,
+\qquad
+\sigma_2,\sigma_3\uparrow.
+}
+\]
+
+% =========================================================
+\section{Three-Level Evaluation Framework}
+
+The entire evaluation can be divided into three levels.
+
+\subsection{Level 1: Inter-Solver Channel Agreement}
+
+The first level evaluates whether the three simulation methods produce reasonably consistent channel responses.
+
+The main quantities are
+
+\[
+|H_{ij}|,
+\qquad
+\angle H_{ij},
+\qquad
+\Delta M,
+\qquad
+S_{ij},
+\]
+
+together with centered frequency-response and aligned-phase discrepancies.
+
+\subsection{Level 2: Lens-Induced Channel Modification}
+
+The second level evaluates whether the solvers agree on the physical modification introduced by the antenna lens.
+
+The main quantity is
+
+\[
+G_{\mathrm{lens}}
+=
+M_{\mathrm{with}}
+-
+M_{\mathrm{without}},
+\]
+
+together with the direction agreement among the three solvers.
+
+\subsection{Level 3: MIMO Performance}
+
+The final level evaluates whether the lens-induced modification improves the MIMO channel.
+
+The main metrics are
+
+\[
+\rho,
+\qquad
+\sigma_i,
+\qquad
+\kappa,
+\qquad
+r_{\mathrm{eff}},
+\qquad
+C.
+\]
+
+% =========================================================
+\section{Recommended Result Presentation}
+
+For a clear thesis presentation, the results may be presented in the following sequence:
+
+\begin{enumerate}[leftmargin=0.8cm]
+    \item Antenna equivalence mapping.
+    \item Individual channel magnitude and phase responses.
+    \item Inter-solver discrepancy at 37, 38, and 39 GHz.
+    \item Inter-solver spread.
+    \item Lens-induced channel gain or attenuation.
+    \item Lens-effect direction agreement.
+    \item Normalized channel-power distribution.
+    \item Spatial correlation.
+    \item Singular-value distribution.
+    \item Condition number.
+    \item Effective rank.
+    \item Channel capacity.
+\end{enumerate}
+
+This sequence allows the analysis to progress from channel-level solver comparison to the final communication-system interpretation.
+
+% =========================================================
+\section{Important Remark}
+
+The nominal value
+
+\[
+\rho=100
+\]
+
+corresponds mathematically to 20 dB.
+
+However, when the raw channel matrix still contains the absolute propagation attenuation, the resulting capacity should not automatically be interpreted as a channel with exactly 20 dB received SNR.
+
+For evaluating the spatial improvement introduced by the lens, the most direct indicators are therefore
+
+\[
+\boxed{
+\text{Frobenius-Normalized SVD}
++
+\text{Spatial Correlation}
++
+\text{Condition Number}
++
+\text{Effective Rank}
+}
+\]
+
+while the raw channel results can be used separately to describe the absolute end-to-end channel behavior.
+
+This separation makes it possible to distinguish between the statements
+
+\[
+\text{``The lens increases the channel gain''}
+\]
+
+and
+
+\[
+\text{``The lens improves channel decorrelation and spatial multiplexing.''}
+\]
+
+\end{document}
+```
